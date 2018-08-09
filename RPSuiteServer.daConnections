@@ -1,0 +1,13 @@
+<Connections>
+  <PoolTransactionBehaviour>Fail</PoolTransactionBehaviour>
+  <CanRaiseEventsInternal>True</CanRaiseEventsInternal>
+  <Definitions>
+    <Definition>
+      <Description />
+      <ConnectionString>MSSQL.NET?Server=laspalmascaborca.dnsalias.net;Database=RedCo;User ID=sa;Password=Cistem32;</ConnectionString>
+      <ConnectionType>SQLite</ConnectionType>
+      <Default>True</Default>
+      <Name>RPSuite</Name>
+    </Definition>
+  </Definitions>
+</Connections>

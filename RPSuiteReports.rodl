@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Library Name="RPSuiteReports" UID="{9256BE22-2DC0-4D71-B026-90C5875012BC}" Version="3.0">
+<Services>
+</Services>
+<Structs>
+<Struct Name="TRPReporte" UID="{B16210DA-DE06-42E7-9B91-89E730402363}" AutoCreateParams="1">
+<Elements>
+<Element Name="ReporteID" DataType="Integer">
+</Element>
+<Element Name="Nombre" DataType="AnsiString">
+</Element>
+<Element Name="Columnas" DataType="Integer">
+</Element>
+<Element Name="Filas" DataType="Integer">
+</Element>
+<Element Name="Template" DataType="AnsiString">
+</Element>
+<Element Name="LayoutPivotGrid" DataType="AnsiString">
+</Element>
+<Element Name="Script" DataType="AnsiString">
+</Element>
+<Element Name="Descripcion" DataType="AnsiString">
+</Element>
+<Element Name="Datasets" DataType="ARPDataset">
+</Element>
+<Element Name="Parametros" DataType="ARPParametro">
+</Element>
+<Element Name="Graficas" DataType="ARPGrafica">
+</Element>
+<Element Name="Concentrados" DataType="ARPConcentrado">
+</Element>
+</Elements>
+</Struct>
+<Struct Name="TRPParametro" UID="{10ABB5DB-37C5-4278-80FB-2F6850EE163B}" AutoCreateParams="1">
+<Elements>
+<Element Name="ParametroID" DataType="Integer">
+</Element>
+<Element Name="Nombre" DataType="AnsiString">
+</Element>
+<Element Name="Descripcion" DataType="AnsiString">
+</Element>
+<Element Name="SQL" DataType="AnsiString">
+</Element>
+<Element Name="CampoLLave" DataType="AnsiString">
+</Element>
+<Element Name="Tipo" DataType="Integer">
+</Element>
+<Element Name="TipoControl" DataType="Integer">
+</Element>
+<Element Name="IndiceGrupo" DataType="Integer">
+</Element>
+<Element Name="Lista" DataType="ARPValorLista">
+</Element>
+<Element Name="Valor" DataType="Variant">
+</Element>
+</Elements>
+</Struct>
+<Struct Name="TRPDataset" UID="{563B1A61-003F-412E-BFA4-A6994B1B0939}" AutoCreateParams="1">
+<Elements>
+<Element Name="DatasetID" DataType="Integer">
+</Element>
+<Element Name="Nombre" DataType="AnsiString">
+</Element>
+<Element Name="Script" DataType="AnsiString">
+</Element>
+<Element Name="CampoJoin" DataType="AnsiString">
+</Element>
+<Element Name="MasterDetailID" DataType="Integer">
+</Element>
+<Element Name="Campos" DataType="ARPCampo">
+</Element>
+<Element Name="Pasos" DataType="ARPPaso">
+</Element>
+</Elements>
+</Struct>
+<Struct Name="TRPCampo" UID="{05D87785-8A1D-4316-AF0B-CAA602586214}" AutoCreateParams="1">
+<Elements>
+<Element Name="CampoID" DataType="Integer">
+</Element>
+<Element Name="Nombre" DataType="AnsiString">
+</Element>
+<Element Name="Tipo" DataType="Integer">
+</Element>
+<Element Name="Size" DataType="Integer">
+</Element>
+<Element Name="Formato" DataType="AnsiString">
+</Element>
+</Elements>
+</Struct>
+<Struct Name="TRPPaso" UID="{A7888E19-61CA-479E-A5B2-13D3A9469A66}" AutoCreateParams="1">
+<Elements>
+<Element Name="PasoID" DataType="Integer">
+</Element>
+<Element Name="Nombre" DataType="AnsiString">
+</Element>
+<Element Name="SQL" DataType="AnsiString">
+</Element>
+</Elements>
+</Struct>
+<Struct Name="TRPGrafica" UID="{C8394713-DF84-4E90-86E6-A99032DB8696}" AutoCreateParams="1">
+<Elements>
+<Element Name="GraficaID" DataType="Integer">
+</Element>
+<Element Name="Nombre" DataType="AnsiString">
+</Element>
+<Element Name="Template" DataType="AnsiString">
+</Element>
+</Elements>
+</Struct>
+<Struct Name="TRPValidaQuery" UID="{70F896E4-AD94-4512-9AC1-BE2BBA185160}" AutoCreateParams="1">
+<Elements>
+<Element Name="Valido" DataType="Boolean">
+</Element>
+<Element Name="Error" DataType="AnsiString">
+</Element>
+<Element Name="Campos" DataType="ARPCampo">
+</Element>
+</Elements>
+</Struct>
+<Struct Name="TRPValorParametros" UID="{DFFE9866-2FC4-4EF8-8909-C973C8AC31ED}" AutoCreateParams="1">
+<Elements>
+<Element Name="Valido" DataType="Boolean">
+</Element>
+<Element Name="Error" DataType="AnsiString">
+</Element>
+<Element Name="Parametros" DataType="ARPParametro">
+</Element>
+</Elements>
+</Struct>
+<Struct Name="TRPValorLista" UID="{8B03E813-40AD-4916-AE50-707C4A6A5A2F}" AutoCreateParams="1">
+<Elements>
+<Element Name="ValorID" DataType="Integer">
+</Element>
+<Element Name="Descripcion" DataType="AnsiString">
+</Element>
+<Element Name="Value" DataType="AnsiString">
+</Element>
+</Elements>
+</Struct>
+<Struct Name="TRPFavorito" UID="{123309A9-1BEB-4747-B57C-B79D6312CDC3}" AutoCreateParams="1">
+<Elements>
+<Element Name="UsuarioID" DataType="Integer">
+</Element>
+<Element Name="Tag" DataType="Integer">
+</Element>
+<Element Name="FavoritoID" DataType="Integer">
+</Element>
+<Element Name="GradientBeginColor" DataType="Integer">
+</Element>
+<Element Name="Text1" DataType="AnsiString">
+</Element>
+<Element Name="Text3" DataType="AnsiString">
+</Element>
+<Element Name="ImageIndex" DataType="Integer">
+</Element>
+<Element Name="Size" DataType="Integer">
+</Element>
+<Element Name="IndexInGroup" DataType="Integer">
+</Element>
+<Element Name="RowCount" DataType="Integer">
+</Element>
+<Element Name="GroupIndex" DataType="Integer">
+</Element>
+</Elements>
+</Struct>
+<Struct Name="TRPConcentrado" UID="{7B8E9DD6-C7E6-4871-8BE1-DB31F8DF76DF}" AutoCreateParams="1">
+<Elements>
+<Element Name="ConcentradoID" DataType="Integer">
+</Element>
+<Element Name="Nombre" DataType="AnsiString">
+</Element>
+<Element Name="Dataset" DataType="Integer">
+</Element>
+<Element Name="Template" DataType="AnsiString">
+</Element>
+</Elements>
+</Struct>
+</Structs>
+<Enums>
+</Enums>
+<Arrays>
+<Array Name="ARPDataset" UID="{69D9DA31-0DDE-43BF-871D-80E161C86D13}">
+<ElementType DataType="TRPDataset" />
+</Array>
+<Array Name="ARPParametro" UID="{1DB029A6-4B48-46D5-8724-B818F866E044}">
+<ElementType DataType="TRPParametro" />
+</Array>
+<Array Name="ARPCampo" UID="{25171CDE-35AD-48A3-A556-7609BACEACDB}">
+<ElementType DataType="TRPCampo" />
+</Array>
+<Array Name="ARPPaso" UID="{26A9E5EC-6BC6-4D94-AE6E-6F469447B6FF}">
+<ElementType DataType="TRPPaso" />
+</Array>
+<Array Name="ARPGrafica" UID="{D86378E8-EEA2-40C7-B343-AB219D3381B4}">
+<ElementType DataType="TRPGrafica" />
+</Array>
+<Array Name="ARPValorLista" UID="{147B2DE6-E13C-4794-B868-F8B748F166D2}">
+<ElementType DataType="TRPValorLista" />
+</Array>
+<Array Name="ARPFavorito" UID="{7C6051A9-C135-4A80-A1EE-9C77DDC5476E}">
+<ElementType DataType="TRPFavorito" />
+</Array>
+<Array Name="ARPConcentrado" UID="{B656D516-4AF4-4FB3-A02F-5F4B9F531EFA}">
+<ElementType DataType="TRPConcentrado" />
+</Array>
+</Arrays>
+</Library>
