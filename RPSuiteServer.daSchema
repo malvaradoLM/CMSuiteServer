@@ -96,7 +96,7 @@
           <Description />
         </Item2>
         <Item3>
-          <Name>Usuario</Name>
+          <Name>UserName</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
@@ -105,7 +105,7 @@
           <CustomAttributes />
           <DictionaryEntry />
           <DisplayFormat />
-          <DisplayLabel>Usuario</DisplayLabel>
+          <DisplayLabel>UserName</DisplayLabel>
           <DisplayWidth>0</DisplayWidth>
           <EditFormat />
           <EditMask />
@@ -126,7 +126,7 @@
           <Description />
         </Item3>
         <Item4>
-          <Name>Clave</Name>
+          <Name>Password</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
@@ -135,7 +135,7 @@
           <CustomAttributes />
           <DictionaryEntry />
           <DisplayFormat />
-          <DisplayLabel>Clave</DisplayLabel>
+          <DisplayLabel>Password</DisplayLabel>
           <DisplayWidth>0</DisplayWidth>
           <EditFormat />
           <EditMask />
@@ -208,12 +208,12 @@
           <Connection>RPSuite</Connection>
           <SQL>SELECT 	
 	[UsuarioID], [Nombre], [Status], 
-	[Usuario], [Clave], [EstacionID] 
+	[UserName], [Password], [EstacionID] 
 FROM 
 	[Usuario] 
 WHERE 
-	(Nombre = :Usuario) AND
-	(Clave = :Clave) </SQL>
+	(UserName = :Usuario) AND
+	(Password = :Clave) </SQL>
           <TargetTable>Usuario</TargetTable>
           <ConnectionType>SQLite</ConnectionType>
           <Default>True</Default>
@@ -237,14 +237,14 @@ WHERE
               <TableField>Status</TableField>
             </Item2>
             <Item3>
-              <DatasetField>Usuario</DatasetField>
-              <SQLOrigin>Usuario</SQLOrigin>
-              <TableField>Usuario</TableField>
+              <DatasetField>UserName</DatasetField>
+              <SQLOrigin>UserName</SQLOrigin>
+              <TableField>UserName</TableField>
             </Item3>
             <Item4>
-              <DatasetField>Clave</DatasetField>
-              <SQLOrigin>Clave</SQLOrigin>
-              <TableField>Clave</TableField>
+              <DatasetField>Password</DatasetField>
+              <SQLOrigin>Password</SQLOrigin>
+              <TableField>Password</TableField>
             </Item4>
             <Item5>
               <DatasetField>EstacionID</DatasetField>
@@ -257,7 +257,7 @@ WHERE
       </Statements>
       <Params IsObject="true" Count="2" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam">
         <Item0>
-          <Value>Manuel</Value>
+          <Value />
           <ParamType>daptInput</ParamType>
           <Name>Usuario</Name>
           <DataType>datString</DataType>
@@ -270,11 +270,11 @@ WHERE
           <Description />
         </Item0>
         <Item1>
-          <Value>123</Value>
+          <Value />
           <ParamType>daptInput</ParamType>
           <Name>Clave</Name>
           <DataType>datString</DataType>
-          <Size>10</Size>
+          <Size>100</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
           <BlobType>dabtUnknown</BlobType>

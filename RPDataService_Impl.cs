@@ -533,5 +533,43 @@ namespace RPSuiteServer
                 throw ex;
             }
         }
+
+        public int GuardaPedido(TPedido pedido)
+        {
+            int res = -1;
+            try
+            {
+                using (IDbCommand lCommand = this.ServiceSchema.NewCommand(this.Connection, "InsertPedido", new string[] { "PedidoID", "Serie", "Folio", "Fecha", "FechaModificacion", "Ejercicio", "Periodo", "Dia", "SubTotal", "IVA", "IEPS", "Total", "Descuento", "Status", "Observacion", "EstacionID", "ConfiguracionID", "UsuarioID", "StatusID" }, new object[] { pedido.PedidoID, pedido.Serie, pedido.Folio, pedido.Fecha, pedido.FechaModificacion, pedido.Ejercisio, pedido.Periodo, pedido.Dia, pedido.Subtotal, pedido.IVA, pedido.IEPS, pedido.Total, pedido.Descuento, pedido.Status, pedido.Observacion, pedido.EstacionID, pedido.ConfiguracionID, pedido.UsuarioID, pedido.StatusID }))
+                {
+                    res = int.Parse(lCommand.ExecuteScalar().ToString());
+                }
+                return res;
+            }
+            catch (Exception ex)
+            {
+
+                return res;
+            }
+
+        }
+
+        public int GuardaDetallePedido(TDetallePedido Datos)
+        {
+            int res = -1;
+            try
+            {
+                using (IDbCommand lCommand = this.ServiceSchema.NewCommand(this.Connection, "InsertDetallePedido", new string[] { "DetallePedidoID", "Descuento", "IEPS", "IVA", "NoItems", "PedidoID", "Precio", "ProductoID", "SubTotal", "TerminalID", "Total", "VehiculoID", "Volumen" }, new object[] { Datos.DetallePedidoID, Datos.Descuento, Datos.IEPS, Datos.IVA, Datos.NoItems, Datos.PedidoID, Datos.Precio, Datos.ProductoID, Datos.Subtotal, Datos.TerminalID, Datos.Total, Datos.VehiculoID, Datos.Volumen }))
+                {
+                    res = int.Parse(lCommand.ExecuteScalar().ToString());
+                }
+                return res;
+            }
+            catch (Exception ex)
+            {
+
+                return res;
+            }
+
+        }
     }
 }
