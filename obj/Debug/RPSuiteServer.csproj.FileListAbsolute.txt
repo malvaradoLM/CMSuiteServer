@@ -160,3 +160,16 @@ C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\obj\Debug\
 C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\obj\Debug\RPSuiteServer.exe
 C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\obj\Debug\RPSuiteServer.pdb
 C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\obj\Debug\RPSuiteServer.csprojResolveAssemblyReference.cache
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.csprojResolveAssemblyReference.cache
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.RPDataService.resources
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.RPLoginService.resources
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.Engine.resources
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.MainForm.resources
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.MainService.resources
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.ProjectInstaller.resources
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.Properties.Resources.resources
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.csproj.GenerateResource.Cache
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.exe.licenses
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.csproj.CoreCompileInputs.cache
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.exe
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.pdb
