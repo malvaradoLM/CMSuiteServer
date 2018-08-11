@@ -1,190 +1,28 @@
-Z:\Win10\RPSuiteServer\bin\Debug\RPSuiteServer.exe.config
-Z:\Win10\RPSuiteServer\bin\Debug\RPSuiteServer.exe
-Z:\Win10\RPSuiteServer\bin\Debug\RPSuiteServer.pdb
-Z:\Win10\RPSuiteServer\bin\Debug\RemObjects.DataAbstract.dll
-Z:\Win10\RPSuiteServer\bin\Debug\RemObjects.DataAbstract.Server.dll
-Z:\Win10\RPSuiteServer\bin\Debug\RemObjects.SDK.dll
-Z:\Win10\RPSuiteServer\bin\Debug\RemObjects.SDK.Server.dll
-Z:\Win10\RPSuiteServer\bin\Debug\RemObjects.SDK.ZeroConf.dll
-Z:\Win10\RPSuiteServer\bin\Debug\RemObjects.SDK.ZLib.dll
-Z:\Win10\RPSuiteServer\bin\Debug\RemObjects.SDK.pdb
-Z:\Win10\RPSuiteServer\bin\Debug\RemObjects.SDK.Server.pdb
-Z:\Win10\RPSuiteServer\bin\Debug\RemObjects.SDK.ZeroConf.pdb
-Z:\Win10\RPSuiteServer\bin\Debug\RemObjects.SDK.ZLib.pdb
-Z:\Win10\RPSuiteServer\bin\Debug\RemObjects.DataAbstract.pdb
-Z:\Win10\RPSuiteServer\bin\Debug\RemObjects.DataAbstract.Server.pdb
-Z:\Win10\RPSuiteServer\obj\Debug\RPSuiteServer.csprojResolveAssemblyReference.cache
-Z:\Win10\RPSuiteServer\obj\Debug\RPSuiteServer.Engine.resources
-Z:\Win10\RPSuiteServer\obj\Debug\RPSuiteServer.MainForm.resources
-Z:\Win10\RPSuiteServer\obj\Debug\RPSuiteServer.MainService.resources
-Z:\Win10\RPSuiteServer\obj\Debug\RPSuiteServer.ProjectInstaller.resources
-Z:\Win10\RPSuiteServer\obj\Debug\RPSuiteServer.Properties.Resources.resources
-Z:\Win10\RPSuiteServer\obj\Debug\RPSuiteServer.csproj.GenerateResource.Cache
-Z:\Win10\RPSuiteServer\obj\Debug\RPSuiteServer.exe.licenses
-Z:\Win10\RPSuiteServer\obj\Debug\RPSuiteServer.exe
-Z:\Win10\RPSuiteServer\obj\Debug\RPSuiteServer.pdb
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\bin\Debug\RPSuiteServer.exe.config
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\bin\Debug\RPSuiteServer.exe
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\bin\Debug\RPSuiteServer.pdb
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.DataAbstract.dll
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.DataAbstract.Server.dll
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.dll
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.Server.dll
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.ZeroConf.dll
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.ZLib.dll
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.pdb
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.Server.pdb
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.ZeroConf.pdb
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.ZLib.pdb
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.DataAbstract.pdb
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.DataAbstract.Server.pdb
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.csprojResolveAssemblyReference.cache
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.RPDataService.resources
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.RPLoginService.resources
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.Engine.resources
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.MainForm.resources
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.MainService.resources
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.ProjectInstaller.resources
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.Properties.Resources.resources
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.csproj.GenerateResource.Cache
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.exe.licenses
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.exe
-C:\Users\RedPacifico\documents\visual studio 2017\Projects\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.pdb
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.RPDataService.resources
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.RPLoginService.resources
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.Engine.resources
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.MainForm.resources
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.MainService.resources
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.ProjectInstaller.resources
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.Properties.Resources.resources
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.csproj.GenerateResource.Cache
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.exe.licenses
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RPSuiteServer.exe.config
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RPSuiteServer.exe
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RPSuiteServer.pdb
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.DataAbstract.dll
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.DataAbstract.Server.dll
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.dll
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.Server.dll
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.ZeroConf.dll
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.ZLib.dll
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.pdb
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.Server.pdb
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.ZeroConf.pdb
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.ZLib.pdb
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.DataAbstract.pdb
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.DataAbstract.Server.pdb
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.exe
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.pdb
-Z:\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.csprojResolveAssemblyReference.cache
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RPSuiteServer.exe.config
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RPSuiteServer.exe
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RPSuiteServer.pdb
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.DataAbstract.dll
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.DataAbstract.Server.dll
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.dll
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.Server.dll
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.ZeroConf.dll
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.ZLib.dll
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.pdb
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.Server.pdb
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.ZeroConf.pdb
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.ZLib.pdb
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.DataAbstract.pdb
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.DataAbstract.Server.pdb
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.RPDataService.resources
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.RPLoginService.resources
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.Engine.resources
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.MainForm.resources
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.MainService.resources
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.ProjectInstaller.resources
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.Properties.Resources.resources
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.csproj.GenerateResource.Cache
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.exe.licenses
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.exe
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.pdb
-C:\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.csprojResolveAssemblyReference.cache
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RPSuiteServer.exe.config
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RPSuiteServer.exe
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RPSuiteServer.pdb
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.DataAbstract.dll
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.DataAbstract.Server.dll
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.dll
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.Server.dll
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.ZeroConf.dll
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.ZLib.dll
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.pdb
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.Server.pdb
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.ZeroConf.pdb
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.SDK.ZLib.pdb
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.DataAbstract.pdb
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\bin\Debug\RemObjects.DataAbstract.Server.pdb
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.RPDataService.resources
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.RPLoginService.resources
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.Engine.resources
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.MainForm.resources
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.MainService.resources
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.ProjectInstaller.resources
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.Properties.Resources.resources
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.csproj.GenerateResource.Cache
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.exe.licenses
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.csproj.CoreCompileInputs.cache
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.exe
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.pdb
-\\vmware-host\Shared Folders\Proyectos\RPSuite 1.0\RPSuiteServer\obj\Debug\RPSuiteServer.csprojResolveAssemblyReference.cache
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\bin\Debug\RPSuiteServer.exe.config
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\bin\Debug\RPSuiteServer.exe
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\bin\Debug\RPSuiteServer.pdb
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\bin\Debug\RemObjects.DataAbstract.dll
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\bin\Debug\RemObjects.DataAbstract.Server.dll
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\bin\Debug\RemObjects.SDK.dll
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\bin\Debug\RemObjects.SDK.Server.dll
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\bin\Debug\RemObjects.SDK.ZeroConf.dll
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\bin\Debug\RemObjects.SDK.ZLib.dll
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\bin\Debug\RemObjects.SDK.pdb
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\bin\Debug\RemObjects.SDK.Server.pdb
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\bin\Debug\RemObjects.SDK.ZeroConf.pdb
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\bin\Debug\RemObjects.SDK.ZLib.pdb
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\bin\Debug\RemObjects.DataAbstract.pdb
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\bin\Debug\RemObjects.DataAbstract.Server.pdb
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\obj\Debug\RPSuiteServer.RPDataService.resources
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\obj\Debug\RPSuiteServer.RPLoginService.resources
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\obj\Debug\RPSuiteServer.Engine.resources
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\obj\Debug\RPSuiteServer.MainForm.resources
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\obj\Debug\RPSuiteServer.MainService.resources
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\obj\Debug\RPSuiteServer.ProjectInstaller.resources
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\obj\Debug\RPSuiteServer.Properties.Resources.resources
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\obj\Debug\RPSuiteServer.csproj.GenerateResource.Cache
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\obj\Debug\RPSuiteServer.exe.licenses
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\obj\Debug\RPSuiteServer.csproj.CoreCompileInputs.cache
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\obj\Debug\RPSuiteServer.exe
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\obj\Debug\RPSuiteServer.pdb
-C:\Users\RedPacifico\Desktop\RedCoSiteVersionEscritorio\RPSuiteServer\obj\Debug\RPSuiteServer.csprojResolveAssemblyReference.cache
-C:\Proyectos\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.RPDataService.resources
-C:\Proyectos\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.RPLoginService.resources
-C:\Proyectos\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.Engine.resources
-C:\Proyectos\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.MainForm.resources
-C:\Proyectos\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.MainService.resources
-C:\Proyectos\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.ProjectInstaller.resources
-C:\Proyectos\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.Properties.Resources.resources
-C:\Proyectos\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.csproj.GenerateResource.Cache
-C:\Proyectos\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.exe.licenses
-C:\Proyectos\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.csproj.CoreCompileInputs.cache
-C:\Proyectos\Comercializadora\CMSuiteServer\bin\Debug\RPSuiteServer.exe.config
-C:\Proyectos\Comercializadora\CMSuiteServer\bin\Debug\RPSuiteServer.exe
-C:\Proyectos\Comercializadora\CMSuiteServer\bin\Debug\RPSuiteServer.pdb
-C:\Proyectos\Comercializadora\CMSuiteServer\bin\Debug\RemObjects.DataAbstract.dll
-C:\Proyectos\Comercializadora\CMSuiteServer\bin\Debug\RemObjects.DataAbstract.Server.dll
-C:\Proyectos\Comercializadora\CMSuiteServer\bin\Debug\RemObjects.SDK.dll
-C:\Proyectos\Comercializadora\CMSuiteServer\bin\Debug\RemObjects.SDK.Server.dll
-C:\Proyectos\Comercializadora\CMSuiteServer\bin\Debug\RemObjects.SDK.ZeroConf.dll
-C:\Proyectos\Comercializadora\CMSuiteServer\bin\Debug\RemObjects.SDK.ZLib.dll
-C:\Proyectos\Comercializadora\CMSuiteServer\bin\Debug\RemObjects.SDK.pdb
-C:\Proyectos\Comercializadora\CMSuiteServer\bin\Debug\RemObjects.SDK.Server.pdb
-C:\Proyectos\Comercializadora\CMSuiteServer\bin\Debug\RemObjects.SDK.ZeroConf.pdb
-C:\Proyectos\Comercializadora\CMSuiteServer\bin\Debug\RemObjects.SDK.ZLib.pdb
-C:\Proyectos\Comercializadora\CMSuiteServer\bin\Debug\RemObjects.DataAbstract.pdb
-C:\Proyectos\Comercializadora\CMSuiteServer\bin\Debug\RemObjects.DataAbstract.Server.pdb
-C:\Proyectos\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.exe
-C:\Proyectos\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.pdb
-C:\Proyectos\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.csprojResolveAssemblyReference.cache
+C:\SuiteWEB\CMSuiteServer\bin\Debug\RPSuiteServer.exe.config
+C:\SuiteWEB\CMSuiteServer\bin\Debug\RPSuiteServer.exe
+C:\SuiteWEB\CMSuiteServer\bin\Debug\RPSuiteServer.pdb
+C:\SuiteWEB\CMSuiteServer\bin\Debug\RemObjects.DataAbstract.dll
+C:\SuiteWEB\CMSuiteServer\bin\Debug\RemObjects.DataAbstract.Server.dll
+C:\SuiteWEB\CMSuiteServer\bin\Debug\RemObjects.SDK.dll
+C:\SuiteWEB\CMSuiteServer\bin\Debug\RemObjects.SDK.Server.dll
+C:\SuiteWEB\CMSuiteServer\bin\Debug\RemObjects.SDK.ZeroConf.dll
+C:\SuiteWEB\CMSuiteServer\bin\Debug\RemObjects.SDK.ZLib.dll
+C:\SuiteWEB\CMSuiteServer\bin\Debug\RemObjects.SDK.pdb
+C:\SuiteWEB\CMSuiteServer\bin\Debug\RemObjects.SDK.Server.pdb
+C:\SuiteWEB\CMSuiteServer\bin\Debug\RemObjects.SDK.ZeroConf.pdb
+C:\SuiteWEB\CMSuiteServer\bin\Debug\RemObjects.SDK.ZLib.pdb
+C:\SuiteWEB\CMSuiteServer\bin\Debug\RemObjects.DataAbstract.pdb
+C:\SuiteWEB\CMSuiteServer\bin\Debug\RemObjects.DataAbstract.Server.pdb
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.RPDataService.resources
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.RPLoginService.resources
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.Engine.resources
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.MainForm.resources
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.MainService.resources
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.ProjectInstaller.resources
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.Properties.Resources.resources
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.csproj.GenerateResource.Cache
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.exe.licenses
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.csproj.CoreCompileInputs.cache
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.exe
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.pdb
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.csprojResolveAssemblyReference.cache

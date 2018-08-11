@@ -11130,7 +11130,7 @@ WHERE
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
-          <DataType>datWideString</DataType>
+          <DataType>datString</DataType>
           <DefaultValue />
           <CustomAttributes />
           <DictionaryEntry />
@@ -11186,16 +11186,16 @@ WHERE
           <Description />
         </Item2>
         <Item3>
-          <Name>Usuario</Name>
+          <Name>UserName</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
-          <DataType>datWideString</DataType>
+          <DataType>datString</DataType>
           <DefaultValue />
           <CustomAttributes />
           <DictionaryEntry />
           <DisplayFormat />
-          <DisplayLabel>Usuario</DisplayLabel>
+          <DisplayLabel>UserName</DisplayLabel>
           <DisplayWidth>0</DisplayWidth>
           <EditFormat />
           <EditMask />
@@ -11216,16 +11216,16 @@ WHERE
           <Description />
         </Item3>
         <Item4>
-          <Name>Clave</Name>
+          <Name>Password</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
-          <DataType>datWideString</DataType>
+          <DataType>datString</DataType>
           <DefaultValue />
           <CustomAttributes />
           <DictionaryEntry />
           <DisplayFormat />
-          <DisplayLabel>Clave</DisplayLabel>
+          <DisplayLabel>Password</DisplayLabel>
           <DisplayWidth>0</DisplayWidth>
           <EditFormat />
           <EditMask />
@@ -11296,14 +11296,14 @@ WHERE
       <Statements IsCollection="true" IsObject="true" Count="1" ItemClass="TDAStatement" Type="TDAStatementCollection">
         <Item0>
           <Connection>RPSuite</Connection>
-          <SQL>Declare @Parametro Varchar(100)
+          <SQL>	Declare @Parametro Varchar(100)
 Declare @WildCards varchar(100)
 select @Parametro=(Select :Datos)
 select @WildCards=(Select '%' + @Parametro + '%') 
 
 SELECT 	
 	[UsuarioID], [Nombre], [Status], 
-	[Usuario], [Clave], [EstacionID] 
+	[UserName], [Password], [EstacionID] 
 FROM 
 	[Usuario] 
 WHERE 
@@ -11335,14 +11335,14 @@ WHERE
               <TableField>Status</TableField>
             </Item2>
             <Item3>
-              <DatasetField>Usuario</DatasetField>
-              <SQLOrigin>Usuario</SQLOrigin>
-              <TableField>Usuario</TableField>
+              <DatasetField>UserName</DatasetField>
+              <SQLOrigin>UserName</SQLOrigin>
+              <TableField>UserName</TableField>
             </Item3>
             <Item4>
-              <DatasetField>Clave</DatasetField>
-              <SQLOrigin>Clave</SQLOrigin>
-              <TableField>Clave</TableField>
+              <DatasetField>Password</DatasetField>
+              <SQLOrigin>Password</SQLOrigin>
+              <TableField>Password</TableField>
             </Item4>
             <Item5>
               <DatasetField>EstacionID</DatasetField>
@@ -11355,7 +11355,7 @@ WHERE
       </Statements>
       <Params IsObject="true" Count="1" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam">
         <Item0>
-          <Value>1</Value>
+          <Value />
           <ParamType>daptInput</ParamType>
           <Name>Datos</Name>
           <DataType>datString</DataType>
