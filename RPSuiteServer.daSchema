@@ -13212,7 +13212,7 @@ FROM
     </Item33>
     <Item34>
       <ReadOnly>False</ReadOnly>
-      <Fields IsObject="true" Count="24" IsCollection="true" ItemClass="TDAField" Type="TDASchemaFieldCollection">
+      <Fields IsObject="true" Count="23" IsCollection="true" ItemClass="TDAField" Type="TDASchemaFieldCollection">
         <Item0>
           <Name>PedidoID</Name>
           <Alignment>taLeftJustify</Alignment>
@@ -13814,36 +13814,6 @@ FROM
           <Description />
         </Item19>
         <Item20>
-          <Name>StatusID</Name>
-          <Alignment>taLeftJustify</Alignment>
-          <Calculated>False</Calculated>
-          <ServerCalculated>False</ServerCalculated>
-          <DataType>datInteger</DataType>
-          <DefaultValue />
-          <CustomAttributes />
-          <DictionaryEntry />
-          <DisplayFormat />
-          <DisplayLabel>StatusID</DisplayLabel>
-          <DisplayWidth>0</DisplayWidth>
-          <EditFormat />
-          <EditMask />
-          <InPrimaryKey>False</InPrimaryKey>
-          <LogChanges>True</LogChanges>
-          <ReadOnly>False</ReadOnly>
-          <RegExpression />
-          <Required>False</Required>
-          <ServerAutoRefresh>False</ServerAutoRefresh>
-          <Visible>True</Visible>
-          <Expression />
-          <Size>0</Size>
-          <DecimalScale>0</DecimalScale>
-          <DecimalPrecision>0</DecimalPrecision>
-          <BlobType>dabtUnknown</BlobType>
-          <GeneratorName />
-          <BusinessClassID />
-          <Description />
-        </Item20>
-        <Item21>
           <Name>statusnombre</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -13872,8 +13842,8 @@ FROM
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item21>
-        <Item22>
+        </Item20>
+        <Item21>
           <Name>ProductoID</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -13902,8 +13872,8 @@ FROM
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item22>
-        <Item23>
+        </Item21>
+        <Item22>
           <Name>ProductoNombre</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -13932,7 +13902,7 @@ FROM
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item23>
+        </Item22>
       </Fields>
       <BusinessRulesClient IsObject="true" Type="TDAClientBusinessRuleScript">
         <CompileOnServer>False</CompileOnServer>
@@ -13959,8 +13929,8 @@ FROM
 	[Fecha], [FechaModificacion], [Ejercicio], 
 	[Periodo], [Dia], ped.[Subtotal], 
     ped.[IVA], ped.[IEPS], ped.[Total], 
-	ped.[Descuento], ped.[Status], [Observacion], 
-	ped.[EstacionID], est.[Nombre] as estacionnombre, ped.[ConfiguracionID],con.[Nombre] as configuracionnombre, [UsuarioID] ,ped.[StatusID], sta.[Nombre] as statusnombre, dp.ProductoID,pd.Descripcion as ProductoNombre
+	ped.[Descuento], ped.[StatusID], [Observacion], 
+	ped.[EstacionID], est.[Nombre] as estacionnombre, ped.[ConfiguracionID],con.[Nombre] as configuracionnombre, [UsuarioID] , sta.[Nombre] as statusnombre, dp.ProductoID,pd.Descripcion as ProductoNombre
 FROM 
 	[Pedido] ped
 	inner join Estacion est on est.[EstacionID] = ped.[EstacionID]
@@ -13969,7 +13939,7 @@ FROM
 	inner join [DetallePedido] dp on dp.[PedidoID] = ped.[PedidoID]
 	inner join [Producto] pd on pd.ProductoID = dp.ProductoID	
 WHERE 
-	[UsuarioID] = :Datos </SQL>
+	[UsuarioID] = :Datos</SQL>
           <TargetTable>pedido</TargetTable>
           <ConnectionType>SQLite</ConnectionType>
           <Default>True</Default>
@@ -14078,7 +14048,7 @@ WHERE
               <TableField>UsuarioID</TableField>
             </Item19>
             <Item20>
-              <DatasetField>StatusID</DatasetField>
+              <DatasetField>StatusI</DatasetField>
               <SQLOrigin>StatusID</SQLOrigin>
               <TableField>StatusID</TableField>
             </Item20>
@@ -14103,11 +14073,11 @@ WHERE
       </Statements>
       <Params IsObject="true" Count="1" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam">
         <Item0>
-          <Value>2</Value>
+          <Value />
           <ParamType>daptInput</ParamType>
           <Name>Datos</Name>
           <DataType>datString</DataType>
-          <Size>100</Size>
+          <Size>0</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
           <BlobType>dabtUnknown</BlobType>
