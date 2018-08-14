@@ -70,22 +70,28 @@ namespace RPSuiteServer
 
             IDbCommand lcommand;
             var reader = dataService.ServiceSchema.GetDataReader(localConnection, "spLogin", new string[] { "Usuario", "Clave" }, new object[] { userId, password }, out lcommand);
+            //var reader = dataService.ServiceSchema.GetDataReader(localConnection, "spLogin", new string[] { "Nombre", "Contrasena" }, new object[] { userId, password }, out lcommand);
             Boolean lIsLoginSuccessful = (((System.Data.Common.DbDataReader)reader).HasRows);
 
             if (lIsLoginSuccessful)
             {
-                
                 // This is an example of setting user-specific session information
                 this.Session["UserID"] = userId;
 
-                reader.Read();
                 userInfo = new UserInfo();
                 userInfo.UserID = userId;
-                userInfo.Attributes = new object[]
-                    {
-                        (string)reader["Usuario"]
-                    };
-                
+
+                //read reader to get id user
+                while (reader.Read())
+                {
+                    userInfo.UserID = Convert.ToString((Int32)reader["UsuarioID"]);
+                    userInfo.SessionID = (string)reader["Nombre"];
+                    userInfo.Attributes = new object[]
+            {
+                      (int)reader["EstacionID"]
+            };
+                }
+
             }
             else
             {
