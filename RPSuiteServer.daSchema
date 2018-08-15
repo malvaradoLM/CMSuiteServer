@@ -11070,21 +11070,7 @@ WHERE
           <Description />
         </Item0>
       </Statements>
-      <Params IsObject="true" Count="1" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam">
-        <Item0>
-          <Value />
-          <ParamType>daptInput</ParamType>
-          <Name>Datos</Name>
-          <DataType>datString</DataType>
-          <Size>100</Size>
-          <DecimalScale>0</DecimalScale>
-          <DecimalPrecision>0</DecimalPrecision>
-          <BlobType>dabtUnknown</BlobType>
-          <GeneratorName />
-          <BusinessClassID />
-          <Description />
-        </Item0>
-      </Params>
+      <Params IsObject="true" Count="0" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam" />
       <CustomAttributes />
       <IsPublic>True</IsPublic>
       <DynamicWhereXML />
