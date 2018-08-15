@@ -10888,18 +10888,19 @@ select @Parametro=(Select :Datos)
 select @WildCards=(Select '%' + @Parametro + '%') 
 
 
-
 SELECT 	
 	[EstacionID], [Nombre], [RazonSocial], 
-	[RFC], [Calle], [NoExterior], 
-	[NoInterior], [Ciudad], [Municipio], 
-	[Estado], [Status], [Telefono], 
-	[Contacto], [Email], [GrupoID], 
-	[ZonaID], [FormaPagoID], [MetodoPagoID], 
-	[PlazoPago], [NIP], [FechaBaja], 
-	[LimiteCredito], [Deposito], [CambioCredito], 
-	[UltimoPago], [DiasRevisionID], [DiaPagoID], 
-	[VendedorID], [GrupoFacturarID], [CP] 
+	[RFC], [Calle], [Colonia], 
+	[NoExterior], [NoInterior], [Ciudad], 
+	[Municipio], [Estado], [Status], 
+	[CodigoPostal], [Telefono], [CuentaContable], 
+	[Contacto], [PlazoPago], [FechaIngreso], 
+	[NIP], [FechaBaja], [LimiteCredito], 
+	[Deposito], [CambioCredito], [CambioCreditoAnterior], 
+	[Email], [GrupoID], [ZonaID], 
+	[FormaPagoID], [VendedorID], [DiaRevision], 
+	[DiaPago], [CuentaBancaria], [FacturaUsoID], 
+	[MetodoPagoID] 
 FROM 
 	[Estacion] 
 WHERE 
@@ -11070,7 +11071,21 @@ WHERE
           <Description />
         </Item0>
       </Statements>
-      <Params IsObject="true" Count="0" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam" />
+      <Params IsObject="true" Count="1" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam">
+        <Item0>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>Datos</Name>
+          <DataType>datString</DataType>
+          <Size>100</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item0>
+      </Params>
       <CustomAttributes />
       <IsPublic>True</IsPublic>
       <DynamicWhereXML />
