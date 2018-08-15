@@ -119,8 +119,6 @@
 </Parameter>
 <Parameter Name="ImpuestoPorcentaje" DataType="Double" Flag="In" >
 </Parameter>
-<Parameter Name="Status" DataType="Boolean" Flag="In" >
-</Parameter>
 <Parameter Name="Observacion" DataType="AnsiString" Flag="In" >
 </Parameter>
 <Parameter Name="FacturaUsoID" DataType="Integer" Flag="In" >
@@ -470,8 +468,6 @@
 <Element Name="Serie" DataType="AnsiString">
 </Element>
 <Element Name="Folio" DataType="Integer">
-</Element>
-<Element Name="Status" DataType="Boolean">
 </Element>
 <Element Name="Observacion" DataType="AnsiString">
 </Element>

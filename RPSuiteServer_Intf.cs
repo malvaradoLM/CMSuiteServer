@@ -1714,7 +1714,6 @@ namespace RPSuiteServer {
         private int @__UsuarioID;
         private string @__Serie;
         private int @__Folio;
-        private bool @__Status;
         private string @__Observacion;
         private int @__Ejercisio;
         private int @__Periodo;
@@ -1830,15 +1829,6 @@ namespace RPSuiteServer {
                 this.TriggerPropertyChanged("Folio");
             }
         }
-        public virtual bool Status {
-            get {
-                return @__Status;
-            }
-            set {
-                @__Status = value;
-                this.TriggerPropertyChanged("Status");
-            }
-        }
         [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
         public virtual string Observacion {
             get {
@@ -1908,7 +1898,6 @@ namespace RPSuiteServer {
                 this.UsuarioID = serializer.ReadInt32("UsuarioID");
                 this.Serie = serializer.ReadAnsiString("Serie");
                 this.Folio = serializer.ReadInt32("Folio");
-                this.Status = serializer.ReadBoolean("Status");
                 this.Observacion = serializer.ReadAnsiString("Observacion");
                 this.Ejercisio = serializer.ReadInt32("Ejercisio");
                 this.Periodo = serializer.ReadInt32("Periodo");
@@ -1931,7 +1920,6 @@ namespace RPSuiteServer {
                 this.PedidoID = serializer.ReadInt32("PedidoID");
                 this.Periodo = serializer.ReadInt32("Periodo");
                 this.Serie = serializer.ReadAnsiString("Serie");
-                this.Status = serializer.ReadBoolean("Status");
                 this.StatusID = serializer.ReadInt32("StatusID");
                 this.Subtotal = serializer.ReadDouble("Subtotal");
                 this.Total = serializer.ReadDouble("Total");
@@ -1952,7 +1940,6 @@ namespace RPSuiteServer {
                 serializer.WriteInt32("UsuarioID", this.UsuarioID);
                 serializer.WriteAnsiString("Serie", this.Serie);
                 serializer.WriteInt32("Folio", this.Folio);
-                serializer.WriteBoolean("Status", this.Status);
                 serializer.WriteAnsiString("Observacion", this.Observacion);
                 serializer.WriteInt32("Ejercisio", this.Ejercisio);
                 serializer.WriteInt32("Periodo", this.Periodo);
@@ -1975,7 +1962,6 @@ namespace RPSuiteServer {
                 serializer.WriteInt32("PedidoID", this.PedidoID);
                 serializer.WriteInt32("Periodo", this.Periodo);
                 serializer.WriteAnsiString("Serie", this.Serie);
-                serializer.WriteBoolean("Status", this.Status);
                 serializer.WriteInt32("StatusID", this.StatusID);
                 serializer.WriteDouble("Subtotal", this.Subtotal);
                 serializer.WriteDouble("Total", this.Total);
@@ -2387,23 +2373,7 @@ namespace RPSuiteServer {
         bool UpdateDetallePedido(TDetallePedido Datos);
         bool GuardarSaldo(TSaldo Datos);
         int GenerarFactura(TPedido Datos);
-        int InsertarFactura(
-                    string Serie, 
-                    int Folio, 
-                    System.DateTime Fecha, 
-                    int Ejercicio, 
-                    int Periodo, 
-                    int Dia, 
-                    System.DateTime FechaVencimiento, 
-                    double ImpuestoPorcentaje, 
-                    bool Status, 
-                    string Observacion, 
-                    int FacturaUsoID, 
-                    int FormaPagoID, 
-                    int MetodoPagoID, 
-                    int EstacionID, 
-                    int ConfiguracionID, 
-                    int MovimientoID);
+        int InsertarFactura(string Serie, int Folio, System.DateTime Fecha, int Ejercicio, int Periodo, int Dia, System.DateTime FechaVencimiento, double ImpuestoPorcentaje, string Observacion, int FacturaUsoID, int FormaPagoID, int MetodoPagoID, int EstacionID, int ConfiguracionID, int MovimientoID);
         int InsertarDetalleFactura(int Cantidad, double Precio, double SubTotal, double IVA, double IEPS, double Total, double Descuento, int NoItems, int FacturaID, int ProductoID);
         double UpdateSaldoCargoPedido(double Saldo, int EstacionID);
         int UpdatePedidoFactura(int PedidoID, int FacturaID);
@@ -2577,23 +2547,7 @@ namespace RPSuiteServer {
                 this.@__ClearMessage(@__LocalMessage);
             }
         }
-        public virtual int InsertarFactura(
-                    string Serie, 
-                    int Folio, 
-                    System.DateTime Fecha, 
-                    int Ejercicio, 
-                    int Periodo, 
-                    int Dia, 
-                    System.DateTime FechaVencimiento, 
-                    double ImpuestoPorcentaje, 
-                    bool Status, 
-                    string Observacion, 
-                    int FacturaUsoID, 
-                    int FormaPagoID, 
-                    int MetodoPagoID, 
-                    int EstacionID, 
-                    int ConfiguracionID, 
-                    int MovimientoID) {
+        public virtual int InsertarFactura(string Serie, int Folio, System.DateTime Fecha, int Ejercicio, int Periodo, int Dia, System.DateTime FechaVencimiento, double ImpuestoPorcentaje, string Observacion, int FacturaUsoID, int FormaPagoID, int MetodoPagoID, int EstacionID, int ConfiguracionID, int MovimientoID) {
             RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
             try {
                 @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "InsertarFactura");
@@ -2605,7 +2559,6 @@ namespace RPSuiteServer {
                 @__LocalMessage.WriteInt32("Dia", Dia);
                 @__LocalMessage.WriteDateTime("FechaVencimiento", FechaVencimiento);
                 @__LocalMessage.WriteDouble("ImpuestoPorcentaje", ImpuestoPorcentaje);
-                @__LocalMessage.WriteBoolean("Status", Status);
                 @__LocalMessage.WriteAnsiString("Observacion", Observacion);
                 @__LocalMessage.WriteInt32("FacturaUsoID", FacturaUsoID);
                 @__LocalMessage.WriteInt32("FormaPagoID", FormaPagoID);
@@ -2758,7 +2711,6 @@ namespace RPSuiteServer {
                     int Dia, 
                     System.DateTime FechaVencimiento, 
                     double ImpuestoPorcentaje, 
-                    bool Status, 
                     string Observacion, 
                     int FacturaUsoID, 
                     int FormaPagoID, 
@@ -2769,23 +2721,7 @@ namespace RPSuiteServer {
                     System.AsyncCallback @__Callback, 
                     object @__UserData);
         int EndInsertarFactura(System.IAsyncResult @__AsyncResult);
-        System.Threading.Tasks.Task<int> InsertarFacturaAsync(
-                    string Serie, 
-                    int Folio, 
-                    System.DateTime Fecha, 
-                    int Ejercicio, 
-                    int Periodo, 
-                    int Dia, 
-                    System.DateTime FechaVencimiento, 
-                    double ImpuestoPorcentaje, 
-                    bool Status, 
-                    string Observacion, 
-                    int FacturaUsoID, 
-                    int FormaPagoID, 
-                    int MetodoPagoID, 
-                    int EstacionID, 
-                    int ConfiguracionID, 
-                    int MovimientoID);
+        System.Threading.Tasks.Task<int> InsertarFacturaAsync(string Serie, int Folio, System.DateTime Fecha, int Ejercicio, int Periodo, int Dia, System.DateTime FechaVencimiento, double ImpuestoPorcentaje, string Observacion, int FacturaUsoID, int FormaPagoID, int MetodoPagoID, int EstacionID, int ConfiguracionID, int MovimientoID);
         System.IAsyncResult BeginInsertarDetalleFactura(int Cantidad, double Precio, double SubTotal, double IVA, double IEPS, double Total, double Descuento, int NoItems, int FacturaID, int ProductoID, System.AsyncCallback @__Callback, object @__UserData);
         int EndInsertarDetalleFactura(System.IAsyncResult @__AsyncResult);
         System.Threading.Tasks.Task<int> InsertarDetalleFacturaAsync(int Cantidad, double Precio, double SubTotal, double IVA, double IEPS, double Total, double Descuento, int NoItems, int FacturaID, int ProductoID);
@@ -3098,7 +3034,6 @@ namespace RPSuiteServer {
                     int Dia, 
                     System.DateTime FechaVencimiento, 
                     double ImpuestoPorcentaje, 
-                    bool Status, 
                     string Observacion, 
                     int FacturaUsoID, 
                     int FormaPagoID, 
@@ -3119,7 +3054,6 @@ namespace RPSuiteServer {
                 @__LocalMessage.WriteInt32("Dia", Dia);
                 @__LocalMessage.WriteDateTime("FechaVencimiento", FechaVencimiento);
                 @__LocalMessage.WriteDouble("ImpuestoPorcentaje", ImpuestoPorcentaje);
-                @__LocalMessage.WriteBoolean("Status", Status);
                 @__LocalMessage.WriteAnsiString("Observacion", Observacion);
                 @__LocalMessage.WriteInt32("FacturaUsoID", FacturaUsoID);
                 @__LocalMessage.WriteInt32("FormaPagoID", FormaPagoID);
@@ -3145,24 +3079,8 @@ namespace RPSuiteServer {
                 this.@__ClearMessage(@__LocalMessage);
             }
         }
-        public virtual System.Threading.Tasks.Task<int> InsertarFacturaAsync(
-                    string Serie, 
-                    int Folio, 
-                    System.DateTime Fecha, 
-                    int Ejercicio, 
-                    int Periodo, 
-                    int Dia, 
-                    System.DateTime FechaVencimiento, 
-                    double ImpuestoPorcentaje, 
-                    bool Status, 
-                    string Observacion, 
-                    int FacturaUsoID, 
-                    int FormaPagoID, 
-                    int MetodoPagoID, 
-                    int EstacionID, 
-                    int ConfiguracionID, 
-                    int MovimientoID) {
-            return System.Threading.Tasks.Task<int>.Factory.FromAsync(this.BeginInsertarFactura(Serie, Folio, Fecha, Ejercicio, Periodo, Dia, FechaVencimiento, ImpuestoPorcentaje, Status, Observacion, FacturaUsoID, FormaPagoID, MetodoPagoID, EstacionID, ConfiguracionID, MovimientoID, null, null), new System.Func<System.IAsyncResult, int>(this.EndInsertarFactura));
+        public virtual System.Threading.Tasks.Task<int> InsertarFacturaAsync(string Serie, int Folio, System.DateTime Fecha, int Ejercicio, int Periodo, int Dia, System.DateTime FechaVencimiento, double ImpuestoPorcentaje, string Observacion, int FacturaUsoID, int FormaPagoID, int MetodoPagoID, int EstacionID, int ConfiguracionID, int MovimientoID) {
+            return System.Threading.Tasks.Task<int>.Factory.FromAsync(this.BeginInsertarFactura(Serie, Folio, Fecha, Ejercicio, Periodo, Dia, FechaVencimiento, ImpuestoPorcentaje, Observacion, FacturaUsoID, FormaPagoID, MetodoPagoID, EstacionID, ConfiguracionID, MovimientoID, null, null), new System.Func<System.IAsyncResult, int>(this.EndInsertarFactura));
         }
         public virtual System.IAsyncResult BeginInsertarDetalleFactura(int Cantidad, double Precio, double SubTotal, double IVA, double IEPS, double Total, double Descuento, int NoItems, int FacturaID, int ProductoID, System.AsyncCallback @__Callback, object @__UserData) {
             RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();

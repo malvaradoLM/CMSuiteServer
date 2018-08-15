@@ -194,7 +194,6 @@ namespace RPSuiteServer {
             int Dia = @__Message.ReadInt32("Dia");
             System.DateTime FechaVencimiento = @__Message.ReadDateTime("FechaVencimiento");
             double ImpuestoPorcentaje = @__Message.ReadDouble("ImpuestoPorcentaje");
-            bool Status = @__Message.ReadBoolean("Status");
             string Observacion = @__Message.ReadAnsiString("Observacion");
             int FacturaUsoID = @__Message.ReadInt32("FacturaUsoID");
             int FormaPagoID = @__Message.ReadInt32("FormaPagoID");
@@ -203,7 +202,7 @@ namespace RPSuiteServer {
             int ConfiguracionID = @__Message.ReadInt32("ConfiguracionID");
             int MovimientoID = @__Message.ReadInt32("MovimientoID");
             int Result;
-            Result = ((IRPDataService)(@__Instance)).InsertarFactura(Serie, Folio, Fecha, Ejercicio, Periodo, Dia, FechaVencimiento, ImpuestoPorcentaje, Status, Observacion, FacturaUsoID, FormaPagoID, MetodoPagoID, EstacionID, ConfiguracionID, MovimientoID);
+            Result = ((IRPDataService)(@__Instance)).InsertarFactura(Serie, Folio, Fecha, Ejercicio, Periodo, Dia, FechaVencimiento, ImpuestoPorcentaje, Observacion, FacturaUsoID, FormaPagoID, MetodoPagoID, EstacionID, ConfiguracionID, MovimientoID);
             @__Message.InitializeResponseMessage(@__ServerChannelInfo, "RPSuiteServer", "RPDataService", "InsertarFacturaResponse");
             @__Message.WriteInt32("Result", Result);
             @__Message.FinalizeMessage();

@@ -345,7 +345,7 @@ namespace RPSuiteServer
                         res.UsuarioID = (int)(reader["UsuarioID"] != DBNull.Value ? reader["UsuarioID"] : -1);
                         res.Serie = (string)(reader["Serie"] != DBNull.Value ? reader["Serie"] : "");
                         res.Folio = (int)(reader["Folio"] != DBNull.Value ? reader["Folio"] : 0);
-                        res.Status = (bool)(reader["Status"] != DBNull.Value ? reader["Status"] : false);
+                        //res.Status = (bool)(reader["Status"] != DBNull.Value ? reader["Status"] : false);
                         res.Observacion = (string)(reader["Observacion"] != DBNull.Value ? reader["Observacion"] : "");
                         res.ConfiguracionID = (int)(reader["ConfiguracionID"] != DBNull.Value ? reader["ConfiguracionID"] : -1);
                         res.Dia = (int)(reader["Dia"] != DBNull.Value ? reader["Dia"] : -1);
@@ -394,7 +394,7 @@ namespace RPSuiteServer
                 {
                     MovimientoID = int.Parse(lcommand.ExecuteScalar().ToString());
                     //return MovimientoID;
-                  FacturaID=  InsertarFactura(Datos.Serie, Datos.Folio, Datos.Fecha, Datos.Ejercisio, Datos.Periodo, Datos.Dia, Datos.FechaModificacion, Datos.IVA, Datos.Status, Datos.Observacion, 1, -1, 1, Datos.EstacionID, 1, MovimientoID);
+                  FacturaID=  InsertarFactura(Datos.Serie, Datos.Folio, Datos.Fecha, Datos.Ejercisio, Datos.Periodo, Datos.Dia, Datos.FechaModificacion, Datos.IVA, Datos.Observacion, 1, -1, 1, Datos.EstacionID, 1, MovimientoID);
                 }
                 return FacturaID;
                 
@@ -452,16 +452,16 @@ namespace RPSuiteServer
             }
         }
 
-        public int InsertarFactura(string Serie, int Folio, DateTime Fecha, int Ejercicio, int Periodo, int Dia, DateTime FechaVencimiento, double ImpuestoPorcentaje, bool Status, string Observacion, int FacturaUsoID, int FormaPagoID, int MetodoPagoID, int EstacionID, int ConfiguracionID, int MovimientoID)
+        public int InsertarFactura(string Serie, int Folio, DateTime Fecha, int Ejercicio, int Periodo, int Dia, DateTime FechaVencimiento, double ImpuestoPorcentaje, string Observacion, int FacturaUsoID, int FormaPagoID, int MetodoPagoID, int EstacionID, int ConfiguracionID, int MovimientoID)
         {
             try
             {
                 //Generar una nueva Factura y Detalle Factura
                 int FacturaID;
                 using (IDbCommand lcommand = this.ServiceSchema.NewCommand(this.Connection, "InsertarFactura", new string[]
-                { "Serie", "Folio", "Fecha", "Ejercicio", "Periodo", "Dia", "FechaVencimiento", "ImpuestoPorcentaje", "Status", "Observacion", "FacturaUsoID", "FormaPagoID", "MetodoPagoID", "EstacionID", "ConfiguracionID", "MovimientoID" },
+                { "Serie", "Folio", "Fecha", "Ejercicio", "Periodo", "Dia", "FechaVencimiento", "ImpuestoPorcentaje", "Observacion", "FacturaUsoID", "FormaPagoID", "MetodoPagoID", "EstacionID", "ConfiguracionID", "MovimientoID" },
                                                                                                                  new object[]
-                { Serie, Folio, Fecha,Ejercicio, Periodo,Dia,FechaVencimiento,ImpuestoPorcentaje,Status,Observacion,FacturaUsoID,FormaPagoID,MetodoPagoID,EstacionID,ConfiguracionID,MovimientoID}))
+                { Serie, Folio, Fecha,Ejercicio, Periodo,Dia,FechaVencimiento,ImpuestoPorcentaje,Observacion,FacturaUsoID,FormaPagoID,MetodoPagoID,EstacionID,ConfiguracionID,MovimientoID}))
                 {
                     FacturaID = int.Parse(lcommand.ExecuteScalar().ToString());
 
@@ -539,7 +539,7 @@ namespace RPSuiteServer
             int res = -1;
             try
             {
-                using (IDbCommand lCommand = this.ServiceSchema.NewCommand(this.Connection, "InsertPedido", new string[] { "PedidoID", "Serie", "Folio", "Fecha", "FechaModificacion", "Ejercicio", "Periodo", "Dia", "SubTotal", "IVA", "IEPS", "Total", "Descuento", "Status", "Observacion", "EstacionID", "ConfiguracionID", "UsuarioID", "StatusID" }, new object[] { pedido.PedidoID, pedido.Serie, pedido.Folio, pedido.Fecha, pedido.FechaModificacion, pedido.Ejercisio, pedido.Periodo, pedido.Dia, pedido.Subtotal, pedido.IVA, pedido.IEPS, pedido.Total, pedido.Descuento, pedido.Status, pedido.Observacion, pedido.EstacionID, pedido.ConfiguracionID, pedido.UsuarioID, pedido.StatusID }))
+                using (IDbCommand lCommand = this.ServiceSchema.NewCommand(this.Connection, "InsertPedido", new string[] { "PedidoID", "Serie", "Folio", "Fecha", "FechaModificacion", "Ejercicio", "Periodo", "Dia", "SubTotal", "IVA", "IEPS", "Total", "Descuento", "Observacion", "EstacionID", "ConfiguracionID", "UsuarioID", "StatusID" }, new object[] { pedido.PedidoID, pedido.Serie, pedido.Folio, pedido.Fecha, pedido.FechaModificacion, pedido.Ejercisio, pedido.Periodo, pedido.Dia, pedido.Subtotal, pedido.IVA, pedido.IEPS, pedido.Total, pedido.Descuento, pedido.Observacion, pedido.EstacionID, pedido.ConfiguracionID, pedido.UsuarioID, pedido.StatusID }))
                 {
                     res = int.Parse(lCommand.ExecuteScalar().ToString());
                 }
