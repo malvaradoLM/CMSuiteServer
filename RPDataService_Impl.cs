@@ -20,7 +20,7 @@ namespace RPSuiteServer
 
     [RemObjects.SDK.Server.ClassFactories.StandardClassFactory()]
     [RemObjects.SDK.Server.Service(Name = "RPDataService", InvokerClass = typeof(RPDataService_Invoker), ActivatorClass = typeof(RPDataService_Activator))]
-    public class RPDataService : RemObjects.DataAbstract.Server.DataAbstractService, IRPDataService
+    public class RPDataService : RemObjects.DataAbstract.Server.DataAbstractService, IRPDataService 
     {
         private RemObjects.DataAbstract.Bin2DataStreamer dataStreamer;
         private System.ComponentModel.IContainer components;
@@ -382,12 +382,14 @@ namespace RPSuiteServer
             }
         }
 
-        public int GenerarFactura(TPedido Datos)
+        public int GenerarFactura(TPedido Datos, TDetallePedido detallePedido)
         {
             try
             {
                 int MovimientoID;
                 int FacturaID;
+                int DetalleFactura;
+                int factura;
                 //Generar un nuevo Movimiento
                 using (IDbCommand lcommand = this.ServiceSchema.NewCommand(this.Connection, "InsertaMovimiento", new string[] { "FechaMovimiento", "FechaVencimiento", "Referencia", "Ejercicio", "Periodo", "CargoAbono", "Cargo", "Abono", "FechaRegistro", "Origen", "AfectaSaldos", "TipoMovimientoID", "UsuarioID", "EstacionID" },
                                                                                                                  new object[] { Datos.Fecha, Datos.FechaModificacion, "Facturando", Datos.Ejercisio, Datos.Periodo, "C","C","", DateTime.Today, "Auto", "si", 12, Datos.UsuarioID, Datos.EstacionID }))
@@ -395,8 +397,14 @@ namespace RPSuiteServer
                     MovimientoID = int.Parse(lcommand.ExecuteScalar().ToString());
                     //return MovimientoID;
                   FacturaID=  InsertarFactura(Datos.Serie, Datos.Folio, Datos.Fecha, Datos.Ejercisio, Datos.Periodo, Datos.Dia, Datos.FechaModificacion, Datos.IVA, Datos.Observacion, 1, -1, 1, Datos.EstacionID, 1, MovimientoID);
+
+                   DetalleFactura= InsertarDetalleFactura(int.Parse(detallePedido.Volumen.ToString()), detallePedido.Precio, detallePedido.Subtotal, detallePedido.IVA, detallePedido.IEPS, detallePedido.Total, detallePedido.Descuento, detallePedido.NoItems, FacturaID, detallePedido.ProductoID);
+
+                    UpdateSaldoCargoPedido(detallePedido.Total, Datos.EstacionID);
+
+                   factura= UpdatePedidoFactura(Datos.PedidoID, FacturaID);
                 }
-                return FacturaID;
+                return factura;
                 
             }
             catch (Exception ex)
@@ -570,6 +578,20 @@ namespace RPSuiteServer
                 return res;
             }
 
+        }
+
+        public TEstacion GetEstacion()
+        {
+            try
+            {
+                TEstacion est = new TEstacion();
+                return est;
+            }
+            catch (Exception ex)
+            {
+               // throw ex.Message.ToString();
+               
+            }
         }
     }
 }

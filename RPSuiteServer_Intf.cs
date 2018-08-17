@@ -2280,6 +2280,598 @@ namespace RPSuiteServer {
             return new TSaldo();
         }
     }
+    [System.Serializable()]
+    [RemObjects.SDK.Remotable(ActivatorClass=typeof(TEstacion_Activator))]
+    [System.Reflection.ObfuscationAttribute(Exclude=true)]
+    public partial class TEstacion : RemObjects.SDK.Types.ComplexType {
+        private int @__EstacionID;
+        private string @__Nombre;
+        private string @__RazonSocial;
+        private string @__RFC;
+        private string @__Calle;
+        private string @__NoExterior;
+        private string @__NoInterior;
+        private string @__Ciudad;
+        private string @__Municipio;
+        private string @__Estado;
+        private bool @__Status;
+        private int @__CodigoPostal;
+        private string @__Telefono;
+        private string @__CuentaContable;
+        private string @__Contacto;
+        private int @__PlazoPago;
+        private System.DateTime @__FechaIngreso;
+        private string @__NIP;
+        private System.DateTime @__FechaBaja;
+        private double @__LimiteCredito;
+        private double @__Deposito;
+        private System.DateTime @__CambioCredito;
+        private System.DateTime @__CambioCreditoAnterior;
+        private string @__Email;
+        private int @__GrupoID;
+        private int @__ZonaID;
+        private string @__NombreGrupo;
+        private string @__NombreZona;
+        private int @__FormaPagoID;
+        private string @__NombreFormaPago;
+        private int @__VendedorID;
+        private string @__NombreVendedor;
+        private int @__DiaRevision;
+        private int @__DiaPago;
+        private string @__CuentaBancaria;
+        private int @__FacturaUsoID;
+        private string @__NombreFacturaUso;
+        private int @__MetodoPagoID;
+        private string @__NombreMetoodoPago;
+        public virtual int EstacionID {
+            get {
+                return @__EstacionID;
+            }
+            set {
+                @__EstacionID = value;
+                this.TriggerPropertyChanged("EstacionID");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string Nombre {
+            get {
+                return @__Nombre;
+            }
+            set {
+                @__Nombre = value;
+                this.TriggerPropertyChanged("Nombre");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string RazonSocial {
+            get {
+                return @__RazonSocial;
+            }
+            set {
+                @__RazonSocial = value;
+                this.TriggerPropertyChanged("RazonSocial");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string RFC {
+            get {
+                return @__RFC;
+            }
+            set {
+                @__RFC = value;
+                this.TriggerPropertyChanged("RFC");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string Calle {
+            get {
+                return @__Calle;
+            }
+            set {
+                @__Calle = value;
+                this.TriggerPropertyChanged("Calle");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string NoExterior {
+            get {
+                return @__NoExterior;
+            }
+            set {
+                @__NoExterior = value;
+                this.TriggerPropertyChanged("NoExterior");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string NoInterior {
+            get {
+                return @__NoInterior;
+            }
+            set {
+                @__NoInterior = value;
+                this.TriggerPropertyChanged("NoInterior");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string Ciudad {
+            get {
+                return @__Ciudad;
+            }
+            set {
+                @__Ciudad = value;
+                this.TriggerPropertyChanged("Ciudad");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string Municipio {
+            get {
+                return @__Municipio;
+            }
+            set {
+                @__Municipio = value;
+                this.TriggerPropertyChanged("Municipio");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string Estado {
+            get {
+                return @__Estado;
+            }
+            set {
+                @__Estado = value;
+                this.TriggerPropertyChanged("Estado");
+            }
+        }
+        public virtual bool Status {
+            get {
+                return @__Status;
+            }
+            set {
+                @__Status = value;
+                this.TriggerPropertyChanged("Status");
+            }
+        }
+        public virtual int CodigoPostal {
+            get {
+                return @__CodigoPostal;
+            }
+            set {
+                @__CodigoPostal = value;
+                this.TriggerPropertyChanged("CodigoPostal");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string Telefono {
+            get {
+                return @__Telefono;
+            }
+            set {
+                @__Telefono = value;
+                this.TriggerPropertyChanged("Telefono");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string CuentaContable {
+            get {
+                return @__CuentaContable;
+            }
+            set {
+                @__CuentaContable = value;
+                this.TriggerPropertyChanged("CuentaContable");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string Contacto {
+            get {
+                return @__Contacto;
+            }
+            set {
+                @__Contacto = value;
+                this.TriggerPropertyChanged("Contacto");
+            }
+        }
+        public virtual int PlazoPago {
+            get {
+                return @__PlazoPago;
+            }
+            set {
+                @__PlazoPago = value;
+                this.TriggerPropertyChanged("PlazoPago");
+            }
+        }
+        public virtual System.DateTime FechaIngreso {
+            get {
+                return @__FechaIngreso;
+            }
+            set {
+                @__FechaIngreso = value;
+                this.TriggerPropertyChanged("FechaIngreso");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string NIP {
+            get {
+                return @__NIP;
+            }
+            set {
+                @__NIP = value;
+                this.TriggerPropertyChanged("NIP");
+            }
+        }
+        public virtual System.DateTime FechaBaja {
+            get {
+                return @__FechaBaja;
+            }
+            set {
+                @__FechaBaja = value;
+                this.TriggerPropertyChanged("FechaBaja");
+            }
+        }
+        public virtual double LimiteCredito {
+            get {
+                return @__LimiteCredito;
+            }
+            set {
+                @__LimiteCredito = value;
+                this.TriggerPropertyChanged("LimiteCredito");
+            }
+        }
+        public virtual double Deposito {
+            get {
+                return @__Deposito;
+            }
+            set {
+                @__Deposito = value;
+                this.TriggerPropertyChanged("Deposito");
+            }
+        }
+        public virtual System.DateTime CambioCredito {
+            get {
+                return @__CambioCredito;
+            }
+            set {
+                @__CambioCredito = value;
+                this.TriggerPropertyChanged("CambioCredito");
+            }
+        }
+        public virtual System.DateTime CambioCreditoAnterior {
+            get {
+                return @__CambioCreditoAnterior;
+            }
+            set {
+                @__CambioCreditoAnterior = value;
+                this.TriggerPropertyChanged("CambioCreditoAnterior");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string Email {
+            get {
+                return @__Email;
+            }
+            set {
+                @__Email = value;
+                this.TriggerPropertyChanged("Email");
+            }
+        }
+        public virtual int GrupoID {
+            get {
+                return @__GrupoID;
+            }
+            set {
+                @__GrupoID = value;
+                this.TriggerPropertyChanged("GrupoID");
+            }
+        }
+        public virtual int ZonaID {
+            get {
+                return @__ZonaID;
+            }
+            set {
+                @__ZonaID = value;
+                this.TriggerPropertyChanged("ZonaID");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string NombreGrupo {
+            get {
+                return @__NombreGrupo;
+            }
+            set {
+                @__NombreGrupo = value;
+                this.TriggerPropertyChanged("NombreGrupo");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string NombreZona {
+            get {
+                return @__NombreZona;
+            }
+            set {
+                @__NombreZona = value;
+                this.TriggerPropertyChanged("NombreZona");
+            }
+        }
+        public virtual int FormaPagoID {
+            get {
+                return @__FormaPagoID;
+            }
+            set {
+                @__FormaPagoID = value;
+                this.TriggerPropertyChanged("FormaPagoID");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string NombreFormaPago {
+            get {
+                return @__NombreFormaPago;
+            }
+            set {
+                @__NombreFormaPago = value;
+                this.TriggerPropertyChanged("NombreFormaPago");
+            }
+        }
+        public virtual int VendedorID {
+            get {
+                return @__VendedorID;
+            }
+            set {
+                @__VendedorID = value;
+                this.TriggerPropertyChanged("VendedorID");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string NombreVendedor {
+            get {
+                return @__NombreVendedor;
+            }
+            set {
+                @__NombreVendedor = value;
+                this.TriggerPropertyChanged("NombreVendedor");
+            }
+        }
+        public virtual int DiaRevision {
+            get {
+                return @__DiaRevision;
+            }
+            set {
+                @__DiaRevision = value;
+                this.TriggerPropertyChanged("DiaRevision");
+            }
+        }
+        public virtual int DiaPago {
+            get {
+                return @__DiaPago;
+            }
+            set {
+                @__DiaPago = value;
+                this.TriggerPropertyChanged("DiaPago");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string CuentaBancaria {
+            get {
+                return @__CuentaBancaria;
+            }
+            set {
+                @__CuentaBancaria = value;
+                this.TriggerPropertyChanged("CuentaBancaria");
+            }
+        }
+        public virtual int FacturaUsoID {
+            get {
+                return @__FacturaUsoID;
+            }
+            set {
+                @__FacturaUsoID = value;
+                this.TriggerPropertyChanged("FacturaUsoID");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string NombreFacturaUso {
+            get {
+                return @__NombreFacturaUso;
+            }
+            set {
+                @__NombreFacturaUso = value;
+                this.TriggerPropertyChanged("NombreFacturaUso");
+            }
+        }
+        public virtual int MetodoPagoID {
+            get {
+                return @__MetodoPagoID;
+            }
+            set {
+                @__MetodoPagoID = value;
+                this.TriggerPropertyChanged("MetodoPagoID");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string NombreMetoodoPago {
+            get {
+                return @__NombreMetoodoPago;
+            }
+            set {
+                @__NombreMetoodoPago = value;
+                this.TriggerPropertyChanged("NombreMetoodoPago");
+            }
+        }
+        public override void ReadComplex(RemObjects.SDK.Serializer serializer) {
+            if (serializer.RecordStrictOrder) {
+                this.EstacionID = serializer.ReadInt32("EstacionID");
+                this.Nombre = serializer.ReadAnsiString("Nombre");
+                this.RazonSocial = serializer.ReadAnsiString("RazonSocial");
+                this.RFC = serializer.ReadAnsiString("RFC");
+                this.Calle = serializer.ReadAnsiString("Calle");
+                this.NoExterior = serializer.ReadAnsiString("NoExterior");
+                this.NoInterior = serializer.ReadAnsiString("NoInterior");
+                this.Ciudad = serializer.ReadAnsiString("Ciudad");
+                this.Municipio = serializer.ReadAnsiString("Municipio");
+                this.Estado = serializer.ReadAnsiString("Estado");
+                this.Status = serializer.ReadBoolean("Status");
+                this.CodigoPostal = serializer.ReadInt32("CodigoPostal");
+                this.Telefono = serializer.ReadAnsiString("Telefono");
+                this.CuentaContable = serializer.ReadAnsiString("CuentaContable");
+                this.Contacto = serializer.ReadAnsiString("Contacto");
+                this.PlazoPago = serializer.ReadInt32("PlazoPago");
+                this.FechaIngreso = serializer.ReadDateTime("FechaIngreso");
+                this.NIP = serializer.ReadAnsiString("NIP");
+                this.FechaBaja = serializer.ReadDateTime("FechaBaja");
+                this.LimiteCredito = serializer.ReadDouble("LimiteCredito");
+                this.Deposito = serializer.ReadDouble("Deposito");
+                this.CambioCredito = serializer.ReadDateTime("CambioCredito");
+                this.CambioCreditoAnterior = serializer.ReadDateTime("CambioCreditoAnterior");
+                this.Email = serializer.ReadAnsiString("Email");
+                this.GrupoID = serializer.ReadInt32("GrupoID");
+                this.ZonaID = serializer.ReadInt32("ZonaID");
+                this.NombreGrupo = serializer.ReadAnsiString("NombreGrupo");
+                this.NombreZona = serializer.ReadAnsiString("NombreZona");
+                this.FormaPagoID = serializer.ReadInt32("FormaPagoID");
+                this.NombreFormaPago = serializer.ReadAnsiString("NombreFormaPago");
+                this.VendedorID = serializer.ReadInt32("VendedorID");
+                this.NombreVendedor = serializer.ReadAnsiString("NombreVendedor");
+                this.DiaRevision = serializer.ReadInt32("DiaRevision");
+                this.DiaPago = serializer.ReadInt32("DiaPago");
+                this.CuentaBancaria = serializer.ReadAnsiString("CuentaBancaria");
+                this.FacturaUsoID = serializer.ReadInt32("FacturaUsoID");
+                this.NombreFacturaUso = serializer.ReadAnsiString("NombreFacturaUso");
+                this.MetodoPagoID = serializer.ReadInt32("MetodoPagoID");
+                this.NombreMetoodoPago = serializer.ReadAnsiString("NombreMetoodoPago");
+            }
+            else {
+                this.Calle = serializer.ReadAnsiString("Calle");
+                this.CambioCredito = serializer.ReadDateTime("CambioCredito");
+                this.CambioCreditoAnterior = serializer.ReadDateTime("CambioCreditoAnterior");
+                this.Ciudad = serializer.ReadAnsiString("Ciudad");
+                this.CodigoPostal = serializer.ReadInt32("CodigoPostal");
+                this.Contacto = serializer.ReadAnsiString("Contacto");
+                this.CuentaBancaria = serializer.ReadAnsiString("CuentaBancaria");
+                this.CuentaContable = serializer.ReadAnsiString("CuentaContable");
+                this.Deposito = serializer.ReadDouble("Deposito");
+                this.DiaPago = serializer.ReadInt32("DiaPago");
+                this.DiaRevision = serializer.ReadInt32("DiaRevision");
+                this.Email = serializer.ReadAnsiString("Email");
+                this.EstacionID = serializer.ReadInt32("EstacionID");
+                this.Estado = serializer.ReadAnsiString("Estado");
+                this.FacturaUsoID = serializer.ReadInt32("FacturaUsoID");
+                this.FechaBaja = serializer.ReadDateTime("FechaBaja");
+                this.FechaIngreso = serializer.ReadDateTime("FechaIngreso");
+                this.FormaPagoID = serializer.ReadInt32("FormaPagoID");
+                this.GrupoID = serializer.ReadInt32("GrupoID");
+                this.LimiteCredito = serializer.ReadDouble("LimiteCredito");
+                this.MetodoPagoID = serializer.ReadInt32("MetodoPagoID");
+                this.Municipio = serializer.ReadAnsiString("Municipio");
+                this.NIP = serializer.ReadAnsiString("NIP");
+                this.NoExterior = serializer.ReadAnsiString("NoExterior");
+                this.NoInterior = serializer.ReadAnsiString("NoInterior");
+                this.Nombre = serializer.ReadAnsiString("Nombre");
+                this.NombreFacturaUso = serializer.ReadAnsiString("NombreFacturaUso");
+                this.NombreFormaPago = serializer.ReadAnsiString("NombreFormaPago");
+                this.NombreGrupo = serializer.ReadAnsiString("NombreGrupo");
+                this.NombreMetoodoPago = serializer.ReadAnsiString("NombreMetoodoPago");
+                this.NombreVendedor = serializer.ReadAnsiString("NombreVendedor");
+                this.NombreZona = serializer.ReadAnsiString("NombreZona");
+                this.PlazoPago = serializer.ReadInt32("PlazoPago");
+                this.RazonSocial = serializer.ReadAnsiString("RazonSocial");
+                this.RFC = serializer.ReadAnsiString("RFC");
+                this.Status = serializer.ReadBoolean("Status");
+                this.Telefono = serializer.ReadAnsiString("Telefono");
+                this.VendedorID = serializer.ReadInt32("VendedorID");
+                this.ZonaID = serializer.ReadInt32("ZonaID");
+            }
+        }
+        public override void WriteComplex(RemObjects.SDK.Serializer serializer) {
+            if (serializer.RecordStrictOrder) {
+                serializer.WriteInt32("EstacionID", this.EstacionID);
+                serializer.WriteAnsiString("Nombre", this.Nombre);
+                serializer.WriteAnsiString("RazonSocial", this.RazonSocial);
+                serializer.WriteAnsiString("RFC", this.RFC);
+                serializer.WriteAnsiString("Calle", this.Calle);
+                serializer.WriteAnsiString("NoExterior", this.NoExterior);
+                serializer.WriteAnsiString("NoInterior", this.NoInterior);
+                serializer.WriteAnsiString("Ciudad", this.Ciudad);
+                serializer.WriteAnsiString("Municipio", this.Municipio);
+                serializer.WriteAnsiString("Estado", this.Estado);
+                serializer.WriteBoolean("Status", this.Status);
+                serializer.WriteInt32("CodigoPostal", this.CodigoPostal);
+                serializer.WriteAnsiString("Telefono", this.Telefono);
+                serializer.WriteAnsiString("CuentaContable", this.CuentaContable);
+                serializer.WriteAnsiString("Contacto", this.Contacto);
+                serializer.WriteInt32("PlazoPago", this.PlazoPago);
+                serializer.WriteDateTime("FechaIngreso", this.FechaIngreso);
+                serializer.WriteAnsiString("NIP", this.NIP);
+                serializer.WriteDateTime("FechaBaja", this.FechaBaja);
+                serializer.WriteDouble("LimiteCredito", this.LimiteCredito);
+                serializer.WriteDouble("Deposito", this.Deposito);
+                serializer.WriteDateTime("CambioCredito", this.CambioCredito);
+                serializer.WriteDateTime("CambioCreditoAnterior", this.CambioCreditoAnterior);
+                serializer.WriteAnsiString("Email", this.Email);
+                serializer.WriteInt32("GrupoID", this.GrupoID);
+                serializer.WriteInt32("ZonaID", this.ZonaID);
+                serializer.WriteAnsiString("NombreGrupo", this.NombreGrupo);
+                serializer.WriteAnsiString("NombreZona", this.NombreZona);
+                serializer.WriteInt32("FormaPagoID", this.FormaPagoID);
+                serializer.WriteAnsiString("NombreFormaPago", this.NombreFormaPago);
+                serializer.WriteInt32("VendedorID", this.VendedorID);
+                serializer.WriteAnsiString("NombreVendedor", this.NombreVendedor);
+                serializer.WriteInt32("DiaRevision", this.DiaRevision);
+                serializer.WriteInt32("DiaPago", this.DiaPago);
+                serializer.WriteAnsiString("CuentaBancaria", this.CuentaBancaria);
+                serializer.WriteInt32("FacturaUsoID", this.FacturaUsoID);
+                serializer.WriteAnsiString("NombreFacturaUso", this.NombreFacturaUso);
+                serializer.WriteInt32("MetodoPagoID", this.MetodoPagoID);
+                serializer.WriteAnsiString("NombreMetoodoPago", this.NombreMetoodoPago);
+            }
+            else {
+                serializer.WriteAnsiString("Calle", this.Calle);
+                serializer.WriteDateTime("CambioCredito", this.CambioCredito);
+                serializer.WriteDateTime("CambioCreditoAnterior", this.CambioCreditoAnterior);
+                serializer.WriteAnsiString("Ciudad", this.Ciudad);
+                serializer.WriteInt32("CodigoPostal", this.CodigoPostal);
+                serializer.WriteAnsiString("Contacto", this.Contacto);
+                serializer.WriteAnsiString("CuentaBancaria", this.CuentaBancaria);
+                serializer.WriteAnsiString("CuentaContable", this.CuentaContable);
+                serializer.WriteDouble("Deposito", this.Deposito);
+                serializer.WriteInt32("DiaPago", this.DiaPago);
+                serializer.WriteInt32("DiaRevision", this.DiaRevision);
+                serializer.WriteAnsiString("Email", this.Email);
+                serializer.WriteInt32("EstacionID", this.EstacionID);
+                serializer.WriteAnsiString("Estado", this.Estado);
+                serializer.WriteInt32("FacturaUsoID", this.FacturaUsoID);
+                serializer.WriteDateTime("FechaBaja", this.FechaBaja);
+                serializer.WriteDateTime("FechaIngreso", this.FechaIngreso);
+                serializer.WriteInt32("FormaPagoID", this.FormaPagoID);
+                serializer.WriteInt32("GrupoID", this.GrupoID);
+                serializer.WriteDouble("LimiteCredito", this.LimiteCredito);
+                serializer.WriteInt32("MetodoPagoID", this.MetodoPagoID);
+                serializer.WriteAnsiString("Municipio", this.Municipio);
+                serializer.WriteAnsiString("NIP", this.NIP);
+                serializer.WriteAnsiString("NoExterior", this.NoExterior);
+                serializer.WriteAnsiString("NoInterior", this.NoInterior);
+                serializer.WriteAnsiString("Nombre", this.Nombre);
+                serializer.WriteAnsiString("NombreFacturaUso", this.NombreFacturaUso);
+                serializer.WriteAnsiString("NombreFormaPago", this.NombreFormaPago);
+                serializer.WriteAnsiString("NombreGrupo", this.NombreGrupo);
+                serializer.WriteAnsiString("NombreMetoodoPago", this.NombreMetoodoPago);
+                serializer.WriteAnsiString("NombreVendedor", this.NombreVendedor);
+                serializer.WriteAnsiString("NombreZona", this.NombreZona);
+                serializer.WriteInt32("PlazoPago", this.PlazoPago);
+                serializer.WriteAnsiString("RazonSocial", this.RazonSocial);
+                serializer.WriteAnsiString("RFC", this.RFC);
+                serializer.WriteBoolean("Status", this.Status);
+                serializer.WriteAnsiString("Telefono", this.Telefono);
+                serializer.WriteInt32("VendedorID", this.VendedorID);
+                serializer.WriteInt32("ZonaID", this.ZonaID);
+            }
+        }
+    }
+    [System.Reflection.ObfuscationAttribute(Exclude=true, ApplyToMembers=false)]
+    public class TEstacion_Activator : object, RemObjects.SDK.ITypeActivator {
+        public TEstacion_Activator() {
+        }
+        public object CreateInstance() {
+            return new TEstacion();
+        }
+    }
     public interface IRPLoginService : RemObjects.DataAbstract.Server.ISimpleLoginService {
     }
     public partial class RPLoginService_Proxy : RemObjects.DataAbstract.Server.SimpleLoginService_Proxy, IRPLoginService {
@@ -2372,13 +2964,14 @@ namespace RPSuiteServer {
         TPedido BuscarPedido(string Datos);
         bool UpdateDetallePedido(TDetallePedido Datos);
         bool GuardarSaldo(TSaldo Datos);
-        int GenerarFactura(TPedido Datos);
+        int GenerarFactura(TPedido Datos, TDetallePedido DatosDetalle);
         int InsertarFactura(string Serie, int Folio, System.DateTime Fecha, int Ejercicio, int Periodo, int Dia, System.DateTime FechaVencimiento, double ImpuestoPorcentaje, string Observacion, int FacturaUsoID, int FormaPagoID, int MetodoPagoID, int EstacionID, int ConfiguracionID, int MovimientoID);
         int InsertarDetalleFactura(int Cantidad, double Precio, double SubTotal, double IVA, double IEPS, double Total, double Descuento, int NoItems, int FacturaID, int ProductoID);
         double UpdateSaldoCargoPedido(double Saldo, int EstacionID);
         int UpdatePedidoFactura(int PedidoID, int FacturaID);
         int GuardaPedido(TPedido Datos);
         int GuardaDetallePedido(TDetallePedido Datos);
+        TEstacion GetEstacion();
     }
     public partial class RPDataService_Proxy : RemObjects.DataAbstract.Server.DataAbstractService_Proxy, IRPDataService {
         public RPDataService_Proxy(RemObjects.SDK.IMessage message, RemObjects.SDK.IClientChannel clientChannel) : 
@@ -2533,11 +3126,12 @@ namespace RPSuiteServer {
                 this.@__ClearMessage(@__LocalMessage);
             }
         }
-        public virtual int GenerarFactura(TPedido Datos) {
+        public virtual int GenerarFactura(TPedido Datos, TDetallePedido DatosDetalle) {
             RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
             try {
                 @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "GenerarFactura");
                 @__LocalMessage.Write("Datos", Datos, typeof(TPedido), RemObjects.SDK.StreamingFormat.Default);
+                @__LocalMessage.Write("DatosDetalle", DatosDetalle, typeof(TDetallePedido), RemObjects.SDK.StreamingFormat.Default);
                 @__LocalMessage.FinalizeMessage();
                 this.ClientChannel.Dispatch(@__LocalMessage);
                 int _Result = @__LocalMessage.ReadInt32("Result");
@@ -2656,6 +3250,19 @@ namespace RPSuiteServer {
                 this.@__ClearMessage(@__LocalMessage);
             }
         }
+        public virtual TEstacion GetEstacion() {
+            RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
+            try {
+                @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "GetEstacion");
+                @__LocalMessage.FinalizeMessage();
+                this.ClientChannel.Dispatch(@__LocalMessage);
+                TEstacion _Result = ((TEstacion)(@__LocalMessage.Read("Result", typeof(TEstacion), RemObjects.SDK.StreamingFormat.Default)));
+                return _Result;
+            }
+            finally {
+                this.@__ClearMessage(@__LocalMessage);
+            }
+        }
     }
     public class CoRPDataService {
         public static IRPDataService Create(RemObjects.SDK.IMessage message, RemObjects.SDK.IClientChannel clientChannel) {
@@ -2699,9 +3306,9 @@ namespace RPSuiteServer {
         System.IAsyncResult BeginGuardarSaldo(TSaldo Datos, System.AsyncCallback @__Callback, object @__UserData);
         bool EndGuardarSaldo(System.IAsyncResult @__AsyncResult);
         System.Threading.Tasks.Task<bool> GuardarSaldoAsync(TSaldo Datos);
-        System.IAsyncResult BeginGenerarFactura(TPedido Datos, System.AsyncCallback @__Callback, object @__UserData);
+        System.IAsyncResult BeginGenerarFactura(TPedido Datos, TDetallePedido DatosDetalle, System.AsyncCallback @__Callback, object @__UserData);
         int EndGenerarFactura(System.IAsyncResult @__AsyncResult);
-        System.Threading.Tasks.Task<int> GenerarFacturaAsync(TPedido Datos);
+        System.Threading.Tasks.Task<int> GenerarFacturaAsync(TPedido Datos, TDetallePedido DatosDetalle);
         System.IAsyncResult BeginInsertarFactura(
                     string Serie, 
                     int Folio, 
@@ -2737,6 +3344,9 @@ namespace RPSuiteServer {
         System.IAsyncResult BeginGuardaDetallePedido(TDetallePedido Datos, System.AsyncCallback @__Callback, object @__UserData);
         int EndGuardaDetallePedido(System.IAsyncResult @__AsyncResult);
         System.Threading.Tasks.Task<int> GuardaDetallePedidoAsync(TDetallePedido Datos);
+        System.IAsyncResult BeginGetEstacion(System.AsyncCallback @__Callback, object @__UserData);
+        TEstacion EndGetEstacion(System.IAsyncResult @__AsyncResult);
+        System.Threading.Tasks.Task<TEstacion> GetEstacionAsync();
     }
     public partial class RPDataService_AsyncProxy : RemObjects.DataAbstract.Server.DataAbstractService_AsyncProxy, IRPDataService_Async {
         public RPDataService_AsyncProxy(RemObjects.SDK.IMessage message, RemObjects.SDK.IClientChannel clientChannel) : 
@@ -2999,11 +3609,12 @@ namespace RPSuiteServer {
         public virtual System.Threading.Tasks.Task<bool> GuardarSaldoAsync(TSaldo Datos) {
             return System.Threading.Tasks.Task<bool>.Factory.FromAsync(this.BeginGuardarSaldo(Datos, null, null), new System.Func<System.IAsyncResult, bool>(this.EndGuardarSaldo));
         }
-        public virtual System.IAsyncResult BeginGenerarFactura(TPedido Datos, System.AsyncCallback @__Callback, object @__UserData) {
+        public virtual System.IAsyncResult BeginGenerarFactura(TPedido Datos, TDetallePedido DatosDetalle, System.AsyncCallback @__Callback, object @__UserData) {
             RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
             try {
                 @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "GenerarFactura");
                 @__LocalMessage.Write("Datos", Datos, typeof(TPedido), RemObjects.SDK.StreamingFormat.Default);
+                @__LocalMessage.Write("DatosDetalle", DatosDetalle, typeof(TDetallePedido), RemObjects.SDK.StreamingFormat.Default);
                 @__LocalMessage.FinalizeMessage();
                 return this.ClientChannel.AsyncDispatch(@__LocalMessage, @__Callback, @__UserData);
             }
@@ -3022,8 +3633,8 @@ namespace RPSuiteServer {
                 this.@__ClearMessage(@__LocalMessage);
             }
         }
-        public virtual System.Threading.Tasks.Task<int> GenerarFacturaAsync(TPedido Datos) {
-            return System.Threading.Tasks.Task<int>.Factory.FromAsync(this.BeginGenerarFactura(Datos, null, null), new System.Func<System.IAsyncResult, int>(this.EndGenerarFactura));
+        public virtual System.Threading.Tasks.Task<int> GenerarFacturaAsync(TPedido Datos, TDetallePedido DatosDetalle) {
+            return System.Threading.Tasks.Task<int>.Factory.FromAsync(this.BeginGenerarFactura(Datos, DatosDetalle, null, null), new System.Func<System.IAsyncResult, int>(this.EndGenerarFactura));
         }
         public virtual System.IAsyncResult BeginInsertarFactura(
                     string Serie, 
@@ -3222,6 +3833,31 @@ namespace RPSuiteServer {
         }
         public virtual System.Threading.Tasks.Task<int> GuardaDetallePedidoAsync(TDetallePedido Datos) {
             return System.Threading.Tasks.Task<int>.Factory.FromAsync(this.BeginGuardaDetallePedido(Datos, null, null), new System.Func<System.IAsyncResult, int>(this.EndGuardaDetallePedido));
+        }
+        public virtual System.IAsyncResult BeginGetEstacion(System.AsyncCallback @__Callback, object @__UserData) {
+            RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
+            try {
+                @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "GetEstacion");
+                @__LocalMessage.FinalizeMessage();
+                return this.ClientChannel.AsyncDispatch(@__LocalMessage, @__Callback, @__UserData);
+            }
+            catch (System.Exception ex) {
+                this.@__ClearMessage(@__LocalMessage);
+                throw ex;
+            }
+        }
+        public virtual TEstacion EndGetEstacion(System.IAsyncResult @__AsyncResult) {
+            RemObjects.SDK.IMessage @__LocalMessage = ((RemObjects.SDK.IClientAsyncResult)(@__AsyncResult)).Message;
+            try {
+                TEstacion Result = ((TEstacion)(@__LocalMessage.Read("Result", typeof(TEstacion), RemObjects.SDK.StreamingFormat.Default)));
+                return Result;
+            }
+            finally {
+                this.@__ClearMessage(@__LocalMessage);
+            }
+        }
+        public virtual System.Threading.Tasks.Task<TEstacion> GetEstacionAsync() {
+            return System.Threading.Tasks.Task<TEstacion>.Factory.FromAsync(this.BeginGetEstacion(null, null), new System.Func<System.IAsyncResult, TEstacion>(this.EndGetEstacion));
         }
     }
     public class CoRPDataServiceAsync {

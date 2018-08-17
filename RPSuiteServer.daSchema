@@ -9961,7 +9961,7 @@ WHERE
     </Item22>
     <Item23>
       <ReadOnly>False</ReadOnly>
-      <Fields IsObject="true" Count="30" IsCollection="true" ItemClass="TDAField" Type="TDASchemaFieldCollection">
+      <Fields IsObject="true" Count="34" IsCollection="true" ItemClass="TDAField" Type="TDASchemaFieldCollection">
         <Item0>
           <Name>EstacionID</Name>
           <Alignment>taLeftJustify</Alignment>
@@ -10113,6 +10113,36 @@ WHERE
           <Description />
         </Item4>
         <Item5>
+          <Name>Colonia</Name>
+          <Alignment>taLeftJustify</Alignment>
+          <Calculated>False</Calculated>
+          <ServerCalculated>False</ServerCalculated>
+          <DataType>datString</DataType>
+          <DefaultValue />
+          <CustomAttributes />
+          <DictionaryEntry />
+          <DisplayFormat />
+          <DisplayLabel>Colonia</DisplayLabel>
+          <DisplayWidth>0</DisplayWidth>
+          <EditFormat />
+          <EditMask />
+          <InPrimaryKey>False</InPrimaryKey>
+          <LogChanges>True</LogChanges>
+          <ReadOnly>False</ReadOnly>
+          <RegExpression />
+          <Required>False</Required>
+          <ServerAutoRefresh>False</ServerAutoRefresh>
+          <Visible>True</Visible>
+          <Expression />
+          <Size>50</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item5>
+        <Item6>
           <Name>NoExterior</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -10141,8 +10171,8 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item5>
-        <Item6>
+        </Item6>
+        <Item7>
           <Name>NoInterior</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -10171,8 +10201,8 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item6>
-        <Item7>
+        </Item7>
+        <Item8>
           <Name>Ciudad</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -10201,8 +10231,8 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item7>
-        <Item8>
+        </Item8>
+        <Item9>
           <Name>Municipio</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -10231,8 +10261,8 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item8>
-        <Item9>
+        </Item9>
+        <Item10>
           <Name>Estado</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -10261,8 +10291,8 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item9>
-        <Item10>
+        </Item10>
+        <Item11>
           <Name>Status</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -10291,8 +10321,38 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item10>
-        <Item11>
+        </Item11>
+        <Item12>
+          <Name>CodigoPostal</Name>
+          <Alignment>taLeftJustify</Alignment>
+          <Calculated>False</Calculated>
+          <ServerCalculated>False</ServerCalculated>
+          <DataType>datInteger</DataType>
+          <DefaultValue />
+          <CustomAttributes />
+          <DictionaryEntry />
+          <DisplayFormat />
+          <DisplayLabel>CodigoPostal</DisplayLabel>
+          <DisplayWidth>0</DisplayWidth>
+          <EditFormat />
+          <EditMask />
+          <InPrimaryKey>False</InPrimaryKey>
+          <LogChanges>True</LogChanges>
+          <ReadOnly>False</ReadOnly>
+          <RegExpression />
+          <Required>False</Required>
+          <ServerAutoRefresh>False</ServerAutoRefresh>
+          <Visible>True</Visible>
+          <Expression />
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item12>
+        <Item13>
           <Name>Telefono</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -10321,8 +10381,38 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item11>
-        <Item12>
+        </Item13>
+        <Item14>
+          <Name>CuentaContable</Name>
+          <Alignment>taLeftJustify</Alignment>
+          <Calculated>False</Calculated>
+          <ServerCalculated>False</ServerCalculated>
+          <DataType>datString</DataType>
+          <DefaultValue />
+          <CustomAttributes />
+          <DictionaryEntry />
+          <DisplayFormat />
+          <DisplayLabel>CuentaContable</DisplayLabel>
+          <DisplayWidth>0</DisplayWidth>
+          <EditFormat />
+          <EditMask />
+          <InPrimaryKey>False</InPrimaryKey>
+          <LogChanges>True</LogChanges>
+          <ReadOnly>False</ReadOnly>
+          <RegExpression />
+          <Required>False</Required>
+          <ServerAutoRefresh>False</ServerAutoRefresh>
+          <Visible>True</Visible>
+          <Expression />
+          <Size>20</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item14>
+        <Item15>
           <Name>Contacto</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -10351,158 +10441,8 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item12>
-        <Item13>
-          <Name>Email</Name>
-          <Alignment>taLeftJustify</Alignment>
-          <Calculated>False</Calculated>
-          <ServerCalculated>False</ServerCalculated>
-          <DataType>datString</DataType>
-          <DefaultValue />
-          <CustomAttributes />
-          <DictionaryEntry />
-          <DisplayFormat />
-          <DisplayLabel>Email</DisplayLabel>
-          <DisplayWidth>0</DisplayWidth>
-          <EditFormat />
-          <EditMask />
-          <InPrimaryKey>False</InPrimaryKey>
-          <LogChanges>True</LogChanges>
-          <ReadOnly>False</ReadOnly>
-          <RegExpression />
-          <Required>False</Required>
-          <ServerAutoRefresh>False</ServerAutoRefresh>
-          <Visible>True</Visible>
-          <Expression />
-          <Size>200</Size>
-          <DecimalScale>0</DecimalScale>
-          <DecimalPrecision>0</DecimalPrecision>
-          <BlobType>dabtUnknown</BlobType>
-          <GeneratorName />
-          <BusinessClassID />
-          <Description />
-        </Item13>
-        <Item14>
-          <Name>GrupoID</Name>
-          <Alignment>taLeftJustify</Alignment>
-          <Calculated>False</Calculated>
-          <ServerCalculated>False</ServerCalculated>
-          <DataType>datInteger</DataType>
-          <DefaultValue />
-          <CustomAttributes />
-          <DictionaryEntry />
-          <DisplayFormat />
-          <DisplayLabel>GrupoID</DisplayLabel>
-          <DisplayWidth>0</DisplayWidth>
-          <EditFormat />
-          <EditMask />
-          <InPrimaryKey>False</InPrimaryKey>
-          <LogChanges>True</LogChanges>
-          <ReadOnly>False</ReadOnly>
-          <RegExpression />
-          <Required>True</Required>
-          <ServerAutoRefresh>False</ServerAutoRefresh>
-          <Visible>True</Visible>
-          <Expression />
-          <Size>0</Size>
-          <DecimalScale>0</DecimalScale>
-          <DecimalPrecision>0</DecimalPrecision>
-          <BlobType>dabtUnknown</BlobType>
-          <GeneratorName />
-          <BusinessClassID />
-          <Description />
-        </Item14>
-        <Item15>
-          <Name>ZonaID</Name>
-          <Alignment>taLeftJustify</Alignment>
-          <Calculated>False</Calculated>
-          <ServerCalculated>False</ServerCalculated>
-          <DataType>datInteger</DataType>
-          <DefaultValue />
-          <CustomAttributes />
-          <DictionaryEntry />
-          <DisplayFormat />
-          <DisplayLabel>ZonaID</DisplayLabel>
-          <DisplayWidth>0</DisplayWidth>
-          <EditFormat />
-          <EditMask />
-          <InPrimaryKey>False</InPrimaryKey>
-          <LogChanges>True</LogChanges>
-          <ReadOnly>False</ReadOnly>
-          <RegExpression />
-          <Required>True</Required>
-          <ServerAutoRefresh>False</ServerAutoRefresh>
-          <Visible>True</Visible>
-          <Expression />
-          <Size>0</Size>
-          <DecimalScale>0</DecimalScale>
-          <DecimalPrecision>0</DecimalPrecision>
-          <BlobType>dabtUnknown</BlobType>
-          <GeneratorName />
-          <BusinessClassID />
-          <Description />
         </Item15>
         <Item16>
-          <Name>FormaPagoID</Name>
-          <Alignment>taLeftJustify</Alignment>
-          <Calculated>False</Calculated>
-          <ServerCalculated>False</ServerCalculated>
-          <DataType>datInteger</DataType>
-          <DefaultValue />
-          <CustomAttributes />
-          <DictionaryEntry />
-          <DisplayFormat />
-          <DisplayLabel>FormaPagoID</DisplayLabel>
-          <DisplayWidth>0</DisplayWidth>
-          <EditFormat />
-          <EditMask />
-          <InPrimaryKey>False</InPrimaryKey>
-          <LogChanges>True</LogChanges>
-          <ReadOnly>False</ReadOnly>
-          <RegExpression />
-          <Required>False</Required>
-          <ServerAutoRefresh>False</ServerAutoRefresh>
-          <Visible>True</Visible>
-          <Expression />
-          <Size>0</Size>
-          <DecimalScale>0</DecimalScale>
-          <DecimalPrecision>0</DecimalPrecision>
-          <BlobType>dabtUnknown</BlobType>
-          <GeneratorName />
-          <BusinessClassID />
-          <Description />
-        </Item16>
-        <Item17>
-          <Name>MetodoPagoID</Name>
-          <Alignment>taLeftJustify</Alignment>
-          <Calculated>False</Calculated>
-          <ServerCalculated>False</ServerCalculated>
-          <DataType>datInteger</DataType>
-          <DefaultValue />
-          <CustomAttributes />
-          <DictionaryEntry />
-          <DisplayFormat />
-          <DisplayLabel>MetodoPagoID</DisplayLabel>
-          <DisplayWidth>0</DisplayWidth>
-          <EditFormat />
-          <EditMask />
-          <InPrimaryKey>False</InPrimaryKey>
-          <LogChanges>True</LogChanges>
-          <ReadOnly>False</ReadOnly>
-          <RegExpression />
-          <Required>False</Required>
-          <ServerAutoRefresh>False</ServerAutoRefresh>
-          <Visible>True</Visible>
-          <Expression />
-          <Size>0</Size>
-          <DecimalScale>0</DecimalScale>
-          <DecimalPrecision>0</DecimalPrecision>
-          <BlobType>dabtUnknown</BlobType>
-          <GeneratorName />
-          <BusinessClassID />
-          <Description />
-        </Item17>
-        <Item18>
           <Name>PlazoPago</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -10531,18 +10471,18 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item18>
-        <Item19>
-          <Name>NIP</Name>
+        </Item16>
+        <Item17>
+          <Name>FechaIngreso</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
-          <DataType>datInteger</DataType>
+          <DataType>datDateTime</DataType>
           <DefaultValue />
           <CustomAttributes />
           <DictionaryEntry />
           <DisplayFormat />
-          <DisplayLabel>NIP</DisplayLabel>
+          <DisplayLabel>FechaIngreso</DisplayLabel>
           <DisplayWidth>0</DisplayWidth>
           <EditFormat />
           <EditMask />
@@ -10561,8 +10501,38 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item19>
-        <Item20>
+        </Item17>
+        <Item18>
+          <Name>NIP</Name>
+          <Alignment>taLeftJustify</Alignment>
+          <Calculated>False</Calculated>
+          <ServerCalculated>False</ServerCalculated>
+          <DataType>datString</DataType>
+          <DefaultValue />
+          <CustomAttributes />
+          <DictionaryEntry />
+          <DisplayFormat />
+          <DisplayLabel>NIP</DisplayLabel>
+          <DisplayWidth>0</DisplayWidth>
+          <EditFormat />
+          <EditMask />
+          <InPrimaryKey>False</InPrimaryKey>
+          <LogChanges>True</LogChanges>
+          <ReadOnly>False</ReadOnly>
+          <RegExpression />
+          <Required>False</Required>
+          <ServerAutoRefresh>False</ServerAutoRefresh>
+          <Visible>True</Visible>
+          <Expression />
+          <Size>8</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item18>
+        <Item19>
           <Name>FechaBaja</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -10591,8 +10561,8 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item20>
-        <Item21>
+        </Item19>
+        <Item20>
           <Name>LimiteCredito</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -10621,8 +10591,8 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item21>
-        <Item22>
+        </Item20>
+        <Item21>
           <Name>Deposito</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -10651,8 +10621,8 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item22>
-        <Item23>
+        </Item21>
+        <Item22>
           <Name>CambioCredito</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -10681,9 +10651,9 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item23>
-        <Item24>
-          <Name>UltimoPago</Name>
+        </Item22>
+        <Item23>
+          <Name>CambioCreditoAnterior</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
@@ -10692,7 +10662,7 @@ WHERE
           <CustomAttributes />
           <DictionaryEntry />
           <DisplayFormat />
-          <DisplayLabel>UltimoPago</DisplayLabel>
+          <DisplayLabel>CambioCreditoAnterior</DisplayLabel>
           <DisplayWidth>0</DisplayWidth>
           <EditFormat />
           <EditMask />
@@ -10711,18 +10681,18 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item24>
-        <Item25>
-          <Name>DiasRevisionID</Name>
+        </Item23>
+        <Item24>
+          <Name>Email</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
-          <DataType>datInteger</DataType>
+          <DataType>datString</DataType>
           <DefaultValue />
           <CustomAttributes />
           <DictionaryEntry />
           <DisplayFormat />
-          <DisplayLabel>DiasRevisionID</DisplayLabel>
+          <DisplayLabel>Email</DisplayLabel>
           <DisplayWidth>0</DisplayWidth>
           <EditFormat />
           <EditMask />
@@ -10731,6 +10701,36 @@ WHERE
           <ReadOnly>False</ReadOnly>
           <RegExpression />
           <Required>False</Required>
+          <ServerAutoRefresh>False</ServerAutoRefresh>
+          <Visible>True</Visible>
+          <Expression />
+          <Size>200</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item24>
+        <Item25>
+          <Name>GrupoID</Name>
+          <Alignment>taLeftJustify</Alignment>
+          <Calculated>False</Calculated>
+          <ServerCalculated>False</ServerCalculated>
+          <DataType>datInteger</DataType>
+          <DefaultValue />
+          <CustomAttributes />
+          <DictionaryEntry />
+          <DisplayFormat />
+          <DisplayLabel>GrupoID</DisplayLabel>
+          <DisplayWidth>0</DisplayWidth>
+          <EditFormat />
+          <EditMask />
+          <InPrimaryKey>False</InPrimaryKey>
+          <LogChanges>True</LogChanges>
+          <ReadOnly>False</ReadOnly>
+          <RegExpression />
+          <Required>True</Required>
           <ServerAutoRefresh>False</ServerAutoRefresh>
           <Visible>True</Visible>
           <Expression />
@@ -10743,7 +10743,7 @@ WHERE
           <Description />
         </Item25>
         <Item26>
-          <Name>DiaPagoID</Name>
+          <Name>ZonaID</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
@@ -10752,7 +10752,37 @@ WHERE
           <CustomAttributes />
           <DictionaryEntry />
           <DisplayFormat />
-          <DisplayLabel>DiaPagoID</DisplayLabel>
+          <DisplayLabel>ZonaID</DisplayLabel>
+          <DisplayWidth>0</DisplayWidth>
+          <EditFormat />
+          <EditMask />
+          <InPrimaryKey>False</InPrimaryKey>
+          <LogChanges>True</LogChanges>
+          <ReadOnly>False</ReadOnly>
+          <RegExpression />
+          <Required>True</Required>
+          <ServerAutoRefresh>False</ServerAutoRefresh>
+          <Visible>True</Visible>
+          <Expression />
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item26>
+        <Item27>
+          <Name>FormaPagoID</Name>
+          <Alignment>taLeftJustify</Alignment>
+          <Calculated>False</Calculated>
+          <ServerCalculated>False</ServerCalculated>
+          <DataType>datInteger</DataType>
+          <DefaultValue />
+          <CustomAttributes />
+          <DictionaryEntry />
+          <DisplayFormat />
+          <DisplayLabel>FormaPagoID</DisplayLabel>
           <DisplayWidth>0</DisplayWidth>
           <EditFormat />
           <EditMask />
@@ -10771,8 +10801,8 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item26>
-        <Item27>
+        </Item27>
+        <Item28>
           <Name>VendedorID</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -10801,39 +10831,9 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item27>
-        <Item28>
-          <Name>GrupoFacturarID</Name>
-          <Alignment>taLeftJustify</Alignment>
-          <Calculated>False</Calculated>
-          <ServerCalculated>False</ServerCalculated>
-          <DataType>datInteger</DataType>
-          <DefaultValue />
-          <CustomAttributes />
-          <DictionaryEntry />
-          <DisplayFormat />
-          <DisplayLabel>GrupoFacturarID</DisplayLabel>
-          <DisplayWidth>0</DisplayWidth>
-          <EditFormat />
-          <EditMask />
-          <InPrimaryKey>False</InPrimaryKey>
-          <LogChanges>True</LogChanges>
-          <ReadOnly>False</ReadOnly>
-          <RegExpression />
-          <Required>False</Required>
-          <ServerAutoRefresh>False</ServerAutoRefresh>
-          <Visible>True</Visible>
-          <Expression />
-          <Size>0</Size>
-          <DecimalScale>0</DecimalScale>
-          <DecimalPrecision>0</DecimalPrecision>
-          <BlobType>dabtUnknown</BlobType>
-          <GeneratorName />
-          <BusinessClassID />
-          <Description />
         </Item28>
         <Item29>
-          <Name>CP</Name>
+          <Name>DiaRevision</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
@@ -10842,7 +10842,7 @@ WHERE
           <CustomAttributes />
           <DictionaryEntry />
           <DisplayFormat />
-          <DisplayLabel>CP</DisplayLabel>
+          <DisplayLabel>DiaRevision</DisplayLabel>
           <DisplayWidth>0</DisplayWidth>
           <EditFormat />
           <EditMask />
@@ -10862,6 +10862,126 @@ WHERE
           <BusinessClassID />
           <Description />
         </Item29>
+        <Item30>
+          <Name>DiaPago</Name>
+          <Alignment>taLeftJustify</Alignment>
+          <Calculated>False</Calculated>
+          <ServerCalculated>False</ServerCalculated>
+          <DataType>datInteger</DataType>
+          <DefaultValue />
+          <CustomAttributes />
+          <DictionaryEntry />
+          <DisplayFormat />
+          <DisplayLabel>DiaPago</DisplayLabel>
+          <DisplayWidth>0</DisplayWidth>
+          <EditFormat />
+          <EditMask />
+          <InPrimaryKey>False</InPrimaryKey>
+          <LogChanges>True</LogChanges>
+          <ReadOnly>False</ReadOnly>
+          <RegExpression />
+          <Required>False</Required>
+          <ServerAutoRefresh>False</ServerAutoRefresh>
+          <Visible>True</Visible>
+          <Expression />
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item30>
+        <Item31>
+          <Name>CuentaBancaria</Name>
+          <Alignment>taLeftJustify</Alignment>
+          <Calculated>False</Calculated>
+          <ServerCalculated>False</ServerCalculated>
+          <DataType>datString</DataType>
+          <DefaultValue />
+          <CustomAttributes />
+          <DictionaryEntry />
+          <DisplayFormat />
+          <DisplayLabel>CuentaBancaria</DisplayLabel>
+          <DisplayWidth>0</DisplayWidth>
+          <EditFormat />
+          <EditMask />
+          <InPrimaryKey>False</InPrimaryKey>
+          <LogChanges>True</LogChanges>
+          <ReadOnly>False</ReadOnly>
+          <RegExpression />
+          <Required>False</Required>
+          <ServerAutoRefresh>False</ServerAutoRefresh>
+          <Visible>True</Visible>
+          <Expression />
+          <Size>50</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item31>
+        <Item32>
+          <Name>FacturaUsoID</Name>
+          <Alignment>taLeftJustify</Alignment>
+          <Calculated>False</Calculated>
+          <ServerCalculated>False</ServerCalculated>
+          <DataType>datInteger</DataType>
+          <DefaultValue />
+          <CustomAttributes />
+          <DictionaryEntry />
+          <DisplayFormat />
+          <DisplayLabel>FacturaUsoID</DisplayLabel>
+          <DisplayWidth>0</DisplayWidth>
+          <EditFormat />
+          <EditMask />
+          <InPrimaryKey>False</InPrimaryKey>
+          <LogChanges>True</LogChanges>
+          <ReadOnly>False</ReadOnly>
+          <RegExpression />
+          <Required>False</Required>
+          <ServerAutoRefresh>False</ServerAutoRefresh>
+          <Visible>True</Visible>
+          <Expression />
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item32>
+        <Item33>
+          <Name>MetodoPagoID</Name>
+          <Alignment>taLeftJustify</Alignment>
+          <Calculated>False</Calculated>
+          <ServerCalculated>False</ServerCalculated>
+          <DataType>datInteger</DataType>
+          <DefaultValue />
+          <CustomAttributes />
+          <DictionaryEntry />
+          <DisplayFormat />
+          <DisplayLabel>MetodoPagoID</DisplayLabel>
+          <DisplayWidth>0</DisplayWidth>
+          <EditFormat />
+          <EditMask />
+          <InPrimaryKey>False</InPrimaryKey>
+          <LogChanges>True</LogChanges>
+          <ReadOnly>False</ReadOnly>
+          <RegExpression />
+          <Required>False</Required>
+          <ServerAutoRefresh>False</ServerAutoRefresh>
+          <Visible>True</Visible>
+          <Expression />
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item33>
       </Fields>
       <BusinessRulesClient IsObject="true" Type="TDAClientBusinessRuleScript">
         <CompileOnServer>False</CompileOnServer>
@@ -10883,13 +11003,7 @@ WHERE
       <Statements IsCollection="true" IsObject="true" Count="1" ItemClass="TDAStatement" Type="TDAStatementCollection">
         <Item0>
           <Connection>RPSuite</Connection>
-          <SQL>Declare @Parametro Varchar(100)
-Declare @WildCards varchar(100)
-select @Parametro=(Select :Datos)
-select @WildCards=(Select '%' + @Parametro + '%') 
-
-
-SELECT 	
+          <SQL>SELECT 	
 	[EstacionID], [Nombre], [RazonSocial], 
 	[RFC], [Calle], [Colonia], 
 	[NoExterior], [NoInterior], [Ciudad], 
@@ -10905,19 +11019,14 @@ SELECT
 FROM 
 	[Estacion] 
 WHERE 
-
-    (Nombre Like @WildCards) OR
-    (RFC Like @WildCards) OR
-    (RazonSocial Like @WildCards) OR
-    (Cast(EstacionID as Varchar(10))=@Parametro) OR
-    (@Parametro = '')</SQL>
+	EstacionID = :Datos</SQL>
           <TargetTable>Estacion</TargetTable>
           <ConnectionType>SQLite</ConnectionType>
           <Default>True</Default>
           <StatementName />
           <StatementType>stSQL</StatementType>
           <GeneratorName />
-          <ColumnMappings IsObject="true" Count="30" IsCollection="true" Type="TDAColumnMappingCollection" ItemClass="TDAColumnMapping">
+          <ColumnMappings IsObject="true" Count="34" IsCollection="true" Type="TDAColumnMappingCollection" ItemClass="TDAColumnMapping">
             <Item0>
               <DatasetField>EstacionID</DatasetField>
               <SQLOrigin>EstacionID</SQLOrigin>
@@ -10944,137 +11053,157 @@ WHERE
               <TableField>Calle</TableField>
             </Item4>
             <Item5>
+              <DatasetField>Colonia</DatasetField>
+              <SQLOrigin>Colonia</SQLOrigin>
+              <TableField>Colonia</TableField>
+            </Item5>
+            <Item6>
               <DatasetField>NoExterior</DatasetField>
               <SQLOrigin>NoExterior</SQLOrigin>
               <TableField>NoExterior</TableField>
-            </Item5>
-            <Item6>
+            </Item6>
+            <Item7>
               <DatasetField>NoInterior</DatasetField>
               <SQLOrigin>NoInterior</SQLOrigin>
               <TableField>NoInterior</TableField>
-            </Item6>
-            <Item7>
+            </Item7>
+            <Item8>
               <DatasetField>Ciudad</DatasetField>
               <SQLOrigin>Ciudad</SQLOrigin>
               <TableField>Ciudad</TableField>
-            </Item7>
-            <Item8>
+            </Item8>
+            <Item9>
               <DatasetField>Municipio</DatasetField>
               <SQLOrigin>Municipio</SQLOrigin>
               <TableField>Municipio</TableField>
-            </Item8>
-            <Item9>
+            </Item9>
+            <Item10>
               <DatasetField>Estado</DatasetField>
               <SQLOrigin>Estado</SQLOrigin>
               <TableField>Estado</TableField>
-            </Item9>
-            <Item10>
+            </Item10>
+            <Item11>
               <DatasetField>Status</DatasetField>
               <SQLOrigin>Status</SQLOrigin>
               <TableField>Status</TableField>
-            </Item10>
-            <Item11>
+            </Item11>
+            <Item12>
+              <DatasetField>CodigoPostal</DatasetField>
+              <SQLOrigin>CodigoPostal</SQLOrigin>
+              <TableField>CodigoPostal</TableField>
+            </Item12>
+            <Item13>
               <DatasetField>Telefono</DatasetField>
               <SQLOrigin>Telefono</SQLOrigin>
               <TableField>Telefono</TableField>
-            </Item11>
-            <Item12>
+            </Item13>
+            <Item14>
+              <DatasetField>CuentaContable</DatasetField>
+              <SQLOrigin>CuentaContable</SQLOrigin>
+              <TableField>CuentaContable</TableField>
+            </Item14>
+            <Item15>
               <DatasetField>Contacto</DatasetField>
               <SQLOrigin>Contacto</SQLOrigin>
               <TableField>Contacto</TableField>
-            </Item12>
-            <Item13>
-              <DatasetField>Email</DatasetField>
-              <SQLOrigin>Email</SQLOrigin>
-              <TableField>Email</TableField>
-            </Item13>
-            <Item14>
-              <DatasetField>GrupoID</DatasetField>
-              <SQLOrigin>GrupoID</SQLOrigin>
-              <TableField>GrupoID</TableField>
-            </Item14>
-            <Item15>
-              <DatasetField>ZonaID</DatasetField>
-              <SQLOrigin>ZonaID</SQLOrigin>
-              <TableField>ZonaID</TableField>
             </Item15>
             <Item16>
-              <DatasetField>FormaPagoID</DatasetField>
-              <SQLOrigin>FormaPagoID</SQLOrigin>
-              <TableField>FormaPagoID</TableField>
-            </Item16>
-            <Item17>
-              <DatasetField>MetodoPagoID</DatasetField>
-              <SQLOrigin>MetodoPagoID</SQLOrigin>
-              <TableField>MetodoPagoID</TableField>
-            </Item17>
-            <Item18>
               <DatasetField>PlazoPago</DatasetField>
               <SQLOrigin>PlazoPago</SQLOrigin>
               <TableField>PlazoPago</TableField>
-            </Item18>
-            <Item19>
+            </Item16>
+            <Item17>
+              <DatasetField>FechaIngreso</DatasetField>
+              <SQLOrigin>FechaIngreso</SQLOrigin>
+              <TableField>FechaIngreso</TableField>
+            </Item17>
+            <Item18>
               <DatasetField>NIP</DatasetField>
               <SQLOrigin>NIP</SQLOrigin>
               <TableField>NIP</TableField>
-            </Item19>
-            <Item20>
+            </Item18>
+            <Item19>
               <DatasetField>FechaBaja</DatasetField>
               <SQLOrigin>FechaBaja</SQLOrigin>
               <TableField>FechaBaja</TableField>
-            </Item20>
-            <Item21>
+            </Item19>
+            <Item20>
               <DatasetField>LimiteCredito</DatasetField>
               <SQLOrigin>LimiteCredito</SQLOrigin>
               <TableField>LimiteCredito</TableField>
-            </Item21>
-            <Item22>
+            </Item20>
+            <Item21>
               <DatasetField>Deposito</DatasetField>
               <SQLOrigin>Deposito</SQLOrigin>
               <TableField>Deposito</TableField>
-            </Item22>
-            <Item23>
+            </Item21>
+            <Item22>
               <DatasetField>CambioCredito</DatasetField>
               <SQLOrigin>CambioCredito</SQLOrigin>
               <TableField>CambioCredito</TableField>
+            </Item22>
+            <Item23>
+              <DatasetField>CambioCreditoAnterior</DatasetField>
+              <SQLOrigin>CambioCreditoAnterior</SQLOrigin>
+              <TableField>CambioCreditoAnterior</TableField>
             </Item23>
             <Item24>
-              <DatasetField>UltimoPago</DatasetField>
-              <SQLOrigin>UltimoPago</SQLOrigin>
-              <TableField>UltimoPago</TableField>
+              <DatasetField>Email</DatasetField>
+              <SQLOrigin>Email</SQLOrigin>
+              <TableField>Email</TableField>
             </Item24>
             <Item25>
-              <DatasetField>DiasRevisionID</DatasetField>
-              <SQLOrigin>DiasRevisionID</SQLOrigin>
-              <TableField>DiasRevisionID</TableField>
+              <DatasetField>GrupoID</DatasetField>
+              <SQLOrigin>GrupoID</SQLOrigin>
+              <TableField>GrupoID</TableField>
             </Item25>
             <Item26>
-              <DatasetField>DiaPagoID</DatasetField>
-              <SQLOrigin>DiaPagoID</SQLOrigin>
-              <TableField>DiaPagoID</TableField>
+              <DatasetField>ZonaID</DatasetField>
+              <SQLOrigin>ZonaID</SQLOrigin>
+              <TableField>ZonaID</TableField>
             </Item26>
             <Item27>
+              <DatasetField>FormaPagoID</DatasetField>
+              <SQLOrigin>FormaPagoID</SQLOrigin>
+              <TableField>FormaPagoID</TableField>
+            </Item27>
+            <Item28>
               <DatasetField>VendedorID</DatasetField>
               <SQLOrigin>VendedorID</SQLOrigin>
               <TableField>VendedorID</TableField>
-            </Item27>
-            <Item28>
-              <DatasetField>GrupoFacturarID</DatasetField>
-              <SQLOrigin>GrupoFacturarID</SQLOrigin>
-              <TableField>GrupoFacturarID</TableField>
             </Item28>
             <Item29>
-              <DatasetField>CP</DatasetField>
-              <SQLOrigin>CP</SQLOrigin>
-              <TableField>CP</TableField>
+              <DatasetField>DiaRevision</DatasetField>
+              <SQLOrigin>DiaRevision</SQLOrigin>
+              <TableField>DiaRevision</TableField>
             </Item29>
+            <Item30>
+              <DatasetField>DiaPago</DatasetField>
+              <SQLOrigin>DiaPago</SQLOrigin>
+              <TableField>DiaPago</TableField>
+            </Item30>
+            <Item31>
+              <DatasetField>CuentaBancaria</DatasetField>
+              <SQLOrigin>CuentaBancaria</SQLOrigin>
+              <TableField>CuentaBancaria</TableField>
+            </Item31>
+            <Item32>
+              <DatasetField>FacturaUsoID</DatasetField>
+              <SQLOrigin>FacturaUsoID</SQLOrigin>
+              <TableField>FacturaUsoID</TableField>
+            </Item32>
+            <Item33>
+              <DatasetField>MetodoPagoID</DatasetField>
+              <SQLOrigin>MetodoPagoID</SQLOrigin>
+              <TableField>MetodoPagoID</TableField>
+            </Item33>
           </ColumnMappings>
           <Description />
         </Item0>
       </Statements>
       <Params IsObject="true" Count="1" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam">
         <Item0>
-          <Value />
+          <Value>1738</Value>
           <ParamType>daptInput</ParamType>
           <Name>Datos</Name>
           <DataType>datString</DataType>
@@ -15412,7 +15541,7 @@ FROM            (SELECT        Estacion.EstacionID, SUM(SaldoDocumento.Cargo) AS
       <Name>spSaldoCliente</Name>
     </Item41>
   </Datasets>
-  <Commands IsObject="true" Count="17" IsCollection="true" ItemClass="TDASQLCommand" Type="TDASQLCommandCollection">
+  <Commands IsObject="true" Count="18" IsCollection="true" ItemClass="TDASQLCommand" Type="TDASQLCommandCollection">
     <Item0>
       <BusinessRulesServer Type="TDABusinessRuleScript" IsObject="true">
         <Script />
@@ -17864,6 +17993,71 @@ update Saldo
       <Description />
       <Name>UpdatePedidoFactura</Name>
     </Item16>
+    <Item17>
+      <BusinessRulesServer Type="TDABusinessRuleScript" IsObject="true">
+        <Script />
+        <ScriptLanguageStr />
+        <Description />
+        <Name />
+      </BusinessRulesServer>
+      <Statements IsCollection="true" IsObject="true" Count="1" ItemClass="TDAStatement" Type="TDAStatementCollection">
+        <Item0>
+          <Connection>RPSuite</Connection>
+          <SQL>SELECT 	
+	[EstacionID], est.[Nombre], [RazonSocial], 
+	[RFC], [Calle], [Colonia], 
+	[NoExterior], [NoInterior], [Ciudad], 
+	[Municipio], [Estado], [Status], 
+	[CodigoPostal], est.[Telefono], [CuentaContable], 
+	[Contacto], [PlazoPago], [FechaIngreso], 
+	[NIP], [FechaBaja], [LimiteCredito], 
+	[Deposito], [CambioCredito], [CambioCreditoAnterior], 
+	est.[Email], est.[GrupoID], gr.Descripcion as NombreGrupo, est.[ZonaID],zn.Descripcion as NombreZona, 
+	est.[FormaPagoID], fp.Descripcion as NombreFormaPago, est.[VendedorID] , vn.Nombre as NombreVendendor, [DiaRevision], 
+	[DiaPago], [CuentaBancaria], est.[FacturaUsoID],fu.Descripcion as NombreFacturaUso  ,
+est.[MetodoPagoID], mp.Descripcion  as NombreMetodoPago
+FROM 
+	[Estacion] est
+  LEFT join Grupo gr on gr.GrupoID = est.GrupoID 
+  left join Zona zn on zn.ZonaID=est.ZonaID
+  left JOIN FormaPago fp on fp.FormaPagoID = est.FormaPagoID
+  left JOIN vendedor vn on vn.VendedorID = est.VendedorID
+  left JOIN FacturaUso fu on fu.FacturaUsoID = est.FacturaUsoID
+  left JOIN MetodoPago mp on mp.MetodoPagoID = est.MetodoPagoID
+WHERE 
+	EstacionID = :Datos</SQL>
+          <TargetTable>Estacion</TargetTable>
+          <ConnectionType>SQLite</ConnectionType>
+          <Default>True</Default>
+          <StatementName />
+          <StatementType>stSQL</StatementType>
+          <GeneratorName />
+          <ColumnMappings IsObject="true" Count="0" IsCollection="true" Type="TDAColumnMappingCollection" ItemClass="TDAColumnMapping" />
+          <Description />
+        </Item0>
+      </Statements>
+      <Params IsObject="true" Count="1" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam">
+        <Item0>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>Datos</Name>
+          <DataType>datString</DataType>
+          <Size>100</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item0>
+      </Params>
+      <CustomAttributes />
+      <IsPublic>True</IsPublic>
+      <DynamicWhereXML />
+      <BusinessClassID />
+      <Description />
+      <Name>cmdEstacion</Name>
+    </Item17>
   </Commands>
   <RelationShips IsObject="true" Count="0" IsCollection="true" Type="TDADatasetRelationshipCollection" ItemClass="TDADatasetRelationship" />
   <UpdateRules IsObject="true" Count="0" IsCollection="true" Type="TDAUpdateRuleCollection" ItemClass="TDAUpdateRule" />

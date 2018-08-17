@@ -170,12 +170,14 @@ namespace RPSuiteServer {
             }
         }
         public static void Invoke_GenerarFactura(RemObjects.SDK.IROService @__Instance, RemObjects.SDK.IMessage @__Message, RemObjects.SDK.Server.IServerChannelInfo @__ServerChannelInfo, out RemObjects.SDK.Server.ResponseOptions @__oResponseOptions) {
-            RemObjects.SDK.ObjectDisposer @__ObjectDisposer = new RemObjects.SDK.ObjectDisposer(1);
+            RemObjects.SDK.ObjectDisposer @__ObjectDisposer = new RemObjects.SDK.ObjectDisposer(2);
             try {
                 TPedido Datos = ((TPedido)(@__Message.Read("Datos", typeof(TPedido), RemObjects.SDK.StreamingFormat.Default)));
+                TDetallePedido DatosDetalle = ((TDetallePedido)(@__Message.Read("DatosDetalle", typeof(TDetallePedido), RemObjects.SDK.StreamingFormat.Default)));
                 @__ObjectDisposer.Add(Datos);
+                @__ObjectDisposer.Add(DatosDetalle);
                 int Result;
-                Result = ((IRPDataService)(@__Instance)).GenerarFactura(Datos);
+                Result = ((IRPDataService)(@__Instance)).GenerarFactura(Datos, DatosDetalle);
                 @__Message.InitializeResponseMessage(@__ServerChannelInfo, "RPSuiteServer", "RPDataService", "GenerarFacturaResponse");
                 @__Message.WriteInt32("Result", Result);
                 @__Message.FinalizeMessage();
@@ -271,6 +273,21 @@ namespace RPSuiteServer {
                 Result = ((IRPDataService)(@__Instance)).GuardaDetallePedido(Datos);
                 @__Message.InitializeResponseMessage(@__ServerChannelInfo, "RPSuiteServer", "RPDataService", "GuardaDetallePedidoResponse");
                 @__Message.WriteInt32("Result", Result);
+                @__Message.FinalizeMessage();
+                @__oResponseOptions = RemObjects.SDK.Server.ResponseOptions.roDefault;
+            }
+            finally {
+                @__ObjectDisposer.Dispose();
+            }
+        }
+        public static void Invoke_GetEstacion(RemObjects.SDK.IROService @__Instance, RemObjects.SDK.IMessage @__Message, RemObjects.SDK.Server.IServerChannelInfo @__ServerChannelInfo, out RemObjects.SDK.Server.ResponseOptions @__oResponseOptions) {
+            RemObjects.SDK.ObjectDisposer @__ObjectDisposer = new RemObjects.SDK.ObjectDisposer(1);
+            try {
+                TEstacion Result;
+                Result = ((IRPDataService)(@__Instance)).GetEstacion();
+                @__ObjectDisposer.Add(Result);
+                @__Message.InitializeResponseMessage(@__ServerChannelInfo, "RPSuiteServer", "RPDataService", "GetEstacionResponse");
+                @__Message.Write("Result", Result, typeof(TEstacion), RemObjects.SDK.StreamingFormat.Default);
                 @__Message.FinalizeMessage();
                 @__oResponseOptions = RemObjects.SDK.Server.ResponseOptions.roDefault;
             }

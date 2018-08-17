@@ -97,6 +97,8 @@
 </Parameter>
 <Parameter Name="Datos" DataType="TPedido" Flag="In" >
 </Parameter>
+<Parameter Name="DatosDetalle" DataType="TDetallePedido" Flag="In" >
+</Parameter>
 </Parameters>
 </Operation>
 <Operation Name="InsertarFactura" UID="{4419D731-B5F2-44D2-937C-34F04B78EBC2}">
@@ -194,6 +196,12 @@
 <Parameter Name="Result" DataType="Integer" Flag="Result">
 </Parameter>
 <Parameter Name="Datos" DataType="TDetallePedido" Flag="In" >
+</Parameter>
+</Parameters>
+</Operation>
+<Operation Name="GetEstacion" UID="{23CDB7C5-C59C-4FD1-941B-E30BD9D25BA4}">
+<Parameters>
+<Parameter Name="Result" DataType="TEstacion" Flag="Result">
 </Parameter>
 </Parameters>
 </Operation>
@@ -524,6 +532,88 @@
 <Element Name="CreditoUsado" DataType="Double">
 </Element>
 <Element Name="Saldo" DataType="Double">
+</Element>
+</Elements>
+</Struct>
+<Struct Name="TEstacion" UID="{82C06D47-3AF6-4691-80C1-FA74BD6E0454}" AutoCreateParams="1">
+<Elements>
+<Element Name="EstacionID" DataType="Integer">
+</Element>
+<Element Name="Nombre" DataType="AnsiString">
+</Element>
+<Element Name="RazonSocial" DataType="AnsiString">
+</Element>
+<Element Name="RFC" DataType="AnsiString">
+</Element>
+<Element Name="Calle" DataType="AnsiString">
+</Element>
+<Element Name="NoExterior" DataType="AnsiString">
+</Element>
+<Element Name="NoInterior" DataType="AnsiString">
+</Element>
+<Element Name="Ciudad" DataType="AnsiString">
+</Element>
+<Element Name="Municipio" DataType="AnsiString">
+</Element>
+<Element Name="Estado" DataType="AnsiString">
+</Element>
+<Element Name="Status" DataType="Boolean">
+</Element>
+<Element Name="CodigoPostal" DataType="Integer">
+</Element>
+<Element Name="Telefono" DataType="AnsiString">
+</Element>
+<Element Name="CuentaContable" DataType="AnsiString">
+</Element>
+<Element Name="Contacto" DataType="AnsiString">
+</Element>
+<Element Name="PlazoPago" DataType="Integer">
+</Element>
+<Element Name="FechaIngreso" DataType="DateTime">
+</Element>
+<Element Name="NIP" DataType="AnsiString">
+</Element>
+<Element Name="FechaBaja" DataType="DateTime">
+</Element>
+<Element Name="LimiteCredito" DataType="Double">
+</Element>
+<Element Name="Deposito" DataType="Double">
+</Element>
+<Element Name="CambioCredito" DataType="DateTime">
+</Element>
+<Element Name="CambioCreditoAnterior" DataType="DateTime">
+</Element>
+<Element Name="Email" DataType="AnsiString">
+</Element>
+<Element Name="GrupoID" DataType="Integer">
+</Element>
+<Element Name="ZonaID" DataType="Integer">
+</Element>
+<Element Name="NombreGrupo" DataType="AnsiString">
+</Element>
+<Element Name="NombreZona" DataType="AnsiString">
+</Element>
+<Element Name="FormaPagoID" DataType="Integer">
+</Element>
+<Element Name="NombreFormaPago" DataType="AnsiString">
+</Element>
+<Element Name="VendedorID" DataType="Integer">
+</Element>
+<Element Name="NombreVendedor" DataType="AnsiString">
+</Element>
+<Element Name="DiaRevision" DataType="Integer">
+</Element>
+<Element Name="DiaPago" DataType="Integer">
+</Element>
+<Element Name="CuentaBancaria" DataType="AnsiString">
+</Element>
+<Element Name="FacturaUsoID" DataType="Integer">
+</Element>
+<Element Name="NombreFacturaUso" DataType="AnsiString">
+</Element>
+<Element Name="MetodoPagoID" DataType="Integer">
+</Element>
+<Element Name="NombreMetoodoPago" DataType="AnsiString">
 </Element>
 </Elements>
 </Struct>
