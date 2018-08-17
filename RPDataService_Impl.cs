@@ -459,9 +459,9 @@ namespace RPSuiteServer
                 //Generar una nueva Factura y Detalle Factura
                 int FacturaID;
                 using (IDbCommand lcommand = this.ServiceSchema.NewCommand(this.Connection, "InsertarFactura", new string[]
-                { "Serie", "Folio", "Fecha", "Ejercicio", "Periodo", "Dia", "FechaVencimiento", "ImpuestoPorcentaje", "Observacion", "FacturaUsoID", "FormaPagoID", "MetodoPagoID", "EstacionID", "ConfiguracionID", "MovimientoID" },
+                { "Serie", "Folio", "Fecha", "Ejercicio", "Periodo", "Dia", "FechaVencimiento", "ImpuestoPorcentaje","Status", "Observacion", "FacturaUsoID", "FormaPagoID", "MetodoPagoID", "EstacionID", "ConfiguracionID", "MovimientoID" },
                                                                                                                  new object[]
-                { Serie, Folio, Fecha,Ejercicio, Periodo,Dia,FechaVencimiento,ImpuestoPorcentaje,Observacion,FacturaUsoID,FormaPagoID,MetodoPagoID,EstacionID,ConfiguracionID,MovimientoID}))
+                { Serie, Folio, Fecha,Ejercicio, Periodo,Dia,FechaVencimiento,ImpuestoPorcentaje,true,Observacion,FacturaUsoID,FormaPagoID,MetodoPagoID,EstacionID,ConfiguracionID,MovimientoID}))
                 {
                     FacturaID = int.Parse(lcommand.ExecuteScalar().ToString());
 

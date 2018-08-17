@@ -9218,7 +9218,7 @@ WHERE
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
-          <DataType>datWideString</DataType>
+          <DataType>datString</DataType>
           <DefaultValue />
           <CustomAttributes />
           <DictionaryEntry />
@@ -9574,16 +9574,16 @@ WHERE
           <Description />
         </Item12>
         <Item13>
-          <Name>Status</Name>
+          <Name>StatusID</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
-          <DataType>datBoolean</DataType>
+          <DataType>datInteger</DataType>
           <DefaultValue />
           <CustomAttributes />
           <DictionaryEntry />
           <DisplayFormat />
-          <DisplayLabel>Status</DisplayLabel>
+          <DisplayLabel>StatusID</DisplayLabel>
           <DisplayWidth>0</DisplayWidth>
           <EditFormat />
           <EditMask />
@@ -9608,7 +9608,7 @@ WHERE
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
-          <DataType>datWideString</DataType>
+          <DataType>datString</DataType>
           <DefaultValue />
           <CustomAttributes />
           <DictionaryEntry />
@@ -9724,7 +9724,7 @@ WHERE
           <Description />
         </Item17>
         <Item18>
-          <Name>StatusID</Name>
+          <Name>FacturaID</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
@@ -9733,7 +9733,7 @@ WHERE
           <CustomAttributes />
           <DictionaryEntry />
           <DisplayFormat />
-          <DisplayLabel>StatusID</DisplayLabel>
+          <DisplayLabel>FacturaID</DisplayLabel>
           <DisplayWidth>0</DisplayWidth>
           <EditFormat />
           <EditMask />
@@ -9754,16 +9754,16 @@ WHERE
           <Description />
         </Item18>
         <Item19>
-          <Name>FacturaID</Name>
+          <Name>Facturado</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
-          <DataType>datInteger</DataType>
+          <DataType>datBoolean</DataType>
           <DefaultValue />
           <CustomAttributes />
           <DictionaryEntry />
           <DisplayFormat />
-          <DisplayLabel>FacturaID</DisplayLabel>
+          <DisplayLabel>Facturado</DisplayLabel>
           <DisplayWidth>0</DisplayWidth>
           <EditFormat />
           <EditMask />
@@ -9814,11 +9814,12 @@ SELECT
 	[Fecha], [FechaModificacion], [Ejercicio], 
 	[Periodo], [Dia], [Subtotal], 
 	[IVA], [IEPS], [Total], 
-	[Descuento], [Status], [Observacion], 
+	[Descuento], [StatusID], [Observacion], 
 	[EstacionID], [ConfiguracionID], [UsuarioID], 
-	[StatusID] ,FacturaID
+	[FacturaID], [Facturado] 
 FROM 
 	[Pedido] 
+	
 WHERE 
 	(Serie Like @WildCards) OR
     (Folio Like @WildCards) OR
@@ -9898,9 +9899,9 @@ WHERE
               <TableField>Descuento</TableField>
             </Item12>
             <Item13>
-              <DatasetField>Status</DatasetField>
-              <SQLOrigin>Status</SQLOrigin>
-              <TableField>Status</TableField>
+              <DatasetField>StatusID</DatasetField>
+              <SQLOrigin>StatusID</SQLOrigin>
+              <TableField>StatusID</TableField>
             </Item13>
             <Item14>
               <DatasetField>Observacion</DatasetField>
@@ -9923,14 +9924,14 @@ WHERE
               <TableField>UsuarioID</TableField>
             </Item17>
             <Item18>
-              <DatasetField>StatusID</DatasetField>
-              <SQLOrigin>StatusID</SQLOrigin>
-              <TableField>StatusID</TableField>
-            </Item18>
-            <Item19>
               <DatasetField>FacturaID</DatasetField>
               <SQLOrigin>FacturaID</SQLOrigin>
               <TableField>FacturaID</TableField>
+            </Item18>
+            <Item19>
+              <DatasetField>Facturado</DatasetField>
+              <SQLOrigin>Facturado</SQLOrigin>
+              <TableField>Facturado</TableField>
             </Item19>
           </ColumnMappings>
           <Description />
@@ -17101,7 +17102,10 @@ insert into Factura
 (FacturaID,Serie,Folio,Fecha,Ejercicio,Periodo,Dia,FechaVencimiento,ImpuestoPorcentaje,Status,Observacion,FacturaUsoID,FormaPagoID,MetodoPagoID,EstacionID,ConfiguracionID,MovimientoID)
 values
 (@Folio1,:Serie,:Folio,:Fecha,:Ejercicio,:Periodo,:Dia,:FechaVencimiento,:ImpuestoPorcentaje,:Status,:Observacion,:FacturaUsoID,:FormaPagoID,:MetodoPagoID,:EstacionID,:ConfiguracionID,:MovimientoID)
-select @Folio1</SQL>
+select @Folio1
+
+update Pedido
+set Facturado=1</SQL>
           <TargetTable>Factura</TargetTable>
           <ConnectionType>SQLite</ConnectionType>
           <Default>True</Default>

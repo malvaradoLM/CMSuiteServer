@@ -81,3 +81,6 @@ C:\Proyectos\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.exe.licenses
 C:\Proyectos\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.csproj.CoreCompileInputs.cache
 C:\Proyectos\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.exe
 C:\Proyectos\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.pdb
+C:\SuiteWEB\CMSuiteServer\bin\Debug\RemObjects.DataAbstract.Async.dll
+C:\SuiteWEB\CMSuiteServer\bin\Debug\RemObjects.DataAbstract.Async.pdb
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.csprojResolveAssemblyReference.cache
