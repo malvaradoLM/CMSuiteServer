@@ -84,3 +84,5 @@ C:\Proyectos\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.pdb
 C:\SuiteWEB\CMSuiteServer\bin\Debug\RemObjects.DataAbstract.Async.dll
 C:\SuiteWEB\CMSuiteServer\bin\Debug\RemObjects.DataAbstract.Async.pdb
 C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.csprojResolveAssemblyReference.cache
+Z:\Compartida\Proyectos\LM\Comercializadora\CMSuiteServer\bin\Debug\RemObjects.DataAbstract.Async.dll
+Z:\Compartida\Proyectos\LM\Comercializadora\CMSuiteServer\bin\Debug\RemObjects.DataAbstract.Async.pdb
