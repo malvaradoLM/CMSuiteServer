@@ -580,16 +580,38 @@ namespace RPSuiteServer
 
         }
 
-        public TEstacion GetEstacion()
+        public TEstacion GetEstacion(string Datos)
         {
             try
             {
                 TEstacion est = new TEstacion();
+                      IDbCommand command;
+
+                using (IDataReader reader = this.ServiceSchema.GetDataReader(this.Connection, "GetPedido", new string[] { "Datos" }, new object[] { Datos }, out command))
+                {
+                    while (reader.Read())
+                    {
+
+                        est.EstacionID = (int)reader["EstacionID"];
+                        est.Nombre = (string)reader["Nombre"];
+                        est.RazonSocial = (string)reader["RazonSocial"];
+                        est.NombreGrupo = (string)reader["NombreGrupo"];
+                        est.Calle = (string)reader["Calle"];
+                        est.NoInterior = (string)reader["NoInterior"];
+                        est.NoExterior = (string)reader["NoExterior"];
+                        est.Ciudad = (string)reader["Ciudad"];
+                        est.Municipio = (string)reader["Municipio"];
+                        est.Estado = (string)reader["Estado"];
+                        est.NombreZona = (string)reader["NombreZona"];
+                        est.NombreGrupo = (string)reader["NombreGrupo"];
+                    }
+                }
                 return est;
             }
             catch (Exception ex)
             {
-               // throw ex.Message.ToString();
+
+                throw ex;
                
             }
         }

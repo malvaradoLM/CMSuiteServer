@@ -2971,7 +2971,7 @@ namespace RPSuiteServer {
         int UpdatePedidoFactura(int PedidoID, int FacturaID);
         int GuardaPedido(TPedido Datos);
         int GuardaDetallePedido(TDetallePedido Datos);
-        TEstacion GetEstacion();
+        TEstacion GetEstacion(string Datos);
     }
     public partial class RPDataService_Proxy : RemObjects.DataAbstract.Server.DataAbstractService_Proxy, IRPDataService {
         public RPDataService_Proxy(RemObjects.SDK.IMessage message, RemObjects.SDK.IClientChannel clientChannel) : 
@@ -3250,10 +3250,11 @@ namespace RPSuiteServer {
                 this.@__ClearMessage(@__LocalMessage);
             }
         }
-        public virtual TEstacion GetEstacion() {
+        public virtual TEstacion GetEstacion(string Datos) {
             RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
             try {
                 @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "GetEstacion");
+                @__LocalMessage.WriteAnsiString("Datos", Datos);
                 @__LocalMessage.FinalizeMessage();
                 this.ClientChannel.Dispatch(@__LocalMessage);
                 TEstacion _Result = ((TEstacion)(@__LocalMessage.Read("Result", typeof(TEstacion), RemObjects.SDK.StreamingFormat.Default)));
@@ -3344,9 +3345,9 @@ namespace RPSuiteServer {
         System.IAsyncResult BeginGuardaDetallePedido(TDetallePedido Datos, System.AsyncCallback @__Callback, object @__UserData);
         int EndGuardaDetallePedido(System.IAsyncResult @__AsyncResult);
         System.Threading.Tasks.Task<int> GuardaDetallePedidoAsync(TDetallePedido Datos);
-        System.IAsyncResult BeginGetEstacion(System.AsyncCallback @__Callback, object @__UserData);
+        System.IAsyncResult BeginGetEstacion(string Datos, System.AsyncCallback @__Callback, object @__UserData);
         TEstacion EndGetEstacion(System.IAsyncResult @__AsyncResult);
-        System.Threading.Tasks.Task<TEstacion> GetEstacionAsync();
+        System.Threading.Tasks.Task<TEstacion> GetEstacionAsync(string Datos);
     }
     public partial class RPDataService_AsyncProxy : RemObjects.DataAbstract.Server.DataAbstractService_AsyncProxy, IRPDataService_Async {
         public RPDataService_AsyncProxy(RemObjects.SDK.IMessage message, RemObjects.SDK.IClientChannel clientChannel) : 
@@ -3834,10 +3835,11 @@ namespace RPSuiteServer {
         public virtual System.Threading.Tasks.Task<int> GuardaDetallePedidoAsync(TDetallePedido Datos) {
             return System.Threading.Tasks.Task<int>.Factory.FromAsync(this.BeginGuardaDetallePedido(Datos, null, null), new System.Func<System.IAsyncResult, int>(this.EndGuardaDetallePedido));
         }
-        public virtual System.IAsyncResult BeginGetEstacion(System.AsyncCallback @__Callback, object @__UserData) {
+        public virtual System.IAsyncResult BeginGetEstacion(string Datos, System.AsyncCallback @__Callback, object @__UserData) {
             RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
             try {
                 @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "GetEstacion");
+                @__LocalMessage.WriteAnsiString("Datos", Datos);
                 @__LocalMessage.FinalizeMessage();
                 return this.ClientChannel.AsyncDispatch(@__LocalMessage, @__Callback, @__UserData);
             }
@@ -3856,8 +3858,8 @@ namespace RPSuiteServer {
                 this.@__ClearMessage(@__LocalMessage);
             }
         }
-        public virtual System.Threading.Tasks.Task<TEstacion> GetEstacionAsync() {
-            return System.Threading.Tasks.Task<TEstacion>.Factory.FromAsync(this.BeginGetEstacion(null, null), new System.Func<System.IAsyncResult, TEstacion>(this.EndGetEstacion));
+        public virtual System.Threading.Tasks.Task<TEstacion> GetEstacionAsync(string Datos) {
+            return System.Threading.Tasks.Task<TEstacion>.Factory.FromAsync(this.BeginGetEstacion(Datos, null, null), new System.Func<System.IAsyncResult, TEstacion>(this.EndGetEstacion));
         }
     }
     public class CoRPDataServiceAsync {

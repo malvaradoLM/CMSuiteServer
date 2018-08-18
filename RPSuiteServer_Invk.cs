@@ -283,8 +283,9 @@ namespace RPSuiteServer {
         public static void Invoke_GetEstacion(RemObjects.SDK.IROService @__Instance, RemObjects.SDK.IMessage @__Message, RemObjects.SDK.Server.IServerChannelInfo @__ServerChannelInfo, out RemObjects.SDK.Server.ResponseOptions @__oResponseOptions) {
             RemObjects.SDK.ObjectDisposer @__ObjectDisposer = new RemObjects.SDK.ObjectDisposer(1);
             try {
+                string Datos = @__Message.ReadAnsiString("Datos");
                 TEstacion Result;
-                Result = ((IRPDataService)(@__Instance)).GetEstacion();
+                Result = ((IRPDataService)(@__Instance)).GetEstacion(Datos);
                 @__ObjectDisposer.Add(Result);
                 @__Message.InitializeResponseMessage(@__ServerChannelInfo, "RPSuiteServer", "RPDataService", "GetEstacionResponse");
                 @__Message.Write("Result", Result, typeof(TEstacion), RemObjects.SDK.StreamingFormat.Default);

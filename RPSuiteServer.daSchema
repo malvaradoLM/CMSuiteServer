@@ -13077,7 +13077,7 @@ WHERE
     </Item31>
     <Item32>
       <ReadOnly>False</ReadOnly>
-      <Fields IsObject="true" Count="2" IsCollection="true" ItemClass="TDAField" Type="TDASchemaFieldCollection">
+      <Fields IsObject="true" Count="3" IsCollection="true" ItemClass="TDAField" Type="TDASchemaFieldCollection">
         <Item0>
           <Name>FormaPagoID</Name>
           <Alignment>taLeftJustify</Alignment>
@@ -13109,6 +13109,36 @@ WHERE
           <Description />
         </Item0>
         <Item1>
+          <Name>CodigoSAT</Name>
+          <Alignment>taLeftJustify</Alignment>
+          <Calculated>False</Calculated>
+          <ServerCalculated>False</ServerCalculated>
+          <DataType>datString</DataType>
+          <DefaultValue />
+          <CustomAttributes />
+          <DictionaryEntry />
+          <DisplayFormat />
+          <DisplayLabel>CodigoSAT</DisplayLabel>
+          <DisplayWidth>0</DisplayWidth>
+          <EditFormat />
+          <EditMask />
+          <InPrimaryKey>False</InPrimaryKey>
+          <LogChanges>True</LogChanges>
+          <ReadOnly>False</ReadOnly>
+          <RegExpression />
+          <Required>False</Required>
+          <ServerAutoRefresh>False</ServerAutoRefresh>
+          <Visible>True</Visible>
+          <Expression />
+          <Size>10</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item1>
+        <Item2>
           <Name>Descripcion</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -13137,7 +13167,7 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item1>
+        </Item2>
       </Fields>
       <BusinessRulesClient IsObject="true" Type="TDAClientBusinessRuleScript">
         <CompileOnServer>False</CompileOnServer>
@@ -13160,7 +13190,7 @@ WHERE
         <Item0>
           <Connection>RPSuite</Connection>
           <SQL>SELECT 	
-	[FormaPagoID], [Descripcion] 
+	[FormaPagoID], [CodigoSAT], [Descripcion] 
 FROM 
 	[FormaPago] 
 </SQL>
@@ -13170,17 +13200,22 @@ FROM
           <StatementName />
           <StatementType>stSQL</StatementType>
           <GeneratorName />
-          <ColumnMappings IsObject="true" Count="2" IsCollection="true" Type="TDAColumnMappingCollection" ItemClass="TDAColumnMapping">
+          <ColumnMappings IsObject="true" Count="3" IsCollection="true" Type="TDAColumnMappingCollection" ItemClass="TDAColumnMapping">
             <Item0>
               <DatasetField>FormaPagoID</DatasetField>
               <SQLOrigin>FormaPagoID</SQLOrigin>
               <TableField>FormaPagoID</TableField>
             </Item0>
             <Item1>
+              <DatasetField>CodigoSAT</DatasetField>
+              <SQLOrigin>CodigoSAT</SQLOrigin>
+              <TableField>CodigoSAT</TableField>
+            </Item1>
+            <Item2>
               <DatasetField>Descripcion</DatasetField>
               <SQLOrigin>Descripcion</SQLOrigin>
               <TableField>Descripcion</TableField>
-            </Item1>
+            </Item2>
           </ColumnMappings>
           <Description />
         </Item0>

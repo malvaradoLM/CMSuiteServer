@@ -203,6 +203,8 @@
 <Parameters>
 <Parameter Name="Result" DataType="TEstacion" Flag="Result">
 </Parameter>
+<Parameter Name="Datos" DataType="AnsiString" Flag="In" >
+</Parameter>
 </Parameters>
 </Operation>
 </Operations>
