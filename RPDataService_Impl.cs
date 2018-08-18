@@ -594,18 +594,18 @@ namespace RPSuiteServer
                     while (reader.Read())
                     {
 
-                        est.EstacionID = (int)reader["EstacionID"];
-                        est.Nombre = (string)reader["Nombre"];
-                        est.RazonSocial = (string)reader["RazonSocial"];
-                        est.NombreGrupo = (string)reader["NombreGrupo"];
-                        est.Calle = (string)reader["Calle"];
-                        est.NoInterior = (string)reader["NoInterior"];
-                        est.NoExterior = (string)reader["NoExterior"];
-                        est.Ciudad = (string)reader["Ciudad"];
-                        est.Municipio = (string)reader["Municipio"];
-                        est.Estado = (string)reader["Estado"];
-                        est.NombreZona = (string)reader["NombreZona"];
-                        est.NombreGrupo = (string)reader["NombreGrupo"];
+                        est.EstacionID = (int)(reader["EstacionID"] != DBNull.Value ? reader["EstacionID"] : "");
+                        est.Nombre = (string)(reader["Nombre"] != DBNull.Value ? reader["Nombre"] : "");
+                        est.RazonSocial = (string)(reader["RazonSocial"] != DBNull.Value ? reader["RazonSocial"] : "");
+                        est.NombreGrupo = (string)(reader["NombreGrupo"] != DBNull.Value ? reader["NombreGrupo"] : "");
+                        est.Calle = (string)(reader["Calle"] != DBNull.Value ? reader["Calle"] : "");
+                        est.NoInterior = (string)(reader["NoInterior"] != DBNull.Value ? reader["NoInterior"] : "");
+                        est.NoExterior = (string)(reader["NoExterior"] != DBNull.Value ? reader["NoExterior"] : "");
+                        est.Ciudad = (string)(reader["Ciudad"] != DBNull.Value ? reader["Ciudad"] : "");
+                        est.Municipio = (string)(reader["Municipio"] != DBNull.Value ? reader["Municipio"] : "");
+                        est.Estado = (string)(reader["Estado"] != DBNull.Value ? reader["Estado"] : "");
+                        est.NombreZona = (string)(reader["NombreZona"] != DBNull.Value ? reader["NombreZona"] : "");
+                        est.NombreGrupo = (string)(reader["NombreGrupo"] != DBNull.Value ? reader["NombreGrupo"] : "");
                     }
                 }
                 return est;
