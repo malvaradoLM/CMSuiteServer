@@ -2422,7 +2422,7 @@ where campo = @Campo and serie = @Serie
           <DisplayWidth>0</DisplayWidth>
           <EditFormat />
           <EditMask />
-          <InPrimaryKey>False</InPrimaryKey>
+          <InPrimaryKey>True</InPrimaryKey>
           <LogChanges>True</LogChanges>
           <ReadOnly>False</ReadOnly>
           <RegExpression />

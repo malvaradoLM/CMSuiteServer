@@ -587,8 +587,10 @@ namespace RPSuiteServer
                 TEstacion est = new TEstacion();
                       IDbCommand command;
 
-                using (IDataReader reader = this.ServiceSchema.GetDataReader(this.Connection, "GetPedido", new string[] { "Datos" }, new object[] { Datos }, out command))
+
+                using (IDbCommand lcommand = this.ServiceSchema.NewCommand(this.Connection, "cmdEstacion", new string[] { "Datos" }, new object[] { Datos }))
                 {
+                    IDataReader reader = lcommand.ExecuteReader();
                     while (reader.Read())
                     {
 
