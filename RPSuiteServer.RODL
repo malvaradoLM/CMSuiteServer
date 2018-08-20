@@ -207,6 +207,14 @@
 </Parameter>
 </Parameters>
 </Operation>
+<Operation Name="GetVendedor" UID="{F60017F3-1498-4879-9407-5A0F0AAAC9E6}">
+<Parameters>
+<Parameter Name="Result" DataType="TVendedor" Flag="Result">
+</Parameter>
+<Parameter Name="Datos" DataType="AnsiString" Flag="In" >
+</Parameter>
+</Parameters>
+</Operation>
 </Operations>
 </Interface>
 </Interfaces>
@@ -616,6 +624,18 @@
 <Element Name="MetodoPagoID" DataType="Integer">
 </Element>
 <Element Name="NombreMetoodoPago" DataType="AnsiString">
+</Element>
+</Elements>
+</Struct>
+<Struct Name="TVendedor" UID="{A8C1C585-C65C-4DA1-B0E6-767131F1A5BC}" AutoCreateParams="1">
+<Elements>
+<Element Name="VendedorID" DataType="Integer">
+</Element>
+<Element Name="Nombre" DataType="AnsiString">
+</Element>
+<Element Name="Telefono" DataType="AnsiString">
+</Element>
+<Element Name="Email" DataType="AnsiString">
 </Element>
 </Elements>
 </Struct>

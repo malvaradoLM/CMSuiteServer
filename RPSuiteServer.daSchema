@@ -15287,7 +15287,7 @@ WHERE
       <Name>spCatRegimenFiscal</Name>
     </Item42>
   </Datasets>
-  <Commands IsObject="true" Count="18" IsCollection="true" ItemClass="TDASQLCommand" Type="TDASQLCommandCollection">
+  <Commands IsObject="true" Count="19" IsCollection="true" ItemClass="TDASQLCommand" Type="TDASQLCommandCollection">
     <Item0>
       <BusinessRulesServer Type="TDABusinessRuleScript" IsObject="true">
         <Script />
@@ -17804,6 +17804,55 @@ WHERE
       <Description />
       <Name>cmdEstacion</Name>
     </Item17>
+    <Item18>
+      <BusinessRulesServer Type="TDABusinessRuleScript" IsObject="true">
+        <Script />
+        <ScriptLanguageStr />
+        <Description />
+        <Name />
+      </BusinessRulesServer>
+      <Statements IsCollection="true" IsObject="true" Count="1" ItemClass="TDAStatement" Type="TDAStatementCollection">
+        <Item0>
+          <Connection>RPSuite</Connection>
+          <SQL>DECLARE @VendedorID VARCHAR(50)
+SET @VendedorID = (SELECT VendedorID FROM Estacion WHERE EstacionID = :Datos)
+
+SELECT VendedorID,Nombre,Telefono,Email
+FROM Vendedor
+where VendedorID = @VendedorID
+</SQL>
+          <TargetTable>vendedor</TargetTable>
+          <ConnectionType>SQLite</ConnectionType>
+          <Default>True</Default>
+          <StatementName />
+          <StatementType>stSQL</StatementType>
+          <GeneratorName />
+          <ColumnMappings IsObject="true" Count="0" IsCollection="true" Type="TDAColumnMappingCollection" ItemClass="TDAColumnMapping" />
+          <Description />
+        </Item0>
+      </Statements>
+      <Params IsObject="true" Count="1" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam">
+        <Item0>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>Datos</Name>
+          <DataType>datString</DataType>
+          <Size>100</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item0>
+      </Params>
+      <CustomAttributes />
+      <IsPublic>True</IsPublic>
+      <DynamicWhereXML />
+      <BusinessClassID />
+      <Description />
+      <Name>cmdBuscarVendedor</Name>
+    </Item18>
   </Commands>
   <RelationShips IsObject="true" Count="0" IsCollection="true" Type="TDADatasetRelationshipCollection" ItemClass="TDADatasetRelationship" />
   <UpdateRules IsObject="true" Count="0" IsCollection="true" Type="TDAUpdateRuleCollection" ItemClass="TDAUpdateRule" />

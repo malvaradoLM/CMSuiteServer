@@ -2872,6 +2872,90 @@ namespace RPSuiteServer {
             return new TEstacion();
         }
     }
+    [System.Serializable()]
+    [RemObjects.SDK.Remotable(ActivatorClass=typeof(TVendedor_Activator))]
+    [System.Reflection.ObfuscationAttribute(Exclude=true)]
+    public partial class TVendedor : RemObjects.SDK.Types.ComplexType {
+        private int @__VendedorID;
+        private string @__Nombre;
+        private string @__Telefono;
+        private string @__Email;
+        public virtual int VendedorID {
+            get {
+                return @__VendedorID;
+            }
+            set {
+                @__VendedorID = value;
+                this.TriggerPropertyChanged("VendedorID");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string Nombre {
+            get {
+                return @__Nombre;
+            }
+            set {
+                @__Nombre = value;
+                this.TriggerPropertyChanged("Nombre");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string Telefono {
+            get {
+                return @__Telefono;
+            }
+            set {
+                @__Telefono = value;
+                this.TriggerPropertyChanged("Telefono");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string Email {
+            get {
+                return @__Email;
+            }
+            set {
+                @__Email = value;
+                this.TriggerPropertyChanged("Email");
+            }
+        }
+        public override void ReadComplex(RemObjects.SDK.Serializer serializer) {
+            if (serializer.RecordStrictOrder) {
+                this.VendedorID = serializer.ReadInt32("VendedorID");
+                this.Nombre = serializer.ReadAnsiString("Nombre");
+                this.Telefono = serializer.ReadAnsiString("Telefono");
+                this.Email = serializer.ReadAnsiString("Email");
+            }
+            else {
+                this.Email = serializer.ReadAnsiString("Email");
+                this.Nombre = serializer.ReadAnsiString("Nombre");
+                this.Telefono = serializer.ReadAnsiString("Telefono");
+                this.VendedorID = serializer.ReadInt32("VendedorID");
+            }
+        }
+        public override void WriteComplex(RemObjects.SDK.Serializer serializer) {
+            if (serializer.RecordStrictOrder) {
+                serializer.WriteInt32("VendedorID", this.VendedorID);
+                serializer.WriteAnsiString("Nombre", this.Nombre);
+                serializer.WriteAnsiString("Telefono", this.Telefono);
+                serializer.WriteAnsiString("Email", this.Email);
+            }
+            else {
+                serializer.WriteAnsiString("Email", this.Email);
+                serializer.WriteAnsiString("Nombre", this.Nombre);
+                serializer.WriteAnsiString("Telefono", this.Telefono);
+                serializer.WriteInt32("VendedorID", this.VendedorID);
+            }
+        }
+    }
+    [System.Reflection.ObfuscationAttribute(Exclude=true, ApplyToMembers=false)]
+    public class TVendedor_Activator : object, RemObjects.SDK.ITypeActivator {
+        public TVendedor_Activator() {
+        }
+        public object CreateInstance() {
+            return new TVendedor();
+        }
+    }
     public interface IRPLoginService : RemObjects.DataAbstract.Server.ISimpleLoginService {
     }
     public partial class RPLoginService_Proxy : RemObjects.DataAbstract.Server.SimpleLoginService_Proxy, IRPLoginService {
@@ -2972,6 +3056,7 @@ namespace RPSuiteServer {
         int GuardaPedido(TPedido Datos);
         int GuardaDetallePedido(TDetallePedido Datos);
         TEstacion GetEstacion(string Datos);
+        TVendedor GetVendedor(string Datos);
     }
     public partial class RPDataService_Proxy : RemObjects.DataAbstract.Server.DataAbstractService_Proxy, IRPDataService {
         public RPDataService_Proxy(RemObjects.SDK.IMessage message, RemObjects.SDK.IClientChannel clientChannel) : 
@@ -3264,6 +3349,20 @@ namespace RPSuiteServer {
                 this.@__ClearMessage(@__LocalMessage);
             }
         }
+        public virtual TVendedor GetVendedor(string Datos) {
+            RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
+            try {
+                @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "GetVendedor");
+                @__LocalMessage.WriteAnsiString("Datos", Datos);
+                @__LocalMessage.FinalizeMessage();
+                this.ClientChannel.Dispatch(@__LocalMessage);
+                TVendedor _Result = ((TVendedor)(@__LocalMessage.Read("Result", typeof(TVendedor), RemObjects.SDK.StreamingFormat.Default)));
+                return _Result;
+            }
+            finally {
+                this.@__ClearMessage(@__LocalMessage);
+            }
+        }
     }
     public class CoRPDataService {
         public static IRPDataService Create(RemObjects.SDK.IMessage message, RemObjects.SDK.IClientChannel clientChannel) {
@@ -3348,6 +3447,9 @@ namespace RPSuiteServer {
         System.IAsyncResult BeginGetEstacion(string Datos, System.AsyncCallback @__Callback, object @__UserData);
         TEstacion EndGetEstacion(System.IAsyncResult @__AsyncResult);
         System.Threading.Tasks.Task<TEstacion> GetEstacionAsync(string Datos);
+        System.IAsyncResult BeginGetVendedor(string Datos, System.AsyncCallback @__Callback, object @__UserData);
+        TVendedor EndGetVendedor(System.IAsyncResult @__AsyncResult);
+        System.Threading.Tasks.Task<TVendedor> GetVendedorAsync(string Datos);
     }
     public partial class RPDataService_AsyncProxy : RemObjects.DataAbstract.Server.DataAbstractService_AsyncProxy, IRPDataService_Async {
         public RPDataService_AsyncProxy(RemObjects.SDK.IMessage message, RemObjects.SDK.IClientChannel clientChannel) : 
@@ -3860,6 +3962,32 @@ namespace RPSuiteServer {
         }
         public virtual System.Threading.Tasks.Task<TEstacion> GetEstacionAsync(string Datos) {
             return System.Threading.Tasks.Task<TEstacion>.Factory.FromAsync(this.BeginGetEstacion(Datos, null, null), new System.Func<System.IAsyncResult, TEstacion>(this.EndGetEstacion));
+        }
+        public virtual System.IAsyncResult BeginGetVendedor(string Datos, System.AsyncCallback @__Callback, object @__UserData) {
+            RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
+            try {
+                @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "GetVendedor");
+                @__LocalMessage.WriteAnsiString("Datos", Datos);
+                @__LocalMessage.FinalizeMessage();
+                return this.ClientChannel.AsyncDispatch(@__LocalMessage, @__Callback, @__UserData);
+            }
+            catch (System.Exception ex) {
+                this.@__ClearMessage(@__LocalMessage);
+                throw ex;
+            }
+        }
+        public virtual TVendedor EndGetVendedor(System.IAsyncResult @__AsyncResult) {
+            RemObjects.SDK.IMessage @__LocalMessage = ((RemObjects.SDK.IClientAsyncResult)(@__AsyncResult)).Message;
+            try {
+                TVendedor Result = ((TVendedor)(@__LocalMessage.Read("Result", typeof(TVendedor), RemObjects.SDK.StreamingFormat.Default)));
+                return Result;
+            }
+            finally {
+                this.@__ClearMessage(@__LocalMessage);
+            }
+        }
+        public virtual System.Threading.Tasks.Task<TVendedor> GetVendedorAsync(string Datos) {
+            return System.Threading.Tasks.Task<TVendedor>.Factory.FromAsync(this.BeginGetVendedor(Datos, null, null), new System.Func<System.IAsyncResult, TVendedor>(this.EndGetVendedor));
         }
     }
     public class CoRPDataServiceAsync {

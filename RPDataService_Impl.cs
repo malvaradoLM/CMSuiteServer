@@ -617,5 +617,35 @@ namespace RPSuiteServer
                
             }
         }
+
+        public TVendedor GetVendedor(string Datos)
+        {
+            try
+            {
+                TVendedor est = new TVendedor();
+                IDbCommand command;
+
+
+                using (IDbCommand lcommand = this.ServiceSchema.NewCommand(this.Connection, "cmdBuscarVendedor", new string[] { "Datos" }, new object[] { Datos }))
+                {
+                    IDataReader reader = lcommand.ExecuteReader();
+                    while (reader.Read())
+                    {
+
+                        est.VendedorID = (int)(reader["VendedorID"] != DBNull.Value ? reader["VendedorID"] : "");
+                        est.Nombre = (string)(reader["Nombre"] != DBNull.Value ? reader["Nombre"] : "");
+                        est.Telefono = (string)(reader["Telefono"] != DBNull.Value ? reader["Telefono"] : "");
+                        est.Email = (string)(reader["Email"] != DBNull.Value ? reader["Email"] : "");
+                    }
+                }
+                return est;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+
+            }
+        }
     }
 }
