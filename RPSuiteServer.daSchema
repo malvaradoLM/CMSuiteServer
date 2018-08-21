@@ -12797,11 +12797,19 @@ WHERE
       <Statements IsCollection="true" IsObject="true" Count="1" ItemClass="TDAStatement" Type="TDAStatementCollection">
         <Item0>
           <Connection>RPSuite</Connection>
-          <SQL>SELECT 	
-	[FormaPagoID], [CodigoSAT], [Descripcion] 
+          <SQL>	
+Declare @Parametro Varchar(100)
+Declare @WildCards varchar(100)
+select @Parametro=(Select :Datos)
+select @WildCards=(Select '%' + @Parametro + '%') 
+
+SELECT 	
+	[FormaPagoID], [Descripcion], [CodigoSAT] 
 FROM 
 	[FormaPago] 
-</SQL>
+WHERE 
+    (Descripcion Like @WildCards) OR
+    (Cast(FormaPagoID as Varchar(10))=@Parametro) </SQL>
           <TargetTable>FormaPago</TargetTable>
           <ConnectionType>SQLite</ConnectionType>
           <Default>True</Default>
@@ -12828,7 +12836,21 @@ FROM
           <Description />
         </Item0>
       </Statements>
-      <Params IsObject="true" Count="0" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam" />
+      <Params IsObject="true" Count="1" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam">
+        <Item0>
+          <Value>1</Value>
+          <ParamType>daptInput</ParamType>
+          <Name>Datos</Name>
+          <DataType>datString</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item0>
+      </Params>
       <CustomAttributes />
       <IsPublic>True</IsPublic>
       <DynamicWhereXML />
@@ -15556,7 +15578,7 @@ WHERE
           <ParamType>daptInput</ParamType>
           <Name>Datos</Name>
           <DataType>datString</DataType>
-          <Size>0</Size>
+          <Size>65536</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
           <BlobType>dabtUnknown</BlobType>
