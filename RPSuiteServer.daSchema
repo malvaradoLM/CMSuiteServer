@@ -3320,7 +3320,7 @@ WHERE
     </Item6>
     <Item7>
       <ReadOnly>False</ReadOnly>
-      <Fields IsObject="true" Count="3" IsCollection="true" ItemClass="TDAField" Type="TDASchemaFieldCollection">
+      <Fields IsObject="true" Count="5" IsCollection="true" ItemClass="TDAField" Type="TDASchemaFieldCollection">
         <Item0>
           <Name>ProveedorID</Name>
           <Alignment>taLeftJustify</Alignment>
@@ -3356,7 +3356,7 @@ WHERE
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
-          <DataType>datString</DataType>
+          <DataType>datWideString</DataType>
           <DefaultValue />
           <CustomAttributes />
           <DictionaryEntry />
@@ -3386,7 +3386,7 @@ WHERE
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
-          <DataType>datString</DataType>
+          <DataType>datWideString</DataType>
           <DefaultValue />
           <CustomAttributes />
           <DictionaryEntry />
@@ -3411,6 +3411,66 @@ WHERE
           <BusinessClassID />
           <Description />
         </Item2>
+        <Item3>
+          <Name>Telefono</Name>
+          <Alignment>taLeftJustify</Alignment>
+          <Calculated>False</Calculated>
+          <ServerCalculated>False</ServerCalculated>
+          <DataType>datWideString</DataType>
+          <DefaultValue />
+          <CustomAttributes />
+          <DictionaryEntry />
+          <DisplayFormat />
+          <DisplayLabel>Telefono</DisplayLabel>
+          <DisplayWidth>0</DisplayWidth>
+          <EditFormat />
+          <EditMask />
+          <InPrimaryKey>False</InPrimaryKey>
+          <LogChanges>True</LogChanges>
+          <ReadOnly>False</ReadOnly>
+          <RegExpression />
+          <Required>False</Required>
+          <ServerAutoRefresh>False</ServerAutoRefresh>
+          <Visible>True</Visible>
+          <Expression />
+          <Size>50</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item3>
+        <Item4>
+          <Name>Email</Name>
+          <Alignment>taLeftJustify</Alignment>
+          <Calculated>False</Calculated>
+          <ServerCalculated>False</ServerCalculated>
+          <DataType>datWideString</DataType>
+          <DefaultValue />
+          <CustomAttributes />
+          <DictionaryEntry />
+          <DisplayFormat />
+          <DisplayLabel>Email</DisplayLabel>
+          <DisplayWidth>0</DisplayWidth>
+          <EditFormat />
+          <EditMask />
+          <InPrimaryKey>False</InPrimaryKey>
+          <LogChanges>True</LogChanges>
+          <ReadOnly>False</ReadOnly>
+          <RegExpression />
+          <Required>False</Required>
+          <ServerAutoRefresh>False</ServerAutoRefresh>
+          <Visible>True</Visible>
+          <Expression />
+          <Size>100</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item4>
       </Fields>
       <BusinessRulesClient IsObject="true" Type="TDAClientBusinessRuleScript">
         <CompileOnServer>False</CompileOnServer>
@@ -3438,7 +3498,7 @@ select @Parametro=(Select :Datos)
 select @WildCards=(Select '%' + @Parametro + '%') 
 
 SELECT 	
-	[ProveedorID], [Nombre], [RazonSocial] 
+	[ProveedorID], [Nombre], [RazonSocial] ,Telefono,Email
 FROM 
 	[Proveedor] 
 WHERE 
@@ -3450,7 +3510,7 @@ WHERE
           <StatementName />
           <StatementType>stSQL</StatementType>
           <GeneratorName />
-          <ColumnMappings IsObject="true" Count="3" IsCollection="true" Type="TDAColumnMappingCollection" ItemClass="TDAColumnMapping">
+          <ColumnMappings IsObject="true" Count="5" IsCollection="true" Type="TDAColumnMappingCollection" ItemClass="TDAColumnMapping">
             <Item0>
               <DatasetField>ProveedorID</DatasetField>
               <SQLOrigin>ProveedorID</SQLOrigin>
@@ -3466,6 +3526,16 @@ WHERE
               <SQLOrigin>RazonSocial</SQLOrigin>
               <TableField>RazonSocial</TableField>
             </Item2>
+            <Item3>
+              <DatasetField>Telefono</DatasetField>
+              <SQLOrigin>Telefono</SQLOrigin>
+              <TableField>Telefono</TableField>
+            </Item3>
+            <Item4>
+              <DatasetField>Email</DatasetField>
+              <SQLOrigin>Email</SQLOrigin>
+              <TableField>Email</TableField>
+            </Item4>
           </ColumnMappings>
           <Description />
         </Item0>
@@ -12842,7 +12912,7 @@ WHERE
           <ParamType>daptInput</ParamType>
           <Name>Datos</Name>
           <DataType>datString</DataType>
-          <Size>0</Size>
+          <Size>65536</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
           <BlobType>dabtUnknown</BlobType>
