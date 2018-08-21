@@ -4602,7 +4602,7 @@ WHERE
           <ServerAutoRefresh>False</ServerAutoRefresh>
           <Visible>True</Visible>
           <Expression />
-          <Size>10</Size>
+          <Size>40</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
           <BlobType>dabtUnknown</BlobType>
@@ -5266,8 +5266,8 @@ WHERE
           <Value />
           <ParamType>daptInput</ParamType>
           <Name>Datos</Name>
-          <DataType>datUnknown</DataType>
-          <Size>0</Size>
+          <DataType>datString</DataType>
+          <Size>100</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
           <BlobType>dabtUnknown</BlobType>
