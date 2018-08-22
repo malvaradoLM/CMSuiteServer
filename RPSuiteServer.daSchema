@@ -12195,7 +12195,7 @@ WHERE
           <Description />
         </Item1>
         <Item2>
-          <Name>CreditoUsado</Name>
+          <Name>Saldo</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
@@ -12204,7 +12204,7 @@ WHERE
           <CustomAttributes />
           <DictionaryEntry />
           <DisplayFormat />
-          <DisplayLabel>CreditoUsado</DisplayLabel>
+          <DisplayLabel>Saldo</DisplayLabel>
           <DisplayWidth>0</DisplayWidth>
           <EditFormat />
           <EditMask />
@@ -12225,7 +12225,7 @@ WHERE
           <Description />
         </Item2>
         <Item3>
-          <Name>Saldo</Name>
+          <Name>Disponible</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
@@ -12234,7 +12234,7 @@ WHERE
           <CustomAttributes />
           <DictionaryEntry />
           <DisplayFormat />
-          <DisplayLabel>Saldo</DisplayLabel>
+          <DisplayLabel>Disponible</DisplayLabel>
           <DisplayWidth>0</DisplayWidth>
           <EditFormat />
           <EditMask />
@@ -12276,8 +12276,8 @@ WHERE
         <Item0>
           <Connection>RPSuite</Connection>
           <SQL>SELECT 	
-	[EstacionID], [LimiteCredito], [CreditoUsado], 
-	[Saldo] 
+	[EstacionID], [LimiteCredito], [CreditoUsado] as Saldo, 
+	[Saldo] as Disponible 
 FROM 
 	[Saldo] 
 WHERE 
@@ -12300,14 +12300,14 @@ WHERE
               <TableField>LimiteCredito</TableField>
             </Item1>
             <Item2>
-              <DatasetField>CreditoUsado</DatasetField>
-              <SQLOrigin>CreditoUsado</SQLOrigin>
-              <TableField>CreditoUsado</TableField>
-            </Item2>
-            <Item3>
               <DatasetField>Saldo</DatasetField>
               <SQLOrigin>Saldo</SQLOrigin>
               <TableField>Saldo</TableField>
+            </Item2>
+            <Item3>
+              <DatasetField>Disponible</DatasetField>
+              <SQLOrigin>Disponible</SQLOrigin>
+              <TableField />
             </Item3>
           </ColumnMappings>
           <Description />
@@ -12318,8 +12318,8 @@ WHERE
           <Value />
           <ParamType>daptInput</ParamType>
           <Name>EstacionID</Name>
-          <DataType>datInteger</DataType>
-          <Size>0</Size>
+          <DataType>datString</DataType>
+          <Size>100</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
           <BlobType>dabtUnknown</BlobType>
@@ -15220,7 +15220,7 @@ WHERE
 Select EstacionID,E.LimiteCredito,isnull(E.Saldo + E.PendienteFacturar,0) as Saldo, isnull((E.LimiteCredito - E .Saldo - E.PendienteFacturar),0) as Disponible
   FROM
   (
-Select Estacion.EstacionID,LimiteCredito,B.PendienteFacturar,D.Saldo
+Select Estacion.EstacionID,LimiteCredito,isnull(B.PendienteFacturar,0) as PendienteFacturar ,isnull(D.Saldo,0) as Saldo
 From Estacion 
   left Join 
     (
