@@ -16465,7 +16465,7 @@ WHERE
           <ParamType>daptInput</ParamType>
           <Name>Datos</Name>
           <DataType>datString</DataType>
-          <Size>0</Size>
+          <Size>65536</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
           <BlobType>dabtUnknown</BlobType>
@@ -19060,7 +19060,9 @@ where VendedorID = @VendedorID
           <Connection>RPSuite</Connection>
           <SQL>Update pedido
 set StatusID = 7 --Cancelado
-Where PedidoID = :Datos</SQL>
+Where PedidoID = :Datos
+
+select 1</SQL>
           <TargetTable>Pedido</TargetTable>
           <ConnectionType>SQLite</ConnectionType>
           <Default>True</Default>

@@ -217,7 +217,7 @@
 </Operation>
 <Operation Name="CancelarPedido" UID="{B1AB77ED-BD3D-4502-A030-E4E6A070DE58}">
 <Parameters>
-<Parameter Name="Result" DataType="Boolean" Flag="Result">
+<Parameter Name="Result" DataType="Integer" Flag="Result">
 </Parameter>
 <Parameter Name="Datos" DataType="AnsiString" Flag="In" >
 </Parameter>

@@ -648,7 +648,7 @@ namespace RPSuiteServer
             }
         }
 
-        public bool CancelarPedido(string Datos)
+        public int CancelarPedido(string Datos)
         {
             try
             {
@@ -657,7 +657,7 @@ namespace RPSuiteServer
                 new object[]
                 {Datos}))
                 {
-                    return bool.Parse(lcommand.ExecuteScalar().ToString());
+                    return int.Parse(lcommand.ExecuteScalar().ToString());
                 }
             }
             catch (Exception ex)
