@@ -647,5 +647,24 @@ namespace RPSuiteServer
 
             }
         }
+
+        public bool CancelarPedido(string Datos)
+        {
+            try
+            {
+                using (IDbCommand lcommand = this.ServiceSchema.NewCommand(this.Connection, "cmdCancelarPedido", new string[]
+                {"Datos"},
+                new object[]
+                {Datos}))
+                {
+                    return bool.Parse(lcommand.ExecuteScalar().ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

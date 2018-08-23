@@ -3057,6 +3057,7 @@ namespace RPSuiteServer {
         int GuardaDetallePedido(TDetallePedido Datos);
         TEstacion GetEstacion(string Datos);
         TVendedor GetVendedor(string Datos);
+        bool CancelarPedido(string Datos);
     }
     public partial class RPDataService_Proxy : RemObjects.DataAbstract.Server.DataAbstractService_Proxy, IRPDataService {
         public RPDataService_Proxy(RemObjects.SDK.IMessage message, RemObjects.SDK.IClientChannel clientChannel) : 
@@ -3363,6 +3364,20 @@ namespace RPSuiteServer {
                 this.@__ClearMessage(@__LocalMessage);
             }
         }
+        public virtual bool CancelarPedido(string Datos) {
+            RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
+            try {
+                @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "CancelarPedido");
+                @__LocalMessage.WriteAnsiString("Datos", Datos);
+                @__LocalMessage.FinalizeMessage();
+                this.ClientChannel.Dispatch(@__LocalMessage);
+                bool _Result = @__LocalMessage.ReadBoolean("Result");
+                return _Result;
+            }
+            finally {
+                this.@__ClearMessage(@__LocalMessage);
+            }
+        }
     }
     public class CoRPDataService {
         public static IRPDataService Create(RemObjects.SDK.IMessage message, RemObjects.SDK.IClientChannel clientChannel) {
@@ -3450,6 +3465,9 @@ namespace RPSuiteServer {
         System.IAsyncResult BeginGetVendedor(string Datos, System.AsyncCallback @__Callback, object @__UserData);
         TVendedor EndGetVendedor(System.IAsyncResult @__AsyncResult);
         System.Threading.Tasks.Task<TVendedor> GetVendedorAsync(string Datos);
+        System.IAsyncResult BeginCancelarPedido(string Datos, System.AsyncCallback @__Callback, object @__UserData);
+        bool EndCancelarPedido(System.IAsyncResult @__AsyncResult);
+        System.Threading.Tasks.Task<bool> CancelarPedidoAsync(string Datos);
     }
     public partial class RPDataService_AsyncProxy : RemObjects.DataAbstract.Server.DataAbstractService_AsyncProxy, IRPDataService_Async {
         public RPDataService_AsyncProxy(RemObjects.SDK.IMessage message, RemObjects.SDK.IClientChannel clientChannel) : 
@@ -3988,6 +4006,32 @@ namespace RPSuiteServer {
         }
         public virtual System.Threading.Tasks.Task<TVendedor> GetVendedorAsync(string Datos) {
             return System.Threading.Tasks.Task<TVendedor>.Factory.FromAsync(this.BeginGetVendedor(Datos, null, null), new System.Func<System.IAsyncResult, TVendedor>(this.EndGetVendedor));
+        }
+        public virtual System.IAsyncResult BeginCancelarPedido(string Datos, System.AsyncCallback @__Callback, object @__UserData) {
+            RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
+            try {
+                @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "CancelarPedido");
+                @__LocalMessage.WriteAnsiString("Datos", Datos);
+                @__LocalMessage.FinalizeMessage();
+                return this.ClientChannel.AsyncDispatch(@__LocalMessage, @__Callback, @__UserData);
+            }
+            catch (System.Exception ex) {
+                this.@__ClearMessage(@__LocalMessage);
+                throw ex;
+            }
+        }
+        public virtual bool EndCancelarPedido(System.IAsyncResult @__AsyncResult) {
+            RemObjects.SDK.IMessage @__LocalMessage = ((RemObjects.SDK.IClientAsyncResult)(@__AsyncResult)).Message;
+            try {
+                bool Result = @__LocalMessage.ReadBoolean("Result");
+                return Result;
+            }
+            finally {
+                this.@__ClearMessage(@__LocalMessage);
+            }
+        }
+        public virtual System.Threading.Tasks.Task<bool> CancelarPedidoAsync(string Datos) {
+            return System.Threading.Tasks.Task<bool>.Factory.FromAsync(this.BeginCancelarPedido(Datos, null, null), new System.Func<System.IAsyncResult, bool>(this.EndCancelarPedido));
         }
     }
     public class CoRPDataServiceAsync {

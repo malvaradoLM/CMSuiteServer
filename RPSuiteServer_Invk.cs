@@ -312,6 +312,15 @@ namespace RPSuiteServer {
                 @__ObjectDisposer.Dispose();
             }
         }
+        public static void Invoke_CancelarPedido(RemObjects.SDK.IROService @__Instance, RemObjects.SDK.IMessage @__Message, RemObjects.SDK.Server.IServerChannelInfo @__ServerChannelInfo, out RemObjects.SDK.Server.ResponseOptions @__oResponseOptions) {
+            string Datos = @__Message.ReadAnsiString("Datos");
+            bool Result;
+            Result = ((IRPDataService)(@__Instance)).CancelarPedido(Datos);
+            @__Message.InitializeResponseMessage(@__ServerChannelInfo, "RPSuiteServer", "RPDataService", "CancelarPedidoResponse");
+            @__Message.WriteBoolean("Result", Result);
+            @__Message.FinalizeMessage();
+            @__oResponseOptions = RemObjects.SDK.Server.ResponseOptions.roDefault;
+        }
     }
     [System.Reflection.ObfuscationAttribute(Exclude=true, ApplyToMembers=false)]
     public class RPDataService_Activator : object, RemObjects.SDK.Server.IServiceActivator {
