@@ -3046,7 +3046,7 @@ namespace RPSuiteServer {
         int GuardaClienteNuevo(TClienteNuevo Datos);
         TCliente BuscarCliente(int ClienteID);
         TPedido BuscarPedido(string Datos);
-        bool UpdateDetallePedido(TDetallePedido Datos);
+        bool UpdateDetallePedido(TDetallePedido[] Datos);
         bool GuardarSaldo(TSaldo Datos);
         int GenerarFactura(TPedido Datos, TDetallePedido DatosDetalle);
         int InsertarFactura(string Serie, int Folio, System.DateTime Fecha, int Ejercicio, int Periodo, int Dia, System.DateTime FechaVencimiento, double ImpuestoPorcentaje, string Observacion, int FacturaUsoID, int FormaPagoID, int MetodoPagoID, int EstacionID, int ConfiguracionID, int MovimientoID);
@@ -3184,11 +3184,11 @@ namespace RPSuiteServer {
                 this.@__ClearMessage(@__LocalMessage);
             }
         }
-        public virtual bool UpdateDetallePedido(TDetallePedido Datos) {
+        public virtual bool UpdateDetallePedido(TDetallePedido[] Datos) {
             RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
             try {
                 @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "UpdateDetallePedido");
-                @__LocalMessage.Write("Datos", Datos, typeof(TDetallePedido), RemObjects.SDK.StreamingFormat.Default);
+                @__LocalMessage.Write("Datos", Datos, typeof(TDetallePedido[]), RemObjects.SDK.StreamingFormat.Default);
                 @__LocalMessage.FinalizeMessage();
                 this.ClientChannel.Dispatch(@__LocalMessage);
                 bool _Result = @__LocalMessage.ReadBoolean("Result");
@@ -3415,9 +3415,9 @@ namespace RPSuiteServer {
         System.IAsyncResult BeginBuscarPedido(string Datos, System.AsyncCallback @__Callback, object @__UserData);
         TPedido EndBuscarPedido(System.IAsyncResult @__AsyncResult);
         System.Threading.Tasks.Task<TPedido> BuscarPedidoAsync(string Datos);
-        System.IAsyncResult BeginUpdateDetallePedido(TDetallePedido Datos, System.AsyncCallback @__Callback, object @__UserData);
+        System.IAsyncResult BeginUpdateDetallePedido(TDetallePedido[] Datos, System.AsyncCallback @__Callback, object @__UserData);
         bool EndUpdateDetallePedido(System.IAsyncResult @__AsyncResult);
-        System.Threading.Tasks.Task<bool> UpdateDetallePedidoAsync(TDetallePedido Datos);
+        System.Threading.Tasks.Task<bool> UpdateDetallePedidoAsync(TDetallePedido[] Datos);
         System.IAsyncResult BeginGuardarSaldo(TSaldo Datos, System.AsyncCallback @__Callback, object @__UserData);
         bool EndGuardarSaldo(System.IAsyncResult @__AsyncResult);
         System.Threading.Tasks.Task<bool> GuardarSaldoAsync(TSaldo Datos);
@@ -3678,11 +3678,11 @@ namespace RPSuiteServer {
         public virtual System.Threading.Tasks.Task<TPedido> BuscarPedidoAsync(string Datos) {
             return System.Threading.Tasks.Task<TPedido>.Factory.FromAsync(this.BeginBuscarPedido(Datos, null, null), new System.Func<System.IAsyncResult, TPedido>(this.EndBuscarPedido));
         }
-        public virtual System.IAsyncResult BeginUpdateDetallePedido(TDetallePedido Datos, System.AsyncCallback @__Callback, object @__UserData) {
+        public virtual System.IAsyncResult BeginUpdateDetallePedido(TDetallePedido[] Datos, System.AsyncCallback @__Callback, object @__UserData) {
             RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
             try {
                 @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "UpdateDetallePedido");
-                @__LocalMessage.Write("Datos", Datos, typeof(TDetallePedido), RemObjects.SDK.StreamingFormat.Default);
+                @__LocalMessage.Write("Datos", Datos, typeof(TDetallePedido[]), RemObjects.SDK.StreamingFormat.Default);
                 @__LocalMessage.FinalizeMessage();
                 return this.ClientChannel.AsyncDispatch(@__LocalMessage, @__Callback, @__UserData);
             }
@@ -3701,7 +3701,7 @@ namespace RPSuiteServer {
                 this.@__ClearMessage(@__LocalMessage);
             }
         }
-        public virtual System.Threading.Tasks.Task<bool> UpdateDetallePedidoAsync(TDetallePedido Datos) {
+        public virtual System.Threading.Tasks.Task<bool> UpdateDetallePedidoAsync(TDetallePedido[] Datos) {
             return System.Threading.Tasks.Task<bool>.Factory.FromAsync(this.BeginUpdateDetallePedido(Datos, null, null), new System.Func<System.IAsyncResult, bool>(this.EndUpdateDetallePedido));
         }
         public virtual System.IAsyncResult BeginGuardarSaldo(TSaldo Datos, System.AsyncCallback @__Callback, object @__UserData) {

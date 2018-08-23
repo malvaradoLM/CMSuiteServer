@@ -362,18 +362,44 @@ namespace RPSuiteServer
             return res;
         }
 
-        public bool UpdateDetallePedido(TDetallePedido Datos)
+        public bool UpdateDetallePedido(TDetallePedido[] Datos)
         {
             try
             {
-
-                using (IDbCommand lcommand = this.ServiceSchema.NewCommand(this.Connection, "cmdDetallePedidoUpdate", new string[] {"DetallePedidoID", "PedidoID"
-                     ,"VehiculoID" ,"ProductoID" ,"Volumen" ,"TerminalID"}, new object[] {
-                         Datos.DetallePedidoID,Datos.PedidoID,Datos.VehiculoID,Datos.ProductoID,Datos.Volumen,Datos.TerminalID}))
+                string Command = "";
+                foreach(TDetallePedido DetallePedido in Datos)
                 {
-                    lcommand.ExecuteNonQuery();
-                    return true;
+
+                    if (DetallePedido.DetallePedidoID < 0)
+                    {
+                        DetallePedido.DetallePedidoID = Folio("DetallePedidoID", "");
+                        Command = "cmdDetallePedidoInserta";
+                    }
+                    else
+                        Command = "cmdDetallePedidoUpdate";
+
+                    using (IDbCommand lcommand = this.ServiceSchema.NewCommand(this.Connection, Command, 
+                        new string[] 
+                        {
+                            "DetallePedidoID","Precio","Subtotal","IVA","IEPS","Total","Descuento",
+                            "NoItems","PedidoID","VehiculoID","ProductoID","Volumen" ,"TerminalID"
+                        }, 
+                        new object[]
+                        {
+                             DetallePedido.DetallePedidoID,DetallePedido.Precio,DetallePedido.Subtotal,
+                             DetallePedido.IVA,DetallePedido.IEPS,DetallePedido.Total,
+                             DetallePedido.Descuento,DetallePedido.NoItems, DetallePedido.PedidoID,
+                             DetallePedido.VehiculoID,DetallePedido.ProductoID,DetallePedido.Volumen,
+                             DetallePedido.TerminalID
+                        }
+                        ))
+                        {
+                            lcommand.ExecuteNonQuery();
+                        }
+                    
                 }
+
+                return true;
             }
 
             catch (Exception ex)

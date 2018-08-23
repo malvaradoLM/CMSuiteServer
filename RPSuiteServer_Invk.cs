@@ -140,7 +140,7 @@ namespace RPSuiteServer {
         public static void Invoke_UpdateDetallePedido(RemObjects.SDK.IROService @__Instance, RemObjects.SDK.IMessage @__Message, RemObjects.SDK.Server.IServerChannelInfo @__ServerChannelInfo, out RemObjects.SDK.Server.ResponseOptions @__oResponseOptions) {
             RemObjects.SDK.ObjectDisposer @__ObjectDisposer = new RemObjects.SDK.ObjectDisposer(1);
             try {
-                TDetallePedido Datos = ((TDetallePedido)(@__Message.Read("Datos", typeof(TDetallePedido), RemObjects.SDK.StreamingFormat.Default)));
+                TDetallePedido[] Datos = ((TDetallePedido[])(@__Message.Read("Datos", typeof(TDetallePedido[]), RemObjects.SDK.StreamingFormat.Default)));
                 @__ObjectDisposer.Add(Datos);
                 bool Result;
                 Result = ((IRPDataService)(@__Instance)).UpdateDetallePedido(Datos);
