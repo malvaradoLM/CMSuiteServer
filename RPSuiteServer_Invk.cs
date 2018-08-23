@@ -314,10 +314,10 @@ namespace RPSuiteServer {
         }
         public static void Invoke_CancelarPedido(RemObjects.SDK.IROService @__Instance, RemObjects.SDK.IMessage @__Message, RemObjects.SDK.Server.IServerChannelInfo @__ServerChannelInfo, out RemObjects.SDK.Server.ResponseOptions @__oResponseOptions) {
             string Datos = @__Message.ReadAnsiString("Datos");
-            int Result;
+            bool Result;
             Result = ((IRPDataService)(@__Instance)).CancelarPedido(Datos);
             @__Message.InitializeResponseMessage(@__ServerChannelInfo, "RPSuiteServer", "RPDataService", "CancelarPedidoResponse");
-            @__Message.WriteInt32("Result", Result);
+            @__Message.WriteBoolean("Result", Result);
             @__Message.FinalizeMessage();
             @__oResponseOptions = RemObjects.SDK.Server.ResponseOptions.roDefault;
         }

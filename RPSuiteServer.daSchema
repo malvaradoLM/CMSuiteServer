@@ -19060,9 +19060,7 @@ where VendedorID = @VendedorID
           <Connection>RPSuite</Connection>
           <SQL>Update pedido
 set StatusID = 7 --Cancelado
-Where PedidoID = :Datos
-
-select 1</SQL>
+Where PedidoID = :Datos</SQL>
           <TargetTable>Pedido</TargetTable>
           <ConnectionType>SQLite</ConnectionType>
           <Default>True</Default>
