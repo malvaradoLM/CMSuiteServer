@@ -8234,13 +8234,13 @@ WHERE
     </Item20>
     <Item21>
       <ReadOnly>False</ReadOnly>
-      <Fields IsObject="true" Count="14" IsCollection="true" ItemClass="TDAField" Type="TDASchemaFieldCollection">
+      <Fields IsObject="true" Count="13" IsCollection="true" ItemClass="TDAField" Type="TDASchemaFieldCollection">
         <Item0>
           <Name>DetallePedidoID</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
-          <DataType>datAutoInc</DataType>
+          <DataType>datInteger</DataType>
           <DefaultValue />
           <CustomAttributes />
           <DictionaryEntry />
@@ -8266,131 +8266,11 @@ WHERE
           <Description />
         </Item0>
         <Item1>
-          <Name>ProductoID</Name>
-          <Alignment>taLeftJustify</Alignment>
-          <Calculated>False</Calculated>
-          <ServerCalculated>False</ServerCalculated>
-          <DataType>datInteger</DataType>
-          <DefaultValue />
-          <CustomAttributes />
-          <DictionaryEntry />
-          <DisplayFormat />
-          <DisplayLabel>ProductoID</DisplayLabel>
-          <DisplayWidth>0</DisplayWidth>
-          <EditFormat />
-          <EditMask />
-          <InPrimaryKey>False</InPrimaryKey>
-          <LogChanges>True</LogChanges>
-          <ReadOnly>False</ReadOnly>
-          <RegExpression />
-          <Required>False</Required>
-          <ServerAutoRefresh>False</ServerAutoRefresh>
-          <Visible>True</Visible>
-          <Expression />
-          <Size>0</Size>
-          <DecimalScale>0</DecimalScale>
-          <DecimalPrecision>0</DecimalPrecision>
-          <BlobType>dabtUnknown</BlobType>
-          <GeneratorName />
-          <BusinessClassID />
-          <Description />
-        </Item1>
-        <Item2>
-          <Name>PedidoID</Name>
-          <Alignment>taLeftJustify</Alignment>
-          <Calculated>False</Calculated>
-          <ServerCalculated>False</ServerCalculated>
-          <DataType>datInteger</DataType>
-          <DefaultValue />
-          <CustomAttributes />
-          <DictionaryEntry />
-          <DisplayFormat />
-          <DisplayLabel>PedidoID</DisplayLabel>
-          <DisplayWidth>0</DisplayWidth>
-          <EditFormat />
-          <EditMask />
-          <InPrimaryKey>False</InPrimaryKey>
-          <LogChanges>True</LogChanges>
-          <ReadOnly>False</ReadOnly>
-          <RegExpression />
-          <Required>False</Required>
-          <ServerAutoRefresh>False</ServerAutoRefresh>
-          <Visible>True</Visible>
-          <Expression />
-          <Size>0</Size>
-          <DecimalScale>0</DecimalScale>
-          <DecimalPrecision>0</DecimalPrecision>
-          <BlobType>dabtUnknown</BlobType>
-          <GeneratorName />
-          <BusinessClassID />
-          <Description />
-        </Item2>
-        <Item3>
-          <Name>TerminalID</Name>
-          <Alignment>taLeftJustify</Alignment>
-          <Calculated>False</Calculated>
-          <ServerCalculated>False</ServerCalculated>
-          <DataType>datInteger</DataType>
-          <DefaultValue />
-          <CustomAttributes />
-          <DictionaryEntry />
-          <DisplayFormat />
-          <DisplayLabel>TerminalID</DisplayLabel>
-          <DisplayWidth>0</DisplayWidth>
-          <EditFormat />
-          <EditMask />
-          <InPrimaryKey>False</InPrimaryKey>
-          <LogChanges>True</LogChanges>
-          <ReadOnly>False</ReadOnly>
-          <RegExpression />
-          <Required>False</Required>
-          <ServerAutoRefresh>False</ServerAutoRefresh>
-          <Visible>True</Visible>
-          <Expression />
-          <Size>0</Size>
-          <DecimalScale>0</DecimalScale>
-          <DecimalPrecision>0</DecimalPrecision>
-          <BlobType>dabtUnknown</BlobType>
-          <GeneratorName />
-          <BusinessClassID />
-          <Description />
-        </Item3>
-        <Item4>
-          <Name>VehiculoID</Name>
-          <Alignment>taLeftJustify</Alignment>
-          <Calculated>False</Calculated>
-          <ServerCalculated>False</ServerCalculated>
-          <DataType>datInteger</DataType>
-          <DefaultValue />
-          <CustomAttributes />
-          <DictionaryEntry />
-          <DisplayFormat />
-          <DisplayLabel>VehiculoID</DisplayLabel>
-          <DisplayWidth>0</DisplayWidth>
-          <EditFormat />
-          <EditMask />
-          <InPrimaryKey>False</InPrimaryKey>
-          <LogChanges>True</LogChanges>
-          <ReadOnly>False</ReadOnly>
-          <RegExpression />
-          <Required>False</Required>
-          <ServerAutoRefresh>False</ServerAutoRefresh>
-          <Visible>True</Visible>
-          <Expression />
-          <Size>0</Size>
-          <DecimalScale>0</DecimalScale>
-          <DecimalPrecision>0</DecimalPrecision>
-          <BlobType>dabtUnknown</BlobType>
-          <GeneratorName />
-          <BusinessClassID />
-          <Description />
-        </Item4>
-        <Item5>
           <Name>Volumen</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
-          <DataType>datInteger</DataType>
+          <DataType>datFloat</DataType>
           <DefaultValue />
           <CustomAttributes />
           <DictionaryEntry />
@@ -8414,8 +8294,8 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item5>
-        <Item6>
+        </Item1>
+        <Item2>
           <Name>Precio</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -8444,8 +8324,8 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item6>
-        <Item7>
+        </Item2>
+        <Item3>
           <Name>Subtotal</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -8474,8 +8354,8 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item7>
-        <Item8>
+        </Item3>
+        <Item4>
           <Name>IVA</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -8504,8 +8384,8 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item8>
-        <Item9>
+        </Item4>
+        <Item5>
           <Name>IEPS</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -8534,8 +8414,8 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item9>
-        <Item10>
+        </Item5>
+        <Item6>
           <Name>Total</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -8564,8 +8444,8 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item10>
-        <Item11>
+        </Item6>
+        <Item7>
           <Name>Descuento</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -8594,8 +8474,8 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item11>
-        <Item12>
+        </Item7>
+        <Item8>
           <Name>NoItems</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
@@ -8624,9 +8504,9 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item12>
-        <Item13>
-          <Name>ChoferID</Name>
+        </Item8>
+        <Item9>
+          <Name>PedidoID</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
@@ -8635,7 +8515,7 @@ WHERE
           <CustomAttributes />
           <DictionaryEntry />
           <DisplayFormat />
-          <DisplayLabel>ChoferID</DisplayLabel>
+          <DisplayLabel>PedidoID</DisplayLabel>
           <DisplayWidth>0</DisplayWidth>
           <EditFormat />
           <EditMask />
@@ -8654,7 +8534,97 @@ WHERE
           <GeneratorName />
           <BusinessClassID />
           <Description />
-        </Item13>
+        </Item9>
+        <Item10>
+          <Name>ProductoID</Name>
+          <Alignment>taLeftJustify</Alignment>
+          <Calculated>False</Calculated>
+          <ServerCalculated>False</ServerCalculated>
+          <DataType>datInteger</DataType>
+          <DefaultValue />
+          <CustomAttributes />
+          <DictionaryEntry />
+          <DisplayFormat />
+          <DisplayLabel>ProductoID</DisplayLabel>
+          <DisplayWidth>0</DisplayWidth>
+          <EditFormat />
+          <EditMask />
+          <InPrimaryKey>False</InPrimaryKey>
+          <LogChanges>True</LogChanges>
+          <ReadOnly>False</ReadOnly>
+          <RegExpression />
+          <Required>True</Required>
+          <ServerAutoRefresh>False</ServerAutoRefresh>
+          <Visible>True</Visible>
+          <Expression />
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item10>
+        <Item11>
+          <Name>TerminalID</Name>
+          <Alignment>taLeftJustify</Alignment>
+          <Calculated>False</Calculated>
+          <ServerCalculated>False</ServerCalculated>
+          <DataType>datInteger</DataType>
+          <DefaultValue />
+          <CustomAttributes />
+          <DictionaryEntry />
+          <DisplayFormat />
+          <DisplayLabel>TerminalID</DisplayLabel>
+          <DisplayWidth>0</DisplayWidth>
+          <EditFormat />
+          <EditMask />
+          <InPrimaryKey>False</InPrimaryKey>
+          <LogChanges>True</LogChanges>
+          <ReadOnly>False</ReadOnly>
+          <RegExpression />
+          <Required>False</Required>
+          <ServerAutoRefresh>False</ServerAutoRefresh>
+          <Visible>True</Visible>
+          <Expression />
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item11>
+        <Item12>
+          <Name>VehiculoID</Name>
+          <Alignment>taLeftJustify</Alignment>
+          <Calculated>False</Calculated>
+          <ServerCalculated>False</ServerCalculated>
+          <DataType>datInteger</DataType>
+          <DefaultValue />
+          <CustomAttributes />
+          <DictionaryEntry />
+          <DisplayFormat />
+          <DisplayLabel>VehiculoID</DisplayLabel>
+          <DisplayWidth>0</DisplayWidth>
+          <EditFormat />
+          <EditMask />
+          <InPrimaryKey>False</InPrimaryKey>
+          <LogChanges>True</LogChanges>
+          <ReadOnly>False</ReadOnly>
+          <RegExpression />
+          <Required>False</Required>
+          <ServerAutoRefresh>False</ServerAutoRefresh>
+          <Visible>True</Visible>
+          <Expression />
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item12>
       </Fields>
       <BusinessRulesClient IsObject="true" Type="TDAClientBusinessRuleScript">
         <CompileOnServer>False</CompileOnServer>
@@ -8670,9 +8640,9 @@ WHERE
         <Description />
         <Name />
       </BusinessRulesServer>
-      <UpdateCommandName>cmdDetallePedidoUpdate</UpdateCommandName>
+      <UpdateCommandName />
       <DeleteCommandName />
-      <InsertCommandName>cmdDetallePedidoInserta</InsertCommandName>
+      <InsertCommandName />
       <Statements IsCollection="true" IsObject="true" Count="1" ItemClass="TDAStatement" Type="TDAStatementCollection">
         <Item0>
           <Connection>RPSuite</Connection>
@@ -8692,77 +8662,72 @@ WHERE
           <StatementName />
           <StatementType>stSQL</StatementType>
           <GeneratorName />
-          <ColumnMappings IsObject="true" Count="14" IsCollection="true" Type="TDAColumnMappingCollection" ItemClass="TDAColumnMapping">
+          <ColumnMappings IsObject="true" Count="13" IsCollection="true" Type="TDAColumnMappingCollection" ItemClass="TDAColumnMapping">
             <Item0>
               <DatasetField>DetallePedidoID</DatasetField>
               <SQLOrigin>DetallePedidoID</SQLOrigin>
               <TableField>DetallePedidoID</TableField>
             </Item0>
             <Item1>
-              <DatasetField>ProductoID</DatasetField>
-              <SQLOrigin>ProductoID</SQLOrigin>
-              <TableField>ProductoID</TableField>
-            </Item1>
-            <Item2>
-              <DatasetField>PedidoID</DatasetField>
-              <SQLOrigin>PedidoID</SQLOrigin>
-              <TableField>PedidoID</TableField>
-            </Item2>
-            <Item3>
-              <DatasetField>TerminalID</DatasetField>
-              <SQLOrigin>TerminalID</SQLOrigin>
-              <TableField>TerminalID</TableField>
-            </Item3>
-            <Item4>
-              <DatasetField>VehiculoID</DatasetField>
-              <SQLOrigin>VehiculoID</SQLOrigin>
-              <TableField>VehiculoID</TableField>
-            </Item4>
-            <Item5>
               <DatasetField>Volumen</DatasetField>
               <SQLOrigin>Volumen</SQLOrigin>
               <TableField>Volumen</TableField>
-            </Item5>
-            <Item6>
+            </Item1>
+            <Item2>
               <DatasetField>Precio</DatasetField>
               <SQLOrigin>Precio</SQLOrigin>
               <TableField>Precio</TableField>
-            </Item6>
-            <Item7>
+            </Item2>
+            <Item3>
               <DatasetField>Subtotal</DatasetField>
               <SQLOrigin>Subtotal</SQLOrigin>
               <TableField>Subtotal</TableField>
-            </Item7>
-            <Item8>
+            </Item3>
+            <Item4>
               <DatasetField>IVA</DatasetField>
               <SQLOrigin>IVA</SQLOrigin>
               <TableField>IVA</TableField>
-            </Item8>
-            <Item9>
+            </Item4>
+            <Item5>
               <DatasetField>IEPS</DatasetField>
               <SQLOrigin>IEPS</SQLOrigin>
               <TableField>IEPS</TableField>
-            </Item9>
-            <Item10>
+            </Item5>
+            <Item6>
               <DatasetField>Total</DatasetField>
               <SQLOrigin>Total</SQLOrigin>
               <TableField>Total</TableField>
-            </Item10>
-            <Item11>
+            </Item6>
+            <Item7>
               <DatasetField>Descuento</DatasetField>
               <SQLOrigin>Descuento</SQLOrigin>
               <TableField>Descuento</TableField>
-            </Item11>
-            <Item12>
+            </Item7>
+            <Item8>
               <DatasetField>NoItems</DatasetField>
               <SQLOrigin>NoItems</SQLOrigin>
               <TableField>NoItems</TableField>
+            </Item8>
+            <Item9>
+              <DatasetField>PedidoID</DatasetField>
+              <SQLOrigin>PedidoID</SQLOrigin>
+              <TableField>PedidoID</TableField>
+            </Item9>
+            <Item10>
+              <DatasetField>ProductoID</DatasetField>
+              <SQLOrigin>ProductoID</SQLOrigin>
+              <TableField>ProductoID</TableField>
+            </Item10>
+            <Item11>
+              <DatasetField>TerminalID</DatasetField>
+              <SQLOrigin>TerminalID</SQLOrigin>
+              <TableField>TerminalID</TableField>
+            </Item11>
+            <Item12>
+              <DatasetField>VehiculoID</DatasetField>
+              <SQLOrigin>VehiculoID</SQLOrigin>
+              <TableField>VehiculoID</TableField>
             </Item12>
-            <Item13>
-              <DatasetField>ChoferID</DatasetField>
-              <SQLOrigin>ChoferID</SQLOrigin>
-              <TableField>ChoferID</TableField>
-            </Item13>
           </ColumnMappings>
           <Description />
         </Item0>
@@ -16465,7 +16430,7 @@ WHERE
           <ParamType>daptInput</ParamType>
           <Name>Datos</Name>
           <DataType>datString</DataType>
-          <Size>0</Size>
+          <Size>65536</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
           <BlobType>dabtUnknown</BlobType>
@@ -16482,7 +16447,7 @@ WHERE
       <Name>spCatConfiguracion</Name>
     </Item44>
   </Datasets>
-  <Commands IsObject="true" Count="20" IsCollection="true" ItemClass="TDASQLCommand" Type="TDASQLCommandCollection">
+  <Commands IsObject="true" Count="21" IsCollection="true" ItemClass="TDASQLCommand" Type="TDASQLCommandCollection">
     <Item0>
       <BusinessRulesServer Type="TDABusinessRuleScript" IsObject="true">
         <Script />
@@ -17160,6 +17125,13 @@ where PedidoID = :PedidoID</SQL>
           <SQL>Insert Into DetallePedido
 (
 DetallePedidoID
+ ,Precio
+ ,Subtotal
+ ,IVA
+ ,IEPS
+ ,Total
+ ,Descuento
+ ,NoItems
  ,PedidoID
  ,VehiculoID
  ,ProductoID
@@ -17171,6 +17143,13 @@ DetallePedidoID
  Values
  (
  :DetallePedidoID
+ ,:Precio
+ ,:Subtotal
+ ,:IVA
+ ,:IEPS
+ ,:Total
+ ,:Descuento
+ ,:NoItems
  ,:PedidoID
  ,:VehiculoID
  ,:ProductoID
@@ -17189,12 +17168,12 @@ DetallePedidoID
           <Description />
         </Item0>
       </Statements>
-      <Params IsObject="true" Count="6" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam">
+      <Params IsObject="true" Count="13" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam">
         <Item0>
           <Value />
           <ParamType>daptInput</ParamType>
           <Name>DetallePedidoID</Name>
-          <DataType>datUnknown</DataType>
+          <DataType>datInteger</DataType>
           <Size>0</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
@@ -17206,8 +17185,8 @@ DetallePedidoID
         <Item1>
           <Value />
           <ParamType>daptInput</ParamType>
-          <Name>PedidoID</Name>
-          <DataType>datUnknown</DataType>
+          <Name>Precio</Name>
+          <DataType>datFloat</DataType>
           <Size>0</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
@@ -17219,8 +17198,8 @@ DetallePedidoID
         <Item2>
           <Value />
           <ParamType>daptInput</ParamType>
-          <Name>VehiculoID</Name>
-          <DataType>datUnknown</DataType>
+          <Name>Subtotal</Name>
+          <DataType>datFloat</DataType>
           <Size>0</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
@@ -17232,8 +17211,8 @@ DetallePedidoID
         <Item3>
           <Value />
           <ParamType>daptInput</ParamType>
-          <Name>ProductoID</Name>
-          <DataType>datUnknown</DataType>
+          <Name>IVA</Name>
+          <DataType>datFloat</DataType>
           <Size>0</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
@@ -17245,8 +17224,8 @@ DetallePedidoID
         <Item4>
           <Value />
           <ParamType>daptInput</ParamType>
-          <Name>TerminalID</Name>
-          <DataType>datUnknown</DataType>
+          <Name>IEPS</Name>
+          <DataType>datFloat</DataType>
           <Size>0</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
@@ -17258,8 +17237,8 @@ DetallePedidoID
         <Item5>
           <Value />
           <ParamType>daptInput</ParamType>
-          <Name>Volumen</Name>
-          <DataType>datUnknown</DataType>
+          <Name>Total</Name>
+          <DataType>datFloat</DataType>
           <Size>0</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
@@ -17268,6 +17247,97 @@ DetallePedidoID
           <BusinessClassID />
           <Description />
         </Item5>
+        <Item6>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>Descuento</Name>
+          <DataType>datFloat</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item6>
+        <Item7>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>NoItems</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item7>
+        <Item8>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>PedidoID</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item8>
+        <Item9>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>VehiculoID</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item9>
+        <Item10>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>ProductoID</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item10>
+        <Item11>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>TerminalID</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item11>
+        <Item12>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>Volumen</Name>
+          <DataType>datFloat</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item12>
       </Params>
       <CustomAttributes />
       <IsPublic>True</IsPublic>
@@ -17288,7 +17358,14 @@ DetallePedidoID
           <Connection>RPSuite</Connection>
           <SQL>UPDATE DetallePedido
 set
- PedidoID =:PedidoID
+  Precio = :Precio
+ ,Subtotal = :Subtotal
+ ,IVA = :IVA
+ ,IEPS = :IEPS
+ ,Total = :Total
+ ,Descuento = :Descuento
+ ,NoItems = :NoItems
+ ,PedidoID =:PedidoID
  ,VehiculoID =:VehiculoID
  ,ProductoID =:ProductoID
  ,TerminalID =:TerminalID
@@ -17305,12 +17382,12 @@ where DetallePedidoID=:DetallePedidoID</SQL>
           <Description />
         </Item0>
       </Statements>
-      <Params IsObject="true" Count="6" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam">
+      <Params IsObject="true" Count="13" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam">
         <Item0>
           <Value />
           <ParamType>daptInput</ParamType>
-          <Name>DetallePedidoID</Name>
-          <DataType>datInteger</DataType>
+          <Name>Precio</Name>
+          <DataType>datFloat</DataType>
           <Size>0</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
@@ -17322,8 +17399,8 @@ where DetallePedidoID=:DetallePedidoID</SQL>
         <Item1>
           <Value />
           <ParamType>daptInput</ParamType>
-          <Name>PedidoID</Name>
-          <DataType>datInteger</DataType>
+          <Name>Subtotal</Name>
+          <DataType>datFloat</DataType>
           <Size>0</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
@@ -17335,8 +17412,8 @@ where DetallePedidoID=:DetallePedidoID</SQL>
         <Item2>
           <Value />
           <ParamType>daptInput</ParamType>
-          <Name>VehiculoID</Name>
-          <DataType>datInteger</DataType>
+          <Name>IVA</Name>
+          <DataType>datFloat</DataType>
           <Size>0</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
@@ -17348,8 +17425,8 @@ where DetallePedidoID=:DetallePedidoID</SQL>
         <Item3>
           <Value />
           <ParamType>daptInput</ParamType>
-          <Name>ProductoID</Name>
-          <DataType>datInteger</DataType>
+          <Name>IEPS</Name>
+          <DataType>datFloat</DataType>
           <Size>0</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
@@ -17361,8 +17438,8 @@ where DetallePedidoID=:DetallePedidoID</SQL>
         <Item4>
           <Value />
           <ParamType>daptInput</ParamType>
-          <Name>TerminalID</Name>
-          <DataType>datInteger</DataType>
+          <Name>Total</Name>
+          <DataType>datFloat</DataType>
           <Size>0</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
@@ -17374,8 +17451,8 @@ where DetallePedidoID=:DetallePedidoID</SQL>
         <Item5>
           <Value />
           <ParamType>daptInput</ParamType>
-          <Name>Volumen</Name>
-          <DataType>datInteger</DataType>
+          <Name>Descuento</Name>
+          <DataType>datFloat</DataType>
           <Size>0</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
@@ -17384,6 +17461,97 @@ where DetallePedidoID=:DetallePedidoID</SQL>
           <BusinessClassID />
           <Description />
         </Item5>
+        <Item6>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>NoItems</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item6>
+        <Item7>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>PedidoID</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item7>
+        <Item8>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>VehiculoID</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item8>
+        <Item9>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>ProductoID</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item9>
+        <Item10>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>TerminalID</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item10>
+        <Item11>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>Volumen</Name>
+          <DataType>datFloat</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item11>
+        <Item12>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>DetallePedidoID</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item12>
       </Params>
       <CustomAttributes />
       <IsPublic>True</IsPublic>
@@ -19093,6 +19261,135 @@ Where PedidoID = :Datos</SQL>
       <Description />
       <Name>cmdCancelarPedido</Name>
     </Item19>
+    <Item20>
+      <BusinessRulesServer Type="TDABusinessRuleScript" IsObject="true">
+        <Script />
+        <ScriptLanguageStr />
+        <Description />
+        <Name />
+      </BusinessRulesServer>
+      <Statements IsCollection="true" IsObject="true" Count="1" ItemClass="TDAStatement" Type="TDAStatementCollection">
+        <Item0>
+          <Connection>RPSuite</Connection>
+          <SQL>INSERT INTO 
+	[Documento] (
+	[DocumentoID], [Fecha], [Observaciones], 
+	[Imagen], [EmpleadoID], [TipoDocumentoID], 
+	[UsuarioID]) 
+VALUES (
+	:DocumentoID, :Fecha, :Observaciones, 
+	:Imagen, :EmpleadoID, :TipoDocumentoID, 
+	:UsuarioID) </SQL>
+          <TargetTable>Documento</TargetTable>
+          <ConnectionType>SQLite</ConnectionType>
+          <Default>True</Default>
+          <StatementName />
+          <StatementType>stSQL</StatementType>
+          <GeneratorName />
+          <ColumnMappings IsObject="true" Count="0" IsCollection="true" Type="TDAColumnMappingCollection" ItemClass="TDAColumnMapping" />
+          <Description />
+        </Item0>
+      </Statements>
+      <Params IsObject="true" Count="7" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam">
+        <Item0>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>DocumentoID</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item0>
+        <Item1>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>Fecha</Name>
+          <DataType>datDateTime</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item1>
+        <Item2>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>Observaciones</Name>
+          <DataType>datWideString</DataType>
+          <Size>100</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item2>
+        <Item3>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>Imagen</Name>
+          <DataType>datBlob</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item3>
+        <Item4>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>EmpleadoID</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item4>
+        <Item5>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>TipoDocumentoID</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item5>
+        <Item6>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>UsuarioID</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item6>
+      </Params>
+      <CustomAttributes />
+      <IsPublic>True</IsPublic>
+      <DynamicWhereXML />
+      <BusinessClassID />
+      <Description />
+      <Name />
+    </Item20>
   </Commands>
   <RelationShips IsObject="true" Count="0" IsCollection="true" Type="TDADatasetRelationshipCollection" ItemClass="TDADatasetRelationship" />
   <UpdateRules IsObject="true" Count="0" IsCollection="true" Type="TDAUpdateRuleCollection" ItemClass="TDAUpdateRule" />

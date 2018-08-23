@@ -79,7 +79,7 @@
 <Parameters>
 <Parameter Name="Result" DataType="Boolean" Flag="Result">
 </Parameter>
-<Parameter Name="Datos" DataType="TDetallePedido" Flag="In" >
+<Parameter Name="Datos" DataType="TADetallePedido" Flag="In" >
 </Parameter>
 </Parameters>
 </Operation>
@@ -662,6 +662,9 @@
 </Array>
 <Array Name="TAConfiguraEstacionTanques" UID="{2E795BC2-B63C-490D-AB82-D751B30067BE}">
 <ElementType DataType="TConfiguraEstacionTanques" />
+</Array>
+<Array Name="TADetallePedido" UID="{392103F2-ECB3-4E84-A7C7-FAA1F99B64DA}">
+<ElementType DataType="TDetallePedido" />
 </Array>
 </Arrays>
 <Uses>
