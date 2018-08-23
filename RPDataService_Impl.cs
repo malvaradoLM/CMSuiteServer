@@ -683,8 +683,9 @@ namespace RPSuiteServer
                 new object[]
                 {Datos}))
                 {
-                    return bool.Parse(lcommand.ExecuteScalar().ToString());
+                    lcommand.ExecuteNonQuery();
                 }
+                return true;
             }
             catch (Exception ex)
             {
