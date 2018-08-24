@@ -223,9 +223,17 @@
 </Parameter>
 </Parameters>
 </Operation>
+<<<<<<< HEAD
 <Operation Name="CargarProductoIEPS" UID="{57745EDB-ED85-4219-9B35-7BCB240B9682}">
 <Parameters>
 <Parameter Name="Result" DataType="TACustomProductoIEPS" Flag="Result">
+=======
+<Operation Name="InsertaMuestradeProducto" UID="{C3FD52AF-E318-4553-B12A-8EC6856E458B}">
+<Parameters>
+<Parameter Name="Result" DataType="Integer" Flag="Result">
+</Parameter>
+<Parameter Name="MuestraProducto" DataType="TMuestraProducto" Flag="In" >
+>>>>>>> f2b9909ff5bc7fb17e42bbda6ba9333ff06158a3
 </Parameter>
 </Parameters>
 </Operation>
@@ -653,6 +661,7 @@
 </Element>
 </Elements>
 </Struct>
+<<<<<<< HEAD
 <Struct Name="TCustomProductoIEPS" UID="{0788E3ED-25E0-41E7-9B6D-76C1677BEE46}" AutoCreateParams="1">
 <Elements>
 <Element Name="TerminalID" DataType="Integer">
@@ -684,6 +693,29 @@
 <Element Name="Fecha" DataType="DateTime">
 </Element>
 <Element Name="UsuarioID" DataType="Integer">
+=======
+<Struct Name="TMuestraProducto" UID="{1A0DA154-FABA-4829-B854-73B27997A6D8}" AutoCreateParams="1">
+<Elements>
+<Element Name="MuestraProductoID" DataType="Integer">
+</Element>
+<Element Name="Fecha" DataType="DateTime">
+</Element>
+<Element Name="TerminalID" DataType="Integer">
+</Element>
+<Element Name="NoMuestra" DataType="AnsiString">
+</Element>
+<Element Name="PesodeCarga" DataType="AnsiString">
+</Element>
+<Element Name="Azufre" DataType="AnsiString">
+</Element>
+<Element Name="Octanaje" DataType="AnsiString">
+</Element>
+<Element Name="Adimensional" DataType="AnsiString">
+</Element>
+<Element Name="ProductoID" DataType="Integer">
+</Element>
+<Element Name="Observacion" DataType="AnsiString">
+>>>>>>> f2b9909ff5bc7fb17e42bbda6ba9333ff06158a3
 </Element>
 </Elements>
 </Struct>
@@ -711,7 +743,7 @@
 </Array>
 </Arrays>
 <Uses>
-<Use Name="DataAbstract" UID="{30EEA332-03CE-45E5-8062-CCE8B6C1FAFE}" Rodl="..\..\..\..\..\Program Files (x86)\RemObjects Software\Data Abstract for .NET\Source\RemObjects.DataAbstract.Server\DataAbstract.RODL" AbsoluteRodl="C:\Program Files (x86)\RemObjects Software\Data Abstract for .NET\Source\RemObjects.DataAbstract.Server\DataAbstract.RODL" UsedRodlUID="{DC8B7BE2-14AF-402D-B1F8-E1008B6FA4F6}" DontCodeGen="1">
+<Use Name="DataAbstract" UID="{30EEA332-03CE-45E5-8062-CCE8B6C1FAFE}" Rodl="C:\Program Files (x86)\RemObjects Software\Data Abstract for .NET\Source\RemObjects.DataAbstract.Server\DataAbstract.RODL" AbsoluteRodl="C:\Program Files (x86)\RemObjects Software\Data Abstract for .NET\Source\RemObjects.DataAbstract.Server\DataAbstract.RODL" UsedRodlUID="{DC8B7BE2-14AF-402D-B1F8-E1008B6FA4F6}" DontCodeGen="1">
 <Includes UID="{ECE5910F-040B-4BDF-9502-EDF7F95642CF}" Delphi="DataAbstract4" DotNet="RemObjects.DataAbstract.Server" ObjC="DataAbstract/DataAbstract4_Intf" Java="com.remobjects.dataabstract.intf" Cocoa="DataAbstract"/>
 </Use>
 </Uses>
