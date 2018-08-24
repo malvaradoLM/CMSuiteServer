@@ -2956,6 +2956,177 @@ namespace RPSuiteServer {
             return new TVendedor();
         }
     }
+    [System.Serializable()]
+    [RemObjects.SDK.Remotable(ActivatorClass=typeof(TMuestraProducto_Activator))]
+    [System.Reflection.ObfuscationAttribute(Exclude=true)]
+    public partial class TMuestraProducto : RemObjects.SDK.Types.ComplexType {
+        private int @__MuestraProductoID;
+        private System.DateTime @__Fecha;
+        private int @__TerminalID;
+        private string @__NoMuestra;
+        private string @__PesodeCarga;
+        private string @__Azufre;
+        private string @__Octanaje;
+        private string @__Adimensional;
+        private int @__ProductoID;
+        private string @__Observacion;
+        public virtual int MuestraProductoID {
+            get {
+                return @__MuestraProductoID;
+            }
+            set {
+                @__MuestraProductoID = value;
+                this.TriggerPropertyChanged("MuestraProductoID");
+            }
+        }
+        public virtual System.DateTime Fecha {
+            get {
+                return @__Fecha;
+            }
+            set {
+                @__Fecha = value;
+                this.TriggerPropertyChanged("Fecha");
+            }
+        }
+        public virtual int TerminalID {
+            get {
+                return @__TerminalID;
+            }
+            set {
+                @__TerminalID = value;
+                this.TriggerPropertyChanged("TerminalID");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string NoMuestra {
+            get {
+                return @__NoMuestra;
+            }
+            set {
+                @__NoMuestra = value;
+                this.TriggerPropertyChanged("NoMuestra");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string PesodeCarga {
+            get {
+                return @__PesodeCarga;
+            }
+            set {
+                @__PesodeCarga = value;
+                this.TriggerPropertyChanged("PesodeCarga");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string Azufre {
+            get {
+                return @__Azufre;
+            }
+            set {
+                @__Azufre = value;
+                this.TriggerPropertyChanged("Azufre");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string Octanaje {
+            get {
+                return @__Octanaje;
+            }
+            set {
+                @__Octanaje = value;
+                this.TriggerPropertyChanged("Octanaje");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string Adimensional {
+            get {
+                return @__Adimensional;
+            }
+            set {
+                @__Adimensional = value;
+                this.TriggerPropertyChanged("Adimensional");
+            }
+        }
+        public virtual int ProductoID {
+            get {
+                return @__ProductoID;
+            }
+            set {
+                @__ProductoID = value;
+                this.TriggerPropertyChanged("ProductoID");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string Observacion {
+            get {
+                return @__Observacion;
+            }
+            set {
+                @__Observacion = value;
+                this.TriggerPropertyChanged("Observacion");
+            }
+        }
+        public override void ReadComplex(RemObjects.SDK.Serializer serializer) {
+            if (serializer.RecordStrictOrder) {
+                this.MuestraProductoID = serializer.ReadInt32("MuestraProductoID");
+                this.Fecha = serializer.ReadDateTime("Fecha");
+                this.TerminalID = serializer.ReadInt32("TerminalID");
+                this.NoMuestra = serializer.ReadAnsiString("NoMuestra");
+                this.PesodeCarga = serializer.ReadAnsiString("PesodeCarga");
+                this.Azufre = serializer.ReadAnsiString("Azufre");
+                this.Octanaje = serializer.ReadAnsiString("Octanaje");
+                this.Adimensional = serializer.ReadAnsiString("Adimensional");
+                this.ProductoID = serializer.ReadInt32("ProductoID");
+                this.Observacion = serializer.ReadAnsiString("Observacion");
+            }
+            else {
+                this.Adimensional = serializer.ReadAnsiString("Adimensional");
+                this.Azufre = serializer.ReadAnsiString("Azufre");
+                this.Fecha = serializer.ReadDateTime("Fecha");
+                this.MuestraProductoID = serializer.ReadInt32("MuestraProductoID");
+                this.NoMuestra = serializer.ReadAnsiString("NoMuestra");
+                this.Observacion = serializer.ReadAnsiString("Observacion");
+                this.Octanaje = serializer.ReadAnsiString("Octanaje");
+                this.PesodeCarga = serializer.ReadAnsiString("PesodeCarga");
+                this.ProductoID = serializer.ReadInt32("ProductoID");
+                this.TerminalID = serializer.ReadInt32("TerminalID");
+            }
+        }
+        public override void WriteComplex(RemObjects.SDK.Serializer serializer) {
+            if (serializer.RecordStrictOrder) {
+                serializer.WriteInt32("MuestraProductoID", this.MuestraProductoID);
+                serializer.WriteDateTime("Fecha", this.Fecha);
+                serializer.WriteInt32("TerminalID", this.TerminalID);
+                serializer.WriteAnsiString("NoMuestra", this.NoMuestra);
+                serializer.WriteAnsiString("PesodeCarga", this.PesodeCarga);
+                serializer.WriteAnsiString("Azufre", this.Azufre);
+                serializer.WriteAnsiString("Octanaje", this.Octanaje);
+                serializer.WriteAnsiString("Adimensional", this.Adimensional);
+                serializer.WriteInt32("ProductoID", this.ProductoID);
+                serializer.WriteAnsiString("Observacion", this.Observacion);
+            }
+            else {
+                serializer.WriteAnsiString("Adimensional", this.Adimensional);
+                serializer.WriteAnsiString("Azufre", this.Azufre);
+                serializer.WriteDateTime("Fecha", this.Fecha);
+                serializer.WriteInt32("MuestraProductoID", this.MuestraProductoID);
+                serializer.WriteAnsiString("NoMuestra", this.NoMuestra);
+                serializer.WriteAnsiString("Observacion", this.Observacion);
+                serializer.WriteAnsiString("Octanaje", this.Octanaje);
+                serializer.WriteAnsiString("PesodeCarga", this.PesodeCarga);
+                serializer.WriteInt32("ProductoID", this.ProductoID);
+                serializer.WriteInt32("TerminalID", this.TerminalID);
+            }
+        }
+    }
+    [System.Reflection.ObfuscationAttribute(Exclude=true, ApplyToMembers=false)]
+    public class TMuestraProducto_Activator : object, RemObjects.SDK.ITypeActivator {
+        public TMuestraProducto_Activator() {
+        }
+        public object CreateInstance() {
+            return new TMuestraProducto();
+        }
+    }
     public interface IRPLoginService : RemObjects.DataAbstract.Server.ISimpleLoginService {
     }
     public partial class RPLoginService_Proxy : RemObjects.DataAbstract.Server.SimpleLoginService_Proxy, IRPLoginService {
@@ -3058,6 +3229,7 @@ namespace RPSuiteServer {
         TEstacion GetEstacion(string Datos);
         TVendedor GetVendedor(string Datos);
         bool CancelarPedido(string Datos);
+        int InsertaMuestradeProducto(TMuestraProducto MuestraProducto);
     }
     public partial class RPDataService_Proxy : RemObjects.DataAbstract.Server.DataAbstractService_Proxy, IRPDataService {
         public RPDataService_Proxy(RemObjects.SDK.IMessage message, RemObjects.SDK.IClientChannel clientChannel) : 
@@ -3378,6 +3550,20 @@ namespace RPSuiteServer {
                 this.@__ClearMessage(@__LocalMessage);
             }
         }
+        public virtual int InsertaMuestradeProducto(TMuestraProducto MuestraProducto) {
+            RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
+            try {
+                @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "InsertaMuestradeProducto");
+                @__LocalMessage.Write("MuestraProducto", MuestraProducto, typeof(TMuestraProducto), RemObjects.SDK.StreamingFormat.Default);
+                @__LocalMessage.FinalizeMessage();
+                this.ClientChannel.Dispatch(@__LocalMessage);
+                int _Result = @__LocalMessage.ReadInt32("Result");
+                return _Result;
+            }
+            finally {
+                this.@__ClearMessage(@__LocalMessage);
+            }
+        }
     }
     public class CoRPDataService {
         public static IRPDataService Create(RemObjects.SDK.IMessage message, RemObjects.SDK.IClientChannel clientChannel) {
@@ -3468,6 +3654,9 @@ namespace RPSuiteServer {
         System.IAsyncResult BeginCancelarPedido(string Datos, System.AsyncCallback @__Callback, object @__UserData);
         bool EndCancelarPedido(System.IAsyncResult @__AsyncResult);
         System.Threading.Tasks.Task<bool> CancelarPedidoAsync(string Datos);
+        System.IAsyncResult BeginInsertaMuestradeProducto(TMuestraProducto MuestraProducto, System.AsyncCallback @__Callback, object @__UserData);
+        int EndInsertaMuestradeProducto(System.IAsyncResult @__AsyncResult);
+        System.Threading.Tasks.Task<int> InsertaMuestradeProductoAsync(TMuestraProducto MuestraProducto);
     }
     public partial class RPDataService_AsyncProxy : RemObjects.DataAbstract.Server.DataAbstractService_AsyncProxy, IRPDataService_Async {
         public RPDataService_AsyncProxy(RemObjects.SDK.IMessage message, RemObjects.SDK.IClientChannel clientChannel) : 
@@ -4032,6 +4221,32 @@ namespace RPSuiteServer {
         }
         public virtual System.Threading.Tasks.Task<bool> CancelarPedidoAsync(string Datos) {
             return System.Threading.Tasks.Task<bool>.Factory.FromAsync(this.BeginCancelarPedido(Datos, null, null), new System.Func<System.IAsyncResult, bool>(this.EndCancelarPedido));
+        }
+        public virtual System.IAsyncResult BeginInsertaMuestradeProducto(TMuestraProducto MuestraProducto, System.AsyncCallback @__Callback, object @__UserData) {
+            RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
+            try {
+                @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "InsertaMuestradeProducto");
+                @__LocalMessage.Write("MuestraProducto", MuestraProducto, typeof(TMuestraProducto), RemObjects.SDK.StreamingFormat.Default);
+                @__LocalMessage.FinalizeMessage();
+                return this.ClientChannel.AsyncDispatch(@__LocalMessage, @__Callback, @__UserData);
+            }
+            catch (System.Exception ex) {
+                this.@__ClearMessage(@__LocalMessage);
+                throw ex;
+            }
+        }
+        public virtual int EndInsertaMuestradeProducto(System.IAsyncResult @__AsyncResult) {
+            RemObjects.SDK.IMessage @__LocalMessage = ((RemObjects.SDK.IClientAsyncResult)(@__AsyncResult)).Message;
+            try {
+                int Result = @__LocalMessage.ReadInt32("Result");
+                return Result;
+            }
+            finally {
+                this.@__ClearMessage(@__LocalMessage);
+            }
+        }
+        public virtual System.Threading.Tasks.Task<int> InsertaMuestradeProductoAsync(TMuestraProducto MuestraProducto) {
+            return System.Threading.Tasks.Task<int>.Factory.FromAsync(this.BeginInsertaMuestradeProducto(MuestraProducto, null, null), new System.Func<System.IAsyncResult, int>(this.EndInsertaMuestradeProducto));
         }
     }
     public class CoRPDataServiceAsync {

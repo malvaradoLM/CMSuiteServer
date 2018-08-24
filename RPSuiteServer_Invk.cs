@@ -321,6 +321,22 @@ namespace RPSuiteServer {
             @__Message.FinalizeMessage();
             @__oResponseOptions = RemObjects.SDK.Server.ResponseOptions.roDefault;
         }
+        public static void Invoke_InsertaMuestradeProducto(RemObjects.SDK.IROService @__Instance, RemObjects.SDK.IMessage @__Message, RemObjects.SDK.Server.IServerChannelInfo @__ServerChannelInfo, out RemObjects.SDK.Server.ResponseOptions @__oResponseOptions) {
+            RemObjects.SDK.ObjectDisposer @__ObjectDisposer = new RemObjects.SDK.ObjectDisposer(1);
+            try {
+                TMuestraProducto MuestraProducto = ((TMuestraProducto)(@__Message.Read("MuestraProducto", typeof(TMuestraProducto), RemObjects.SDK.StreamingFormat.Default)));
+                @__ObjectDisposer.Add(MuestraProducto);
+                int Result;
+                Result = ((IRPDataService)(@__Instance)).InsertaMuestradeProducto(MuestraProducto);
+                @__Message.InitializeResponseMessage(@__ServerChannelInfo, "RPSuiteServer", "RPDataService", "InsertaMuestradeProductoResponse");
+                @__Message.WriteInt32("Result", Result);
+                @__Message.FinalizeMessage();
+                @__oResponseOptions = RemObjects.SDK.Server.ResponseOptions.roDefault;
+            }
+            finally {
+                @__ObjectDisposer.Dispose();
+            }
+        }
     }
     [System.Reflection.ObfuscationAttribute(Exclude=true, ApplyToMembers=false)]
     public class RPDataService_Activator : object, RemObjects.SDK.Server.IServiceActivator {
