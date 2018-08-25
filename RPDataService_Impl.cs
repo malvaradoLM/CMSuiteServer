@@ -694,7 +694,6 @@ namespace RPSuiteServer
             }
         }
 
-<<<<<<< HEAD
         public TCustomProductoIEPS[] CargarProductoIEPS ()
         {
             List<TCustomProductoIEPS> lstProductoIEPS = new List<TCustomProductoIEPS>();
@@ -742,7 +741,6 @@ namespace RPSuiteServer
 
             return arrayProductoIEPS;
         }
-=======
         public int InsertaMuestradeProducto(TMuestraProducto MuestraProducto)
         {
 
@@ -775,6 +773,5 @@ namespace RPSuiteServer
 
 
 
->>>>>>> f2b9909ff5bc7fb17e42bbda6ba9333ff06158a3
     }
 }

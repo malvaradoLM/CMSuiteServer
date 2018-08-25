@@ -321,7 +321,6 @@ namespace RPSuiteServer {
             @__Message.FinalizeMessage();
             @__oResponseOptions = RemObjects.SDK.Server.ResponseOptions.roDefault;
         }
-<<<<<<< HEAD
         public static void Invoke_CargarProductoIEPS(RemObjects.SDK.IROService @__Instance, RemObjects.SDK.IMessage @__Message, RemObjects.SDK.Server.IServerChannelInfo @__ServerChannelInfo, out RemObjects.SDK.Server.ResponseOptions @__oResponseOptions) {
             RemObjects.SDK.ObjectDisposer @__ObjectDisposer = new RemObjects.SDK.ObjectDisposer(1);
             try {
@@ -330,7 +329,13 @@ namespace RPSuiteServer {
                 @__ObjectDisposer.Add(Result);
                 @__Message.InitializeResponseMessage(@__ServerChannelInfo, "RPSuiteServer", "RPDataService", "CargarProductoIEPSResponse");
                 @__Message.Write("Result", Result, typeof(TCustomProductoIEPS[]), RemObjects.SDK.StreamingFormat.Default);
-=======
+                @__Message.FinalizeMessage();
+                @__oResponseOptions = RemObjects.SDK.Server.ResponseOptions.roDefault;
+            }
+            finally {
+                @__ObjectDisposer.Dispose();
+            }
+        }
         public static void Invoke_InsertaMuestradeProducto(RemObjects.SDK.IROService @__Instance, RemObjects.SDK.IMessage @__Message, RemObjects.SDK.Server.IServerChannelInfo @__ServerChannelInfo, out RemObjects.SDK.Server.ResponseOptions @__oResponseOptions) {
             RemObjects.SDK.ObjectDisposer @__ObjectDisposer = new RemObjects.SDK.ObjectDisposer(1);
             try {
@@ -340,7 +345,6 @@ namespace RPSuiteServer {
                 Result = ((IRPDataService)(@__Instance)).InsertaMuestradeProducto(MuestraProducto);
                 @__Message.InitializeResponseMessage(@__ServerChannelInfo, "RPSuiteServer", "RPDataService", "InsertaMuestradeProductoResponse");
                 @__Message.WriteInt32("Result", Result);
->>>>>>> f2b9909ff5bc7fb17e42bbda6ba9333ff06158a3
                 @__Message.FinalizeMessage();
                 @__oResponseOptions = RemObjects.SDK.Server.ResponseOptions.roDefault;
             }

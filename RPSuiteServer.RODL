@@ -223,17 +223,17 @@
 </Parameter>
 </Parameters>
 </Operation>
-<<<<<<< HEAD
 <Operation Name="CargarProductoIEPS" UID="{57745EDB-ED85-4219-9B35-7BCB240B9682}">
 <Parameters>
 <Parameter Name="Result" DataType="TACustomProductoIEPS" Flag="Result">
-=======
+</Parameter>
+</Parameters>
+</Operation>
 <Operation Name="InsertaMuestradeProducto" UID="{C3FD52AF-E318-4553-B12A-8EC6856E458B}">
 <Parameters>
 <Parameter Name="Result" DataType="Integer" Flag="Result">
 </Parameter>
 <Parameter Name="MuestraProducto" DataType="TMuestraProducto" Flag="In" >
->>>>>>> f2b9909ff5bc7fb17e42bbda6ba9333ff06158a3
 </Parameter>
 </Parameters>
 </Operation>
@@ -661,7 +661,6 @@
 </Element>
 </Elements>
 </Struct>
-<<<<<<< HEAD
 <Struct Name="TCustomProductoIEPS" UID="{0788E3ED-25E0-41E7-9B6D-76C1677BEE46}" AutoCreateParams="1">
 <Elements>
 <Element Name="TerminalID" DataType="Integer">
@@ -693,7 +692,9 @@
 <Element Name="Fecha" DataType="DateTime">
 </Element>
 <Element Name="UsuarioID" DataType="Integer">
-=======
+</Element>
+</Elements>
+</Struct>
 <Struct Name="TMuestraProducto" UID="{1A0DA154-FABA-4829-B854-73B27997A6D8}" AutoCreateParams="1">
 <Elements>
 <Element Name="MuestraProductoID" DataType="Integer">
@@ -715,7 +716,6 @@
 <Element Name="ProductoID" DataType="Integer">
 </Element>
 <Element Name="Observacion" DataType="AnsiString">
->>>>>>> f2b9909ff5bc7fb17e42bbda6ba9333ff06158a3
 </Element>
 </Elements>
 </Struct>
