@@ -20317,7 +20317,6 @@ VALUES (
       <Statements IsCollection="true" IsObject="true" Count="1" ItemClass="TDAStatement" Type="TDAStatementCollection">
         <Item0>
           <Connection>RPSuite</Connection>
-<<<<<<< HEAD
           <SQL>WITH Gasolina87 AS
 (
 SELECT Z.ProductoIEPSID,Z.Precio,Y.ProductoID,x.TerminalID from ProductoIEPS Z
@@ -20349,18 +20348,7 @@ select DISTINCT (A.TerminalID),B.Descripcion,D.ProductoIEPSID as PIEPSID87, D.Pr
   LEFT JOIN Gasolina87 D on A.TerminalID = D.TerminalID
   LEFT JOIN Gasolina91 F ON A.TerminalID = F.TerminalID
   LEFT JOIN Diesel G ON A.TerminalID = G.TerminalID</SQL>
-          <TargetTable />
-=======
-          <SQL>
-
-
-insert into MuestradeProducto
-(MuestraProductoID,Fecha,TerminalID,NoMuestra,PesodeCarga,Azufre,Octanaje,Adimensional,ProductoID,Observacion)
-values
-(:MuestraProductoID,:Fecha,:TerminalID,:NoMuestra,:PesodeCarga,:Azufre,:Octanaje,:Adimensional,:ProductoID,:Observacion)
-</SQL>
-          <TargetTable>MuestradeProducto</TargetTable>
->>>>>>> f2b9909ff5bc7fb17e42bbda6ba9333ff06158a3
+  <TargetTable />
           <ConnectionType>SQLite</ConnectionType>
           <Default>True</Default>
           <StatementName />
@@ -20370,9 +20358,40 @@ values
           <Description />
         </Item0>
       </Statements>
-<<<<<<< HEAD
       <Params IsObject="true" Count="0" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam" />
-=======
+      <CustomAttributes />
+      <IsPublic>True</IsPublic>
+      <DynamicWhereXML />
+      <BusinessClassID />
+      <Description />
+      <Name>spProductoIEPSCargar</Name>
+    </Item21>
+    <Item22>
+      <BusinessRulesServer Type="TDABusinessRuleScript" IsObject="true">
+        <Script />
+        <ScriptLanguageStr />
+        <Description />
+        <Name />
+      </BusinessRulesServer>
+      <Statements IsCollection="true" IsObject="true" Count="1" ItemClass="TDAStatement" Type="TDAStatementCollection">
+        <Item0>
+          <Connection>RPSuite</Connection>
+          <SQL>
+insert into MuestradeProducto
+(MuestraProductoID,Fecha,TerminalID,NoMuestra,PesodeCarga,Azufre,Octanaje,Adimensional,ProductoID,Observacion)
+values
+(:MuestraProductoID,:Fecha,:TerminalID,:NoMuestra,:PesodeCarga,:Azufre,:Octanaje,:Adimensional,:ProductoID,:Observacion)
+</SQL>
+          <TargetTable>MuestradeProducto</TargetTable>
+          <ConnectionType>SQLite</ConnectionType>
+          <Default>True</Default>
+          <StatementName />
+          <StatementType>stSQL</StatementType>
+          <GeneratorName />
+          <ColumnMappings IsObject="true" Count="0" IsCollection="true" Type="TDAColumnMappingCollection" ItemClass="TDAColumnMapping" />
+          <Description />
+        </Item0>
+      </Statements>
       <Params IsObject="true" Count="10" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam">
         <Item0>
           <Value />
@@ -20505,18 +20524,13 @@ values
           <Description />
         </Item9>
       </Params>
->>>>>>> f2b9909ff5bc7fb17e42bbda6ba9333ff06158a3
       <CustomAttributes />
       <IsPublic>True</IsPublic>
       <DynamicWhereXML />
       <BusinessClassID />
       <Description />
-<<<<<<< HEAD
-      <Name>spProductoIEPSCargar</Name>
-=======
       <Name>InsertMuestraProducto</Name>
->>>>>>> f2b9909ff5bc7fb17e42bbda6ba9333ff06158a3
-    </Item21>
+    </Item22>
   </Commands>
   <RelationShips IsObject="true" Count="0" IsCollection="true" Type="TDADatasetRelationshipCollection" ItemClass="TDADatasetRelationship" />
   <UpdateRules IsObject="true" Count="0" IsCollection="true" Type="TDAUpdateRuleCollection" ItemClass="TDAUpdateRule" />
