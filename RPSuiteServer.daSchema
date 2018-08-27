@@ -10577,7 +10577,13 @@ WHERE
       <Statements IsCollection="true" IsObject="true" Count="1" ItemClass="TDAStatement" Type="TDAStatementCollection">
         <Item0>
           <Connection>RPSuite</Connection>
-          <SQL>SELECT 	
+          <SQL>	
+	Declare @Parametro Varchar(100)
+Declare @WildCards varchar(100)
+select @Parametro=(Select :Datos)
+select @WildCards=(Select '%' + @Parametro + '%') 
+
+SELECT 	
 	[EstacionID], [Nombre], [RazonSocial], 
 	[RFC], [Calle], [Colonia], 
 	[NoExterior], [NoInterior], [Ciudad], 
@@ -10593,7 +10599,11 @@ WHERE
 FROM 
 	[Estacion] 
 WHERE 
-	EstacionID = :Datos</SQL>
+
+    (Nombre Like @WildCards) OR
+    (RazonSocial Like @WildCards) or
+    
+    (Cast(EstacionID as Varchar(10))=@Parametro) </SQL>
           <TargetTable>Estacion</TargetTable>
           <ConnectionType>SQLite</ConnectionType>
           <Default>True</Default>
@@ -16908,9 +16918,15 @@ WHERE
     </Item46>
     <Item47>
       <ReadOnly>False</ReadOnly>
+<<<<<<< HEAD
+      <Fields IsObject="true" Count="7" IsCollection="true" ItemClass="TDAField" Type="TDASchemaFieldCollection">
+        <Item0>
+          <Name>DetalleRemisionID</Name>
+=======
       <Fields IsObject="true" Count="11" IsCollection="true" ItemClass="TDAField" Type="TDASchemaFieldCollection">
         <Item0>
           <Name>ProductoIEPSID</Name>
+>>>>>>> a90b3e3e3c6e22c1054f1734430483b0b4d584d8
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
@@ -16919,7 +16935,11 @@ WHERE
           <CustomAttributes />
           <DictionaryEntry />
           <DisplayFormat />
+<<<<<<< HEAD
+          <DisplayLabel>DetalleRemisionID</DisplayLabel>
+=======
           <DisplayLabel>ProductoIEPSID</DisplayLabel>
+>>>>>>> a90b3e3e3c6e22c1054f1734430483b0b4d584d8
           <DisplayWidth>0</DisplayWidth>
           <EditFormat />
           <EditMask />
@@ -16940,16 +16960,28 @@ WHERE
           <Description />
         </Item0>
         <Item1>
+<<<<<<< HEAD
+          <Name>RemisionID</Name>
+          <Alignment>taLeftJustify</Alignment>
+          <Calculated>False</Calculated>
+          <ServerCalculated>False</ServerCalculated>
+          <DataType>datInteger</DataType>
+=======
           <Name>Precio</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
           <DataType>datFloat</DataType>
+>>>>>>> a90b3e3e3c6e22c1054f1734430483b0b4d584d8
           <DefaultValue />
           <CustomAttributes />
           <DictionaryEntry />
           <DisplayFormat />
+<<<<<<< HEAD
+          <DisplayLabel>RemisionID</DisplayLabel>
+=======
           <DisplayLabel>Precio</DisplayLabel>
+>>>>>>> a90b3e3e3c6e22c1054f1734430483b0b4d584d8
           <DisplayWidth>0</DisplayWidth>
           <EditFormat />
           <EditMask />
@@ -16957,7 +16989,11 @@ WHERE
           <LogChanges>True</LogChanges>
           <ReadOnly>False</ReadOnly>
           <RegExpression />
+<<<<<<< HEAD
+          <Required>True</Required>
+=======
           <Required>False</Required>
+>>>>>>> a90b3e3e3c6e22c1054f1734430483b0b4d584d8
           <ServerAutoRefresh>False</ServerAutoRefresh>
           <Visible>True</Visible>
           <Expression />
@@ -16970,16 +17006,28 @@ WHERE
           <Description />
         </Item1>
         <Item2>
+<<<<<<< HEAD
+          <Name>UnidadMedida</Name>
+          <Alignment>taLeftJustify</Alignment>
+          <Calculated>False</Calculated>
+          <ServerCalculated>False</ServerCalculated>
+          <DataType>datWideString</DataType>
+=======
           <Name>IEPS</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
           <DataType>datFloat</DataType>
+>>>>>>> a90b3e3e3c6e22c1054f1734430483b0b4d584d8
           <DefaultValue />
           <CustomAttributes />
           <DictionaryEntry />
           <DisplayFormat />
+<<<<<<< HEAD
+          <DisplayLabel>UnidadMedida</DisplayLabel>
+=======
           <DisplayLabel>IEPS</DisplayLabel>
+>>>>>>> a90b3e3e3c6e22c1054f1734430483b0b4d584d8
           <DisplayWidth>0</DisplayWidth>
           <EditFormat />
           <EditMask />
@@ -16987,11 +17035,19 @@ WHERE
           <LogChanges>True</LogChanges>
           <ReadOnly>False</ReadOnly>
           <RegExpression />
+<<<<<<< HEAD
+          <Required>True</Required>
+          <ServerAutoRefresh>False</ServerAutoRefresh>
+          <Visible>True</Visible>
+          <Expression />
+          <Size>50</Size>
+=======
           <Required>False</Required>
           <ServerAutoRefresh>False</ServerAutoRefresh>
           <Visible>True</Visible>
           <Expression />
           <Size>0</Size>
+>>>>>>> a90b3e3e3c6e22c1054f1734430483b0b4d584d8
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
           <BlobType>dabtUnknown</BlobType>
@@ -17000,16 +17056,28 @@ WHERE
           <Description />
         </Item2>
         <Item3>
+<<<<<<< HEAD
+          <Name>Cantidad</Name>
+          <Alignment>taLeftJustify</Alignment>
+          <Calculated>False</Calculated>
+          <ServerCalculated>False</ServerCalculated>
+          <DataType>datFloat</DataType>
+=======
           <Name>Fecha</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
           <DataType>datDateTime</DataType>
+>>>>>>> a90b3e3e3c6e22c1054f1734430483b0b4d584d8
           <DefaultValue />
           <CustomAttributes />
           <DictionaryEntry />
           <DisplayFormat />
+<<<<<<< HEAD
+          <DisplayLabel>Cantidad</DisplayLabel>
+=======
           <DisplayLabel>Fecha</DisplayLabel>
+>>>>>>> a90b3e3e3c6e22c1054f1734430483b0b4d584d8
           <DisplayWidth>0</DisplayWidth>
           <EditFormat />
           <EditMask />
@@ -17017,7 +17085,11 @@ WHERE
           <LogChanges>True</LogChanges>
           <ReadOnly>False</ReadOnly>
           <RegExpression />
+<<<<<<< HEAD
+          <Required>True</Required>
+=======
           <Required>False</Required>
+>>>>>>> a90b3e3e3c6e22c1054f1734430483b0b4d584d8
           <ServerAutoRefresh>False</ServerAutoRefresh>
           <Visible>True</Visible>
           <Expression />
@@ -17030,16 +17102,28 @@ WHERE
           <Description />
         </Item3>
         <Item4>
+<<<<<<< HEAD
+          <Name>PrecioUnitario</Name>
+          <Alignment>taLeftJustify</Alignment>
+          <Calculated>False</Calculated>
+          <ServerCalculated>False</ServerCalculated>
+          <DataType>datFloat</DataType>
+=======
           <Name>ProductoID</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
           <DataType>datInteger</DataType>
+>>>>>>> a90b3e3e3c6e22c1054f1734430483b0b4d584d8
           <DefaultValue />
           <CustomAttributes />
           <DictionaryEntry />
           <DisplayFormat />
+<<<<<<< HEAD
+          <DisplayLabel>PrecioUnitario</DisplayLabel>
+=======
           <DisplayLabel>ProductoID</DisplayLabel>
+>>>>>>> a90b3e3e3c6e22c1054f1734430483b0b4d584d8
           <DisplayWidth>0</DisplayWidth>
           <EditFormat />
           <EditMask />
@@ -17060,16 +17144,28 @@ WHERE
           <Description />
         </Item4>
         <Item5>
+<<<<<<< HEAD
+          <Name>Importe</Name>
+          <Alignment>taLeftJustify</Alignment>
+          <Calculated>False</Calculated>
+          <ServerCalculated>False</ServerCalculated>
+          <DataType>datFloat</DataType>
+=======
           <Name>TerminalID</Name>
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
           <DataType>datInteger</DataType>
+>>>>>>> a90b3e3e3c6e22c1054f1734430483b0b4d584d8
           <DefaultValue />
           <CustomAttributes />
           <DictionaryEntry />
           <DisplayFormat />
+<<<<<<< HEAD
+          <DisplayLabel>Importe</DisplayLabel>
+=======
           <DisplayLabel>TerminalID</DisplayLabel>
+>>>>>>> a90b3e3e3c6e22c1054f1734430483b0b4d584d8
           <DisplayWidth>0</DisplayWidth>
           <EditFormat />
           <EditMask />
@@ -17090,7 +17186,11 @@ WHERE
           <Description />
         </Item5>
         <Item6>
+<<<<<<< HEAD
+          <Name>ProductoID</Name>
+=======
           <Name>Ejercicio</Name>
+>>>>>>> a90b3e3e3c6e22c1054f1734430483b0b4d584d8
           <Alignment>taLeftJustify</Alignment>
           <Calculated>False</Calculated>
           <ServerCalculated>False</ServerCalculated>
@@ -17099,7 +17199,11 @@ WHERE
           <CustomAttributes />
           <DictionaryEntry />
           <DisplayFormat />
+<<<<<<< HEAD
+          <DisplayLabel>ProductoID</DisplayLabel>
+=======
           <DisplayLabel>Ejercicio</DisplayLabel>
+>>>>>>> a90b3e3e3c6e22c1054f1734430483b0b4d584d8
           <DisplayWidth>0</DisplayWidth>
           <EditFormat />
           <EditMask />
@@ -17107,7 +17211,11 @@ WHERE
           <LogChanges>True</LogChanges>
           <ReadOnly>False</ReadOnly>
           <RegExpression />
+<<<<<<< HEAD
+          <Required>True</Required>
+=======
           <Required>False</Required>
+>>>>>>> a90b3e3e3c6e22c1054f1734430483b0b4d584d8
           <ServerAutoRefresh>False</ServerAutoRefresh>
           <Visible>True</Visible>
           <Expression />
@@ -17119,6 +17227,8 @@ WHERE
           <BusinessClassID />
           <Description />
         </Item6>
+<<<<<<< HEAD
+=======
         <Item7>
           <Name>Periodo</Name>
           <Alignment>taLeftJustify</Alignment>
@@ -17239,6 +17349,7 @@ WHERE
           <BusinessClassID />
           <Description />
         </Item10>
+>>>>>>> a90b3e3e3c6e22c1054f1734430483b0b4d584d8
       </Fields>
       <BusinessRulesClient IsObject="true" Type="TDAClientBusinessRuleScript">
         <CompileOnServer>False</CompileOnServer>
@@ -17260,6 +17371,17 @@ WHERE
       <Statements IsCollection="true" IsObject="true" Count="1" ItemClass="TDAStatement" Type="TDAStatementCollection">
         <Item0>
           <Connection>RPSuite</Connection>
+<<<<<<< HEAD
+          <SQL>SELECT 	
+	[DetalleRemisionID], [RemisionID], [UnidadMedida], 
+	[Cantidad], [PrecioUnitario], [Importe], 
+	[ProductoID] 
+FROM 
+	[DetalleRemision] 
+WHERE 
+	RemisionID=:RemisionID</SQL>
+          <TargetTable>DetalleRemision</TargetTable>
+=======
           <SQL>Declare @Parametro Varchar(100)
 Declare @WildCards varchar(100)
 select @Parametro=(Select :Datos)
@@ -17276,11 +17398,50 @@ WHERE
     (Ejercicio Like @WildCards) OR
     (Cast(TerminalID as Varchar(10))=@Parametro) </SQL>
           <TargetTable>ProductoIEPS</TargetTable>
+>>>>>>> a90b3e3e3c6e22c1054f1734430483b0b4d584d8
           <ConnectionType>SQLite</ConnectionType>
           <Default>True</Default>
           <StatementName />
           <StatementType>stSQL</StatementType>
           <GeneratorName />
+<<<<<<< HEAD
+          <ColumnMappings IsObject="true" Count="7" IsCollection="true" Type="TDAColumnMappingCollection" ItemClass="TDAColumnMapping">
+            <Item0>
+              <DatasetField>DetalleRemisionID</DatasetField>
+              <SQLOrigin>DetalleRemisionID</SQLOrigin>
+              <TableField>DetalleRemisionID</TableField>
+            </Item0>
+            <Item1>
+              <DatasetField>RemisionID</DatasetField>
+              <SQLOrigin>RemisionID</SQLOrigin>
+              <TableField>RemisionID</TableField>
+            </Item1>
+            <Item2>
+              <DatasetField>UnidadMedida</DatasetField>
+              <SQLOrigin>UnidadMedida</SQLOrigin>
+              <TableField>UnidadMedida</TableField>
+            </Item2>
+            <Item3>
+              <DatasetField>Cantidad</DatasetField>
+              <SQLOrigin>Cantidad</SQLOrigin>
+              <TableField>Cantidad</TableField>
+            </Item3>
+            <Item4>
+              <DatasetField>PrecioUnitario</DatasetField>
+              <SQLOrigin>PrecioUnitario</SQLOrigin>
+              <TableField>PrecioUnitario</TableField>
+            </Item4>
+            <Item5>
+              <DatasetField>Importe</DatasetField>
+              <SQLOrigin>Importe</SQLOrigin>
+              <TableField>Importe</TableField>
+            </Item5>
+            <Item6>
+              <DatasetField>ProductoID</DatasetField>
+              <SQLOrigin>ProductoID</SQLOrigin>
+              <TableField>ProductoID</TableField>
+            </Item6>
+=======
           <ColumnMappings IsObject="true" Count="11" IsCollection="true" Type="TDAColumnMappingCollection" ItemClass="TDAColumnMapping">
             <Item0>
               <DatasetField>ProductoIEPSID</DatasetField>
@@ -17337,6 +17498,7 @@ WHERE
               <SQLOrigin>UsuarioID</SQLOrigin>
               <TableField>UsuarioID</TableField>
             </Item10>
+>>>>>>> a90b3e3e3c6e22c1054f1734430483b0b4d584d8
           </ColumnMappings>
           <Description />
         </Item0>
@@ -17345,9 +17507,15 @@ WHERE
         <Item0>
           <Value />
           <ParamType>daptInput</ParamType>
+<<<<<<< HEAD
+          <Name>RemisionID</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+=======
           <Name>Datos</Name>
           <DataType>datString</DataType>
           <Size>100</Size>
+>>>>>>> a90b3e3e3c6e22c1054f1734430483b0b4d584d8
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
           <BlobType>dabtUnknown</BlobType>
@@ -17361,7 +17529,11 @@ WHERE
       <DynamicWhereXML />
       <BusinessClassID />
       <Description />
+<<<<<<< HEAD
+      <Name>spDetalleRemision</Name>
+=======
       <Name>spProductoIEP</Name>
+>>>>>>> a90b3e3e3c6e22c1054f1734430483b0b4d584d8
     </Item47>
   </Datasets>
   <Commands IsObject="true" Count="23" IsCollection="true" ItemClass="TDASQLCommand" Type="TDASQLCommandCollection">
@@ -20399,7 +20571,7 @@ values
           <Value />
           <ParamType>daptInput</ParamType>
           <Name>MuestraProductoID</Name>
-          <DataType>datUnknown</DataType>
+          <DataType>datInteger</DataType>
           <Size>0</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
@@ -20412,7 +20584,7 @@ values
           <Value />
           <ParamType>daptInput</ParamType>
           <Name>Fecha</Name>
-          <DataType>datUnknown</DataType>
+          <DataType>datDateTime</DataType>
           <Size>0</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
@@ -20425,7 +20597,7 @@ values
           <Value />
           <ParamType>daptInput</ParamType>
           <Name>TerminalID</Name>
-          <DataType>datUnknown</DataType>
+          <DataType>datInteger</DataType>
           <Size>0</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
@@ -20438,8 +20610,8 @@ values
           <Value />
           <ParamType>daptInput</ParamType>
           <Name>NoMuestra</Name>
-          <DataType>datUnknown</DataType>
-          <Size>0</Size>
+          <DataType>datString</DataType>
+          <Size>65536</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
           <BlobType>dabtUnknown</BlobType>
@@ -20451,8 +20623,8 @@ values
           <Value />
           <ParamType>daptInput</ParamType>
           <Name>PesodeCarga</Name>
-          <DataType>datUnknown</DataType>
-          <Size>0</Size>
+          <DataType>datString</DataType>
+          <Size>65536</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
           <BlobType>dabtUnknown</BlobType>
@@ -20464,8 +20636,8 @@ values
           <Value />
           <ParamType>daptInput</ParamType>
           <Name>Azufre</Name>
-          <DataType>datUnknown</DataType>
-          <Size>0</Size>
+          <DataType>datString</DataType>
+          <Size>65536</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
           <BlobType>dabtUnknown</BlobType>
@@ -20477,8 +20649,8 @@ values
           <Value />
           <ParamType>daptInput</ParamType>
           <Name>Octanaje</Name>
-          <DataType>datUnknown</DataType>
-          <Size>0</Size>
+          <DataType>datString</DataType>
+          <Size>65536</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
           <BlobType>dabtUnknown</BlobType>
@@ -20490,8 +20662,8 @@ values
           <Value />
           <ParamType>daptInput</ParamType>
           <Name>Adimensional</Name>
-          <DataType>datUnknown</DataType>
-          <Size>0</Size>
+          <DataType>datString</DataType>
+          <Size>65536</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
           <BlobType>dabtUnknown</BlobType>
@@ -20503,7 +20675,7 @@ values
           <Value />
           <ParamType>daptInput</ParamType>
           <Name>ProductoID</Name>
-          <DataType>datUnknown</DataType>
+          <DataType>datInteger</DataType>
           <Size>0</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
@@ -20516,8 +20688,8 @@ values
           <Value />
           <ParamType>daptInput</ParamType>
           <Name>Observacion</Name>
-          <DataType>datUnknown</DataType>
-          <Size>0</Size>
+          <DataType>datString</DataType>
+          <Size>65536</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
           <BlobType>dabtUnknown</BlobType>
