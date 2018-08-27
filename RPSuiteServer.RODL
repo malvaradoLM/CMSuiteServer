@@ -223,6 +223,12 @@
 </Parameter>
 </Parameters>
 </Operation>
+<Operation Name="CargarProductoIEPS" UID="{57745EDB-ED85-4219-9B35-7BCB240B9682}">
+<Parameters>
+<Parameter Name="Result" DataType="TACustomProductoIEPS" Flag="Result">
+</Parameter>
+</Parameters>
+</Operation>
 <Operation Name="InsertaMuestradeProducto" UID="{C3FD52AF-E318-4553-B12A-8EC6856E458B}">
 <Parameters>
 <Parameter Name="Result" DataType="Integer" Flag="Result">
@@ -655,6 +661,40 @@
 </Element>
 </Elements>
 </Struct>
+<Struct Name="TCustomProductoIEPS" UID="{0788E3ED-25E0-41E7-9B6D-76C1677BEE46}" AutoCreateParams="1">
+<Elements>
+<Element Name="TerminalID" DataType="Integer">
+</Element>
+<Element Name="Descripcion" DataType="AnsiString">
+</Element>
+<Element Name="PIEPSID87" DataType="Integer">
+</Element>
+<Element Name="Precio87" DataType="Double">
+</Element>
+<Element Name="PIEPSID91" DataType="Integer">
+</Element>
+<Element Name="Precio91" DataType="Double">
+</Element>
+<Element Name="PIEPSIDDiesel" DataType="Integer">
+</Element>
+<Element Name="PrecioDiesel" DataType="Double">
+</Element>
+<Element Name="IEPS" DataType="Double">
+</Element>
+<Element Name="IVA" DataType="Double">
+</Element>
+<Element Name="Ejercicio" DataType="Integer">
+</Element>
+<Element Name="Periodo" DataType="Integer">
+</Element>
+<Element Name="Dia" DataType="Integer">
+</Element>
+<Element Name="Fecha" DataType="DateTime">
+</Element>
+<Element Name="UsuarioID" DataType="Integer">
+</Element>
+</Elements>
+</Struct>
 <Struct Name="TMuestraProducto" UID="{1A0DA154-FABA-4829-B854-73B27997A6D8}" AutoCreateParams="1">
 <Elements>
 <Element Name="MuestraProductoID" DataType="Integer">
@@ -697,6 +737,9 @@
 </Array>
 <Array Name="TADetallePedido" UID="{392103F2-ECB3-4E84-A7C7-FAA1F99B64DA}">
 <ElementType DataType="TDetallePedido" />
+</Array>
+<Array Name="TACustomProductoIEPS" UID="{394DD5EF-75BE-4093-8AD0-C5308AF76D38}">
+<ElementType DataType="TCustomProductoIEPS" />
 </Array>
 </Arrays>
 <Uses>

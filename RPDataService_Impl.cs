@@ -20,7 +20,7 @@ namespace RPSuiteServer
 
     [RemObjects.SDK.Server.ClassFactories.StandardClassFactory()]
     [RemObjects.SDK.Server.Service(Name = "RPDataService", InvokerClass = typeof(RPDataService_Invoker), ActivatorClass = typeof(RPDataService_Activator))]
-    public class RPDataService : RemObjects.DataAbstract.Server.DataAbstractService, IRPDataService 
+    public class RPDataService : RemObjects.DataAbstract.Server.DataAbstractService, IRPDataService
     {
         private RemObjects.DataAbstract.Bin2DataStreamer dataStreamer;
         private System.ComponentModel.IContainer components;
@@ -80,20 +80,20 @@ namespace RPSuiteServer
                     // do something
                 }
             }
-            
+
 
             using (IDbCommand lCommand = this.ServiceSchema.NewCommand(this.Connection, "spInserta", new string[] { }, new object[] { }))
             {
                 lCommand.ExecuteNonQuery();
             }
-                return true;
+            return true;
         }
 
         public TFactura NotaCredito(string NewParam, string NewParam1, string NewParam2, string NewParam3)
         {
             GuardaFactura(null);
             Fecha();
-            return null;          
+            return null;
         }
 
         public int Folio(string Campo, string Serie)
@@ -121,7 +121,7 @@ namespace RPSuiteServer
             try
             {
                 //using (IDbCommand lcommand = this.ServiceSchema.NewCommand(this.Connection, "InsertarClienteNuevo", new string[] { }, new object[] { }))
-                                                               
+
                 //using (IDbCommand lcommand = this.ServiceSchema.NewCommand(this.Connection, "InsertarClienteNuevo", new string[] {"ClienteID", "Codigo"
                 //     ,"Nombre" ,"Grupo" ,"Calle" ,"Colonia" ,"Ciudad" ,"Telefono" ,"CodigoPostal" ,"RFC" ,"Curp" ,"LimiteCredito" ,"email" 
                 //     ,"Localidad" ,"Estado" ,"NoExterior" ,"NoInterior"  ,"CuentaBancaria" }, new object[] {
@@ -139,14 +139,14 @@ namespace RPSuiteServer
                     lcommand.ExecuteNonQuery();
                     Res = Datos.ClienteId;
                 }
-               // Res = true;
+                // Res = true;
             }
             catch (Exception ex)
             {
                 Res = -1;
-               // Res = false;
+                // Res = false;
             }
-           
+
             return Res;
         }
 
@@ -179,8 +179,8 @@ namespace RPSuiteServer
         public TCliente BuscarCliente(int clienteID)
         {
 
-             TCliente res= new TCliente();
-           // TCliente res; // = new TCliente { ClienteID =};
+            TCliente res = new TCliente();
+            // TCliente res; // = new TCliente { ClienteID =};
             try
             {
                 int x = 0;
@@ -190,7 +190,7 @@ namespace RPSuiteServer
                 {
                     while (reader.Read())
                     {
-                        
+
 
                         // investigar si se puede pasar el Reader completo de manera directa a la variable res, la variable Res es de Tipo TCliente,
                         //Contiene todos los campos de la tabla cliente
@@ -205,14 +205,14 @@ namespace RPSuiteServer
                             res.Codigo = (string)reader["Codigo"];
                         }
                         if (reader["Calle"] != DBNull.Value)
-                            { res.Calle = (string)reader["Calle"]; }
+                        { res.Calle = (string)reader["Calle"]; }
 
                         if (reader["Colonia"] != DBNull.Value)
                         { res.Colonia = (string)reader["Colonia"]; }
-                            
+
                         if (reader["Ciudad"] != DBNull.Value)
                         { res.Ciudad = (string)reader["Ciudad"]; }
-                       
+
                         if (reader["Telefono"] != DBNull.Value)
                         { res.Telefono = (string)reader["Telefono"]; }
 
@@ -268,44 +268,44 @@ namespace RPSuiteServer
                         //    if (reader["Localidad"] != null)
                         //    { res.Localidad = (string)reader["Localidad"]; }
                         //    
-                            //if (reader["Estado"] != null)
-                            //{ res.Estado = (string)reader["Estado"]; }
-                            //if (reader["NoExterior"] != null)
-                            //{ res.NoExterior = (string)reader["NoExterior"]; }
-                            //if (reader["NoInterior"] != null)
-                            //{ res.NoInterior = (string)reader["NoInterior"]; }
-                            //if (reader["Actualizado"] != null)
-                            //{ res.Actualizado = (bool)reader["Actualizado"]; }
-                            //if (reader["CuentaBancaria"] != null)
-                            //{ res.CuentaBancaria = (string)reader["CuentaBancaria"]; }
-                       
-                            //if (reader["Sexo"] != null)
-                            //{ res.Sexo = (string)reader["Sexo"]; }
-                            //if (reader["Clasificacion"] != null)
-                            //{ res.Clasificacion = (double)reader["Clasificacion"]; }
-                            //if (reader["INE"] != null)
-                            //{ res.INE = (bool)reader["INE"]; }
-                            //if (reader["INETipoProceso"] != null)
-                            //{ res.INETipoProceso = (string)reader["INETipoProceso"]; }
-                            //if (reader["INETipoComite"] != null)
-                            //{ res.INETipoComite = (string)reader["INETipoComite"]; }
-                            //if (reader["INEidContabilidad"] != null)
-                            //{ res.INEidContabilidad = (int)reader["INEidContabilidad"]; }
-                            //if (reader["INEClaveEntidad"] != null)
-                            //{ res.INEClaveEntidad = (string)reader["INEClaveEntidad"]; }
-                            //if (reader["INEEntidadAmbito"] != null)
-                            //{ res.INEEntidadAmbito = (string)reader["INEEntidadAmbito"]; }
-                            //if (reader["INEEntidadContabilidad"] != null)
-                            //{ res.INEEntidadContabilidad = (int)reader["INEEntidadContabilidad"]; }
-                            //if (reader["UUID"] != null)
-                            //{ res.UUID = (string)reader["UUID"]; }
-                        
+                        //if (reader["Estado"] != null)
+                        //{ res.Estado = (string)reader["Estado"]; }
+                        //if (reader["NoExterior"] != null)
+                        //{ res.NoExterior = (string)reader["NoExterior"]; }
+                        //if (reader["NoInterior"] != null)
+                        //{ res.NoInterior = (string)reader["NoInterior"]; }
+                        //if (reader["Actualizado"] != null)
+                        //{ res.Actualizado = (bool)reader["Actualizado"]; }
+                        //if (reader["CuentaBancaria"] != null)
+                        //{ res.CuentaBancaria = (string)reader["CuentaBancaria"]; }
+
+                        //if (reader["Sexo"] != null)
+                        //{ res.Sexo = (string)reader["Sexo"]; }
+                        //if (reader["Clasificacion"] != null)
+                        //{ res.Clasificacion = (double)reader["Clasificacion"]; }
+                        //if (reader["INE"] != null)
+                        //{ res.INE = (bool)reader["INE"]; }
+                        //if (reader["INETipoProceso"] != null)
+                        //{ res.INETipoProceso = (string)reader["INETipoProceso"]; }
+                        //if (reader["INETipoComite"] != null)
+                        //{ res.INETipoComite = (string)reader["INETipoComite"]; }
+                        //if (reader["INEidContabilidad"] != null)
+                        //{ res.INEidContabilidad = (int)reader["INEidContabilidad"]; }
+                        //if (reader["INEClaveEntidad"] != null)
+                        //{ res.INEClaveEntidad = (string)reader["INEClaveEntidad"]; }
+                        //if (reader["INEEntidadAmbito"] != null)
+                        //{ res.INEEntidadAmbito = (string)reader["INEEntidadAmbito"]; }
+                        //if (reader["INEEntidadContabilidad"] != null)
+                        //{ res.INEEntidadContabilidad = (int)reader["INEEntidadContabilidad"]; }
+                        //if (reader["UUID"] != null)
+                        //{ res.UUID = (string)reader["UUID"]; }
+
 
                     }
                 }
 
             }
-            
+
             catch (Exception ex)
             {
                 //
@@ -325,7 +325,7 @@ namespace RPSuiteServer
             {
                 int x = 0;
                 IDbCommand command;
-           
+
                 using (IDataReader reader = this.ServiceSchema.GetDataReader(this.Connection, "spPedido", new string[] { "Datos" }, new object[] { Datos }, out command))
                 {
                     while (reader.Read())
@@ -333,8 +333,8 @@ namespace RPSuiteServer
 
 
                         // investigar si se puede pasar el Reader completo de manera directa a la variable res,
-                        res.PedidoID = (int)reader["PedidoID"]; 
-                        res.Fecha = (DateTime)( reader["Fecha"] != DBNull.Value ? reader["Fecha"] : DateTime.MinValue);
+                        res.PedidoID = (int)reader["PedidoID"];
+                        res.Fecha = (DateTime)(reader["Fecha"] != DBNull.Value ? reader["Fecha"] : DateTime.MinValue);
                         res.FechaModificacion = (DateTime)(reader["FechaModificacion"] != DBNull.Value ? reader["FechaModificacion"] : DateTime.MinValue);
                         res.EstacionID = (int)(reader["EstacionID"] != DBNull.Value ? reader["EstacionID"] : -1);
                         res.Subtotal = (double)(reader["Subtotal"] != DBNull.Value ? reader["Subtotal"] : (double)0);
@@ -367,7 +367,7 @@ namespace RPSuiteServer
             try
             {
                 string Command = "";
-                foreach(TDetallePedido DetallePedido in Datos)
+                foreach (TDetallePedido DetallePedido in Datos)
                 {
 
                     if (DetallePedido.DetallePedidoID < 0)
@@ -378,12 +378,12 @@ namespace RPSuiteServer
                     else
                         Command = "cmdDetallePedidoUpdate";
 
-                    using (IDbCommand lcommand = this.ServiceSchema.NewCommand(this.Connection, Command, 
-                        new string[] 
+                    using (IDbCommand lcommand = this.ServiceSchema.NewCommand(this.Connection, Command,
+                        new string[]
                         {
                             "DetallePedidoID","Precio","Subtotal","IVA","IEPS","Total","Descuento",
                             "NoItems","PedidoID","VehiculoID","ProductoID","Volumen" ,"TerminalID"
-                        }, 
+                        },
                         new object[]
                         {
                              DetallePedido.DetallePedidoID,DetallePedido.Precio,DetallePedido.Subtotal,
@@ -393,10 +393,10 @@ namespace RPSuiteServer
                              DetallePedido.TerminalID
                         }
                         ))
-                        {
-                            lcommand.ExecuteNonQuery();
-                        }
-                    
+                    {
+                        lcommand.ExecuteNonQuery();
+                    }
+
                 }
 
                 return true;
@@ -418,20 +418,20 @@ namespace RPSuiteServer
                 int factura;
                 //Generar un nuevo Movimiento
                 using (IDbCommand lcommand = this.ServiceSchema.NewCommand(this.Connection, "InsertaMovimiento", new string[] { "FechaMovimiento", "FechaVencimiento", "Referencia", "Ejercicio", "Periodo", "CargoAbono", "Cargo", "Abono", "FechaRegistro", "Origen", "AfectaSaldos", "TipoMovimientoID", "UsuarioID", "EstacionID" },
-                                                                                                                 new object[] { Datos.Fecha, Datos.FechaModificacion, "Facturando", Datos.Ejercisio, Datos.Periodo, "C","C","", DateTime.Today, "Auto", "si", 12, Datos.UsuarioID, Datos.EstacionID }))
+                                                                                                                 new object[] { Datos.Fecha, Datos.FechaModificacion, "Facturando", Datos.Ejercisio, Datos.Periodo, "C", "C", "", DateTime.Today, "Auto", "si", 12, Datos.UsuarioID, Datos.EstacionID }))
                 {
                     MovimientoID = int.Parse(lcommand.ExecuteScalar().ToString());
                     //return MovimientoID;
-                  FacturaID=  InsertarFactura(Datos.Serie, Datos.Folio, Datos.Fecha, Datos.Ejercisio, Datos.Periodo, Datos.Dia, Datos.FechaModificacion, Datos.IVA, Datos.Observacion, 1, -1, 1, Datos.EstacionID, 1, MovimientoID);
+                    FacturaID = InsertarFactura(Datos.Serie, Datos.Folio, Datos.Fecha, Datos.Ejercisio, Datos.Periodo, Datos.Dia, Datos.FechaModificacion, Datos.IVA, Datos.Observacion, 1, -1, 1, Datos.EstacionID, 1, MovimientoID);
 
-                   DetalleFactura= InsertarDetalleFactura(int.Parse(detallePedido.Volumen.ToString()), detallePedido.Precio, detallePedido.Subtotal, detallePedido.IVA, detallePedido.IEPS, detallePedido.Total, detallePedido.Descuento, detallePedido.NoItems, FacturaID, detallePedido.ProductoID);
+                    DetalleFactura = InsertarDetalleFactura(int.Parse(detallePedido.Volumen.ToString()), detallePedido.Precio, detallePedido.Subtotal, detallePedido.IVA, detallePedido.IEPS, detallePedido.Total, detallePedido.Descuento, detallePedido.NoItems, FacturaID, detallePedido.ProductoID);
 
                     UpdateSaldoCargoPedido(detallePedido.Total, Datos.EstacionID);
 
-                   factura= UpdatePedidoFactura(Datos.PedidoID, FacturaID);
+                    factura = UpdatePedidoFactura(Datos.PedidoID, FacturaID);
                 }
                 return factura;
-                
+
             }
             catch (Exception ex)
             {
@@ -448,7 +448,7 @@ namespace RPSuiteServer
                 IDbCommand commandSaldo;
                 using (IDataReader reader = this.ServiceSchema.GetDataReader(this.Connection, "spSaldo", new string[] { "EstacionID" }, new object[] { Datos.EstacionID }, out commandSaldo))
 
-                if(reader.Read())
+                    if (reader.Read())
                     {
 
                         if (Datos.LimiteCredito != (double)reader["LimiteCredito"])
@@ -466,7 +466,7 @@ namespace RPSuiteServer
                             return true;
                         }
                     }
-                else
+                    else
                     {
                         using (IDbCommand lcommand = this.ServiceSchema.NewCommand(this.Connection, "cmdInsertarSaldo", new string[] {"EstacionID","LimiteCredito", "CreditoUsado"
                      ,"Saldo"}, new object[] {
@@ -507,19 +507,19 @@ namespace RPSuiteServer
 
                 throw ex;
             }
-                    
+
         }
 
         public int InsertarDetalleFactura(int Cantidad, double Precio, double SubTotal, double IVA, double IEPS, double Total, double Descuento, int NoItems, int FacturaID, int ProductoID)
         {
             try
             {
-               using (IDbCommand lcommand = this.ServiceSchema.NewCommand(this.Connection, "InsertarDetalleFactura", new string[]
-               { "Cantidad", "Precio", "SubTotal", "IVA", "IEPS", "Total", "Descuento", "NoItems", "FacturaID", "ProductoID"},
-               new object[]
-               { Cantidad, Precio, SubTotal,IVA, IEPS,Total,Descuento,NoItems,FacturaID,ProductoID}))
+                using (IDbCommand lcommand = this.ServiceSchema.NewCommand(this.Connection, "InsertarDetalleFactura", new string[]
+                { "Cantidad", "Precio", "SubTotal", "IVA", "IEPS", "Total", "Descuento", "NoItems", "FacturaID", "ProductoID"},
+                new object[]
+                { Cantidad, Precio, SubTotal,IVA, IEPS,Total,Descuento,NoItems,FacturaID,ProductoID}))
                 {
-                    return int.Parse(lcommand.ExecuteScalar().ToString()); 
+                    return int.Parse(lcommand.ExecuteScalar().ToString());
                 }
             }
             catch (Exception ex)
@@ -529,7 +529,7 @@ namespace RPSuiteServer
             }
         }
 
-        public double UpdateSaldoCargoPedido( double Saldo, int EstacionID)
+        public double UpdateSaldoCargoPedido(double Saldo, int EstacionID)
         {
             try
             {
@@ -611,7 +611,7 @@ namespace RPSuiteServer
             try
             {
                 TEstacion est = new TEstacion();
-                      IDbCommand command;
+                IDbCommand command;
 
 
                 using (IDbCommand lcommand = this.ServiceSchema.NewCommand(this.Connection, "cmdEstacion", new string[] { "Datos" }, new object[] { Datos }))
@@ -640,7 +640,7 @@ namespace RPSuiteServer
             {
 
                 throw ex;
-               
+
             }
         }
 
@@ -694,6 +694,53 @@ namespace RPSuiteServer
             }
         }
 
+        public TCustomProductoIEPS[] CargarProductoIEPS ()
+        {
+            List<TCustomProductoIEPS> lstProductoIEPS = new List<TCustomProductoIEPS>();
+            IDataReader reader=null;
+            try
+            {
+                using (IDbCommand lcommand = this.ServiceSchema.NewCommand(this.Connection, "spProductoIEPSCargar"))
+                {
+                    reader = lcommand.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        lstProductoIEPS.Add
+                    (new TCustomProductoIEPS()
+                    {
+                        TerminalID = (int)(reader["TerminalID"] != DBNull.Value ? reader["TerminalID"] : ""),
+                        PIEPSID87 = (int)(reader["PIEPSID87"] != DBNull.Value ? reader["PIEPSID87"] : -1),
+                        Precio87 = (double)(reader["87 Octanos"] != DBNull.Value ? reader["87 Octanos"] : (double)0),
+                        PIEPSID91 = (int)(reader["PIEPS91"] != DBNull.Value ? reader["PIEPS91"] : -1),
+                        Precio91 = (double)(reader["91 Octanos"] != DBNull.Value ? reader["91 Octanos"] : (double)0),
+                        PIEPSIDDiesel = (int)(reader["PIEPSDIESEL"] != DBNull.Value ? reader["PIEPSDIESEL"] : -1),
+                        PrecioDiesel = (double)(reader["Diesel"] != DBNull.Value ? reader["Diesel"] : (double)0),
+                        IEPS = (double)(reader["IEPS"] != DBNull.Value ? reader["IEPS"] : (double)0),
+                        IVA = (double)(reader["IVA"] != DBNull.Value ? reader["IVA"] : (double)0),
+                        Ejercicio = (int)(reader["Ejercicio"] != DBNull.Value ? reader["Ejercicio"] : -1),
+                        Periodo = (int)(reader["Periodo"] != DBNull.Value ? reader["Periodo"] : -1),
+                        Dia = (int)(reader["Dia"] != DBNull.Value ? reader["Dia"] : -1),
+                        Fecha = (DateTime)(reader["Fecha"] != DBNull.Value ? reader["Fecha"] : DateTime.MinValue),
+                        UsuarioID = (int)(reader["UsuarioID"] != DBNull.Value ? reader["UsuarioID"] : -1),
+                        Descripcion = (string)(reader["Descripcion"] != DBNull.Value ? reader["Descripcion"] : "")
+                    }
+                    );
+                        
+                    }
+                    reader.Close();
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                reader.Close();
+            }
+
+            TCustomProductoIEPS[] arrayProductoIEPS = lstProductoIEPS.ToArray();
+
+            return arrayProductoIEPS;
+        }
         public int InsertaMuestradeProducto(TMuestraProducto MuestraProducto)
         {
 

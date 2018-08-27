@@ -2957,6 +2957,242 @@ namespace RPSuiteServer {
         }
     }
     [System.Serializable()]
+    [RemObjects.SDK.Remotable(ActivatorClass=typeof(TCustomProductoIEPS_Activator))]
+    [System.Reflection.ObfuscationAttribute(Exclude=true)]
+    public partial class TCustomProductoIEPS : RemObjects.SDK.Types.ComplexType {
+        private int @__TerminalID;
+        private string @__Descripcion;
+        private int @__PIEPSID87;
+        private double @__Precio87;
+        private int @__PIEPSID91;
+        private double @__Precio91;
+        private int @__PIEPSIDDiesel;
+        private double @__PrecioDiesel;
+        private double @__IEPS;
+        private double @__IVA;
+        private int @__Ejercicio;
+        private int @__Periodo;
+        private int @__Dia;
+        private System.DateTime @__Fecha;
+        private int @__UsuarioID;
+        public virtual int TerminalID {
+            get {
+                return @__TerminalID;
+            }
+            set {
+                @__TerminalID = value;
+                this.TriggerPropertyChanged("TerminalID");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string Descripcion {
+            get {
+                return @__Descripcion;
+            }
+            set {
+                @__Descripcion = value;
+                this.TriggerPropertyChanged("Descripcion");
+            }
+        }
+        public virtual int PIEPSID87 {
+            get {
+                return @__PIEPSID87;
+            }
+            set {
+                @__PIEPSID87 = value;
+                this.TriggerPropertyChanged("PIEPSID87");
+            }
+        }
+        public virtual double Precio87 {
+            get {
+                return @__Precio87;
+            }
+            set {
+                @__Precio87 = value;
+                this.TriggerPropertyChanged("Precio87");
+            }
+        }
+        public virtual int PIEPSID91 {
+            get {
+                return @__PIEPSID91;
+            }
+            set {
+                @__PIEPSID91 = value;
+                this.TriggerPropertyChanged("PIEPSID91");
+            }
+        }
+        public virtual double Precio91 {
+            get {
+                return @__Precio91;
+            }
+            set {
+                @__Precio91 = value;
+                this.TriggerPropertyChanged("Precio91");
+            }
+        }
+        public virtual int PIEPSIDDiesel {
+            get {
+                return @__PIEPSIDDiesel;
+            }
+            set {
+                @__PIEPSIDDiesel = value;
+                this.TriggerPropertyChanged("PIEPSIDDiesel");
+            }
+        }
+        public virtual double PrecioDiesel {
+            get {
+                return @__PrecioDiesel;
+            }
+            set {
+                @__PrecioDiesel = value;
+                this.TriggerPropertyChanged("PrecioDiesel");
+            }
+        }
+        public virtual double IEPS {
+            get {
+                return @__IEPS;
+            }
+            set {
+                @__IEPS = value;
+                this.TriggerPropertyChanged("IEPS");
+            }
+        }
+        public virtual double IVA {
+            get {
+                return @__IVA;
+            }
+            set {
+                @__IVA = value;
+                this.TriggerPropertyChanged("IVA");
+            }
+        }
+        public virtual int Ejercicio {
+            get {
+                return @__Ejercicio;
+            }
+            set {
+                @__Ejercicio = value;
+                this.TriggerPropertyChanged("Ejercicio");
+            }
+        }
+        public virtual int Periodo {
+            get {
+                return @__Periodo;
+            }
+            set {
+                @__Periodo = value;
+                this.TriggerPropertyChanged("Periodo");
+            }
+        }
+        public virtual int Dia {
+            get {
+                return @__Dia;
+            }
+            set {
+                @__Dia = value;
+                this.TriggerPropertyChanged("Dia");
+            }
+        }
+        public virtual System.DateTime Fecha {
+            get {
+                return @__Fecha;
+            }
+            set {
+                @__Fecha = value;
+                this.TriggerPropertyChanged("Fecha");
+            }
+        }
+        public virtual int UsuarioID {
+            get {
+                return @__UsuarioID;
+            }
+            set {
+                @__UsuarioID = value;
+                this.TriggerPropertyChanged("UsuarioID");
+            }
+        }
+        public override void ReadComplex(RemObjects.SDK.Serializer serializer) {
+            if (serializer.RecordStrictOrder) {
+                this.TerminalID = serializer.ReadInt32("TerminalID");
+                this.Descripcion = serializer.ReadAnsiString("Descripcion");
+                this.PIEPSID87 = serializer.ReadInt32("PIEPSID87");
+                this.Precio87 = serializer.ReadDouble("Precio87");
+                this.PIEPSID91 = serializer.ReadInt32("PIEPSID91");
+                this.Precio91 = serializer.ReadDouble("Precio91");
+                this.PIEPSIDDiesel = serializer.ReadInt32("PIEPSIDDiesel");
+                this.PrecioDiesel = serializer.ReadDouble("PrecioDiesel");
+                this.IEPS = serializer.ReadDouble("IEPS");
+                this.IVA = serializer.ReadDouble("IVA");
+                this.Ejercicio = serializer.ReadInt32("Ejercicio");
+                this.Periodo = serializer.ReadInt32("Periodo");
+                this.Dia = serializer.ReadInt32("Dia");
+                this.Fecha = serializer.ReadDateTime("Fecha");
+                this.UsuarioID = serializer.ReadInt32("UsuarioID");
+            }
+            else {
+                this.Descripcion = serializer.ReadAnsiString("Descripcion");
+                this.Dia = serializer.ReadInt32("Dia");
+                this.Ejercicio = serializer.ReadInt32("Ejercicio");
+                this.Fecha = serializer.ReadDateTime("Fecha");
+                this.IEPS = serializer.ReadDouble("IEPS");
+                this.IVA = serializer.ReadDouble("IVA");
+                this.Periodo = serializer.ReadInt32("Periodo");
+                this.PIEPSID87 = serializer.ReadInt32("PIEPSID87");
+                this.PIEPSID91 = serializer.ReadInt32("PIEPSID91");
+                this.PIEPSIDDiesel = serializer.ReadInt32("PIEPSIDDiesel");
+                this.Precio87 = serializer.ReadDouble("Precio87");
+                this.Precio91 = serializer.ReadDouble("Precio91");
+                this.PrecioDiesel = serializer.ReadDouble("PrecioDiesel");
+                this.TerminalID = serializer.ReadInt32("TerminalID");
+                this.UsuarioID = serializer.ReadInt32("UsuarioID");
+            }
+        }
+        public override void WriteComplex(RemObjects.SDK.Serializer serializer) {
+            if (serializer.RecordStrictOrder) {
+                serializer.WriteInt32("TerminalID", this.TerminalID);
+                serializer.WriteAnsiString("Descripcion", this.Descripcion);
+                serializer.WriteInt32("PIEPSID87", this.PIEPSID87);
+                serializer.WriteDouble("Precio87", this.Precio87);
+                serializer.WriteInt32("PIEPSID91", this.PIEPSID91);
+                serializer.WriteDouble("Precio91", this.Precio91);
+                serializer.WriteInt32("PIEPSIDDiesel", this.PIEPSIDDiesel);
+                serializer.WriteDouble("PrecioDiesel", this.PrecioDiesel);
+                serializer.WriteDouble("IEPS", this.IEPS);
+                serializer.WriteDouble("IVA", this.IVA);
+                serializer.WriteInt32("Ejercicio", this.Ejercicio);
+                serializer.WriteInt32("Periodo", this.Periodo);
+                serializer.WriteInt32("Dia", this.Dia);
+                serializer.WriteDateTime("Fecha", this.Fecha);
+                serializer.WriteInt32("UsuarioID", this.UsuarioID);
+            }
+            else {
+                serializer.WriteAnsiString("Descripcion", this.Descripcion);
+                serializer.WriteInt32("Dia", this.Dia);
+                serializer.WriteInt32("Ejercicio", this.Ejercicio);
+                serializer.WriteDateTime("Fecha", this.Fecha);
+                serializer.WriteDouble("IEPS", this.IEPS);
+                serializer.WriteDouble("IVA", this.IVA);
+                serializer.WriteInt32("Periodo", this.Periodo);
+                serializer.WriteInt32("PIEPSID87", this.PIEPSID87);
+                serializer.WriteInt32("PIEPSID91", this.PIEPSID91);
+                serializer.WriteInt32("PIEPSIDDiesel", this.PIEPSIDDiesel);
+                serializer.WriteDouble("Precio87", this.Precio87);
+                serializer.WriteDouble("Precio91", this.Precio91);
+                serializer.WriteDouble("PrecioDiesel", this.PrecioDiesel);
+                serializer.WriteInt32("TerminalID", this.TerminalID);
+                serializer.WriteInt32("UsuarioID", this.UsuarioID);
+            }
+        }
+    }
+    [System.Reflection.ObfuscationAttribute(Exclude=true, ApplyToMembers=false)]
+    public class TCustomProductoIEPS_Activator : object, RemObjects.SDK.ITypeActivator {
+        public TCustomProductoIEPS_Activator() {
+        }
+        public object CreateInstance() {
+            return new TCustomProductoIEPS();
+        }
+    }
+    [System.Serializable()]
     [RemObjects.SDK.Remotable(ActivatorClass=typeof(TMuestraProducto_Activator))]
     [System.Reflection.ObfuscationAttribute(Exclude=true)]
     public partial class TMuestraProducto : RemObjects.SDK.Types.ComplexType {
@@ -3229,6 +3465,7 @@ namespace RPSuiteServer {
         TEstacion GetEstacion(string Datos);
         TVendedor GetVendedor(string Datos);
         bool CancelarPedido(string Datos);
+        TCustomProductoIEPS[] CargarProductoIEPS();
         int InsertaMuestradeProducto(TMuestraProducto MuestraProducto);
     }
     public partial class RPDataService_Proxy : RemObjects.DataAbstract.Server.DataAbstractService_Proxy, IRPDataService {
@@ -3550,6 +3787,19 @@ namespace RPSuiteServer {
                 this.@__ClearMessage(@__LocalMessage);
             }
         }
+        public virtual TCustomProductoIEPS[] CargarProductoIEPS() {
+            RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
+            try {
+                @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "CargarProductoIEPS");
+                @__LocalMessage.FinalizeMessage();
+                this.ClientChannel.Dispatch(@__LocalMessage);
+                TCustomProductoIEPS[] _Result = ((TCustomProductoIEPS[])(@__LocalMessage.Read("Result", typeof(TCustomProductoIEPS[]), RemObjects.SDK.StreamingFormat.Default)));
+                return _Result;
+            }
+            finally {
+                this.@__ClearMessage(@__LocalMessage);
+            }
+        }
         public virtual int InsertaMuestradeProducto(TMuestraProducto MuestraProducto) {
             RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
             try {
@@ -3654,6 +3904,9 @@ namespace RPSuiteServer {
         System.IAsyncResult BeginCancelarPedido(string Datos, System.AsyncCallback @__Callback, object @__UserData);
         bool EndCancelarPedido(System.IAsyncResult @__AsyncResult);
         System.Threading.Tasks.Task<bool> CancelarPedidoAsync(string Datos);
+        System.IAsyncResult BeginCargarProductoIEPS(System.AsyncCallback @__Callback, object @__UserData);
+        TCustomProductoIEPS[] EndCargarProductoIEPS(System.IAsyncResult @__AsyncResult);
+        System.Threading.Tasks.Task<TCustomProductoIEPS[]> CargarProductoIEPSAsync();
         System.IAsyncResult BeginInsertaMuestradeProducto(TMuestraProducto MuestraProducto, System.AsyncCallback @__Callback, object @__UserData);
         int EndInsertaMuestradeProducto(System.IAsyncResult @__AsyncResult);
         System.Threading.Tasks.Task<int> InsertaMuestradeProductoAsync(TMuestraProducto MuestraProducto);
@@ -4221,6 +4474,31 @@ namespace RPSuiteServer {
         }
         public virtual System.Threading.Tasks.Task<bool> CancelarPedidoAsync(string Datos) {
             return System.Threading.Tasks.Task<bool>.Factory.FromAsync(this.BeginCancelarPedido(Datos, null, null), new System.Func<System.IAsyncResult, bool>(this.EndCancelarPedido));
+        }
+        public virtual System.IAsyncResult BeginCargarProductoIEPS(System.AsyncCallback @__Callback, object @__UserData) {
+            RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
+            try {
+                @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "CargarProductoIEPS");
+                @__LocalMessage.FinalizeMessage();
+                return this.ClientChannel.AsyncDispatch(@__LocalMessage, @__Callback, @__UserData);
+            }
+            catch (System.Exception ex) {
+                this.@__ClearMessage(@__LocalMessage);
+                throw ex;
+            }
+        }
+        public virtual TCustomProductoIEPS[] EndCargarProductoIEPS(System.IAsyncResult @__AsyncResult) {
+            RemObjects.SDK.IMessage @__LocalMessage = ((RemObjects.SDK.IClientAsyncResult)(@__AsyncResult)).Message;
+            try {
+                TCustomProductoIEPS[] Result = ((TCustomProductoIEPS[])(@__LocalMessage.Read("Result", typeof(TCustomProductoIEPS[]), RemObjects.SDK.StreamingFormat.Default)));
+                return Result;
+            }
+            finally {
+                this.@__ClearMessage(@__LocalMessage);
+            }
+        }
+        public virtual System.Threading.Tasks.Task<TCustomProductoIEPS[]> CargarProductoIEPSAsync() {
+            return System.Threading.Tasks.Task<TCustomProductoIEPS[]>.Factory.FromAsync(this.BeginCargarProductoIEPS(null, null), new System.Func<System.IAsyncResult, TCustomProductoIEPS[]>(this.EndCargarProductoIEPS));
         }
         public virtual System.IAsyncResult BeginInsertaMuestradeProducto(TMuestraProducto MuestraProducto, System.AsyncCallback @__Callback, object @__UserData) {
             RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();

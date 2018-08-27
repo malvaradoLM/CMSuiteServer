@@ -321,6 +321,21 @@ namespace RPSuiteServer {
             @__Message.FinalizeMessage();
             @__oResponseOptions = RemObjects.SDK.Server.ResponseOptions.roDefault;
         }
+        public static void Invoke_CargarProductoIEPS(RemObjects.SDK.IROService @__Instance, RemObjects.SDK.IMessage @__Message, RemObjects.SDK.Server.IServerChannelInfo @__ServerChannelInfo, out RemObjects.SDK.Server.ResponseOptions @__oResponseOptions) {
+            RemObjects.SDK.ObjectDisposer @__ObjectDisposer = new RemObjects.SDK.ObjectDisposer(1);
+            try {
+                TCustomProductoIEPS[] Result;
+                Result = ((IRPDataService)(@__Instance)).CargarProductoIEPS();
+                @__ObjectDisposer.Add(Result);
+                @__Message.InitializeResponseMessage(@__ServerChannelInfo, "RPSuiteServer", "RPDataService", "CargarProductoIEPSResponse");
+                @__Message.Write("Result", Result, typeof(TCustomProductoIEPS[]), RemObjects.SDK.StreamingFormat.Default);
+                @__Message.FinalizeMessage();
+                @__oResponseOptions = RemObjects.SDK.Server.ResponseOptions.roDefault;
+            }
+            finally {
+                @__ObjectDisposer.Dispose();
+            }
+        }
         public static void Invoke_InsertaMuestradeProducto(RemObjects.SDK.IROService @__Instance, RemObjects.SDK.IMessage @__Message, RemObjects.SDK.Server.IServerChannelInfo @__ServerChannelInfo, out RemObjects.SDK.Server.ResponseOptions @__oResponseOptions) {
             RemObjects.SDK.ObjectDisposer @__ObjectDisposer = new RemObjects.SDK.ObjectDisposer(1);
             try {
