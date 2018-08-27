@@ -701,20 +701,23 @@ namespace RPSuiteServer
 
             int res= -1;
             MuestraProducto.MuestraProductoID = Folio("MuestraProductoID", "");
+            MuestraProducto.Fecha= Fecha();
+           
 
-            DateTime FechaActual = Fecha();
             try
             {
                 using (IDbCommand lCommand = this.ServiceSchema.NewCommand(this.Connection, "InsertMuestraProducto", new string[]
                 { "MuestraProductoID", "Fecha", "TerminalID", "NoMuestra", "PesodeCarga", "Azufre", "Octanaje", "Adimensional", "ProductoID", "Observacion"},
-                    new object[] { MuestraProducto.MuestraProductoID,FechaActual,MuestraProducto.TerminalID,MuestraProducto.NoMuestra,MuestraProducto.PesodeCarga,
-                                MuestraProducto.Azufre,MuestraProducto.Octanaje,MuestraProducto.Adimensional,MuestraProducto.ProductoID,MuestraProducto.Observacion}))
+                    new object[] { MuestraProducto.MuestraProductoID,MuestraProducto.Fecha,MuestraProducto.TerminalID,MuestraProducto.NoMuestra,MuestraProducto.PesodeCarga,
+                               MuestraProducto.Azufre,
+                               MuestraProducto.Octanaje,MuestraProducto.Adimensional,MuestraProducto.ProductoID,MuestraProducto.Observacion}))
                 {
-                    
-                      res = int.Parse(lCommand.ExecuteScalar().ToString());
-                    
+
+                    // res = int.Parse(lCommand.ExecuteScalar().ToString());
+                    lCommand.ExecuteNonQuery();
+
                 }
-                return res;
+                return MuestraProducto.MuestraProductoID;
 
             }
             catch
