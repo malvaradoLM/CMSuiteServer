@@ -17364,7 +17364,7 @@ WHERE
       <Name>spProductoIEP</Name>
     </Item47>
   </Datasets>
-  <Commands IsObject="true" Count="22" IsCollection="true" ItemClass="TDASQLCommand" Type="TDASQLCommandCollection">
+  <Commands IsObject="true" Count="23" IsCollection="true" ItemClass="TDASQLCommand" Type="TDASQLCommandCollection">
     <Item0>
       <BusinessRulesServer Type="TDABusinessRuleScript" IsObject="true">
         <Script />
@@ -20319,36 +20319,38 @@ VALUES (
           <Connection>RPSuite</Connection>
           <SQL>WITH Gasolina87 AS
 (
-SELECT Z.ProductoIEPSID,Z.Precio,Y.ProductoID,x.TerminalID from ProductoIEPS Z
+SELECT Z.ProductoIEPSID,Z.Precio,Y.ProductoID,x.TerminalID,Z.IEPS from ProductoIEPS Z
   INNER JOIN Producto Y on Y.ProductoID = Z.ProductoID 
   INNER JOIN Terminal X on X.TerminalID = Z.TerminalID
   where Y.Descripcion like '%87 Octanos%'
 ), 
 Gasolina91 AS
 (
-SELECT Z.ProductoIEPSID,Z.Precio,Y.ProductoID,x.TerminalID from ProductoIEPS Z
+SELECT Z.ProductoIEPSID,Z.Precio,Y.ProductoID,x.TerminalID,Z.IEPS from ProductoIEPS Z
   INNER JOIN Producto Y on Y.ProductoID = Z.ProductoID 
   INNER JOIN Terminal X on X.TerminalID = Z.TerminalID
   where Y.Descripcion like '%91 Octanos%'
 ),
 Diesel AS
 (
-SELECT Z.ProductoIEPSID,Z.Precio,Y.ProductoID,x.TerminalID from ProductoIEPS Z
+SELECT Z.ProductoIEPSID,Z.Precio,Y.ProductoID,x.TerminalID,Z.IEPS from ProductoIEPS Z
   INNER JOIN Producto Y on Y.ProductoID = Z.ProductoID 
   INNER JOIN Terminal X on X.TerminalID = Z.TerminalID
   where Y.Descripcion like '%Diesel%'
 )
 
 
-select DISTINCT (A.TerminalID),B.Descripcion,D.ProductoIEPSID as PIEPSID87, D.Precio as "87 Octanos",F.ProductoIEPSID as PIEPS91,F.Precio as "91 Octanos",
-  G.ProductoIEPSID as PIEPSDIESEL, G.Precio as "Diesel",A.IEPS,A.IVA,A.Ejercicio,A.Periodo,A.Dia,A.UsuarioID,convert(DATE,a.Fecha ) as Fecha
+select DISTINCT (A.TerminalID),B.Descripcion,D.ProductoIEPSID as PIEPSID87, D.Precio as "87 Octanos",D.IEPS as "IEPS87",
+  F.ProductoIEPSID as PIEPS91,F.Precio as "91 Octanos",F.IEPS as "IEPS91", G.ProductoIEPSID as PIEPSDIESEL, G.Precio as "Diesel",G.IEPS as "IEPSDiesel",
+  A.IVA,A.Ejercicio,A.Periodo,A.Dia,A.UsuarioID,convert(DATE,a.Fecha ) as Fecha
   from ProductoIEPS A
   INNER JOIN Terminal B on A.TerminalID = B.TerminalID
   LEFT JOIN Producto C on A.ProductoID = C.ProductoID
   LEFT JOIN Gasolina87 D on A.TerminalID = D.TerminalID
   LEFT JOIN Gasolina91 F ON A.TerminalID = F.TerminalID
-  LEFT JOIN Diesel G ON A.TerminalID = G.TerminalID</SQL>
-  <TargetTable />
+  LEFT JOIN Diesel G ON A.TerminalID = G.TerminalID
+  </SQL>
+          <TargetTable />
           <ConnectionType>SQLite</ConnectionType>
           <Default>True</Default>
           <StatementName />

@@ -27,3 +27,4 @@ C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.exe.licenses
 C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.csproj.CoreCompileInputs.cache
 C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.exe
 C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.pdb
+C:\SuiteWEB\CMSuiteServer\obj\Debug\RPSuiteServer.csprojResolveAssemblyReference.cache

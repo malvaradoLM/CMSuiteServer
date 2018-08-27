@@ -2964,11 +2964,13 @@ namespace RPSuiteServer {
         private string @__Descripcion;
         private int @__PIEPSID87;
         private double @__Precio87;
+        private double @__IEPS87;
         private int @__PIEPSID91;
         private double @__Precio91;
+        private double @__IEPS91;
         private int @__PIEPSIDDiesel;
         private double @__PrecioDiesel;
-        private double @__IEPS;
+        private double @__IEPSDiesel;
         private double @__IVA;
         private int @__Ejercicio;
         private int @__Periodo;
@@ -3012,6 +3014,15 @@ namespace RPSuiteServer {
                 this.TriggerPropertyChanged("Precio87");
             }
         }
+        public virtual double IEPS87 {
+            get {
+                return @__IEPS87;
+            }
+            set {
+                @__IEPS87 = value;
+                this.TriggerPropertyChanged("IEPS87");
+            }
+        }
         public virtual int PIEPSID91 {
             get {
                 return @__PIEPSID91;
@@ -3028,6 +3039,15 @@ namespace RPSuiteServer {
             set {
                 @__Precio91 = value;
                 this.TriggerPropertyChanged("Precio91");
+            }
+        }
+        public virtual double IEPS91 {
+            get {
+                return @__IEPS91;
+            }
+            set {
+                @__IEPS91 = value;
+                this.TriggerPropertyChanged("IEPS91");
             }
         }
         public virtual int PIEPSIDDiesel {
@@ -3048,13 +3068,13 @@ namespace RPSuiteServer {
                 this.TriggerPropertyChanged("PrecioDiesel");
             }
         }
-        public virtual double IEPS {
+        public virtual double IEPSDiesel {
             get {
-                return @__IEPS;
+                return @__IEPSDiesel;
             }
             set {
-                @__IEPS = value;
-                this.TriggerPropertyChanged("IEPS");
+                @__IEPSDiesel = value;
+                this.TriggerPropertyChanged("IEPSDiesel");
             }
         }
         public virtual double IVA {
@@ -3117,11 +3137,13 @@ namespace RPSuiteServer {
                 this.Descripcion = serializer.ReadAnsiString("Descripcion");
                 this.PIEPSID87 = serializer.ReadInt32("PIEPSID87");
                 this.Precio87 = serializer.ReadDouble("Precio87");
+                this.IEPS87 = serializer.ReadDouble("IEPS87");
                 this.PIEPSID91 = serializer.ReadInt32("PIEPSID91");
                 this.Precio91 = serializer.ReadDouble("Precio91");
+                this.IEPS91 = serializer.ReadDouble("IEPS91");
                 this.PIEPSIDDiesel = serializer.ReadInt32("PIEPSIDDiesel");
                 this.PrecioDiesel = serializer.ReadDouble("PrecioDiesel");
-                this.IEPS = serializer.ReadDouble("IEPS");
+                this.IEPSDiesel = serializer.ReadDouble("IEPSDiesel");
                 this.IVA = serializer.ReadDouble("IVA");
                 this.Ejercicio = serializer.ReadInt32("Ejercicio");
                 this.Periodo = serializer.ReadInt32("Periodo");
@@ -3134,7 +3156,9 @@ namespace RPSuiteServer {
                 this.Dia = serializer.ReadInt32("Dia");
                 this.Ejercicio = serializer.ReadInt32("Ejercicio");
                 this.Fecha = serializer.ReadDateTime("Fecha");
-                this.IEPS = serializer.ReadDouble("IEPS");
+                this.IEPS87 = serializer.ReadDouble("IEPS87");
+                this.IEPS91 = serializer.ReadDouble("IEPS91");
+                this.IEPSDiesel = serializer.ReadDouble("IEPSDiesel");
                 this.IVA = serializer.ReadDouble("IVA");
                 this.Periodo = serializer.ReadInt32("Periodo");
                 this.PIEPSID87 = serializer.ReadInt32("PIEPSID87");
@@ -3153,11 +3177,13 @@ namespace RPSuiteServer {
                 serializer.WriteAnsiString("Descripcion", this.Descripcion);
                 serializer.WriteInt32("PIEPSID87", this.PIEPSID87);
                 serializer.WriteDouble("Precio87", this.Precio87);
+                serializer.WriteDouble("IEPS87", this.IEPS87);
                 serializer.WriteInt32("PIEPSID91", this.PIEPSID91);
                 serializer.WriteDouble("Precio91", this.Precio91);
+                serializer.WriteDouble("IEPS91", this.IEPS91);
                 serializer.WriteInt32("PIEPSIDDiesel", this.PIEPSIDDiesel);
                 serializer.WriteDouble("PrecioDiesel", this.PrecioDiesel);
-                serializer.WriteDouble("IEPS", this.IEPS);
+                serializer.WriteDouble("IEPSDiesel", this.IEPSDiesel);
                 serializer.WriteDouble("IVA", this.IVA);
                 serializer.WriteInt32("Ejercicio", this.Ejercicio);
                 serializer.WriteInt32("Periodo", this.Periodo);
@@ -3170,7 +3196,9 @@ namespace RPSuiteServer {
                 serializer.WriteInt32("Dia", this.Dia);
                 serializer.WriteInt32("Ejercicio", this.Ejercicio);
                 serializer.WriteDateTime("Fecha", this.Fecha);
-                serializer.WriteDouble("IEPS", this.IEPS);
+                serializer.WriteDouble("IEPS87", this.IEPS87);
+                serializer.WriteDouble("IEPS91", this.IEPS91);
+                serializer.WriteDouble("IEPSDiesel", this.IEPSDiesel);
                 serializer.WriteDouble("IVA", this.IVA);
                 serializer.WriteInt32("Periodo", this.Periodo);
                 serializer.WriteInt32("PIEPSID87", this.PIEPSID87);
