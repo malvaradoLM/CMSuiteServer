@@ -647,6 +647,32 @@
 </Element>
 <Element Name="NombreMetoodoPago" DataType="AnsiString">
 </Element>
+<Element Name="FormaCompraID" DataType="Integer">
+</Element>
+<Element Name="Descuento" DataType="Double">
+</Element>
+<Element Name="TerminalPrimariaID" DataType="Integer">
+</Element>
+<Element Name="TerminalSecundariaID" DataType="Integer">
+</Element>
+<Element Name="EntregaCalle" DataType="AnsiString">
+</Element>
+<Element Name="EntregaNoExterior" DataType="AnsiString">
+</Element>
+<Element Name="EntregaNoInterior" DataType="AnsiString">
+</Element>
+<Element Name="EntregaColonia" DataType="AnsiString">
+</Element>
+<Element Name="EntregaCiudad" DataType="AnsiString">
+</Element>
+<Element Name="EntregaMunicipio" DataType="AnsiString">
+</Element>
+<Element Name="EntregaEstado" DataType="AnsiString">
+</Element>
+<Element Name="EntregaCP" DataType="AnsiString">
+</Element>
+<Element Name="NoCREE" DataType="AnsiString">
+</Element>
 </Elements>
 </Struct>
 <Struct Name="TVendedor" UID="{A8C1C585-C65C-4DA1-B0E6-767131F1A5BC}" AutoCreateParams="1">
@@ -747,7 +773,7 @@
 </Array>
 </Arrays>
 <Uses>
-<Use Name="DataAbstract" UID="{30EEA332-03CE-45E5-8062-CCE8B6C1FAFE}" Rodl="..\..\Program Files (x86)\RemObjects Software\Data Abstract for .NET\Source\RemObjects.DataAbstract.Server\DataAbstract.RODL" AbsoluteRodl="C:\Program Files (x86)\RemObjects Software\Data Abstract for .NET\Source\RemObjects.DataAbstract.Server\DataAbstract.RODL" UsedRodlUID="{DC8B7BE2-14AF-402D-B1F8-E1008B6FA4F6}" DontCodeGen="1">
+<Use Name="DataAbstract" UID="{30EEA332-03CE-45E5-8062-CCE8B6C1FAFE}" Rodl="C:\Program Files (x86)\RemObjects Software\Data Abstract for .NET\Source\RemObjects.DataAbstract.Server\DataAbstract.RODL" AbsoluteRodl="C:\Program Files (x86)\RemObjects Software\Data Abstract for .NET\Source\RemObjects.DataAbstract.Server\DataAbstract.RODL" UsedRodlUID="{DC8B7BE2-14AF-402D-B1F8-E1008B6FA4F6}" DontCodeGen="1">
 <Includes UID="{ECE5910F-040B-4BDF-9502-EDF7F95642CF}" Delphi="DataAbstract4" DotNet="RemObjects.DataAbstract.Server" ObjC="DataAbstract/DataAbstract4_Intf" Java="com.remobjects.dataabstract.intf" Cocoa="DataAbstract"/>
 </Use>
 </Uses>

@@ -18219,7 +18219,7 @@ WHERE
           <ParamType>daptInput</ParamType>
           <Name>Datos</Name>
           <DataType>datString</DataType>
-          <Size>0</Size>
+          <Size>65536</Size>
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
           <BlobType>dabtUnknown</BlobType>
@@ -20913,7 +20913,9 @@ update Saldo
 	est.[Email], est.[GrupoID], gr.Descripcion as NombreGrupo, est.[ZonaID],zn.Descripcion as NombreZona, 
 	est.[FormaPagoID], fp.Descripcion as NombreFormaPago, est.[VendedorID] , vn.Nombre as NombreVendendor, [DiaRevision], 
 	[DiaPago], [CuentaBancaria], est.[FacturaUsoID],fu.Descripcion as NombreFacturaUso  ,
-est.[MetodoPagoID], mp.Descripcion  as NombreMetodoPago
+est.[MetodoPagoID], mp.Descripcion  as NombreMetodoPago,
+    FormaCompraID,Descuento,TerminalPrimariaID,TerminalSecundariaID,EntregaCalle, EntregaNoExterior, EntregaNoInterior,EntregaCiudad,EntregaColonia,EntregaMunicipio,EntregaEstado,EntregaCP,NoCREE
+
 FROM 
 	[Estacion] est
   LEFT join Grupo gr on gr.GrupoID = est.GrupoID 

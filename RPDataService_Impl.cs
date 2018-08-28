@@ -637,6 +637,14 @@ namespace RPSuiteServer
                         est.Estado = (string)(reader["Estado"] != DBNull.Value ? reader["Estado"] : "");
                         est.NombreZona = (string)(reader["NombreZona"] != DBNull.Value ? reader["NombreZona"] : "");
                         est.NombreGrupo = (string)(reader["NombreGrupo"] != DBNull.Value ? reader["NombreGrupo"] : "");
+                        est.EntregaCalle= (string)(reader["EntregaCalle"] != DBNull.Value ? reader["EntregaCalle"] : "");
+                        est.EntregaNoExterior = (string)(reader["NoExterior"] != DBNull.Value ? reader["NoExterior"] : "");
+                        est.EntregaNoInterior = (string)(reader["EntregaNoInterior"] != DBNull.Value ? reader["EntregaNoInterior"] : "");
+                        est.EntregaColonia = (string)(reader["EntregaColonia"] != DBNull.Value ? reader["EntregaColonia"] : "");
+                        est.EntregaCiudad = (string)(reader["EntregaCiudad"] != DBNull.Value ? reader["EntregaCiudad"] : "");
+                        est.EntregaMunicipio = (string)(reader["EntregaMunicipio"] != DBNull.Value ? reader["EntregaMunicipio"] : "");
+                        est.EntregaEstado = (string)(reader["EntregaEstado"] != DBNull.Value ? reader["EntregaEstado"] : "");
+                        est.EntregaCP = (string)(reader["EntregaCP"] != DBNull.Value ? reader["EntregaCP"] : "");
                     }
                 }
                 return est;
