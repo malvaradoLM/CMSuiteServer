@@ -57,3 +57,4 @@ Z:\Compartida\Proyectos\LM\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServe
 Z:\Compartida\Proyectos\LM\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.csproj.CoreCompileInputs.cache
 Z:\Compartida\Proyectos\LM\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.exe
 Z:\Compartida\Proyectos\LM\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.pdb
+Z:\Compartida\Proyectos\LM\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.csprojResolveAssemblyReference.cache
