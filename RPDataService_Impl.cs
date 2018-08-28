@@ -428,7 +428,12 @@ namespace RPSuiteServer
 
                     UpdateSaldoCargoPedido(detallePedido.Total, Datos.EstacionID);
 
-                    factura = UpdatePedidoFactura(Datos.PedidoID, FacturaID);
+
+                    //facturacion sin pedido
+                    if (Datos.PedidoID != 0)
+                        factura = UpdatePedidoFactura(Datos.PedidoID, FacturaID);
+                    else
+                        factura = Datos.PedidoID;
                 }
                 return factura;
 
