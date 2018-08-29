@@ -720,10 +720,10 @@ namespace RPSuiteServer
             }
         }
 
-        public TCustomProductoIEPS[] CargarProductoIEPS ()
+        public TCustomProductoIEPS[] CargarProductoIEPS()
         {
             List<TCustomProductoIEPS> lstProductoIEPS = new List<TCustomProductoIEPS>();
-            IDataReader reader=null;
+            IDataReader reader = null;
             try
             {
                 using (IDbCommand lcommand = this.ServiceSchema.NewCommand(this.Connection, "spProductoIEPSCargar"))
@@ -738,12 +738,15 @@ namespace RPSuiteServer
                         PIEPSID87 = (int)(reader["PIEPSID87"] != DBNull.Value ? reader["PIEPSID87"] : -1),
                         Precio87 = (double)(reader["87 Octanos"] != DBNull.Value ? reader["87 Octanos"] : (double)0),
                         IEPS87 = (double)(reader["IEPS87"] != DBNull.Value ? reader["IEPS87"] : (double)0),
+                        ProdID87 = (int)(reader["ProdID87"] != DBNull.Value ? reader["ProdID87"] : -1),
                         PIEPSID91 = (int)(reader["PIEPS91"] != DBNull.Value ? reader["PIEPS91"] : -1),
                         Precio91 = (double)(reader["91 Octanos"] != DBNull.Value ? reader["91 Octanos"] : (double)0),
                         IEPS91 = (double)(reader["IEPS91"] != DBNull.Value ? reader["IEPS91"] : (double)0),
+                        ProdID91 = (int)(reader["ProdID91"] != DBNull.Value ? reader["ProdID91"] : -1),
                         PIEPSIDDiesel = (int)(reader["PIEPSDIESEL"] != DBNull.Value ? reader["PIEPSDIESEL"] : -1),
                         PrecioDiesel = (double)(reader["Diesel"] != DBNull.Value ? reader["Diesel"] : (double)0),
                         IEPSDiesel = (double)(reader["IEPSDiesel"] != DBNull.Value ? reader["IEPSDiesel"] : (double)0),
+                        ProdIDDiesel = (int)(reader["ProdIDDiesel"] != DBNull.Value ? reader["ProdIDDiesel"] : -1),
                         IVA = (double)(reader["IVA"] != DBNull.Value ? reader["IVA"] : (double)0),
                         Ejercicio = (int)(reader["Ejercicio"] != DBNull.Value ? reader["Ejercicio"] : -1),
                         Periodo = (int)(reader["Periodo"] != DBNull.Value ? reader["Periodo"] : -1),
@@ -753,7 +756,7 @@ namespace RPSuiteServer
                         Descripcion = (string)(reader["Descripcion"] != DBNull.Value ? reader["Descripcion"] : "")
                     }
                     );
-                        
+
                     }
                     reader.Close();
                 }
@@ -774,10 +777,10 @@ namespace RPSuiteServer
 
             //Inserta en la Tabla MuestraProducto la Muestra que realiza pemex y va en la Remision .
 
-            int res= -1;
+            int res = -1;
             MuestraProducto.MuestraProductoID = Folio("MuestraProductoID", "");
-            MuestraProducto.Fecha= Fecha();
-           
+            MuestraProducto.Fecha = Fecha();
+
 
             try
             {
@@ -799,9 +802,10 @@ namespace RPSuiteServer
             {
                 return -1;
             }
-            
+
         }
 
+<<<<<<< HEAD
         public TVehiculo GetVehiculoTransportista(string Datos)
         {
             try
@@ -834,6 +838,123 @@ namespace RPSuiteServer
             catch (Exception ex)
             {
 
+=======
+        public bool ActualizarProductoIEPS(TCustomProductoIEPS[] Datos)
+        {
+            try
+            {
+                List<TCustomProductoIEPS> lstProductoIEPS = new List<TCustomProductoIEPS>();
+                foreach (TCustomProductoIEPS Registros in Datos)
+                {
+                    for (int i = 1; i <= 3; i++)
+                    {
+                        TCustomProductoIEPS objProductoIEPS = new TCustomProductoIEPS();
+                        objProductoIEPS.Fecha = Registros.Fecha;
+                        objProductoIEPS.Ejercicio = Registros.Fecha.Year;
+                        objProductoIEPS.Periodo = Registros.Fecha.Month;
+                        objProductoIEPS.Dia = Registros.Fecha.Day;
+                        objProductoIEPS.IVA = Registros.IVA;
+                        objProductoIEPS.UsuarioID = Registros.UsuarioID;
+                        objProductoIEPS.TerminalID = Registros.TerminalID;
+                        switch (i)
+                        {
+                            case 1:
+                                objProductoIEPS.PIEPSID87 = Registros.PIEPSID87;
+                                objProductoIEPS.Precio87 = Registros.Precio87;
+                                objProductoIEPS.IEPS87 = Registros.IEPS87;
+                                objProductoIEPS.ProdID87 = Registros.ProdID87!=-1?Registros.ProdID87:GetProductoID("%87 Octanos%");
+                                lstProductoIEPS.Add(objProductoIEPS);
+                                break;
+                            case 2:
+                                objProductoIEPS.PIEPSID87 = Registros.PIEPSID91;
+                                objProductoIEPS.Precio87 = Registros.Precio91;
+                                objProductoIEPS.IEPS87 = Registros.IEPS91;
+                                objProductoIEPS.ProdID87 = Registros.ProdID91 != -1 ? Registros.ProdID91 : GetProductoID("%91 Octanos%"); ;
+                                lstProductoIEPS.Add(objProductoIEPS);
+                                break;
+                            case 3:
+                                objProductoIEPS.PIEPSID87 = Registros.PIEPSIDDiesel;
+                                objProductoIEPS.Precio87 = Registros.PrecioDiesel;
+                                objProductoIEPS.IEPS87 = Registros.IEPSDiesel;
+                                objProductoIEPS.ProdID87 = Registros.ProdIDDiesel != -1 ? Registros.ProdIDDiesel : GetProductoID("%Diesel%"); ;
+                                lstProductoIEPS.Add(objProductoIEPS);
+                                break;
+                        }
+                    }
+                }
+                foreach (TCustomProductoIEPS ProdIEPS in lstProductoIEPS.FindAll(obj=>obj.Precio87>0))
+                {
+                    string command="";
+                    string[] Parametros;
+                    object[] Valores;
+                    if(ProdIEPS.PIEPSID87<=0)
+                    {
+                        command = "spProductoIEPSInsertar";
+                       ProdIEPS.PIEPSID87 =  Folio("ProductoIEPSID", "");
+                        Parametros = new string[]
+                        {
+                            "ProductoIEPSID","Precio","IEPS","IVA","Fecha","Ejercicio","Periodo",
+                            "Dia","UsuarioID","ProductoID","TerminalID"
+                        };
+                        Valores = new object[]
+                        {
+                             ProdIEPS.PIEPSID87,ProdIEPS.Precio87,ProdIEPS.IEPS87,
+                             ProdIEPS.IVA,ProdIEPS.Fecha,ProdIEPS.Ejercicio,
+                             ProdIEPS.Periodo,ProdIEPS.Dia, ProdIEPS.UsuarioID,ProdIEPS.ProdID87,ProdIEPS.TerminalID
+                        };
+                    }
+                    else
+                    {
+                        command = "spProductoIEPSUpdate";
+                        Parametros = new string[]
+                        {
+                            "ProductoIEPSID","Precio","IEPS","IVA","Fecha","Ejercicio","Periodo",
+                            "Dia","UsuarioID"
+                        };
+                        Valores = new object[]
+                        {
+                             ProdIEPS.PIEPSID87,ProdIEPS.Precio87,ProdIEPS.IEPS87,
+                             ProdIEPS.IVA,ProdIEPS.Fecha,ProdIEPS.Ejercicio,
+                             ProdIEPS.Periodo,ProdIEPS.Dia, ProdIEPS.UsuarioID
+                        };
+                    }
+                    using (IDbCommand lcommand = this.ServiceSchema.NewCommand(this.Connection, command,
+                           Parametros,Valores))
+                    {
+                        lcommand.ExecuteNonQuery();
+                    }
+                }
+                return true;
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
+
+        }
+
+        public int GetProductoID(string Datos)
+        {
+            IDataReader reader=null;
+            try
+            {
+                int Res = -1;
+
+                using (IDbCommand lCommand = this.ServiceSchema.NewCommand(this.Connection, "GetProductoID", new string[] { "Descripcion" }, new object[] { Datos }))
+                {
+                    reader = lCommand.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        Res = (int)reader["ProductoID"];
+                    }
+                    reader.Close();
+                }
+                return Res;
+            }
+            catch (Exception ex)
+            {
+                reader.Close();
+>>>>>>> a9c86540f78fc4d50c23c0272a87b29e6cfdac21
                 throw ex;
 
             }

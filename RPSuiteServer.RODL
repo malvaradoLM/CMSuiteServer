@@ -237,9 +237,23 @@
 </Parameter>
 </Parameters>
 </Operation>
+<<<<<<< HEAD
 <Operation Name="GetVehiculoTransportista" UID="{26A1074F-5FE3-4CD5-8F7A-59725204180A}">
 <Parameters>
 <Parameter Name="Result" DataType="TVehiculo" Flag="Result">
+=======
+<Operation Name="ActualizarProductoIEPS" UID="{B27D5637-055D-4E3D-8504-6AA18457DBA3}">
+<Parameters>
+<Parameter Name="Result" DataType="Boolean" Flag="Result">
+</Parameter>
+<Parameter Name="Datos" DataType="TACustomProductoIEPS" Flag="In" >
+</Parameter>
+</Parameters>
+</Operation>
+<Operation Name="GetProductoID" UID="{C2F69693-0E43-49E4-A81D-5ED6256CD10D}">
+<Parameters>
+<Parameter Name="Result" DataType="Integer" Flag="Result">
+>>>>>>> a9c86540f78fc4d50c23c0272a87b29e6cfdac21
 </Parameter>
 <Parameter Name="Datos" DataType="AnsiString" Flag="In" >
 </Parameter>
@@ -707,17 +721,23 @@
 </Element>
 <Element Name="IEPS87" DataType="Double">
 </Element>
+<Element Name="ProdID87" DataType="Integer">
+</Element>
 <Element Name="PIEPSID91" DataType="Integer">
 </Element>
 <Element Name="Precio91" DataType="Double">
 </Element>
 <Element Name="IEPS91" DataType="Double">
 </Element>
+<Element Name="ProdID91" DataType="Integer">
+</Element>
 <Element Name="PIEPSIDDiesel" DataType="Integer">
 </Element>
 <Element Name="PrecioDiesel" DataType="Double">
 </Element>
 <Element Name="IEPSDiesel" DataType="Double">
+</Element>
+<Element Name="ProdIDDiesel" DataType="Integer">
 </Element>
 <Element Name="IVA" DataType="Double">
 </Element>

@@ -18417,7 +18417,11 @@ WHERE
       <Name>spCatFormaCompra</Name>
     </Item49>
   </Datasets>
+<<<<<<< HEAD
   <Commands IsObject="true" Count="24" IsCollection="true" ItemClass="TDASQLCommand" Type="TDASQLCommandCollection">
+=======
+  <Commands IsObject="true" Count="26" IsCollection="true" ItemClass="TDASQLCommand" Type="TDASQLCommandCollection">
+>>>>>>> a9c86540f78fc4d50c23c0272a87b29e6cfdac21
     <Item0>
       <BusinessRulesServer Type="TDABusinessRuleScript" IsObject="true">
         <Script />
@@ -21395,11 +21399,11 @@ SELECT Z.ProductoIEPSID,Z.Precio,Y.ProductoID,x.TerminalID,Z.IEPS from ProductoI
 )
 
 
-select DISTINCT (A.TerminalID),B.Descripcion,D.ProductoIEPSID as PIEPSID87, D.Precio as "87 Octanos",D.IEPS as "IEPS87",
-  F.ProductoIEPSID as PIEPS91,F.Precio as "91 Octanos",F.IEPS as "IEPS91", G.ProductoIEPSID as PIEPSDIESEL, G.Precio as "Diesel",G.IEPS as "IEPSDiesel",
-  A.IVA,A.Ejercicio,A.Periodo,A.Dia,A.UsuarioID,convert(DATE,a.Fecha ) as Fecha
+select DISTINCT (B.TerminalID),B.Descripcion,D.ProductoIEPSID as PIEPSID87, D.Precio as "87 Octanos",D.IEPS as "IEPS87",D.ProductoID as "ProdID87",
+  F.ProductoIEPSID as PIEPS91,F.Precio as "91 Octanos",F.IEPS as "IEPS91",F.ProductoID as ProdID91, G.ProductoIEPSID as PIEPSDIESEL, G.Precio as "Diesel",
+  G.IEPS as "IEPSDiesel",G.ProductoID as "ProdIDDiesel",A.IVA,A.Ejercicio,A.Periodo,A.Dia,A.UsuarioID,convert(DATE,a.Fecha ) as Fecha
   from ProductoIEPS A
-  INNER JOIN Terminal B on A.TerminalID = B.TerminalID
+  RIGHT JOIN Terminal B on A.TerminalID = B.TerminalID
   LEFT JOIN Producto C on A.ProductoID = C.ProductoID
   LEFT JOIN Gasolina87 D on A.TerminalID = D.TerminalID
   LEFT JOIN Gasolina91 F ON A.TerminalID = F.TerminalID
@@ -21598,11 +21602,376 @@ values
       <Statements IsCollection="true" IsObject="true" Count="1" ItemClass="TDAStatement" Type="TDAStatementCollection">
         <Item0>
           <Connection>RPSuite</Connection>
+<<<<<<< HEAD
           <SQL>select VehiculoID, NoEconomico, NoSerie, Marca, Modelo, NoToneles, Capacidad, Placas, Certificado, FechaCertificado, TransportistaID
 from Vehiculo
 where TransportistaID = :Datos
 </SQL>
           <TargetTable>Vehiculo</TargetTable>
+=======
+          <SQL>UPDATE ProductoIEPS
+set
+  Precio = :Precio
+ ,IEPS = :IEPS
+ ,Fecha = :Fecha
+ ,Ejercicio = :Ejercicio
+ ,Periodo = :Periodo
+ ,Dia = :Dia
+ ,IVA = :IVA
+ ,UsuarioID =:UsuarioID
+
+where ProductoIEPSID=:ProductoIEPSID</SQL>
+          <TargetTable />
+          <ConnectionType>SQLite</ConnectionType>
+          <Default>True</Default>
+          <StatementName />
+          <StatementType>stSQL</StatementType>
+          <GeneratorName />
+          <ColumnMappings IsObject="true" Count="0" IsCollection="true" Type="TDAColumnMappingCollection" ItemClass="TDAColumnMapping" />
+          <Description />
+        </Item0>
+      </Statements>
+      <Params IsObject="true" Count="9" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam">
+        <Item0>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>Precio</Name>
+          <DataType>datFloat</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item0>
+        <Item1>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>IEPS</Name>
+          <DataType>datFloat</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item1>
+        <Item2>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>Fecha</Name>
+          <DataType>datDateTime</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item2>
+        <Item3>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>Ejercicio</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item3>
+        <Item4>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>Periodo</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item4>
+        <Item5>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>Dia</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item5>
+        <Item6>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>IVA</Name>
+          <DataType>datFloat</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item6>
+        <Item7>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>UsuarioID</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item7>
+        <Item8>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>ProductoIEPSID</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item8>
+      </Params>
+      <CustomAttributes />
+      <IsPublic>True</IsPublic>
+      <DynamicWhereXML />
+      <BusinessClassID />
+      <Description />
+      <Name>spProductoIEPSUpdate</Name>
+    </Item23>
+    <Item24>
+      <BusinessRulesServer Type="TDABusinessRuleScript" IsObject="true">
+        <Script />
+        <ScriptLanguageStr />
+        <Description />
+        <Name />
+      </BusinessRulesServer>
+      <Statements IsCollection="true" IsObject="true" Count="1" ItemClass="TDAStatement" Type="TDAStatementCollection">
+        <Item0>
+          <Connection>RPSuite</Connection>
+          <SQL>Insert Into ProductoIEPS
+(
+ProductoIEPSID
+ ,Precio
+ ,IEPS
+ ,Fecha
+ ,ProductoID
+ ,TerminalID
+ ,Ejercicio
+ ,Periodo
+ ,Dia
+ ,IVA
+ ,UsuarioID
+ )
+ Values
+ (
+ :ProductoIEPSID
+ ,:Precio
+ ,:IEPS
+ ,:Fecha
+ ,:ProductoID
+ ,:TerminalID
+ ,:Ejercicio
+ ,:Periodo
+ ,:Dia
+ ,:IVA
+ ,:UsuarioID
+ )</SQL>
+          <TargetTable />
+          <ConnectionType>SQLite</ConnectionType>
+          <Default>True</Default>
+          <StatementName />
+          <StatementType>stSQL</StatementType>
+          <GeneratorName />
+          <ColumnMappings IsObject="true" Count="0" IsCollection="true" Type="TDAColumnMappingCollection" ItemClass="TDAColumnMapping" />
+          <Description />
+        </Item0>
+      </Statements>
+      <Params IsObject="true" Count="11" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam">
+        <Item0>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>ProductoIEPSID</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item0>
+        <Item1>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>Precio</Name>
+          <DataType>datFloat</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item1>
+        <Item2>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>IEPS</Name>
+          <DataType>datFloat</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item2>
+        <Item3>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>Fecha</Name>
+          <DataType>datDateTime</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item3>
+        <Item4>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>ProductoID</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item4>
+        <Item5>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>TerminalID</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item5>
+        <Item6>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>Ejercicio</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item6>
+        <Item7>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>Periodo</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item7>
+        <Item8>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>Dia</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item8>
+        <Item9>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>IVA</Name>
+          <DataType>datFloat</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item9>
+        <Item10>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>UsuarioID</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item10>
+      </Params>
+      <CustomAttributes />
+      <IsPublic>True</IsPublic>
+      <DynamicWhereXML />
+      <BusinessClassID />
+      <Description />
+      <Name>spProductoIEPSInsertar</Name>
+    </Item24>
+    <Item25>
+      <BusinessRulesServer Type="TDABusinessRuleScript" IsObject="true">
+        <Script />
+        <ScriptLanguageStr />
+        <Description />
+        <Name />
+      </BusinessRulesServer>
+      <Statements IsCollection="true" IsObject="true" Count="1" ItemClass="TDAStatement" Type="TDAStatementCollection">
+        <Item0>
+          <Connection>RPSuite</Connection>
+          <SQL>select ProductoID 
+from Producto 
+where Descripcion like :Descripcion</SQL>
+          <TargetTable />
+>>>>>>> a9c86540f78fc4d50c23c0272a87b29e6cfdac21
           <ConnectionType>SQLite</ConnectionType>
           <Default>True</Default>
           <StatementName />
@@ -21616,9 +21985,15 @@ where TransportistaID = :Datos
         <Item0>
           <Value />
           <ParamType>daptInput</ParamType>
+<<<<<<< HEAD
           <Name>Datos</Name>
           <DataType>datString</DataType>
           <Size>100</Size>
+=======
+          <Name>Descripcion</Name>
+          <DataType>datString</DataType>
+          <Size>20</Size>
+>>>>>>> a9c86540f78fc4d50c23c0272a87b29e6cfdac21
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
           <BlobType>dabtUnknown</BlobType>
@@ -21632,8 +22007,13 @@ where TransportistaID = :Datos
       <DynamicWhereXML />
       <BusinessClassID />
       <Description />
+<<<<<<< HEAD
       <Name>cmdBuscarVehiculoTransportista</Name>
     </Item23>
+=======
+      <Name>GetProductoID</Name>
+    </Item25>
+>>>>>>> a9c86540f78fc4d50c23c0272a87b29e6cfdac21
   </Commands>
   <RelationShips IsObject="true" Count="0" IsCollection="true" Type="TDADatasetRelationshipCollection" ItemClass="TDADatasetRelationship" />
   <UpdateRules IsObject="true" Count="0" IsCollection="true" Type="TDAUpdateRuleCollection" ItemClass="TDAUpdateRule" />
