@@ -2323,6 +2323,19 @@ namespace RPSuiteServer {
         private string @__NombreFacturaUso;
         private int @__MetodoPagoID;
         private string @__NombreMetoodoPago;
+        private int @__FormaCompraID;
+        private double @__Descuento;
+        private int @__TerminalPrimariaID;
+        private int @__TerminalSecundariaID;
+        private string @__EntregaCalle;
+        private string @__EntregaNoExterior;
+        private string @__EntregaNoInterior;
+        private string @__EntregaColonia;
+        private string @__EntregaCiudad;
+        private string @__EntregaMunicipio;
+        private string @__EntregaEstado;
+        private string @__EntregaCP;
+        private string @__NoCREE;
         public virtual int EstacionID {
             get {
                 return @__EstacionID;
@@ -2695,6 +2708,132 @@ namespace RPSuiteServer {
                 this.TriggerPropertyChanged("NombreMetoodoPago");
             }
         }
+        public virtual int FormaCompraID {
+            get {
+                return @__FormaCompraID;
+            }
+            set {
+                @__FormaCompraID = value;
+                this.TriggerPropertyChanged("FormaCompraID");
+            }
+        }
+        public virtual double Descuento {
+            get {
+                return @__Descuento;
+            }
+            set {
+                @__Descuento = value;
+                this.TriggerPropertyChanged("Descuento");
+            }
+        }
+        public virtual int TerminalPrimariaID {
+            get {
+                return @__TerminalPrimariaID;
+            }
+            set {
+                @__TerminalPrimariaID = value;
+                this.TriggerPropertyChanged("TerminalPrimariaID");
+            }
+        }
+        public virtual int TerminalSecundariaID {
+            get {
+                return @__TerminalSecundariaID;
+            }
+            set {
+                @__TerminalSecundariaID = value;
+                this.TriggerPropertyChanged("TerminalSecundariaID");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string EntregaCalle {
+            get {
+                return @__EntregaCalle;
+            }
+            set {
+                @__EntregaCalle = value;
+                this.TriggerPropertyChanged("EntregaCalle");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string EntregaNoExterior {
+            get {
+                return @__EntregaNoExterior;
+            }
+            set {
+                @__EntregaNoExterior = value;
+                this.TriggerPropertyChanged("EntregaNoExterior");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string EntregaNoInterior {
+            get {
+                return @__EntregaNoInterior;
+            }
+            set {
+                @__EntregaNoInterior = value;
+                this.TriggerPropertyChanged("EntregaNoInterior");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string EntregaColonia {
+            get {
+                return @__EntregaColonia;
+            }
+            set {
+                @__EntregaColonia = value;
+                this.TriggerPropertyChanged("EntregaColonia");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string EntregaCiudad {
+            get {
+                return @__EntregaCiudad;
+            }
+            set {
+                @__EntregaCiudad = value;
+                this.TriggerPropertyChanged("EntregaCiudad");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string EntregaMunicipio {
+            get {
+                return @__EntregaMunicipio;
+            }
+            set {
+                @__EntregaMunicipio = value;
+                this.TriggerPropertyChanged("EntregaMunicipio");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string EntregaEstado {
+            get {
+                return @__EntregaEstado;
+            }
+            set {
+                @__EntregaEstado = value;
+                this.TriggerPropertyChanged("EntregaEstado");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string EntregaCP {
+            get {
+                return @__EntregaCP;
+            }
+            set {
+                @__EntregaCP = value;
+                this.TriggerPropertyChanged("EntregaCP");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string NoCREE {
+            get {
+                return @__NoCREE;
+            }
+            set {
+                @__NoCREE = value;
+                this.TriggerPropertyChanged("NoCREE");
+            }
+        }
         public override void ReadComplex(RemObjects.SDK.Serializer serializer) {
             if (serializer.RecordStrictOrder) {
                 this.EstacionID = serializer.ReadInt32("EstacionID");
@@ -2736,6 +2875,19 @@ namespace RPSuiteServer {
                 this.NombreFacturaUso = serializer.ReadAnsiString("NombreFacturaUso");
                 this.MetodoPagoID = serializer.ReadInt32("MetodoPagoID");
                 this.NombreMetoodoPago = serializer.ReadAnsiString("NombreMetoodoPago");
+                this.FormaCompraID = serializer.ReadInt32("FormaCompraID");
+                this.Descuento = serializer.ReadDouble("Descuento");
+                this.TerminalPrimariaID = serializer.ReadInt32("TerminalPrimariaID");
+                this.TerminalSecundariaID = serializer.ReadInt32("TerminalSecundariaID");
+                this.EntregaCalle = serializer.ReadAnsiString("EntregaCalle");
+                this.EntregaNoExterior = serializer.ReadAnsiString("EntregaNoExterior");
+                this.EntregaNoInterior = serializer.ReadAnsiString("EntregaNoInterior");
+                this.EntregaColonia = serializer.ReadAnsiString("EntregaColonia");
+                this.EntregaCiudad = serializer.ReadAnsiString("EntregaCiudad");
+                this.EntregaMunicipio = serializer.ReadAnsiString("EntregaMunicipio");
+                this.EntregaEstado = serializer.ReadAnsiString("EntregaEstado");
+                this.EntregaCP = serializer.ReadAnsiString("EntregaCP");
+                this.NoCREE = serializer.ReadAnsiString("NoCREE");
             }
             else {
                 this.Calle = serializer.ReadAnsiString("Calle");
@@ -2747,20 +2899,31 @@ namespace RPSuiteServer {
                 this.CuentaBancaria = serializer.ReadAnsiString("CuentaBancaria");
                 this.CuentaContable = serializer.ReadAnsiString("CuentaContable");
                 this.Deposito = serializer.ReadDouble("Deposito");
+                this.Descuento = serializer.ReadDouble("Descuento");
                 this.DiaPago = serializer.ReadInt32("DiaPago");
                 this.DiaRevision = serializer.ReadInt32("DiaRevision");
                 this.Email = serializer.ReadAnsiString("Email");
+                this.EntregaCalle = serializer.ReadAnsiString("EntregaCalle");
+                this.EntregaCiudad = serializer.ReadAnsiString("EntregaCiudad");
+                this.EntregaColonia = serializer.ReadAnsiString("EntregaColonia");
+                this.EntregaCP = serializer.ReadAnsiString("EntregaCP");
+                this.EntregaEstado = serializer.ReadAnsiString("EntregaEstado");
+                this.EntregaMunicipio = serializer.ReadAnsiString("EntregaMunicipio");
+                this.EntregaNoExterior = serializer.ReadAnsiString("EntregaNoExterior");
+                this.EntregaNoInterior = serializer.ReadAnsiString("EntregaNoInterior");
                 this.EstacionID = serializer.ReadInt32("EstacionID");
                 this.Estado = serializer.ReadAnsiString("Estado");
                 this.FacturaUsoID = serializer.ReadInt32("FacturaUsoID");
                 this.FechaBaja = serializer.ReadDateTime("FechaBaja");
                 this.FechaIngreso = serializer.ReadDateTime("FechaIngreso");
+                this.FormaCompraID = serializer.ReadInt32("FormaCompraID");
                 this.FormaPagoID = serializer.ReadInt32("FormaPagoID");
                 this.GrupoID = serializer.ReadInt32("GrupoID");
                 this.LimiteCredito = serializer.ReadDouble("LimiteCredito");
                 this.MetodoPagoID = serializer.ReadInt32("MetodoPagoID");
                 this.Municipio = serializer.ReadAnsiString("Municipio");
                 this.NIP = serializer.ReadAnsiString("NIP");
+                this.NoCREE = serializer.ReadAnsiString("NoCREE");
                 this.NoExterior = serializer.ReadAnsiString("NoExterior");
                 this.NoInterior = serializer.ReadAnsiString("NoInterior");
                 this.Nombre = serializer.ReadAnsiString("Nombre");
@@ -2775,6 +2938,8 @@ namespace RPSuiteServer {
                 this.RFC = serializer.ReadAnsiString("RFC");
                 this.Status = serializer.ReadBoolean("Status");
                 this.Telefono = serializer.ReadAnsiString("Telefono");
+                this.TerminalPrimariaID = serializer.ReadInt32("TerminalPrimariaID");
+                this.TerminalSecundariaID = serializer.ReadInt32("TerminalSecundariaID");
                 this.VendedorID = serializer.ReadInt32("VendedorID");
                 this.ZonaID = serializer.ReadInt32("ZonaID");
             }
@@ -2820,6 +2985,19 @@ namespace RPSuiteServer {
                 serializer.WriteAnsiString("NombreFacturaUso", this.NombreFacturaUso);
                 serializer.WriteInt32("MetodoPagoID", this.MetodoPagoID);
                 serializer.WriteAnsiString("NombreMetoodoPago", this.NombreMetoodoPago);
+                serializer.WriteInt32("FormaCompraID", this.FormaCompraID);
+                serializer.WriteDouble("Descuento", this.Descuento);
+                serializer.WriteInt32("TerminalPrimariaID", this.TerminalPrimariaID);
+                serializer.WriteInt32("TerminalSecundariaID", this.TerminalSecundariaID);
+                serializer.WriteAnsiString("EntregaCalle", this.EntregaCalle);
+                serializer.WriteAnsiString("EntregaNoExterior", this.EntregaNoExterior);
+                serializer.WriteAnsiString("EntregaNoInterior", this.EntregaNoInterior);
+                serializer.WriteAnsiString("EntregaColonia", this.EntregaColonia);
+                serializer.WriteAnsiString("EntregaCiudad", this.EntregaCiudad);
+                serializer.WriteAnsiString("EntregaMunicipio", this.EntregaMunicipio);
+                serializer.WriteAnsiString("EntregaEstado", this.EntregaEstado);
+                serializer.WriteAnsiString("EntregaCP", this.EntregaCP);
+                serializer.WriteAnsiString("NoCREE", this.NoCREE);
             }
             else {
                 serializer.WriteAnsiString("Calle", this.Calle);
@@ -2831,20 +3009,31 @@ namespace RPSuiteServer {
                 serializer.WriteAnsiString("CuentaBancaria", this.CuentaBancaria);
                 serializer.WriteAnsiString("CuentaContable", this.CuentaContable);
                 serializer.WriteDouble("Deposito", this.Deposito);
+                serializer.WriteDouble("Descuento", this.Descuento);
                 serializer.WriteInt32("DiaPago", this.DiaPago);
                 serializer.WriteInt32("DiaRevision", this.DiaRevision);
                 serializer.WriteAnsiString("Email", this.Email);
+                serializer.WriteAnsiString("EntregaCalle", this.EntregaCalle);
+                serializer.WriteAnsiString("EntregaCiudad", this.EntregaCiudad);
+                serializer.WriteAnsiString("EntregaColonia", this.EntregaColonia);
+                serializer.WriteAnsiString("EntregaCP", this.EntregaCP);
+                serializer.WriteAnsiString("EntregaEstado", this.EntregaEstado);
+                serializer.WriteAnsiString("EntregaMunicipio", this.EntregaMunicipio);
+                serializer.WriteAnsiString("EntregaNoExterior", this.EntregaNoExterior);
+                serializer.WriteAnsiString("EntregaNoInterior", this.EntregaNoInterior);
                 serializer.WriteInt32("EstacionID", this.EstacionID);
                 serializer.WriteAnsiString("Estado", this.Estado);
                 serializer.WriteInt32("FacturaUsoID", this.FacturaUsoID);
                 serializer.WriteDateTime("FechaBaja", this.FechaBaja);
                 serializer.WriteDateTime("FechaIngreso", this.FechaIngreso);
+                serializer.WriteInt32("FormaCompraID", this.FormaCompraID);
                 serializer.WriteInt32("FormaPagoID", this.FormaPagoID);
                 serializer.WriteInt32("GrupoID", this.GrupoID);
                 serializer.WriteDouble("LimiteCredito", this.LimiteCredito);
                 serializer.WriteInt32("MetodoPagoID", this.MetodoPagoID);
                 serializer.WriteAnsiString("Municipio", this.Municipio);
                 serializer.WriteAnsiString("NIP", this.NIP);
+                serializer.WriteAnsiString("NoCREE", this.NoCREE);
                 serializer.WriteAnsiString("NoExterior", this.NoExterior);
                 serializer.WriteAnsiString("NoInterior", this.NoInterior);
                 serializer.WriteAnsiString("Nombre", this.Nombre);
@@ -2859,6 +3048,8 @@ namespace RPSuiteServer {
                 serializer.WriteAnsiString("RFC", this.RFC);
                 serializer.WriteBoolean("Status", this.Status);
                 serializer.WriteAnsiString("Telefono", this.Telefono);
+                serializer.WriteInt32("TerminalPrimariaID", this.TerminalPrimariaID);
+                serializer.WriteInt32("TerminalSecundariaID", this.TerminalSecundariaID);
                 serializer.WriteInt32("VendedorID", this.VendedorID);
                 serializer.WriteInt32("ZonaID", this.ZonaID);
             }

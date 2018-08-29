@@ -416,19 +416,37 @@ namespace RPSuiteServer
                 int FacturaID;
                 int DetalleFactura;
                 int factura;
-                //Generar un nuevo Movimiento
-                using (IDbCommand lcommand = this.ServiceSchema.NewCommand(this.Connection, "InsertaMovimiento", new string[] { "FechaMovimiento", "FechaVencimiento", "Referencia", "Ejercicio", "Periodo", "CargoAbono", "Cargo", "Abono", "FechaRegistro", "Origen", "AfectaSaldos", "TipoMovimientoID", "UsuarioID", "EstacionID" },
+
+                if (Datos.PedidoID == 0)
+                {
+                    IDbCommand command;
+
+                    using (IDataReader reader = this.ServiceSchema.GetDataReader(this.Connection, "spFolio", new string[] { "Campo","Serie" }, new object[] { "FolioFacturacion",Datos.Serie}, out command))
+                    {
+                        while (reader.Read())
+                        {
+                            Datos.Folio = int.Parse(reader["Folio"].ToString());
+                        }
+                    }
+                }
+                        //Generar un nuevo Movimiento
+                        using (IDbCommand lcommand = this.ServiceSchema.NewCommand(this.Connection, "InsertaMovimiento", new string[] { "FechaMovimiento", "FechaVencimiento", "Referencia", "Ejercicio", "Periodo", "CargoAbono", "Cargo", "Abono", "FechaRegistro", "Origen", "AfectaSaldos", "TipoMovimientoID", "UsuarioID", "EstacionID" },
                                                                                                                  new object[] { Datos.Fecha, Datos.FechaModificacion, "Facturando", Datos.Ejercisio, Datos.Periodo, "C", "C", "", DateTime.Today, "Auto", "si", 12, Datos.UsuarioID, Datos.EstacionID }))
                 {
                     MovimientoID = int.Parse(lcommand.ExecuteScalar().ToString());
                     //return MovimientoID;
-                    FacturaID = InsertarFactura(Datos.Serie, Datos.Folio, Datos.Fecha, Datos.Ejercisio, Datos.Periodo, Datos.Dia, Datos.FechaModificacion, Datos.IVA, Datos.Observacion, 1, -1, 1, Datos.EstacionID, 1, MovimientoID);
+                    FacturaID = InsertarFactura(Datos.Serie, Datos.Folio, Datos.Fecha, Datos.Ejercisio, Datos.Periodo, Datos.Dia, Datos.FechaModificacion, Datos.IVA, Datos.Observacion, 1, 1, 1, Datos.EstacionID, 1, MovimientoID);
 
                     DetalleFactura = InsertarDetalleFactura(int.Parse(detallePedido.Volumen.ToString()), detallePedido.Precio, detallePedido.Subtotal, detallePedido.IVA, detallePedido.IEPS, detallePedido.Total, detallePedido.Descuento, detallePedido.NoItems, FacturaID, detallePedido.ProductoID);
 
                     UpdateSaldoCargoPedido(detallePedido.Total, Datos.EstacionID);
 
-                    factura = UpdatePedidoFactura(Datos.PedidoID, FacturaID);
+
+                    //facturacion sin pedido
+                    if (Datos.PedidoID != 0)
+                        factura = UpdatePedidoFactura(Datos.PedidoID, FacturaID);
+                    else
+                        factura = Datos.PedidoID;
                 }
                 return factura;
 
@@ -632,6 +650,14 @@ namespace RPSuiteServer
                         est.Estado = (string)(reader["Estado"] != DBNull.Value ? reader["Estado"] : "");
                         est.NombreZona = (string)(reader["NombreZona"] != DBNull.Value ? reader["NombreZona"] : "");
                         est.NombreGrupo = (string)(reader["NombreGrupo"] != DBNull.Value ? reader["NombreGrupo"] : "");
+                        est.EntregaCalle= (string)(reader["EntregaCalle"] != DBNull.Value ? reader["EntregaCalle"] : "");
+                        est.EntregaNoExterior = (string)(reader["NoExterior"] != DBNull.Value ? reader["NoExterior"] : "");
+                        est.EntregaNoInterior = (string)(reader["EntregaNoInterior"] != DBNull.Value ? reader["EntregaNoInterior"] : "");
+                        est.EntregaColonia = (string)(reader["EntregaColonia"] != DBNull.Value ? reader["EntregaColonia"] : "");
+                        est.EntregaCiudad = (string)(reader["EntregaCiudad"] != DBNull.Value ? reader["EntregaCiudad"] : "");
+                        est.EntregaMunicipio = (string)(reader["EntregaMunicipio"] != DBNull.Value ? reader["EntregaMunicipio"] : "");
+                        est.EntregaEstado = (string)(reader["EntregaEstado"] != DBNull.Value ? reader["EntregaEstado"] : "");
+                        est.EntregaCP = (string)(reader["EntregaCP"] != DBNull.Value ? reader["EntregaCP"] : "");
                     }
                 }
                 return est;
