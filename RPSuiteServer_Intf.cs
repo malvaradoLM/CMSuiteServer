@@ -3913,12 +3913,9 @@ namespace RPSuiteServer {
         bool CancelarPedido(string Datos);
         TCustomProductoIEPS[] CargarProductoIEPS();
         int InsertaMuestradeProducto(TMuestraProducto MuestraProducto);
-<<<<<<< HEAD
         TVehiculo GetVehiculoTransportista(string Datos);
-=======
         bool ActualizarProductoIEPS(TCustomProductoIEPS[] Datos);
         int GetProductoID(string Datos);
->>>>>>> a9c86540f78fc4d50c23c0272a87b29e6cfdac21
     }
     public partial class RPDataService_Proxy : RemObjects.DataAbstract.Server.DataAbstractService_Proxy, IRPDataService {
         public RPDataService_Proxy(RemObjects.SDK.IMessage message, RemObjects.SDK.IClientChannel clientChannel) : 
@@ -4266,8 +4263,7 @@ namespace RPSuiteServer {
                 this.@__ClearMessage(@__LocalMessage);
             }
         }
-<<<<<<< HEAD
-        public virtual TVehiculo GetVehiculoTransportista(string Datos) {
+         public virtual TVehiculo GetVehiculoTransportista(string Datos) {
             RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
             try {
                 @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "GetVehiculoTransportista");
@@ -4275,7 +4271,12 @@ namespace RPSuiteServer {
                 @__LocalMessage.FinalizeMessage();
                 this.ClientChannel.Dispatch(@__LocalMessage);
                 TVehiculo _Result = ((TVehiculo)(@__LocalMessage.Read("Result", typeof(TVehiculo), RemObjects.SDK.StreamingFormat.Default)));
-=======
+                return _Result;
+            }
+            finally {
+                this.@__ClearMessage(@__LocalMessage);
+            }
+        }
         public virtual bool ActualizarProductoIEPS(TCustomProductoIEPS[] Datos) {
             RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
             try {
@@ -4298,7 +4299,6 @@ namespace RPSuiteServer {
                 @__LocalMessage.FinalizeMessage();
                 this.ClientChannel.Dispatch(@__LocalMessage);
                 int _Result = @__LocalMessage.ReadInt32("Result");
->>>>>>> a9c86540f78fc4d50c23c0272a87b29e6cfdac21
                 return _Result;
             }
             finally {
@@ -4401,18 +4401,15 @@ namespace RPSuiteServer {
         System.IAsyncResult BeginInsertaMuestradeProducto(TMuestraProducto MuestraProducto, System.AsyncCallback @__Callback, object @__UserData);
         int EndInsertaMuestradeProducto(System.IAsyncResult @__AsyncResult);
         System.Threading.Tasks.Task<int> InsertaMuestradeProductoAsync(TMuestraProducto MuestraProducto);
-<<<<<<< HEAD
         System.IAsyncResult BeginGetVehiculoTransportista(string Datos, System.AsyncCallback @__Callback, object @__UserData);
         TVehiculo EndGetVehiculoTransportista(System.IAsyncResult @__AsyncResult);
         System.Threading.Tasks.Task<TVehiculo> GetVehiculoTransportistaAsync(string Datos);
-=======
         System.IAsyncResult BeginActualizarProductoIEPS(TCustomProductoIEPS[] Datos, System.AsyncCallback @__Callback, object @__UserData);
         bool EndActualizarProductoIEPS(System.IAsyncResult @__AsyncResult);
         System.Threading.Tasks.Task<bool> ActualizarProductoIEPSAsync(TCustomProductoIEPS[] Datos);
         System.IAsyncResult BeginGetProductoID(string Datos, System.AsyncCallback @__Callback, object @__UserData);
         int EndGetProductoID(System.IAsyncResult @__AsyncResult);
         System.Threading.Tasks.Task<int> GetProductoIDAsync(string Datos);
->>>>>>> a9c86540f78fc4d50c23c0272a87b29e6cfdac21
     }
     public partial class RPDataService_AsyncProxy : RemObjects.DataAbstract.Server.DataAbstractService_AsyncProxy, IRPDataService_Async {
         public RPDataService_AsyncProxy(RemObjects.SDK.IMessage message, RemObjects.SDK.IClientChannel clientChannel) : 
@@ -5029,12 +5026,32 @@ namespace RPSuiteServer {
         public virtual System.Threading.Tasks.Task<int> InsertaMuestradeProductoAsync(TMuestraProducto MuestraProducto) {
             return System.Threading.Tasks.Task<int>.Factory.FromAsync(this.BeginInsertaMuestradeProducto(MuestraProducto, null, null), new System.Func<System.IAsyncResult, int>(this.EndInsertaMuestradeProducto));
         }
-<<<<<<< HEAD
-        public virtual System.IAsyncResult BeginGetVehiculoTransportista(string Datos, System.AsyncCallback @__Callback, object @__UserData) {
+           public virtual System.IAsyncResult BeginGetVehiculoTransportista(string Datos, System.AsyncCallback @__Callback, object @__UserData) {
             RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
             try {
                 @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "GetVehiculoTransportista");
-=======
+                @__LocalMessage.WriteAnsiString("Datos", Datos);
+                @__LocalMessage.FinalizeMessage();
+                return this.ClientChannel.AsyncDispatch(@__LocalMessage, @__Callback, @__UserData);
+            }
+            catch (System.Exception ex) {
+                this.@__ClearMessage(@__LocalMessage);
+                throw ex;
+            }
+        }
+        public virtual TVehiculo EndGetVehiculoTransportista(System.IAsyncResult @__AsyncResult) {
+            RemObjects.SDK.IMessage @__LocalMessage = ((RemObjects.SDK.IClientAsyncResult)(@__AsyncResult)).Message;
+            try {
+                TVehiculo Result = ((TVehiculo)(@__LocalMessage.Read("Result", typeof(TVehiculo), RemObjects.SDK.StreamingFormat.Default)));
+                return Result;
+            }
+            finally {
+                this.@__ClearMessage(@__LocalMessage);
+            }
+        }
+        public virtual System.Threading.Tasks.Task<TVehiculo> GetVehiculoTransportistaAsync(string Datos) {
+            return System.Threading.Tasks.Task<TVehiculo>.Factory.FromAsync(this.BeginGetVehiculoTransportista(Datos, null, null), new System.Func<System.IAsyncResult, TVehiculo>(this.EndGetVehiculoTransportista));
+        }
         public virtual System.IAsyncResult BeginActualizarProductoIEPS(TCustomProductoIEPS[] Datos, System.AsyncCallback @__Callback, object @__UserData) {
             RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
             try {
@@ -5065,7 +5082,6 @@ namespace RPSuiteServer {
             RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
             try {
                 @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "GetProductoID");
->>>>>>> a9c86540f78fc4d50c23c0272a87b29e6cfdac21
                 @__LocalMessage.WriteAnsiString("Datos", Datos);
                 @__LocalMessage.FinalizeMessage();
                 return this.ClientChannel.AsyncDispatch(@__LocalMessage, @__Callback, @__UserData);
@@ -5075,30 +5091,18 @@ namespace RPSuiteServer {
                 throw ex;
             }
         }
-<<<<<<< HEAD
-        public virtual TVehiculo EndGetVehiculoTransportista(System.IAsyncResult @__AsyncResult) {
-            RemObjects.SDK.IMessage @__LocalMessage = ((RemObjects.SDK.IClientAsyncResult)(@__AsyncResult)).Message;
-            try {
-                TVehiculo Result = ((TVehiculo)(@__LocalMessage.Read("Result", typeof(TVehiculo), RemObjects.SDK.StreamingFormat.Default)));
-=======
         public virtual int EndGetProductoID(System.IAsyncResult @__AsyncResult) {
             RemObjects.SDK.IMessage @__LocalMessage = ((RemObjects.SDK.IClientAsyncResult)(@__AsyncResult)).Message;
             try {
                 int Result = @__LocalMessage.ReadInt32("Result");
->>>>>>> a9c86540f78fc4d50c23c0272a87b29e6cfdac21
                 return Result;
             }
             finally {
                 this.@__ClearMessage(@__LocalMessage);
             }
         }
-<<<<<<< HEAD
-        public virtual System.Threading.Tasks.Task<TVehiculo> GetVehiculoTransportistaAsync(string Datos) {
-            return System.Threading.Tasks.Task<TVehiculo>.Factory.FromAsync(this.BeginGetVehiculoTransportista(Datos, null, null), new System.Func<System.IAsyncResult, TVehiculo>(this.EndGetVehiculoTransportista));
-=======
         public virtual System.Threading.Tasks.Task<int> GetProductoIDAsync(string Datos) {
             return System.Threading.Tasks.Task<int>.Factory.FromAsync(this.BeginGetProductoID(Datos, null, null), new System.Func<System.IAsyncResult, int>(this.EndGetProductoID));
->>>>>>> a9c86540f78fc4d50c23c0272a87b29e6cfdac21
         }
     }
     public class CoRPDataServiceAsync {

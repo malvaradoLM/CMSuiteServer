@@ -805,8 +805,7 @@ namespace RPSuiteServer
 
         }
 
-<<<<<<< HEAD
-        public TVehiculo GetVehiculoTransportista(string Datos)
+       public TVehiculo GetVehiculoTransportista(string Datos)
         {
             try
             {
@@ -838,7 +837,10 @@ namespace RPSuiteServer
             catch (Exception ex)
             {
 
-=======
+                throw ex;
+
+            }
+        }
         public bool ActualizarProductoIEPS(TCustomProductoIEPS[] Datos)
         {
             try
@@ -954,7 +956,6 @@ namespace RPSuiteServer
             catch (Exception ex)
             {
                 reader.Close();
->>>>>>> a9c86540f78fc4d50c23c0272a87b29e6cfdac21
                 throw ex;
 
             }

@@ -18417,11 +18417,7 @@ WHERE
       <Name>spCatFormaCompra</Name>
     </Item49>
   </Datasets>
-<<<<<<< HEAD
-  <Commands IsObject="true" Count="24" IsCollection="true" ItemClass="TDASQLCommand" Type="TDASQLCommandCollection">
-=======
-  <Commands IsObject="true" Count="26" IsCollection="true" ItemClass="TDASQLCommand" Type="TDASQLCommandCollection">
->>>>>>> a9c86540f78fc4d50c23c0272a87b29e6cfdac21
+  <Commands IsObject="true" Count="27" IsCollection="true" ItemClass="TDASQLCommand" Type="TDASQLCommandCollection">
     <Item0>
       <BusinessRulesServer Type="TDABusinessRuleScript" IsObject="true">
         <Script />
@@ -21602,13 +21598,52 @@ values
       <Statements IsCollection="true" IsObject="true" Count="1" ItemClass="TDAStatement" Type="TDAStatementCollection">
         <Item0>
           <Connection>RPSuite</Connection>
-<<<<<<< HEAD
           <SQL>select VehiculoID, NoEconomico, NoSerie, Marca, Modelo, NoToneles, Capacidad, Placas, Certificado, FechaCertificado, TransportistaID
 from Vehiculo
 where TransportistaID = :Datos
 </SQL>
           <TargetTable>Vehiculo</TargetTable>
-=======
+          <ConnectionType>SQLite</ConnectionType>
+          <Default>True</Default>
+          <StatementName />
+          <StatementType>stSQL</StatementType>
+          <GeneratorName />
+          <ColumnMappings IsObject="true" Count="0" IsCollection="true" Type="TDAColumnMappingCollection" ItemClass="TDAColumnMapping" />
+          <Description />
+        </Item0>
+      </Statements>
+      <Params IsObject="true" Count="1" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam">
+        <Item0>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>Datos</Name>
+          <DataType>datString</DataType>
+          <Size>100</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item0>
+      </Params>
+      <CustomAttributes />
+      <IsPublic>True</IsPublic>
+      <DynamicWhereXML />
+      <BusinessClassID />
+      <Description />
+      <Name>cmdBuscarVehiculoTransportista</Name>
+    </Item23>
+           <Item24>
+      <BusinessRulesServer Type="TDABusinessRuleScript" IsObject="true">
+        <Script />
+        <ScriptLanguageStr />
+        <Description />
+        <Name />
+      </BusinessRulesServer>
+      <Statements IsCollection="true" IsObject="true" Count="1" ItemClass="TDAStatement" Type="TDAStatementCollection">
+        <Item0>
+          <Connection>RPSuite</Connection>
           <SQL>UPDATE ProductoIEPS
 set
   Precio = :Precio
@@ -21756,8 +21791,9 @@ where ProductoIEPSID=:ProductoIEPSID</SQL>
       <BusinessClassID />
       <Description />
       <Name>spProductoIEPSUpdate</Name>
-    </Item23>
-    <Item24>
+    </Item24>
+      <Name>GetProductoID</Name>
+    <Item25>
       <BusinessRulesServer Type="TDABusinessRuleScript" IsObject="true">
         <Script />
         <ScriptLanguageStr />
@@ -21956,8 +21992,8 @@ ProductoIEPSID
       <BusinessClassID />
       <Description />
       <Name>spProductoIEPSInsertar</Name>
-    </Item24>
-    <Item25>
+    </Item25>
+    <Item26>
       <BusinessRulesServer Type="TDABusinessRuleScript" IsObject="true">
         <Script />
         <ScriptLanguageStr />
@@ -21971,7 +22007,6 @@ ProductoIEPSID
 from Producto 
 where Descripcion like :Descripcion</SQL>
           <TargetTable />
->>>>>>> a9c86540f78fc4d50c23c0272a87b29e6cfdac21
           <ConnectionType>SQLite</ConnectionType>
           <Default>True</Default>
           <StatementName />
@@ -21985,15 +22020,9 @@ where Descripcion like :Descripcion</SQL>
         <Item0>
           <Value />
           <ParamType>daptInput</ParamType>
-<<<<<<< HEAD
-          <Name>Datos</Name>
-          <DataType>datString</DataType>
-          <Size>100</Size>
-=======
           <Name>Descripcion</Name>
           <DataType>datString</DataType>
           <Size>20</Size>
->>>>>>> a9c86540f78fc4d50c23c0272a87b29e6cfdac21
           <DecimalScale>0</DecimalScale>
           <DecimalPrecision>0</DecimalPrecision>
           <BlobType>dabtUnknown</BlobType>
@@ -22007,13 +22036,8 @@ where Descripcion like :Descripcion</SQL>
       <DynamicWhereXML />
       <BusinessClassID />
       <Description />
-<<<<<<< HEAD
-      <Name>cmdBuscarVehiculoTransportista</Name>
-    </Item23>
-=======
       <Name>GetProductoID</Name>
-    </Item25>
->>>>>>> a9c86540f78fc4d50c23c0272a87b29e6cfdac21
+    </Item26>
   </Commands>
   <RelationShips IsObject="true" Count="0" IsCollection="true" Type="TDADatasetRelationshipCollection" ItemClass="TDADatasetRelationship" />
   <UpdateRules IsObject="true" Count="0" IsCollection="true" Type="TDAUpdateRuleCollection" ItemClass="TDAUpdateRule" />

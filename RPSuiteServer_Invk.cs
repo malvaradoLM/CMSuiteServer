@@ -352,8 +352,7 @@ namespace RPSuiteServer {
                 @__ObjectDisposer.Dispose();
             }
         }
-<<<<<<< HEAD
-        public static void Invoke_GetVehiculoTransportista(RemObjects.SDK.IROService @__Instance, RemObjects.SDK.IMessage @__Message, RemObjects.SDK.Server.IServerChannelInfo @__ServerChannelInfo, out RemObjects.SDK.Server.ResponseOptions @__oResponseOptions) {
+       public static void Invoke_GetVehiculoTransportista(RemObjects.SDK.IROService @__Instance, RemObjects.SDK.IMessage @__Message, RemObjects.SDK.Server.IServerChannelInfo @__ServerChannelInfo, out RemObjects.SDK.Server.ResponseOptions @__oResponseOptions) {
             RemObjects.SDK.ObjectDisposer @__ObjectDisposer = new RemObjects.SDK.ObjectDisposer(1);
             try {
                 string Datos = @__Message.ReadAnsiString("Datos");
@@ -362,7 +361,13 @@ namespace RPSuiteServer {
                 @__ObjectDisposer.Add(Result);
                 @__Message.InitializeResponseMessage(@__ServerChannelInfo, "RPSuiteServer", "RPDataService", "GetVehiculoTransportistaResponse");
                 @__Message.Write("Result", Result, typeof(TVehiculo), RemObjects.SDK.StreamingFormat.Default);
-=======
+                @__Message.FinalizeMessage();
+                @__oResponseOptions = RemObjects.SDK.Server.ResponseOptions.roDefault;
+            }
+            finally {
+                @__ObjectDisposer.Dispose();
+            }
+        }
         public static void Invoke_ActualizarProductoIEPS(RemObjects.SDK.IROService @__Instance, RemObjects.SDK.IMessage @__Message, RemObjects.SDK.Server.IServerChannelInfo @__ServerChannelInfo, out RemObjects.SDK.Server.ResponseOptions @__oResponseOptions) {
             RemObjects.SDK.ObjectDisposer @__ObjectDisposer = new RemObjects.SDK.ObjectDisposer(1);
             try {
@@ -372,7 +377,6 @@ namespace RPSuiteServer {
                 Result = ((IRPDataService)(@__Instance)).ActualizarProductoIEPS(Datos);
                 @__Message.InitializeResponseMessage(@__ServerChannelInfo, "RPSuiteServer", "RPDataService", "ActualizarProductoIEPSResponse");
                 @__Message.WriteBoolean("Result", Result);
->>>>>>> a9c86540f78fc4d50c23c0272a87b29e6cfdac21
                 @__Message.FinalizeMessage();
                 @__oResponseOptions = RemObjects.SDK.Server.ResponseOptions.roDefault;
             }
@@ -380,8 +384,6 @@ namespace RPSuiteServer {
                 @__ObjectDisposer.Dispose();
             }
         }
-<<<<<<< HEAD
-=======
         public static void Invoke_GetProductoID(RemObjects.SDK.IROService @__Instance, RemObjects.SDK.IMessage @__Message, RemObjects.SDK.Server.IServerChannelInfo @__ServerChannelInfo, out RemObjects.SDK.Server.ResponseOptions @__oResponseOptions) {
             string Datos = @__Message.ReadAnsiString("Datos");
             int Result;
@@ -391,7 +393,6 @@ namespace RPSuiteServer {
             @__Message.FinalizeMessage();
             @__oResponseOptions = RemObjects.SDK.Server.ResponseOptions.roDefault;
         }
->>>>>>> a9c86540f78fc4d50c23c0272a87b29e6cfdac21
     }
     [System.Reflection.ObfuscationAttribute(Exclude=true, ApplyToMembers=false)]
     public class RPDataService_Activator : object, RemObjects.SDK.Server.IServiceActivator {
