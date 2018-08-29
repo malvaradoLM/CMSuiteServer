@@ -3582,6 +3582,191 @@ namespace RPSuiteServer {
             return new TMuestraProducto();
         }
     }
+    [System.Serializable()]
+    [RemObjects.SDK.Remotable(ActivatorClass=typeof(TVehiculo_Activator))]
+    [System.Reflection.ObfuscationAttribute(Exclude=true)]
+    public partial class TVehiculo : RemObjects.SDK.Types.ComplexType {
+        private int @__VehiculoID;
+        private string @__NoEconomico;
+        private string @__NoSerie;
+        private string @__Modelo;
+        private int @__NoToneles;
+        private int @__Capacidad;
+        private string @__Placas;
+        private string @__Certificado;
+        private System.DateTime @__FechaCertificado;
+        private int @__TransportistaID;
+        private string @__Marca;
+        public virtual int VehiculoID {
+            get {
+                return @__VehiculoID;
+            }
+            set {
+                @__VehiculoID = value;
+                this.TriggerPropertyChanged("VehiculoID");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string NoEconomico {
+            get {
+                return @__NoEconomico;
+            }
+            set {
+                @__NoEconomico = value;
+                this.TriggerPropertyChanged("NoEconomico");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string NoSerie {
+            get {
+                return @__NoSerie;
+            }
+            set {
+                @__NoSerie = value;
+                this.TriggerPropertyChanged("NoSerie");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string Modelo {
+            get {
+                return @__Modelo;
+            }
+            set {
+                @__Modelo = value;
+                this.TriggerPropertyChanged("Modelo");
+            }
+        }
+        public virtual int NoToneles {
+            get {
+                return @__NoToneles;
+            }
+            set {
+                @__NoToneles = value;
+                this.TriggerPropertyChanged("NoToneles");
+            }
+        }
+        public virtual int Capacidad {
+            get {
+                return @__Capacidad;
+            }
+            set {
+                @__Capacidad = value;
+                this.TriggerPropertyChanged("Capacidad");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string Placas {
+            get {
+                return @__Placas;
+            }
+            set {
+                @__Placas = value;
+                this.TriggerPropertyChanged("Placas");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string Certificado {
+            get {
+                return @__Certificado;
+            }
+            set {
+                @__Certificado = value;
+                this.TriggerPropertyChanged("Certificado");
+            }
+        }
+        public virtual System.DateTime FechaCertificado {
+            get {
+                return @__FechaCertificado;
+            }
+            set {
+                @__FechaCertificado = value;
+                this.TriggerPropertyChanged("FechaCertificado");
+            }
+        }
+        public virtual int TransportistaID {
+            get {
+                return @__TransportistaID;
+            }
+            set {
+                @__TransportistaID = value;
+                this.TriggerPropertyChanged("TransportistaID");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string Marca {
+            get {
+                return @__Marca;
+            }
+            set {
+                @__Marca = value;
+                this.TriggerPropertyChanged("Marca");
+            }
+        }
+        public override void ReadComplex(RemObjects.SDK.Serializer serializer) {
+            if (serializer.RecordStrictOrder) {
+                this.VehiculoID = serializer.ReadInt32("VehiculoID");
+                this.NoEconomico = serializer.ReadAnsiString("NoEconomico");
+                this.NoSerie = serializer.ReadAnsiString("NoSerie");
+                this.Modelo = serializer.ReadAnsiString("Modelo");
+                this.NoToneles = serializer.ReadInt32("NoToneles");
+                this.Capacidad = serializer.ReadInt32("Capacidad");
+                this.Placas = serializer.ReadAnsiString("Placas");
+                this.Certificado = serializer.ReadAnsiString("Certificado");
+                this.FechaCertificado = serializer.ReadDateTime("FechaCertificado");
+                this.TransportistaID = serializer.ReadInt32("TransportistaID");
+                this.Marca = serializer.ReadAnsiString("Marca");
+            }
+            else {
+                this.Capacidad = serializer.ReadInt32("Capacidad");
+                this.Certificado = serializer.ReadAnsiString("Certificado");
+                this.FechaCertificado = serializer.ReadDateTime("FechaCertificado");
+                this.Marca = serializer.ReadAnsiString("Marca");
+                this.Modelo = serializer.ReadAnsiString("Modelo");
+                this.NoEconomico = serializer.ReadAnsiString("NoEconomico");
+                this.NoSerie = serializer.ReadAnsiString("NoSerie");
+                this.NoToneles = serializer.ReadInt32("NoToneles");
+                this.Placas = serializer.ReadAnsiString("Placas");
+                this.TransportistaID = serializer.ReadInt32("TransportistaID");
+                this.VehiculoID = serializer.ReadInt32("VehiculoID");
+            }
+        }
+        public override void WriteComplex(RemObjects.SDK.Serializer serializer) {
+            if (serializer.RecordStrictOrder) {
+                serializer.WriteInt32("VehiculoID", this.VehiculoID);
+                serializer.WriteAnsiString("NoEconomico", this.NoEconomico);
+                serializer.WriteAnsiString("NoSerie", this.NoSerie);
+                serializer.WriteAnsiString("Modelo", this.Modelo);
+                serializer.WriteInt32("NoToneles", this.NoToneles);
+                serializer.WriteInt32("Capacidad", this.Capacidad);
+                serializer.WriteAnsiString("Placas", this.Placas);
+                serializer.WriteAnsiString("Certificado", this.Certificado);
+                serializer.WriteDateTime("FechaCertificado", this.FechaCertificado);
+                serializer.WriteInt32("TransportistaID", this.TransportistaID);
+                serializer.WriteAnsiString("Marca", this.Marca);
+            }
+            else {
+                serializer.WriteInt32("Capacidad", this.Capacidad);
+                serializer.WriteAnsiString("Certificado", this.Certificado);
+                serializer.WriteDateTime("FechaCertificado", this.FechaCertificado);
+                serializer.WriteAnsiString("Marca", this.Marca);
+                serializer.WriteAnsiString("Modelo", this.Modelo);
+                serializer.WriteAnsiString("NoEconomico", this.NoEconomico);
+                serializer.WriteAnsiString("NoSerie", this.NoSerie);
+                serializer.WriteInt32("NoToneles", this.NoToneles);
+                serializer.WriteAnsiString("Placas", this.Placas);
+                serializer.WriteInt32("TransportistaID", this.TransportistaID);
+                serializer.WriteInt32("VehiculoID", this.VehiculoID);
+            }
+        }
+    }
+    [System.Reflection.ObfuscationAttribute(Exclude=true, ApplyToMembers=false)]
+    public class TVehiculo_Activator : object, RemObjects.SDK.ITypeActivator {
+        public TVehiculo_Activator() {
+        }
+        public object CreateInstance() {
+            return new TVehiculo();
+        }
+    }
     public interface IRPLoginService : RemObjects.DataAbstract.Server.ISimpleLoginService {
     }
     public partial class RPLoginService_Proxy : RemObjects.DataAbstract.Server.SimpleLoginService_Proxy, IRPLoginService {
@@ -3686,6 +3871,7 @@ namespace RPSuiteServer {
         bool CancelarPedido(string Datos);
         TCustomProductoIEPS[] CargarProductoIEPS();
         int InsertaMuestradeProducto(TMuestraProducto MuestraProducto);
+        TVehiculo GetVehiculoTransportista(string Datos);
     }
     public partial class RPDataService_Proxy : RemObjects.DataAbstract.Server.DataAbstractService_Proxy, IRPDataService {
         public RPDataService_Proxy(RemObjects.SDK.IMessage message, RemObjects.SDK.IClientChannel clientChannel) : 
@@ -4033,6 +4219,20 @@ namespace RPSuiteServer {
                 this.@__ClearMessage(@__LocalMessage);
             }
         }
+        public virtual TVehiculo GetVehiculoTransportista(string Datos) {
+            RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
+            try {
+                @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "GetVehiculoTransportista");
+                @__LocalMessage.WriteAnsiString("Datos", Datos);
+                @__LocalMessage.FinalizeMessage();
+                this.ClientChannel.Dispatch(@__LocalMessage);
+                TVehiculo _Result = ((TVehiculo)(@__LocalMessage.Read("Result", typeof(TVehiculo), RemObjects.SDK.StreamingFormat.Default)));
+                return _Result;
+            }
+            finally {
+                this.@__ClearMessage(@__LocalMessage);
+            }
+        }
     }
     public class CoRPDataService {
         public static IRPDataService Create(RemObjects.SDK.IMessage message, RemObjects.SDK.IClientChannel clientChannel) {
@@ -4129,6 +4329,9 @@ namespace RPSuiteServer {
         System.IAsyncResult BeginInsertaMuestradeProducto(TMuestraProducto MuestraProducto, System.AsyncCallback @__Callback, object @__UserData);
         int EndInsertaMuestradeProducto(System.IAsyncResult @__AsyncResult);
         System.Threading.Tasks.Task<int> InsertaMuestradeProductoAsync(TMuestraProducto MuestraProducto);
+        System.IAsyncResult BeginGetVehiculoTransportista(string Datos, System.AsyncCallback @__Callback, object @__UserData);
+        TVehiculo EndGetVehiculoTransportista(System.IAsyncResult @__AsyncResult);
+        System.Threading.Tasks.Task<TVehiculo> GetVehiculoTransportistaAsync(string Datos);
     }
     public partial class RPDataService_AsyncProxy : RemObjects.DataAbstract.Server.DataAbstractService_AsyncProxy, IRPDataService_Async {
         public RPDataService_AsyncProxy(RemObjects.SDK.IMessage message, RemObjects.SDK.IClientChannel clientChannel) : 
@@ -4744,6 +4947,32 @@ namespace RPSuiteServer {
         }
         public virtual System.Threading.Tasks.Task<int> InsertaMuestradeProductoAsync(TMuestraProducto MuestraProducto) {
             return System.Threading.Tasks.Task<int>.Factory.FromAsync(this.BeginInsertaMuestradeProducto(MuestraProducto, null, null), new System.Func<System.IAsyncResult, int>(this.EndInsertaMuestradeProducto));
+        }
+        public virtual System.IAsyncResult BeginGetVehiculoTransportista(string Datos, System.AsyncCallback @__Callback, object @__UserData) {
+            RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
+            try {
+                @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "GetVehiculoTransportista");
+                @__LocalMessage.WriteAnsiString("Datos", Datos);
+                @__LocalMessage.FinalizeMessage();
+                return this.ClientChannel.AsyncDispatch(@__LocalMessage, @__Callback, @__UserData);
+            }
+            catch (System.Exception ex) {
+                this.@__ClearMessage(@__LocalMessage);
+                throw ex;
+            }
+        }
+        public virtual TVehiculo EndGetVehiculoTransportista(System.IAsyncResult @__AsyncResult) {
+            RemObjects.SDK.IMessage @__LocalMessage = ((RemObjects.SDK.IClientAsyncResult)(@__AsyncResult)).Message;
+            try {
+                TVehiculo Result = ((TVehiculo)(@__LocalMessage.Read("Result", typeof(TVehiculo), RemObjects.SDK.StreamingFormat.Default)));
+                return Result;
+            }
+            finally {
+                this.@__ClearMessage(@__LocalMessage);
+            }
+        }
+        public virtual System.Threading.Tasks.Task<TVehiculo> GetVehiculoTransportistaAsync(string Datos) {
+            return System.Threading.Tasks.Task<TVehiculo>.Factory.FromAsync(this.BeginGetVehiculoTransportista(Datos, null, null), new System.Func<System.IAsyncResult, TVehiculo>(this.EndGetVehiculoTransportista));
         }
     }
     public class CoRPDataServiceAsync {

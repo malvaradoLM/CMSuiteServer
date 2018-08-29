@@ -237,6 +237,14 @@
 </Parameter>
 </Parameters>
 </Operation>
+<Operation Name="GetVehiculoTransportista" UID="{26A1074F-5FE3-4CD5-8F7A-59725204180A}">
+<Parameters>
+<Parameter Name="Result" DataType="TVehiculo" Flag="Result">
+</Parameter>
+<Parameter Name="Datos" DataType="AnsiString" Flag="In" >
+</Parameter>
+</Parameters>
+</Operation>
 </Operations>
 </Interface>
 </Interfaces>
@@ -749,6 +757,32 @@
 </Element>
 </Elements>
 </Struct>
+<Struct Name="TVehiculo" UID="{4088B1C3-5F5A-4AF3-8714-2A0421305595}" AutoCreateParams="1">
+<Elements>
+<Element Name="VehiculoID" DataType="Integer">
+</Element>
+<Element Name="NoEconomico" DataType="AnsiString">
+</Element>
+<Element Name="NoSerie" DataType="AnsiString">
+</Element>
+<Element Name="Modelo" DataType="AnsiString">
+</Element>
+<Element Name="NoToneles" DataType="Integer">
+</Element>
+<Element Name="Capacidad" DataType="Integer">
+</Element>
+<Element Name="Placas" DataType="AnsiString">
+</Element>
+<Element Name="Certificado" DataType="AnsiString">
+</Element>
+<Element Name="FechaCertificado" DataType="DateTime">
+</Element>
+<Element Name="TransportistaID" DataType="Integer">
+</Element>
+<Element Name="Marca" DataType="AnsiString">
+</Element>
+</Elements>
+</Struct>
 </Structs>
 <Enums>
 </Enums>
@@ -773,7 +807,7 @@
 </Array>
 </Arrays>
 <Uses>
-<Use Name="DataAbstract" UID="{30EEA332-03CE-45E5-8062-CCE8B6C1FAFE}" Rodl="C:\Program Files (x86)\RemObjects Software\Data Abstract for .NET\Source\RemObjects.DataAbstract.Server\DataAbstract.RODL" AbsoluteRodl="C:\Program Files (x86)\RemObjects Software\Data Abstract for .NET\Source\RemObjects.DataAbstract.Server\DataAbstract.RODL" UsedRodlUID="{DC8B7BE2-14AF-402D-B1F8-E1008B6FA4F6}" DontCodeGen="1">
+<Use Name="DataAbstract" UID="{30EEA332-03CE-45E5-8062-CCE8B6C1FAFE}" Rodl="..\..\..\Program Files (x86)\RemObjects Software\Data Abstract for .NET\Source\RemObjects.DataAbstract.Server\DataAbstract.RODL" AbsoluteRodl="C:\Program Files (x86)\RemObjects Software\Data Abstract for .NET\Source\RemObjects.DataAbstract.Server\DataAbstract.RODL" UsedRodlUID="{DC8B7BE2-14AF-402D-B1F8-E1008B6FA4F6}" DontCodeGen="1">
 <Includes UID="{ECE5910F-040B-4BDF-9502-EDF7F95642CF}" Delphi="DataAbstract4" DotNet="RemObjects.DataAbstract.Server" ObjC="DataAbstract/DataAbstract4_Intf" Java="com.remobjects.dataabstract.intf" Cocoa="DataAbstract"/>
 </Use>
 </Uses>

@@ -802,7 +802,41 @@ namespace RPSuiteServer
             
         }
 
+        public TVehiculo GetVehiculoTransportista(string Datos)
+        {
+            try
+            {
+                TVehiculo est = new TVehiculo();
+                IDbCommand command;
 
 
+                using (IDbCommand lcommand = this.ServiceSchema.NewCommand(this.Connection, "cmdBuscarVehiculoTransportista", new string[] { "Datos" }, new object[] { Datos }))
+                {
+                    IDataReader reader = lcommand.ExecuteReader();
+                    while (reader.Read())
+                    {
+
+                        est.VehiculoID = (int)(reader["VehiculoID"] != DBNull.Value ? reader["VehiculoID"] : "");
+                        est.NoEconomico = (string)(reader["NoEconomico"] != DBNull.Value ? reader["NoEconomico"] : "");
+                        est.NoSerie = (string)(reader["NoSerie"] != DBNull.Value ? reader["NoSerie"] : "");
+                        est.Marca = (string)(reader["Marca"] != DBNull.Value ? reader["Marca"] : "");
+                        est.Modelo = (string)(reader["Modelo"] != DBNull.Value ? reader["Modelo"] : "");
+                        est.NoToneles = (int)(reader["NoToneles"] != DBNull.Value ? reader["NoToneles"] : "");
+                        est.Capacidad = (int)(reader["Capacidad"] != DBNull.Value ? reader["Capacidad"] : "");
+                        est.Placas = (string)(reader["Placas"] != DBNull.Value ? reader["Placas"] : "");
+                        est.Certificado = (string)(reader["Certificado"] != DBNull.Value ? reader["Certificado"] : "");
+                        est.FechaCertificado = (DateTime)(reader["FechaCertificado"] != DBNull.Value ? reader["FechaCertificado"] : "");
+                        est.TransportistaID = (int)(reader["TransportistaID"] != DBNull.Value ? reader["TransportistaID"] : "");
+                    }
+                }
+                return est;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+
+            }
+        }
     }
 }
