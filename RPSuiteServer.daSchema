@@ -1,11 +1,7 @@
 <TDASchema>
   <UnionDataTables IsObject="true" Count="0" IsCollection="true" Type="TDAUnionDataTableCollection" ItemClass="TDAUnionDataTable" />
   <JoinDataTables IsObject="true" Count="0" IsCollection="true" Type="TDAJoinDataTableCollection" ItemClass="TDAJoinDataTable" />
-<<<<<<< HEAD
-  <Datasets IsObject="true" Count="49" IsCollection="true" Type="TDADatasetCollection" ItemClass="TDADataset">
-=======
   <Datasets IsObject="true" Count="50" IsCollection="true" Type="TDADatasetCollection" ItemClass="TDADataset">
->>>>>>> dc14b28f94830cd1b8069f3e67edca9812ed3c01
     <Item0>
       <ReadOnly>False</ReadOnly>
       <Fields IsObject="true" Count="6" IsCollection="true" ItemClass="TDAField" Type="TDASchemaFieldCollection">
