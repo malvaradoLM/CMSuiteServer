@@ -352,6 +352,31 @@ namespace RPSuiteServer {
                 @__ObjectDisposer.Dispose();
             }
         }
+        public static void Invoke_ActualizarProductoIEPS(RemObjects.SDK.IROService @__Instance, RemObjects.SDK.IMessage @__Message, RemObjects.SDK.Server.IServerChannelInfo @__ServerChannelInfo, out RemObjects.SDK.Server.ResponseOptions @__oResponseOptions) {
+            RemObjects.SDK.ObjectDisposer @__ObjectDisposer = new RemObjects.SDK.ObjectDisposer(1);
+            try {
+                TCustomProductoIEPS[] Datos = ((TCustomProductoIEPS[])(@__Message.Read("Datos", typeof(TCustomProductoIEPS[]), RemObjects.SDK.StreamingFormat.Default)));
+                @__ObjectDisposer.Add(Datos);
+                bool Result;
+                Result = ((IRPDataService)(@__Instance)).ActualizarProductoIEPS(Datos);
+                @__Message.InitializeResponseMessage(@__ServerChannelInfo, "RPSuiteServer", "RPDataService", "ActualizarProductoIEPSResponse");
+                @__Message.WriteBoolean("Result", Result);
+                @__Message.FinalizeMessage();
+                @__oResponseOptions = RemObjects.SDK.Server.ResponseOptions.roDefault;
+            }
+            finally {
+                @__ObjectDisposer.Dispose();
+            }
+        }
+        public static void Invoke_GetProductoID(RemObjects.SDK.IROService @__Instance, RemObjects.SDK.IMessage @__Message, RemObjects.SDK.Server.IServerChannelInfo @__ServerChannelInfo, out RemObjects.SDK.Server.ResponseOptions @__oResponseOptions) {
+            string Datos = @__Message.ReadAnsiString("Datos");
+            int Result;
+            Result = ((IRPDataService)(@__Instance)).GetProductoID(Datos);
+            @__Message.InitializeResponseMessage(@__ServerChannelInfo, "RPSuiteServer", "RPDataService", "GetProductoIDResponse");
+            @__Message.WriteInt32("Result", Result);
+            @__Message.FinalizeMessage();
+            @__oResponseOptions = RemObjects.SDK.Server.ResponseOptions.roDefault;
+        }
     }
     [System.Reflection.ObfuscationAttribute(Exclude=true, ApplyToMembers=false)]
     public class RPDataService_Activator : object, RemObjects.SDK.Server.IServiceActivator {
