@@ -85,5 +85,5 @@ C:\Proyectos\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.exe.licenses
 C:\Proyectos\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.csproj.CoreCompileInputs.cache
 C:\Proyectos\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.exe
 C:\Proyectos\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.pdb
-C:\Proyectos\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.csprojResolveAssemblyReference.cache
 Z:\Compartida\Proyectos\LM\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.csprojResolveAssemblyReference.cache
+C:\Proyectos\Comercializadora\CMSuiteServer\obj\Debug\RPSuiteServer.csprojResolveAssemblyReference.cache

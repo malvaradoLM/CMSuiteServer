@@ -245,7 +245,9 @@
 </Operation>
 <Operation Name="GetVehiculoTransportista" UID="{26A1074F-5FE3-4CD5-8F7A-59725204180A}">
 <Parameters>
-<Parameter Name="Result" DataType="TVehiculo" Flag="Result">
+<Parameter Name="Result" DataType="TAVehiculo" Flag="Result">
+</Parameter>
+<Parameter Name="Datos" DataType="AnsiString" Flag="In" >
 </Parameter>
 </Parameters>
 </Operation>
@@ -549,6 +551,10 @@
 </Element>
 <Element Name="StatusID" DataType="Integer">
 </Element>
+<Element Name="VehiculoID" DataType="Integer">
+</Element>
+<Element Name="AutoAbasto" DataType="Boolean">
+</Element>
 </Elements>
 </Struct>
 <Struct Name="TDetallePedido" UID="{049D67D7-9BCC-4FD1-A075-B06D8C6130AB}" AutoCreateParams="1">
@@ -848,9 +854,12 @@
 <Array Name="TAPermiso" UID="{BBD28029-7DEB-47B5-858D-4408AD1D60B4}">
 <ElementType DataType="TPermiso" />
 </Array>
+<Array Name="TAVehiculo" UID="{2070FBDD-74EA-4CE0-B819-CF215271B8DE}">
+<ElementType DataType="TVehiculo" />
+</Array>
 </Arrays>
 <Uses>
-<Use Name="DataAbstract" UID="{30EEA332-03CE-45E5-8062-CCE8B6C1FAFE}" Rodl="C:\Program Files (x86)\RemObjects Software\Data Abstract for .NET\Source\RemObjects.DataAbstract.Server\DataAbstract.RODL" AbsoluteRodl="C:\Program Files (x86)\RemObjects Software\Data Abstract for .NET\Source\RemObjects.DataAbstract.Server\DataAbstract.RODL" UsedRodlUID="{DC8B7BE2-14AF-402D-B1F8-E1008B6FA4F6}" DontCodeGen="1">
+<Use Name="DataAbstract" UID="{30EEA332-03CE-45E5-8062-CCE8B6C1FAFE}" Rodl="..\..\..\Program Files (x86)\RemObjects Software\Data Abstract for .NET\Source\RemObjects.DataAbstract.Server\DataAbstract.RODL" AbsoluteRodl="C:\Program Files (x86)\RemObjects Software\Data Abstract for .NET\Source\RemObjects.DataAbstract.Server\DataAbstract.RODL" UsedRodlUID="{DC8B7BE2-14AF-402D-B1F8-E1008B6FA4F6}" DontCodeGen="1">
 <Includes UID="{ECE5910F-040B-4BDF-9502-EDF7F95642CF}" Delphi="DataAbstract4" DotNet="RemObjects.DataAbstract.Server" ObjC="DataAbstract/DataAbstract4_Intf" Java="com.remobjects.dataabstract.intf" Cocoa="DataAbstract"/>
 </Use>
 </Uses>

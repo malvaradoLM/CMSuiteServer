@@ -591,7 +591,8 @@ namespace RPSuiteServer
             int res = -1;
             try
             {
-                using (IDbCommand lCommand = this.ServiceSchema.NewCommand(this.Connection, "InsertPedido", new string[] { "PedidoID", "Serie", "Folio", "Fecha", "FechaModificacion", "Ejercicio", "Periodo", "Dia", "SubTotal", "IVA", "IEPS", "Total", "Descuento", "Observacion", "EstacionID", "ConfiguracionID", "UsuarioID", "StatusID" }, new object[] { pedido.PedidoID, pedido.Serie, pedido.Folio, pedido.Fecha, pedido.FechaModificacion, pedido.Ejercisio, pedido.Periodo, pedido.Dia, pedido.Subtotal, pedido.IVA, pedido.IEPS, pedido.Total, pedido.Descuento, pedido.Observacion, pedido.EstacionID, pedido.ConfiguracionID, pedido.UsuarioID, pedido.StatusID }))
+                using (IDbCommand lCommand = this.ServiceSchema.NewCommand(this.Connection, "InsertPedido", new string[] { "PedidoID", "Serie", "Folio", "Fecha", "FechaModificacion", "Ejercicio", "Periodo", "Dia", "SubTotal", "IVA", "IEPS", "Total", "Descuento", "Observacion", "EstacionID", "ConfiguracionID", "UsuarioID", "StatusID","AutoAbasto","VehiculoID" },
+                    new object[] { pedido.PedidoID, pedido.Serie, pedido.Folio, pedido.Fecha, pedido.FechaModificacion, pedido.Ejercisio, pedido.Periodo, pedido.Dia, pedido.Subtotal, pedido.IVA, pedido.IEPS, pedido.Total, pedido.Descuento, pedido.Observacion, pedido.EstacionID, pedido.ConfiguracionID, pedido.UsuarioID, pedido.StatusID,pedido.AutoAbasto,pedido.VehiculoID }))
                 {
                     res = int.Parse(lCommand.ExecuteScalar().ToString());
                 }
@@ -805,11 +806,12 @@ namespace RPSuiteServer
 
         }
 
-       public TVehiculo GetVehiculoTransportista(string Datos)
+       public TVehiculo[] GetVehiculoTransportista(string Datos)
         {
             try
             {
-                TVehiculo est = new TVehiculo();
+                List<TVehiculo> est = new List<TVehiculo>();
+                TVehiculo[] vehiculo = new TVehiculo[100];
                 IDbCommand command;
 
 
@@ -818,21 +820,27 @@ namespace RPSuiteServer
                     IDataReader reader = lcommand.ExecuteReader();
                     while (reader.Read())
                     {
-
-                        est.VehiculoID = (int)(reader["VehiculoID"] != DBNull.Value ? reader["VehiculoID"] : "");
-                        est.NoEconomico = (string)(reader["NoEconomico"] != DBNull.Value ? reader["NoEconomico"] : "");
-                        est.NoSerie = (string)(reader["NoSerie"] != DBNull.Value ? reader["NoSerie"] : "");
-                        est.Marca = (string)(reader["Marca"] != DBNull.Value ? reader["Marca"] : "");
-                        est.Modelo = (string)(reader["Modelo"] != DBNull.Value ? reader["Modelo"] : "");
-                        est.NoToneles = (int)(reader["NoToneles"] != DBNull.Value ? reader["NoToneles"] : "");
-                        est.Capacidad = (int)(reader["Capacidad"] != DBNull.Value ? reader["Capacidad"] : "");
-                        est.Placas = (string)(reader["Placas"] != DBNull.Value ? reader["Placas"] : "");
-                        est.Certificado = (string)(reader["Certificado"] != DBNull.Value ? reader["Certificado"] : "");
-                        est.FechaCertificado = (DateTime)(reader["FechaCertificado"] != DBNull.Value ? reader["FechaCertificado"] : "");
-                        est.TransportistaID = (int)(reader["TransportistaID"] != DBNull.Value ? reader["TransportistaID"] : "");
+                        est.Add
+                            (new TVehiculo()
+                            { 
+                                VehiculoID = (int)(reader["VehiculoID"] != DBNull.Value ? reader["VehiculoID"] : null),
+                        NoEconomico = (string)(reader["NoEconomico"] != DBNull.Value ? reader["NoEconomico"] : ""),
+                        NoSerie = (string)(reader["NoSerie"] != DBNull.Value ? reader["NoSerie"] : ""),
+                        Marca = (string)(reader["Marca"] != DBNull.Value ? reader["Marca"] : ""),
+                        Modelo = (string)(reader["Modelo"] != DBNull.Value ? reader["Modelo"] : ""),
+                        NoToneles = (int)(reader["NoToneles"] != DBNull.Value ? reader["NoToneles"] : null),
+                        Capacidad = (int)(reader["Capacidad"] != DBNull.Value ? reader["Capacidad"] : null),
+                        Placas = (string)(reader["Placas"] != DBNull.Value ? reader["Placas"] : ""),
+                        Certificado = (string)(reader["Certificado"] != DBNull.Value ? reader["Certificado"] : ""),
+                        FechaCertificado = (DateTime)(reader["FechaCertificado"] != DBNull.Value ? reader["FechaCertificado"] : DateTime.MinValue),
+                        TransportistaID = (int)(reader["TransportistaID"] != DBNull.Value ? reader["TransportistaID"] : null)
+                            }
+                            );
+                        
                     }
                 }
-                return est;
+                vehiculo = est.ToArray();
+                    return vehiculo;
             }
             catch (Exception ex)
             {
@@ -1014,9 +1022,6 @@ namespace RPSuiteServer
             }
         }
 
-        public TVehiculo GetVehiculoTransportista()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

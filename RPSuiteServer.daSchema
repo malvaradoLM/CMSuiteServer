@@ -20022,10 +20022,10 @@ update Folio
 set Folio=:Folio
 where Campo = 'PedidoSerie' and Serie = 'PEW'
 
-insert into Pedido (PedidoID,Serie,Folio,Fecha,FechaModificacion,Ejercicio,Periodo,Dia,SubTotal,IVA,IEPS,Total,Descuento,Observacion,EstacionID,ConfiguracionID,UsuarioID,StatusID)
+insert into Pedido (PedidoID,Serie,Folio,Fecha,FechaModificacion,Ejercicio,Periodo,Dia,SubTotal,IVA,IEPS,Total,Descuento,Observacion,EstacionID,ConfiguracionID,UsuarioID,StatusID,AutoAbasto,VehiculoID)
 Values
 (
-:PedidoID,:Serie,:Folio,:Fecha,:FechaModificacion,:Ejercicio,:Periodo,:Dia,:SubTotal,:IVA,:IEPS,:Total,:Descuento,:Observacion,:EstacionID,:ConfiguracionID,:UsuarioID,:StatusID)
+:PedidoID,:Serie,:Folio,:Fecha,:FechaModificacion,:Ejercicio,:Periodo,:Dia,:SubTotal,:IVA,:IEPS,:Total,:Descuento,:Observacion,:EstacionID,:ConfiguracionID,:UsuarioID,:StatusID,:AutoAbasto,:VehiculoID)
 
 select :PedidoID as PedidoID</SQL>
           <TargetTable>Pedido</TargetTable>
@@ -20038,7 +20038,7 @@ select :PedidoID as PedidoID</SQL>
           <Description />
         </Item0>
       </Statements>
-      <Params IsObject="true" Count="18" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam">
+      <Params IsObject="true" Count="20" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam">
         <Item0>
           <Value />
           <ParamType>daptInput</ParamType>
@@ -20273,6 +20273,32 @@ select :PedidoID as PedidoID</SQL>
           <BusinessClassID />
           <Description />
         </Item17>
+        <Item18>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>AutoAbasto</Name>
+          <DataType>datBoolean</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item18>
+        <Item19>
+          <Value />
+          <ParamType>daptInput</ParamType>
+          <Name>VehiculoID</Name>
+          <DataType>datInteger</DataType>
+          <Size>0</Size>
+          <DecimalScale>0</DecimalScale>
+          <DecimalPrecision>0</DecimalPrecision>
+          <BlobType>dabtUnknown</BlobType>
+          <GeneratorName />
+          <BusinessClassID />
+          <Description />
+        </Item19>
       </Params>
       <CustomAttributes />
       <IsPublic>True</IsPublic>
