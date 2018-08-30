@@ -21634,7 +21634,7 @@ where TransportistaID = :Datos
       <Description />
       <Name>cmdBuscarVehiculoTransportista</Name>
     </Item23>
-           <Item24>
+    <Item24>
       <BusinessRulesServer Type="TDABusinessRuleScript" IsObject="true">
         <Script />
         <ScriptLanguageStr />
@@ -21792,7 +21792,6 @@ where ProductoIEPSID=:ProductoIEPSID</SQL>
       <Description />
       <Name>spProductoIEPSUpdate</Name>
     </Item24>
-      <Name>GetProductoID</Name>
     <Item25>
       <BusinessRulesServer Type="TDABusinessRuleScript" IsObject="true">
         <Script />
