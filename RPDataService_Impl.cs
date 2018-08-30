@@ -841,6 +841,7 @@ namespace RPSuiteServer
 
             }
         }
+
         public bool ActualizarProductoIEPS(TCustomProductoIEPS[] Datos)
         {
             try
@@ -959,6 +960,63 @@ namespace RPSuiteServer
                 throw ex;
 
             }
+        }
+
+        public TPermiso[] SelectPermisos()
+        {
+
+            //  throw new NotImplementedException();
+            IDataReader reader = null;
+            List<TPermiso> ListPermiso = new List<TPermiso>();
+
+            TPermiso[] Permiso = new TPermiso[100];
+
+            try
+            {
+
+                int i = 1;
+                //using (IDbCommand lCommand = this.ServiceSchema.NewCommand(this.Connection, "cmdSelectPermisos", new string[] { }, new object[] {  }))
+                using (IDbCommand lCommand = this.ServiceSchema.NewCommand(this.Connection, "cmdSelectPermisos"))
+                {
+                    reader = lCommand.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        ListPermiso.Add
+                            (new TPermiso()
+                            {
+                             PermisoID = (int)(reader["PermisoID"] != DBNull.Value ? reader["PermisoID"] : ""),
+                             Descripcion = (string)(reader["Descripcion"] != DBNull.Value ? reader["Descripcion"] : ""),
+                             ImagenIndex = (int)(reader["ImagenIndex"] != DBNull.Value ? reader["ImagenIndex"] : ""),
+                             PadreID = (int)(reader["PadreID"] != DBNull.Value ? reader["PadreID"] : ""),
+                             Orden = (int)(reader["Orden"] != DBNull.Value ? reader["Orden"] : "")
+                            }
+                            );
+                    
+                        
+                            //  Res = (int)reader["ProductoID"];
+                        //    Permiso[i].PermisoID = (int)(reader["PermisoID"] != DBNull.Value ? reader["PermisoID"] : "");
+                       
+                    
+                        
+                        
+                    }
+                    reader.Close();
+                }
+                Permiso = ListPermiso.ToArray();
+                return Permiso;
+            }
+            catch (Exception ex)
+            {
+                reader.Close();
+                throw ex;
+
+            }
+        }
+
+        public TVehiculo GetVehiculoTransportista()
+        {
+            throw new NotImplementedException();
         }
     }
 }
