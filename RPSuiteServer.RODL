@@ -83,6 +83,12 @@
 </Parameter>
 </Parameters>
 </Operation>
+<Operation Name="SelectPermisos" UID="{DCC6A236-5AD6-4CA1-8DB0-91F97625E7DF}">
+<Parameters>
+<Parameter Name="Result" DataType="TAPermiso" Flag="Result">
+</Parameter>
+</Parameters>
+</Operation>
 <Operation Name="GuardarSaldo" UID="{895D4D85-203B-4CEC-AAD0-85032B6EA790}">
 <Parameters>
 <Parameter Name="Result" DataType="Boolean" Flag="Result">
@@ -803,6 +809,20 @@
 </Element>
 </Elements>
 </Struct>
+<Struct Name="TPermiso" UID="{F32D89DB-6B08-4343-9A62-2A158773CF08}" AutoCreateParams="1">
+<Elements>
+<Element Name="PermisoID" DataType="Integer">
+</Element>
+<Element Name="Descripcion" DataType="AnsiString">
+</Element>
+<Element Name="ImagenIndex" DataType="Integer">
+</Element>
+<Element Name="PadreID" DataType="Integer">
+</Element>
+<Element Name="Orden" DataType="Integer">
+</Element>
+</Elements>
+</Struct>
 </Structs>
 <Enums>
 </Enums>
@@ -825,9 +845,12 @@
 <Array Name="TACustomProductoIEPS" UID="{394DD5EF-75BE-4093-8AD0-C5308AF76D38}">
 <ElementType DataType="TCustomProductoIEPS" />
 </Array>
+<Array Name="TAPermiso" UID="{BBD28029-7DEB-47B5-858D-4408AD1D60B4}">
+<ElementType DataType="TPermiso" />
+</Array>
 </Arrays>
 <Uses>
-<Use Name="DataAbstract" UID="{30EEA332-03CE-45E5-8062-CCE8B6C1FAFE}" Rodl="..\..\..\Program Files (x86)\RemObjects Software\Data Abstract for .NET\Source\RemObjects.DataAbstract.Server\DataAbstract.RODL" AbsoluteRodl="C:\Program Files (x86)\RemObjects Software\Data Abstract for .NET\Source\RemObjects.DataAbstract.Server\DataAbstract.RODL" UsedRodlUID="{DC8B7BE2-14AF-402D-B1F8-E1008B6FA4F6}" DontCodeGen="1">
+<Use Name="DataAbstract" UID="{30EEA332-03CE-45E5-8062-CCE8B6C1FAFE}" Rodl="C:\Program Files (x86)\RemObjects Software\Data Abstract for .NET\Source\RemObjects.DataAbstract.Server\DataAbstract.RODL" AbsoluteRodl="C:\Program Files (x86)\RemObjects Software\Data Abstract for .NET\Source\RemObjects.DataAbstract.Server\DataAbstract.RODL" UsedRodlUID="{DC8B7BE2-14AF-402D-B1F8-E1008B6FA4F6}" DontCodeGen="1">
 <Includes UID="{ECE5910F-040B-4BDF-9502-EDF7F95642CF}" Delphi="DataAbstract4" DotNet="RemObjects.DataAbstract.Server" ObjC="DataAbstract/DataAbstract4_Intf" Java="com.remobjects.dataabstract.intf" Cocoa="DataAbstract"/>
 </Use>
 </Uses>

@@ -3809,6 +3809,102 @@ namespace RPSuiteServer {
             return new TVehiculo();
         }
     }
+    [System.Serializable()]
+    [RemObjects.SDK.Remotable(ActivatorClass=typeof(TPermiso_Activator))]
+    [System.Reflection.ObfuscationAttribute(Exclude=true)]
+    public partial class TPermiso : RemObjects.SDK.Types.ComplexType {
+        private int @__PermisoID;
+        private string @__Descripcion;
+        private int @__ImagenIndex;
+        private int @__PadreID;
+        private int @__Orden;
+        public virtual int PermisoID {
+            get {
+                return @__PermisoID;
+            }
+            set {
+                @__PermisoID = value;
+                this.TriggerPropertyChanged("PermisoID");
+            }
+        }
+        [RemObjects.SDK.StreamAs(RemObjects.SDK.StreamingFormat.AnsiString)]
+        public virtual string Descripcion {
+            get {
+                return @__Descripcion;
+            }
+            set {
+                @__Descripcion = value;
+                this.TriggerPropertyChanged("Descripcion");
+            }
+        }
+        public virtual int ImagenIndex {
+            get {
+                return @__ImagenIndex;
+            }
+            set {
+                @__ImagenIndex = value;
+                this.TriggerPropertyChanged("ImagenIndex");
+            }
+        }
+        public virtual int PadreID {
+            get {
+                return @__PadreID;
+            }
+            set {
+                @__PadreID = value;
+                this.TriggerPropertyChanged("PadreID");
+            }
+        }
+        public virtual int Orden {
+            get {
+                return @__Orden;
+            }
+            set {
+                @__Orden = value;
+                this.TriggerPropertyChanged("Orden");
+            }
+        }
+        public override void ReadComplex(RemObjects.SDK.Serializer serializer) {
+            if (serializer.RecordStrictOrder) {
+                this.PermisoID = serializer.ReadInt32("PermisoID");
+                this.Descripcion = serializer.ReadAnsiString("Descripcion");
+                this.ImagenIndex = serializer.ReadInt32("ImagenIndex");
+                this.PadreID = serializer.ReadInt32("PadreID");
+                this.Orden = serializer.ReadInt32("Orden");
+            }
+            else {
+                this.Descripcion = serializer.ReadAnsiString("Descripcion");
+                this.ImagenIndex = serializer.ReadInt32("ImagenIndex");
+                this.Orden = serializer.ReadInt32("Orden");
+                this.PadreID = serializer.ReadInt32("PadreID");
+                this.PermisoID = serializer.ReadInt32("PermisoID");
+            }
+        }
+        public override void WriteComplex(RemObjects.SDK.Serializer serializer) {
+            if (serializer.RecordStrictOrder) {
+                serializer.WriteInt32("PermisoID", this.PermisoID);
+                serializer.WriteAnsiString("Descripcion", this.Descripcion);
+                serializer.WriteInt32("ImagenIndex", this.ImagenIndex);
+                serializer.WriteInt32("PadreID", this.PadreID);
+                serializer.WriteInt32("Orden", this.Orden);
+            }
+            else {
+                serializer.WriteAnsiString("Descripcion", this.Descripcion);
+                serializer.WriteInt32("ImagenIndex", this.ImagenIndex);
+                serializer.WriteInt32("Orden", this.Orden);
+                serializer.WriteInt32("PadreID", this.PadreID);
+                serializer.WriteInt32("PermisoID", this.PermisoID);
+            }
+        }
+    }
+    [System.Reflection.ObfuscationAttribute(Exclude=true, ApplyToMembers=false)]
+    public class TPermiso_Activator : object, RemObjects.SDK.ITypeActivator {
+        public TPermiso_Activator() {
+        }
+        public object CreateInstance() {
+            return new TPermiso();
+        }
+    }
     public interface IRPLoginService : RemObjects.DataAbstract.Server.ISimpleLoginService {
     }
     public partial class RPLoginService_Proxy : RemObjects.DataAbstract.Server.SimpleLoginService_Proxy, IRPLoginService {
@@ -3900,6 +3996,7 @@ namespace RPSuiteServer {
         TCliente BuscarCliente(int ClienteID);
         TPedido BuscarPedido(string Datos);
         bool UpdateDetallePedido(TDetallePedido[] Datos);
+        TPermiso[] SelectPermisos();
         bool GuardarSaldo(TSaldo Datos);
         int GenerarFactura(TPedido Datos, TDetallePedido DatosDetalle);
         int InsertarFactura(string Serie, int Folio, System.DateTime Fecha, int Ejercicio, int Periodo, int Dia, System.DateTime FechaVencimiento, double ImpuestoPorcentaje, string Observacion, int FacturaUsoID, int FormaPagoID, int MetodoPagoID, int EstacionID, int ConfiguracionID, int MovimientoID);
@@ -3913,7 +4010,7 @@ namespace RPSuiteServer {
         bool CancelarPedido(string Datos);
         TCustomProductoIEPS[] CargarProductoIEPS();
         int InsertaMuestradeProducto(TMuestraProducto MuestraProducto);
-        TVehiculo GetVehiculoTransportista(string Datos);
+        TVehiculo GetVehiculoTransportista();
         bool ActualizarProductoIEPS(TCustomProductoIEPS[] Datos);
         int GetProductoID(string Datos);
     }
@@ -4050,6 +4147,19 @@ namespace RPSuiteServer {
                 @__LocalMessage.FinalizeMessage();
                 this.ClientChannel.Dispatch(@__LocalMessage);
                 bool _Result = @__LocalMessage.ReadBoolean("Result");
+                return _Result;
+            }
+            finally {
+                this.@__ClearMessage(@__LocalMessage);
+            }
+        }
+        public virtual TPermiso[] SelectPermisos() {
+            RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
+            try {
+                @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "SelectPermisos");
+                @__LocalMessage.FinalizeMessage();
+                this.ClientChannel.Dispatch(@__LocalMessage);
+                TPermiso[] _Result = ((TPermiso[])(@__LocalMessage.Read("Result", typeof(TPermiso[]), RemObjects.SDK.StreamingFormat.Default)));
                 return _Result;
             }
             finally {
@@ -4263,11 +4373,10 @@ namespace RPSuiteServer {
                 this.@__ClearMessage(@__LocalMessage);
             }
         }
-         public virtual TVehiculo GetVehiculoTransportista(string Datos) {
+        public virtual TVehiculo GetVehiculoTransportista() {
             RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
             try {
                 @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "GetVehiculoTransportista");
-                @__LocalMessage.WriteAnsiString("Datos", Datos);
                 @__LocalMessage.FinalizeMessage();
                 this.ClientChannel.Dispatch(@__LocalMessage);
                 TVehiculo _Result = ((TVehiculo)(@__LocalMessage.Read("Result", typeof(TVehiculo), RemObjects.SDK.StreamingFormat.Default)));
@@ -4345,6 +4454,9 @@ namespace RPSuiteServer {
         System.IAsyncResult BeginUpdateDetallePedido(TDetallePedido[] Datos, System.AsyncCallback @__Callback, object @__UserData);
         bool EndUpdateDetallePedido(System.IAsyncResult @__AsyncResult);
         System.Threading.Tasks.Task<bool> UpdateDetallePedidoAsync(TDetallePedido[] Datos);
+        System.IAsyncResult BeginSelectPermisos(System.AsyncCallback @__Callback, object @__UserData);
+        TPermiso[] EndSelectPermisos(System.IAsyncResult @__AsyncResult);
+        System.Threading.Tasks.Task<TPermiso[]> SelectPermisosAsync();
         System.IAsyncResult BeginGuardarSaldo(TSaldo Datos, System.AsyncCallback @__Callback, object @__UserData);
         bool EndGuardarSaldo(System.IAsyncResult @__AsyncResult);
         System.Threading.Tasks.Task<bool> GuardarSaldoAsync(TSaldo Datos);
@@ -4401,9 +4513,9 @@ namespace RPSuiteServer {
         System.IAsyncResult BeginInsertaMuestradeProducto(TMuestraProducto MuestraProducto, System.AsyncCallback @__Callback, object @__UserData);
         int EndInsertaMuestradeProducto(System.IAsyncResult @__AsyncResult);
         System.Threading.Tasks.Task<int> InsertaMuestradeProductoAsync(TMuestraProducto MuestraProducto);
-        System.IAsyncResult BeginGetVehiculoTransportista(string Datos, System.AsyncCallback @__Callback, object @__UserData);
+        System.IAsyncResult BeginGetVehiculoTransportista(System.AsyncCallback @__Callback, object @__UserData);
         TVehiculo EndGetVehiculoTransportista(System.IAsyncResult @__AsyncResult);
-        System.Threading.Tasks.Task<TVehiculo> GetVehiculoTransportistaAsync(string Datos);
+        System.Threading.Tasks.Task<TVehiculo> GetVehiculoTransportistaAsync();
         System.IAsyncResult BeginActualizarProductoIEPS(TCustomProductoIEPS[] Datos, System.AsyncCallback @__Callback, object @__UserData);
         bool EndActualizarProductoIEPS(System.IAsyncResult @__AsyncResult);
         System.Threading.Tasks.Task<bool> ActualizarProductoIEPSAsync(TCustomProductoIEPS[] Datos);
@@ -4645,6 +4757,31 @@ namespace RPSuiteServer {
         }
         public virtual System.Threading.Tasks.Task<bool> UpdateDetallePedidoAsync(TDetallePedido[] Datos) {
             return System.Threading.Tasks.Task<bool>.Factory.FromAsync(this.BeginUpdateDetallePedido(Datos, null, null), new System.Func<System.IAsyncResult, bool>(this.EndUpdateDetallePedido));
+        }
+        public virtual System.IAsyncResult BeginSelectPermisos(System.AsyncCallback @__Callback, object @__UserData) {
+            RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
+            try {
+                @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "SelectPermisos");
+                @__LocalMessage.FinalizeMessage();
+                return this.ClientChannel.AsyncDispatch(@__LocalMessage, @__Callback, @__UserData);
+            }
+            catch (System.Exception ex) {
+                this.@__ClearMessage(@__LocalMessage);
+                throw ex;
+            }
+        }
+        public virtual TPermiso[] EndSelectPermisos(System.IAsyncResult @__AsyncResult) {
+            RemObjects.SDK.IMessage @__LocalMessage = ((RemObjects.SDK.IClientAsyncResult)(@__AsyncResult)).Message;
+            try {
+                TPermiso[] Result = ((TPermiso[])(@__LocalMessage.Read("Result", typeof(TPermiso[]), RemObjects.SDK.StreamingFormat.Default)));
+                return Result;
+            }
+            finally {
+                this.@__ClearMessage(@__LocalMessage);
+            }
+        }
+        public virtual System.Threading.Tasks.Task<TPermiso[]> SelectPermisosAsync() {
+            return System.Threading.Tasks.Task<TPermiso[]>.Factory.FromAsync(this.BeginSelectPermisos(null, null), new System.Func<System.IAsyncResult, TPermiso[]>(this.EndSelectPermisos));
         }
         public virtual System.IAsyncResult BeginGuardarSaldo(TSaldo Datos, System.AsyncCallback @__Callback, object @__UserData) {
             RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
@@ -5026,11 +5163,10 @@ namespace RPSuiteServer {
         public virtual System.Threading.Tasks.Task<int> InsertaMuestradeProductoAsync(TMuestraProducto MuestraProducto) {
             return System.Threading.Tasks.Task<int>.Factory.FromAsync(this.BeginInsertaMuestradeProducto(MuestraProducto, null, null), new System.Func<System.IAsyncResult, int>(this.EndInsertaMuestradeProducto));
         }
-           public virtual System.IAsyncResult BeginGetVehiculoTransportista(string Datos, System.AsyncCallback @__Callback, object @__UserData) {
+        public virtual System.IAsyncResult BeginGetVehiculoTransportista(System.AsyncCallback @__Callback, object @__UserData) {
             RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();
             try {
                 @__LocalMessage.InitializeRequestMessage(this.ClientChannel, "RPSuiteServer", this.ActiveInterfaceName, "GetVehiculoTransportista");
-                @__LocalMessage.WriteAnsiString("Datos", Datos);
                 @__LocalMessage.FinalizeMessage();
                 return this.ClientChannel.AsyncDispatch(@__LocalMessage, @__Callback, @__UserData);
             }
@@ -5049,8 +5185,8 @@ namespace RPSuiteServer {
                 this.@__ClearMessage(@__LocalMessage);
             }
         }
-        public virtual System.Threading.Tasks.Task<TVehiculo> GetVehiculoTransportistaAsync(string Datos) {
-            return System.Threading.Tasks.Task<TVehiculo>.Factory.FromAsync(this.BeginGetVehiculoTransportista(Datos, null, null), new System.Func<System.IAsyncResult, TVehiculo>(this.EndGetVehiculoTransportista));
+        public virtual System.Threading.Tasks.Task<TVehiculo> GetVehiculoTransportistaAsync() {
+            return System.Threading.Tasks.Task<TVehiculo>.Factory.FromAsync(this.BeginGetVehiculoTransportista(null, null), new System.Func<System.IAsyncResult, TVehiculo>(this.EndGetVehiculoTransportista));
         }
         public virtual System.IAsyncResult BeginActualizarProductoIEPS(TCustomProductoIEPS[] Datos, System.AsyncCallback @__Callback, object @__UserData) {
             RemObjects.SDK.IMessage @__LocalMessage = this.@__GetMessage();

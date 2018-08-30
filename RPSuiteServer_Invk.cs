@@ -153,6 +153,21 @@ namespace RPSuiteServer {
                 @__ObjectDisposer.Dispose();
             }
         }
+        public static void Invoke_SelectPermisos(RemObjects.SDK.IROService @__Instance, RemObjects.SDK.IMessage @__Message, RemObjects.SDK.Server.IServerChannelInfo @__ServerChannelInfo, out RemObjects.SDK.Server.ResponseOptions @__oResponseOptions) {
+            RemObjects.SDK.ObjectDisposer @__ObjectDisposer = new RemObjects.SDK.ObjectDisposer(1);
+            try {
+                TPermiso[] Result;
+                Result = ((IRPDataService)(@__Instance)).SelectPermisos();
+                @__ObjectDisposer.Add(Result);
+                @__Message.InitializeResponseMessage(@__ServerChannelInfo, "RPSuiteServer", "RPDataService", "SelectPermisosResponse");
+                @__Message.Write("Result", Result, typeof(TPermiso[]), RemObjects.SDK.StreamingFormat.Default);
+                @__Message.FinalizeMessage();
+                @__oResponseOptions = RemObjects.SDK.Server.ResponseOptions.roDefault;
+            }
+            finally {
+                @__ObjectDisposer.Dispose();
+            }
+        }
         public static void Invoke_GuardarSaldo(RemObjects.SDK.IROService @__Instance, RemObjects.SDK.IMessage @__Message, RemObjects.SDK.Server.IServerChannelInfo @__ServerChannelInfo, out RemObjects.SDK.Server.ResponseOptions @__oResponseOptions) {
             RemObjects.SDK.ObjectDisposer @__ObjectDisposer = new RemObjects.SDK.ObjectDisposer(1);
             try {
@@ -352,12 +367,11 @@ namespace RPSuiteServer {
                 @__ObjectDisposer.Dispose();
             }
         }
-       public static void Invoke_GetVehiculoTransportista(RemObjects.SDK.IROService @__Instance, RemObjects.SDK.IMessage @__Message, RemObjects.SDK.Server.IServerChannelInfo @__ServerChannelInfo, out RemObjects.SDK.Server.ResponseOptions @__oResponseOptions) {
+        public static void Invoke_GetVehiculoTransportista(RemObjects.SDK.IROService @__Instance, RemObjects.SDK.IMessage @__Message, RemObjects.SDK.Server.IServerChannelInfo @__ServerChannelInfo, out RemObjects.SDK.Server.ResponseOptions @__oResponseOptions) {
             RemObjects.SDK.ObjectDisposer @__ObjectDisposer = new RemObjects.SDK.ObjectDisposer(1);
             try {
-                string Datos = @__Message.ReadAnsiString("Datos");
                 TVehiculo Result;
-                Result = ((IRPDataService)(@__Instance)).GetVehiculoTransportista(Datos);
+                Result = ((IRPDataService)(@__Instance)).GetVehiculoTransportista();
                 @__ObjectDisposer.Add(Result);
                 @__Message.InitializeResponseMessage(@__ServerChannelInfo, "RPSuiteServer", "RPDataService", "GetVehiculoTransportistaResponse");
                 @__Message.Write("Result", Result, typeof(TVehiculo), RemObjects.SDK.StreamingFormat.Default);

@@ -18417,7 +18417,7 @@ WHERE
       <Name>spCatFormaCompra</Name>
     </Item49>
   </Datasets>
-  <Commands IsObject="true" Count="27" IsCollection="true" ItemClass="TDASQLCommand" Type="TDASQLCommandCollection">
+  <Commands IsObject="true" Count="28" IsCollection="true" ItemClass="TDASQLCommand" Type="TDASQLCommandCollection">
     <Item0>
       <BusinessRulesServer Type="TDABusinessRuleScript" IsObject="true">
         <Script />
@@ -22037,6 +22037,38 @@ where Descripcion like :Descripcion</SQL>
       <Description />
       <Name>GetProductoID</Name>
     </Item26>
+    <Item27>
+      <BusinessRulesServer Type="TDABusinessRuleScript" IsObject="true">
+        <Script />
+        <ScriptLanguageStr />
+        <Description />
+        <Name />
+      </BusinessRulesServer>
+      <Statements IsCollection="true" IsObject="true" Count="1" ItemClass="TDAStatement" Type="TDAStatementCollection">
+        <Item0>
+          <Connection>RPSuite</Connection>
+          <SQL>
+
+Select PermisoId,Descripcion,ImagenIndex,PadreID,Orden
+FRom Permiso</SQL>
+          <TargetTable>Permiso</TargetTable>
+          <ConnectionType>SQLite</ConnectionType>
+          <Default>True</Default>
+          <StatementName />
+          <StatementType>stSQL</StatementType>
+          <GeneratorName />
+          <ColumnMappings IsObject="true" Count="0" IsCollection="true" Type="TDAColumnMappingCollection" ItemClass="TDAColumnMapping" />
+          <Description />
+        </Item0>
+      </Statements>
+      <Params IsObject="true" Count="0" IsCollection="true" Type="TDAParamCollection" ItemClass="TDAParam" />
+      <CustomAttributes />
+      <IsPublic>True</IsPublic>
+      <DynamicWhereXML />
+      <BusinessClassID />
+      <Description />
+      <Name>cmdSelectPermisos</Name>
+    </Item27>
   </Commands>
   <RelationShips IsObject="true" Count="0" IsCollection="true" Type="TDADatasetRelationshipCollection" ItemClass="TDADatasetRelationship" />
   <UpdateRules IsObject="true" Count="0" IsCollection="true" Type="TDAUpdateRuleCollection" ItemClass="TDAUpdateRule" />
